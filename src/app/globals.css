@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    @apply bg-gray-50 text-gray-900;
+  }
+
+  code {
+    @apply bg-gray-100 px-1.5 py-0.5 rounded font-mono text-sm;
+  }
+
+  /* Lesson content tables */
+  .lesson-content table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .lesson-content th {
+    @apply bg-green-800 text-white px-3 py-2 text-left text-sm font-semibold;
+  }
+
+  .lesson-content td {
+    @apply px-3 py-2 border-b border-gray-200 text-sm;
+  }
+
+  .lesson-content tr:nth-child(even) td {
+    @apply bg-gray-50;
+  }
+
+  /* Box styles for raw HTML lesson content */
+  .lesson-content .highlight-box {
+    @apply border-l-4 border-green-600 bg-green-50 p-4 rounded my-4;
+  }
+
+  .lesson-content .analogy-box {
+    @apply border-l-4 border-blue-600 bg-blue-50 p-4 rounded my-4;
+  }
+
+  .lesson-content .example-box {
+    @apply border-l-4 border-amber-600 bg-amber-50 p-4 rounded my-4;
+  }
+
+  .lesson-content .formula-box {
+    @apply bg-slate-800 text-slate-100 rounded-lg p-4 my-4 font-mono text-sm overflow-x-auto;
+  }
+
+  /* Responsive tables in raw HTML content */
+  .lesson-content table {
+    @apply overflow-x-auto block;
+  }
+}

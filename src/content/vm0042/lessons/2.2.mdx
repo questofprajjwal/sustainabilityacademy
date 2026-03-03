@@ -1,0 +1,76 @@
+{/* 2.2: The Baseline Scenario */}
+
+<h2 class="text-2xl font-bold text-gray-800 mb-4">The Baseline Scenario: What Would Have Happened Without the Project?</h2>
+<HighlightBox>
+  <p class="font-semibold text-green-800">The counterfactual</p>
+  <p class="text-green-900 mt-1">The baseline scenario represents the <strong>continuation of pre-project farming practices</strong> — what would have kept happening on this land if no carbon project existed. Carbon credits are calculated as the <em>difference</em> between project performance and baseline. A stronger baseline = more credits (all else equal).</p>
+</HighlightBox>
+
+<h3 class="text-xl font-bold mt-6 mb-3">How the Baseline Is Built</h3>
+<p class="mb-4">For each quantification unit, the baseline is constructed by documenting farming practices over the <strong>historical look-back period</strong> (minimum 3 years, must include at least one complete crop rotation).</p>
+
+<div class="bg-gray-50 border rounded p-4 mb-6">
+  <p class="font-semibold text-gray-800 mb-3">Step-by-Step: Building a Schedule of Activities</p>
+  <div class="space-y-3 text-sm">
+    <div class="flex gap-3"><span class="bg-green-700 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 font-bold">1</span><div><strong>Define the look-back period:</strong> Set t = -x to t = -1 (the years before project start). Minimum x = 3 years.</div></div>
+    <div class="flex gap-3"><span class="bg-green-700 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 font-bold">2</span><div><strong>Collect data on ALM practices</strong> for each year in the look-back period, for each QU.</div></div>
+    <div class="flex gap-3"><span class="bg-green-700 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 font-bold">3</span><div><strong>Create the annual schedule:</strong> Document practices for t=-1, t=-2, t=-3, etc. This schedule repeats through the first baseline period.</div></div>
+    <div class="flex gap-3"><span class="bg-green-700 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 font-bold">4</span><div><strong>Model or measure baseline emissions/SOC</strong> using this schedule (Approach 1, 2, or 3).</div></div>
+    <div class="flex gap-3"><span class="bg-green-700 text-white rounded-full w-6 h-6 flex items-center justify-center flex-shrink-0 font-bold">5</span><div><strong>Reassess baseline</strong> every 10 years (or every 5 years if regional practices change rapidly).</div></div>
+  </div>
+</div>
+
+<h3 class="text-xl font-bold mt-6 mb-3">The Data Hierarchy (Box 1 of VM0042)</h3>
+<p class="mb-4">VM0042 specifies a ranked hierarchy for data used to establish baseline practices. Higher-tier data = less uncertainty = more credits. Auditors will scrutinise which tier was used and may require you to justify why higher-tier data was unavailable:</p>
+<ResponsiveTable>
+<table class="mb-4">
+  <tr><th>Tier</th><th>Data Source</th><th>Example</th><th>Preference</th></tr>
+  <tr><td><strong>1 (Best)</strong></td><td>Historical management records + documented evidence</td><td>Farm management logs, purchase receipts, GPS field records, satellite imagery</td><td class="text-green-700">Most preferred</td></tr>
+  <tr><td><strong>2</strong></td><td>Historical management plans with written documentation</td><td>Agronomist recommendations, management plan documents</td><td class="text-blue-700">Preferred</td></tr>
+  <tr><td><strong>3</strong></td><td>Signed attestation from farmer/landowner</td><td>Farmer statement supported by evidence from similar nearby fields</td><td class="text-amber-700">Acceptable</td></tr>
+  <tr><td><strong>4 (Weakest)</strong></td><td>Regional/national average statistics</td><td>USDA National Agricultural Statistics, government census data (≤20 years old)</td><td class="text-red-600">Least preferred</td></tr>
+</table>
+</ResponsiveTable>
+<div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4 text-sm">
+  <h4 class="font-semibold text-blue-800 mb-2">Practical guidance: Working down the tiers</h4>
+  <p class="text-blue-900 mb-2">You start at Tier 1 and move down only when higher-tier data is unavailable. The methodology requires a justification for each step down:</p>
+  <ul class="space-y-2 text-blue-800 list-disc pl-4">
+    <li><strong>Tier 1 → Tier 2:</strong> Acceptable if the farm has no digital records, but there are written agronomist recommendations or management plan documents covering the look-back period. Common in well-documented commercial operations.</li>
+    <li><strong>Tier 2 → Tier 3:</strong> The farmer provides a signed statutory declaration of their historical practices, supported by at least two corroborating lines of evidence (e.g., neighbouring farm records, dealer records, satellite imagery confirming crop patterns).</li>
+    <li><strong>Tier 3 → Tier 4:</strong> Only where individual farm data is completely unattainable. Regional averages introduce the most uncertainty, typically requiring larger uncertainty deductions.</li>
+  </ul>
+  <p class="text-blue-900 mt-2 font-medium">A mixed-tier approach is common in practice: Tier 1 for tillage (satellite imagery confirms), Tier 3 for fertilizer rate (farmer attestation), Tier 4 for irrigation (no records available).</p>
+</div>
+<div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4 text-sm">
+  <strong class="text-amber-800">Baseline reassessment:</strong> The baseline schedule of activities must be reassessed every <strong>10 years</strong> (or every 5 years where regional production practices change rapidly or new data becomes available). At reassessment, if the regional common practice has changed significantly, the baseline must be updated — which can reduce or eliminate the project's additionality for new practice changes that became common.
+</div>
+
+<ExampleBox>
+  <p class="font-semibold text-amber-800">📐 Worked Example: Australia Wheat Baseline</p>
+  <p class="mt-2 text-sm"><strong>Project:</strong> 3,000 ha of wheat farmland in Western Australia switching to no-till + cover crops.</p>
+  <p class="mt-2 text-sm"><strong>Historical look-back:</strong> 5 years (t=-5 to t=-1)</p>
+  <ResponsiveTable>
+<table class="mt-3 text-sm">
+    <tr><th>Data Collected</th><th>Tier</th><th>Practice Documented</th></tr>
+    <tr><td>5 years of farm management records</td><td class="text-green-700">Tier 1</td><td>Conventional tillage (3 passes/yr), 120 kg N/ha urea, no cover crops, stubble burned</td></tr>
+    <tr><td>Sentinel-2 satellite imagery</td><td class="text-green-700">Tier 1</td><td>Bare soil confirmed in fallow periods; crop types verified</td></tr>
+    <tr><td>ABS regional survey data</td><td class="text-amber-700">Tier 3</td><td>Confirms these practices are standard for the region</td></tr>
+  </table>
+</ResponsiveTable>
+  <p class="mt-3 text-sm"><strong>Resulting baseline schedule of activities (repeating):</strong><br />
+  "Annual wheat crop; conventional tillage 3× per year at 15 cm depth; 120 kg N/ha urea in autumn; all stubble burned at harvest."</p>
+  <p class="mt-2 text-sm text-green-700 font-medium">Project practice: No-till, stubble retention, 80 kg N/ha urea + 20 kg N/ha compost, winter field-pea cover crop.</p>
+</ExampleBox>
+
+<h3 class="text-xl font-bold mt-6 mb-3">Conservativeness Principle</h3>
+<p class="mb-4">When multiple values are available for a baseline parameter, VM0042 requires using the value that results in the <strong>lowest expected emissions (or highest SOC) in the baseline scenario</strong>. This is conservative — it means you earn fewer credits when uncertain, rather than over-claiming.</p>
+
+<div class="bg-amber-50 border border-amber-200 rounded p-4 mb-6">
+  <p class="font-semibold text-amber-800">Example of conservativeness in practice:</p>
+  <p class="mt-1 text-sm">An agronomist recommendation says "apply 100–150 kg N/ha." For the baseline, you use <strong>100 kg N/ha</strong> (the lower end) — this produces lower N₂O baseline emissions, which means the project's N₂O reduction gets fewer credits. Conservativeness always favours the environment, not the developer.</p>
+</div>
+
+<div class="bg-green-50 border border-green-200 rounded p-4">
+  <p class="font-semibold text-green-800">Key Takeaway</p>
+  <p class="text-green-900 mt-1">The baseline scenario is <strong>not hypothetical</strong> — it must be grounded in documented historical practices. Use Tier 1 data wherever possible. The schedule of activities creates a repeating pattern of farming practices that the model or measurement framework uses to estimate what <em>would have happened</em> without the project.</p>
+</div>

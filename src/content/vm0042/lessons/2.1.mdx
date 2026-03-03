@@ -1,0 +1,64 @@
+{/* 2.1: Drawing the Lines: Project Boundary */}
+
+<h2 class="text-2xl font-bold text-gray-800 mb-4">Drawing the Lines: Project Boundary</h2>
+<HighlightBox>
+  <p class="font-semibold text-green-800">What the project boundary defines</p>
+  <p class="text-green-900 mt-1">The project boundary defines <strong>what you measure</strong> and <strong>what you count</strong>. It specifies which carbon pools and GHG emission sources must be included in your calculations — and which can be excluded. Getting this right prevents both under-counting and over-claiming.</p>
+</HighlightBox>
+
+<AnalogyBox>
+  <p class="font-semibold text-blue-800">💳 Analogy: Auditing a Household Budget</p>
+  <p class="mt-2 text-blue-900">The project boundary is like the scope of a household budget audit. The "boundary" determines which bank accounts and expense categories are in scope. If you only track the checking account but ignore the credit card, you get an incomplete picture. VM0042 requires you to account for all significant "accounts" — SOC, fossil fuel, lime, methane, and nitrous oxide — so the carbon balance is accurate.</p>
+</AnalogyBox>
+
+<h3 class="text-xl font-bold mt-6 mb-3">Carbon Pools</h3>
+<ResponsiveTable>
+<table class="mb-6">
+  <tr><th>Carbon Pool</th><th>Status</th><th>When to Include</th></tr>
+  <tr><td><strong>Soil Organic Carbon (SOC)</strong></td><td class="text-green-700 font-bold">MANDATORY — always</td><td>Every VM0042 project, to at least 30 cm depth</td></tr>
+  <tr><td>Aboveground woody biomass</td><td class="text-amber-700">Conditional</td><td>Must include if project activities could significantly REDUCE this pool; optional otherwise (e.g., agroforestry adds trees)</td></tr>
+  <tr><td>Belowground woody biomass</td><td class="text-amber-700">Optional</td><td>Where project significantly increases this pool (agroforestry)</td></tr>
+  <tr><td>Aboveground non-woody biomass</td><td class="text-red-600">Excluded</td><td>Not subject to significant changes or changes are transient</td></tr>
+  <tr><td>Dead wood & litter</td><td class="text-red-600">Excluded</td><td>Not significant for ALM projects</td></tr>
+</table>
+</ResponsiveTable>
+
+<h3 class="text-xl font-bold mt-6 mb-3">GHG Sources & Sinks</h3>
+<ResponsiveTable>
+<table class="mb-6">
+  <tr><th>Source</th><th>Gas</th><th>Included?</th><th>Why It Matters</th></tr>
+  <tr><td>SOC stock change</td><td>CO₂</td><td class="text-green-700">Yes — mandatory</td><td>The main event — changes in soil carbon storage</td></tr>
+  <tr><td>Fossil fuel combustion</td><td>CO₂</td><td class="text-amber-700">S* (conditional)</td><td>Farm machinery — tractors, pumps. More or less tillage = more or less fuel</td></tr>
+  <tr><td>Liming</td><td>CO₂</td><td class="text-amber-700">S* (conditional)</td><td>Limestone/dolomite releases CO₂ as it dissolves</td></tr>
+  <tr><td>Soil methanogenesis (rice)</td><td>CH₄</td><td class="text-amber-700">S* (conditional)</td><td>Flooded soils produce CH₄ — major for rice projects</td></tr>
+  <tr><td>Enteric fermentation</td><td>CH₄</td><td class="text-green-700">Yes (if livestock present)</td><td>Cow digestion produces CH₄ — required for grazing projects</td></tr>
+  <tr><td>Manure deposition</td><td>CH₄, N₂O</td><td class="text-green-700">Yes (if livestock present)</td><td>Manure on pastures emits both CH₄ and N₂O</td></tr>
+  <tr><td>Nitrogen fertilizers</td><td>N₂O</td><td class="text-green-700">Yes (if N fertilized)</td><td>N inputs to soil produce N₂O via nitrification/denitrification</td></tr>
+  <tr><td>Nitrogen-fixing species</td><td>N₂O</td><td class="text-green-700">Yes (if N-fixing crops)</td><td>Legumes release N from root nodules, causing N₂O</td></tr>
+  <tr><td>Biomass burning — CO₂</td><td>CO₂</td><td class="text-red-700 font-medium">Excluded</td><td>CO₂ from burning is accounted as a carbon stock change (not an emissions source)</td></tr>
+  <tr><td>Biomass burning — CH₄ &amp; N₂O</td><td>CH₄, N₂O</td><td class="text-amber-700">S* (conditional)</td><td>CH₄ and N₂O from biomass burning must be included where emissions change significantly vs. baseline</td></tr>
+</table>
+</ResponsiveTable>
+<p class="text-sm text-gray-500 mb-4">S* = Must be included where the project activity significantly INCREASES emissions compared to baseline (>5% of total GHG benefit). May be included where it REDUCES emissions.</p>
+
+<ExampleBox>
+  <p class="font-semibold text-amber-800">📐 Worked Example: Defining the Boundary — US No-Till Project</p>
+  <p class="mt-2 text-sm"><strong>Project:</strong> 5,000 ha Iowa corn farm switches from conventional tillage to no-till + cover crops. No livestock. Uses synthetic N fertilizer (reduced).</p>
+  <ResponsiveTable>
+<table class="mt-3 text-sm">
+    <tr><th>Pool/Source</th><th>Include?</th><th>Reason</th></tr>
+    <tr><td>SOC</td><td class="text-green-700">✅ Yes</td><td>Mandatory — primary benefit</td></tr>
+    <tr><td>Woody biomass</td><td class="text-red-600">❌ No</td><td>No trees — not relevant</td></tr>
+    <tr><td>Fossil fuel (CO₂)</td><td class="text-green-700">✅ Yes</td><td>Switching to no-till reduces tractor passes, lowers fuel use</td></tr>
+    <tr><td>Liming (CO₂)</td><td class="text-red-600">❌ Skip</td><td>No liming practice — not applicable</td></tr>
+    <tr><td>N fertilizer (N₂O)</td><td class="text-green-700">✅ Yes</td><td>Project reduces N rate — emission reduction</td></tr>
+    <tr><td>Enteric fermentation (CH₄)</td><td class="text-red-600">❌ No</td><td>No livestock in project</td></tr>
+    <tr><td>Cover crop N-fixation (N₂O)</td><td class="text-green-700">✅ Yes</td><td>Legume cover crop added — N₂O from root nodules must be included</td></tr>
+  </table>
+</ResponsiveTable>
+</ExampleBox>
+
+<div class="bg-green-50 border border-green-200 rounded p-4">
+  <p class="font-semibold text-green-800">Key Takeaway</p>
+  <p class="text-green-900 mt-1"><strong>SOC is always mandatory.</strong> Other pools and GHG sources are included based on whether they are significant (>5% of total benefit) in your specific project. The de minimis rule lets you exclude sources that are trivially small — but you must demonstrate they are &lt;5% of total benefit first.</p>
+</div>
