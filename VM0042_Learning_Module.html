@@ -4491,9 +4491,18 @@ const colorMap = {
 // ============================================================
 // QUIZ COMPONENT
 // ============================================================
-function Quiz({ questions }) {
-  const [answers, setAnswers] = React.useState({});
-  const [submitted, setSubmitted] = React.useState({});
+function Quiz({ questions, lessonId }) {
+  const storageKey = `vm0042_quiz_${lessonId}`;
+  const [answers, setAnswers] = React.useState(() => {
+    try { return JSON.parse(localStorage.getItem(storageKey))?.answers || {}; } catch { return {}; }
+  });
+  const [submitted, setSubmitted] = React.useState(() => {
+    try { return JSON.parse(localStorage.getItem(storageKey))?.submitted || {}; } catch { return {}; }
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem(storageKey, JSON.stringify({ answers, submitted }));
+  }, [answers, submitted]);
 
   if (!questions || questions.length === 0) return null;
 
@@ -4591,7 +4600,7 @@ function LessonView({ lessonId, onComplete, completed, moduleColor, onPrev, onNe
         <span className="text-xs text-gray-500 ml-auto">⏱ {lesson.duration}</span>
       </div>
       <div className="prose max-w-none" dangerouslySetInnerHTML={{__html: lesson.content}} />
-      <Quiz questions={lesson.quiz} />
+      <Quiz questions={lesson.quiz} lessonId={lessonId} />
       {!completed && (
         <div className="mt-8 text-center">
           <button onClick={onComplete}
