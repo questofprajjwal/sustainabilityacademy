@@ -2885,7 +2885,7 @@ LESSONS["7.1"] = {
   <p class="mt-2 text-sm font-bold text-amber-800">Outcome: Barrier analysis PASSES → Proceed to Step 4.</p>
 </div>
 
-<div class="bg-slate-50 border border-slate-200 rounded p-4 mb-6 text-sm">
+<div class="bg-slate-50 border border-slate-200 rounded p-4 mb-4 text-sm">
   <p class="font-semibold text-slate-800">Evidence Quality Requirements (Appendix 1)</p>
   <ul class="mt-2 space-y-1 text-slate-700">
     <li>• Acceptable: legislation, industry surveys, third-party research, national statistics, bank statements, board minutes</li>
@@ -2893,6 +2893,16 @@ LESSONS["7.1"] = {
     <li>• Evidence must be interpreted conservatively (don't overestimate the barrier effect)</li>
     <li>• Quantifiable barriers may be expressed as costs and incorporated into the investment analysis instead</li>
   </ul>
+</div>
+
+<div class="bg-purple-50 border border-purple-200 rounded p-4 mb-4 text-sm">
+  <p class="font-semibold text-purple-800">LDC / SIDS / LIC Simplified Approach (Appendix 1, Req. 8)</p>
+  <p class="mt-1 text-purple-900">Projects in <strong>Least Developed Countries (LDCs), Small Island Developing States (SIDS), and Low-Income Countries (LICs)</strong> may use a <em>simplified barrier analysis approach</em> where the standard evidence requirements are not feasible to obtain. This is a significant advantage for project developers in the Global South — the bar for demonstrating barriers is lower in contexts where third-party data and formal financial documentation are scarce.</p>
+</div>
+
+<div class="bg-amber-50 border border-amber-200 rounded p-3 mb-6 text-sm">
+  <p class="font-semibold text-amber-800">Reminder: Additionality ≠ Regulatory Surplus</p>
+  <p class="mt-1 text-amber-900">VT0008 demonstrates <em>additionality</em> (the project would not happen without carbon credits). This is separate from <em>regulatory surplus</em> (the project activity is not required by law or regulation). Both must be demonstrated under VCS Program rules. VT0008 does not substitute for regulatory surplus documentation — they are parallel requirements.</p>
 </div>
 
 <h3 class="text-xl font-bold mt-6 mb-3">Key Takeaways: Step 1 & 2</h3>
@@ -3028,12 +3038,13 @@ LESSONS["7.2"] = {
     <tr><th>Parameter</th><th>Value</th><th>Source</th></tr>
     <tr><td>Risk-free rate (r_f)</td><td>3.1%</td><td>VT0008 default (real terms)</td></tr>
     <tr><td>Equity risk premium</td><td>2.7%</td><td>VT0008 default (Credit Suisse 2023)</td></tr>
-    <tr><td>Country risk premium (Vietnam)</td><td>4.57%</td><td>VT0008 Table 1 (Group 3 AFOLU)</td></tr>
-    <tr><td>Cost of equity (r_e)</td><td>10.37%</td><td>3.1 + 2.7 + 4.57 = 10.37%</td></tr>
+    <tr><td>Country risk premium (Vietnam)</td><td>4.07%</td><td>VT0008 Table 1, Group 3 (AFOLU, −0.5pp adjustment)</td></tr>
+    <tr><td>Cost of equity (r_e)</td><td>9.87%</td><td>3.1 + 2.7 + 4.07 = 9.87% (Group 3 AFOLU rate per Table 1)</td></tr>
   </table>
+  <div class="bg-blue-50 border border-blue-200 rounded p-2 mb-2 text-xs text-blue-800">Note: VT0008 Table 1 lists 10.37% for Vietnam Group 1 (energy/waste sectors). AFOLU projects are Group 3, which receives a −0.5 percentage point sector adjustment → 9.87%.</div>
   <p class="text-sm">With 60% debt financing at 8% interest and 30% corporate tax:</p>
-  <p class="font-mono text-sm bg-slate-100 p-2 rounded mt-2">WACC = 10.37% × 0.40 + 8% × (1 − 0.30) × 0.60 = 4.15% + 3.36% = <strong>7.51%</strong></p>
-  <p class="text-sm mt-2">Project IRR without carbon credits = <strong>5.2%</strong> (below WACC of 7.51% → fails benchmark)</p>
+  <p class="font-mono text-sm bg-slate-100 p-2 rounded mt-2">WACC = 9.87% × 0.40 + 8% × (1 − 0.30) × 0.60 = 3.95% + 3.36% = <strong>7.31%</strong></p>
+  <p class="text-sm mt-2">Project IRR without carbon credits = <strong>5.2%</strong> (below WACC of 7.31% → fails benchmark)</p>
   <p class="text-sm">Project IRR with carbon credits at $18/tCO₂e = <strong>9.3%</strong> (above WACC → passes)</p>
   <p class="text-sm font-bold text-amber-800 mt-2">Conclusion: Investment analysis passes → Proceed to Step 4</p>
 </div>
@@ -3216,6 +3227,7 @@ LESSONS["8.1"] = {
       <li>Land cultivation, planting &amp; harvesting (crop rotations, cover crops)</li>
       <li>Grazing practices</li>
     </ol>
+    <p class="text-blue-800 text-xs mt-2"><strong>Domain of Practice Effects:</strong> Each PC must also be validated across its full "domain" — e.g., for Inorganic N Fertilizer, validation must cover variations in magnitude, form, timing, and application method. Simply validating one rate of urea does not validate the full PC.</p>
   </div>
   <div class="bg-purple-50 border border-purple-200 rounded p-4 text-sm">
     <h4 class="font-bold text-purple-800 mb-2">Crop Functional Group (CFG)</h4>
@@ -3515,9 +3527,24 @@ LESSONS["8.2"] = {
   </ul>
 </div>
 
-<div class="bg-amber-50 border border-amber-200 rounded p-3 mb-6 text-sm">
+<div class="bg-amber-50 border border-amber-200 rounded p-3 mb-4 text-sm">
   <p class="font-semibold text-amber-800">Peer-Reviewed Journal Alternative</p>
-  <p class="mt-1 text-amber-900">Instead of an IME review, an MVR may be published in one of 30+ approved peer-reviewed journals listed in VMD0053 Table 3 (including <em>Geoderma, Global Biogeochemical Cycles, Soil Science Society of America Journal</em>, etc.) AND reviewed by an IME. The peer-reviewed publication must explicitly state its purpose as validating the model for VCS carbon credits under ISO 14064.</p>
+  <p class="mt-1 text-amber-900">Instead of a standalone IME review, an MVR may be published in one of 30+ approved peer-reviewed journals listed in VMD0053 Table 3 (including <em>Geoderma, Global Biogeochemical Cycles, Soil Science Society of America Journal</em>, etc.) AND reviewed by an IME. The peer-reviewed publication must explicitly state its purpose as validating the model for VCS carbon credits under ISO 14064. <strong>Important:</strong> the project proponent must also submit a separate sub-report outlining how the MVR requirements have been met and clarifying any aspects of the peer-reviewed paper as it pertains to the overall requirements — the published paper alone is not sufficient.</p>
+</div>
+
+<div class="bg-blue-50 border border-blue-200 rounded p-4 mb-4 text-sm">
+  <p class="font-semibold text-blue-800">Petitions for Exception: When Tests Fail Due to Data Scarcity</p>
+  <p class="mt-1 text-blue-900">Failing the bias test or the 90% confidence coverage test is not always an automatic dead end. VMD0053 allows project proponents to <em>petition for validation approval</em> even when strict thresholds are not met, where data scarcity is the documented reason. For example:</p>
+  <ul class="list-disc ml-5 mt-1 space-y-1 text-blue-900">
+    <li>Bias &gt; PMU: petition allowed if the mean bias is demonstrably due to insufficient validation observations, subject to IME and VVB approval</li>
+    <li>Coverage below 90%: petition allowed for marginal failures (e.g., 6/7 or 7/8 observations covered) where global data gaps exist for the specific PC/CFG/ES combination</li>
+  </ul>
+  <p class="mt-1 text-blue-900">Petitions are evaluated case-by-case and require clear justification — they are not routine exceptions.</p>
+</div>
+
+<div class="bg-slate-50 border border-slate-200 rounded p-4 mb-6 text-sm">
+  <p class="font-semibold text-slate-800">Default PMU When Standard Errors Are Not Published</p>
+  <p class="mt-1 text-slate-700">Many legacy soil studies do not report standard errors for their measurements, making it impossible to compute PMU directly. In these cases, VMD0053 allows a <em>default replacement PMU value</em> based on typical measurement error for the specific measurement technique (e.g., the combined measurement error of the SOC content and bulk density measurement techniques used). PMU may also be defined as a function of cumulative sampling depth based on observed measurement uncertainty in validation datasets. These default values must be justified and are subject to IME approval and VVB review. The North American Proficiency Testing Program (NAPT) is suggested as a reference for instrument-specific measurement error rates.</p>
 </div>
 
 <h3 class="text-xl font-bold mt-6 mb-3">When Must the MVR Be Updated?</h3>
@@ -3614,12 +3641,16 @@ LESSONS["9.1"] = {
 </table>
 
 <div class="bg-red-50 border border-red-200 rounded p-3 mb-6 text-sm">
-  <p class="font-semibold text-red-800">Critical Rules</p>
+  <p class="font-semibold text-red-800">Critical Rules and Thresholds</p>
   <ul class="mt-1 space-y-1 text-red-900">
     <li>• Any individual risk factor rated "FAIL" disqualifies the project from crediting until addressed</li>
-    <li>• Total natural risk above 35 → project FAILS</li>
+    <li>• Natural risk &gt; 35 → project FAILS (Section 2.4.6)</li>
+    <li>• Internal risk &gt; 35 → project FAILS (Section 2.5.3)</li>
+    <li>• External risk &gt; 20 → project FAILS (Section 2.5.3)</li>
+    <li>• Overall risk &gt; 60 → project FAILS entirely (Section 2.5.3)</li>
+    <li>• <strong>Minimum buffer floor = 12%</strong> — even if calculated score is lower, 12% is the floor (Section 2.5.2)</li>
     <li>• No individual sub-category score can fall below zero (minimum = 0)</li>
-    <li>• Buffer contribution rate = overall risk rating, rounded UP to the nearest whole percent</li>
+    <li>• Buffer contribution rate = overall risk rating (at minimum 12%), rounded UP to the nearest whole percent</li>
   </ul>
 </div>
 
@@ -3975,16 +4006,30 @@ LESSONS["9.2"] = {
   <li>The pooled account means that all AFOLU projects share the insurance — a small number of reversals are absorbed without any individual project bearing the full loss</li>
 </ul>
 
+<div class="bg-red-50 border border-red-200 rounded p-4 mb-4 text-sm">
+  <p class="font-semibold text-red-800">Floors, Ceilings & Category-Level Failure Thresholds (Section 2.5)</p>
+  <table class="text-sm mt-2">
+    <tr><th>Rule</th><th>Threshold</th><th>Effect</th></tr>
+    <tr><td>Minimum buffer floor</td><td>12% (regardless of calculated score)</td><td>Even a score of 5 → 12% buffer required</td></tr>
+    <tr><td>Overall risk ceiling</td><td>&gt;60%</td><td>Project FAILS risk analysis → ineligible for crediting</td></tr>
+    <tr><td>Internal risk ceiling</td><td>&gt;35</td><td>Project FAILS risk analysis</td></tr>
+    <tr><td>External risk ceiling</td><td>&gt;20</td><td>Project FAILS risk analysis</td></tr>
+    <tr><td>Natural risk ceiling</td><td>&gt;35</td><td>Project FAILS risk analysis</td></tr>
+  </table>
+  <p class="text-red-900 text-xs mt-2"><strong>Critical for project economics:</strong> The 12% minimum floor means no matter how low your calculated score, at least 12% of all net SOC VCUs are withheld. A project calculating 6% buffer still loses 12% of its credits — project financial models must account for this.</p>
+</div>
+
 <div class="bg-green-50 border border-green-200 rounded p-4 text-sm">
   <p class="font-semibold text-green-800">Summary: The Complete Risk Calculation Flow</p>
   <ol class="list-decimal ml-6 mt-2 space-y-2 text-green-900">
-    <li>Score each of 4 Internal sub-categories (PM + FV + OC + PL); check for FAIL conditions</li>
-    <li>Score each of 3 External sub-categories (LT + SE + PC); check for FAIL conditions</li>
+    <li>Score each of 4 Internal sub-categories (PM + FV + OC + PL); check for individual FAIL conditions</li>
+    <li>Score each of 3 External sub-categories (LT + SE + PC); check for individual FAIL conditions</li>
     <li>Score each natural risk factor using the LS × M formula (Table 10 + mitigation)</li>
     <li>Apply the CID climate change amplification factor (1.0–1.4) to climate-sensitive risks; reduce by 40% if ≥5 adaptive capacity criteria are met</li>
     <li>Add SLR score for coastal projects</li>
-    <li>Verify total natural risk does not exceed 35 (FAIL threshold)</li>
-    <li>Sum all three categories → round UP to nearest whole percent = buffer rate</li>
+    <li>Verify: Natural risk ≤ 35, Internal risk ≤ 35, External risk ≤ 20, and no individual FAIL conditions</li>
+    <li>Sum all three categories → round UP to nearest whole percent = buffer rate; apply 12% minimum floor</li>
+    <li>Verify overall risk ≤ 60 (otherwise project FAILS entirely)</li>
     <li>Buffer credits = net SOC VCUs × buffer rate; marketable VCUs = net VCUs − buffer credits</li>
   </ol>
 </div>
@@ -4492,7 +4537,7 @@ function App() {
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 </script>
 <footer style="text-align:center;padding:18px;background:#1e293b;color:#94a3b8;font-size:0.85rem;font-family:'Segoe UI',system-ui,sans-serif;">
-  Made with 💚 for Muskan — who probably still won't read it 😄
+  Made with 💚 for Muskan — She said she will read it. 🌱
 </footer>
 </body>
 </html>
