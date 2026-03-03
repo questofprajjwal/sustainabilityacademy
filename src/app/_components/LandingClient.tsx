@@ -16,16 +16,6 @@ interface Props {
   courseData: CourseData[];
 }
 
-const CATEGORY_ORDER = ['green-finance', 'esg', 'methodologies', 'markets', 'fundamentals'];
-
-const CATEGORY_LABELS: Record<string, string> = {
-  'green-finance': 'Green Finance',
-  esg: 'ESG & Reporting',
-  methodologies: 'Carbon Methodologies',
-  markets: 'Carbon Markets',
-  fundamentals: 'Fundamentals',
-};
-
 export default function LandingClient({ courseData }: Props) {
   const { mounted, getCourseProgress, lastAccessedCourse } = usePlatformProgress();
 
@@ -37,19 +27,6 @@ export default function LandingClient({ courseData }: Props) {
       continueLessonHref = `/courses/${lastAccessedCourse}/${lessonIdToUrl(cp.lastAccessedLesson)}`;
     }
   }
-
-  // Group all courses by category, preserving preferred order
-  const byCategory = courseData.reduce<Record<string, CourseData[]>>((acc, cd) => {
-    const cat = cd.course.category;
-    if (!acc[cat]) acc[cat] = [];
-    acc[cat].push(cd);
-    return acc;
-  }, {});
-
-  const categoryKeys = [
-    ...CATEGORY_ORDER.filter(k => byCategory[k]),
-    ...Object.keys(byCategory).filter(k => !CATEGORY_ORDER.includes(k)),
-  ];
 
   // Total stats
   let totalCompleted = 0;
@@ -144,49 +121,22 @@ export default function LandingClient({ courseData }: Props) {
               New courses across climate, ESG, green finance, and more are added regularly.
             </p>
 
-            {categoryKeys.length === 1 ? (
-              // Single category — no group header needed
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {byCategory[categoryKeys[0]].map(({ course, totalLessons: tl }) => {
-                  const cp = mounted ? getCourseProgress(course.id) : null;
-                  const completedCount = Object.keys(cp?.completedLessons ?? {}).length;
-                  const lastLesson = cp?.lastAccessedLesson;
-                  return (
-                    <CourseCard
-                      key={course.id}
-                      course={course}
-                      completedLessons={completedCount}
-                      totalLessons={tl}
-                      lastLessonId={lastLesson ? lessonIdToUrl(lastLesson) : undefined}
-                    />
-                  );
-                })}
-              </div>
-            ) : (
-              categoryKeys.map(category => (
-                <div key={category} className="mb-10">
-                  <h3 className="text-lg font-semibold text-gray-700 mb-4">
-                    {CATEGORY_LABELS[category] ?? category.replace(/-/g, ' ')}
-                  </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    {byCategory[category].map(({ course, totalLessons: tl }) => {
-                      const cp = mounted ? getCourseProgress(course.id) : null;
-                      const completedCount = Object.keys(cp?.completedLessons ?? {}).length;
-                      const lastLesson = cp?.lastAccessedLesson;
-                      return (
-                        <CourseCard
-                          key={course.id}
-                          course={course}
-                          completedLessons={completedCount}
-                          totalLessons={tl}
-                          lastLessonId={lastLesson ? lessonIdToUrl(lastLesson) : undefined}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-              ))
-            )}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {courseData.map(({ course, totalLessons: tl }) => {
+                const cp = mounted ? getCourseProgress(course.id) : null;
+                const completedCount = Object.keys(cp?.completedLessons ?? {}).length;
+                const lastLesson = cp?.lastAccessedLesson;
+                return (
+                  <CourseCard
+                    key={course.id}
+                    course={course}
+                    completedLessons={completedCount}
+                    totalLessons={tl}
+                    lastLessonId={lastLesson ? lessonIdToUrl(lastLesson) : undefined}
+                  />
+                );
+              })}
+            </div>
           </section>
         </div>
       </main>
