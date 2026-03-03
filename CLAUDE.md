@@ -176,6 +176,42 @@ Available MDX components:
 | `<ExampleBox>` | Amber left border | Worked examples |
 | `<FormulaBox>` | Dark background | Formulas and equations |
 | `<ResponsiveTable>` + `<table>` | Scrollable on mobile | Data tables |
+| `<CalculationExercise>` | Violet card, interactive | Practice calculations with hints |
+| `<DeepDive>` | Blue collapsible section | Optional deep-dive content |
+
+**CalculationExercise props:**
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `question` | string | ✅ | Problem statement shown to the learner |
+| `answer` | number | ✅ | Correct numeric answer |
+| `tolerance` | number | — | Acceptable absolute deviation (default `0`) |
+| `unit` | string | — | Unit label shown after input (e.g. `"tCO₂e"`) |
+| `hints` | string[] | — | Progressive hints revealed after each wrong attempt |
+| `solution` | string | — | Explanation shown once answer is correct or revealed |
+
+```mdx
+<CalculationExercise
+  question="A project avoids 10 tonnes of CH₄. What is the CO₂e equivalent? (GWP₁₀₀ = 28)"
+  answer={280}
+  unit="tCO₂e"
+  hints={["Multiply the mass of CH₄ by its GWP.", "10 × 28 = ?"]}
+  solution="10 t CH₄ × 28 (GWP₁₀₀) = 280 tCO₂e"
+/>
+```
+
+**DeepDive props:**
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `title` | string | — | Button label (default `"Want to go deeper?"`) |
+| `children` | ReactNode | ✅ | Content revealed on expand |
+
+```mdx
+<DeepDive title="How is GWP calculated?">
+  Global Warming Potential compares the heat absorbed by a greenhouse gas...
+</DeepDive>
+```
 
 ### 4. Write quiz YAML files (optional per lesson)
 

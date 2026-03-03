@@ -25,11 +25,13 @@
   answer: 2
   explanation: "Revenue from low-carbon products at premium prices is a climate-related opportunity — a potential positive financial effect from the transition to a lower-carbon economy. Regulatory penalties, higher insurance premiums, and stranded costs are all risks, not opportunities."
 
-- question: "IFRS S2 Appendix A defines transition risks across five subcategories. Which of the following is NOT one of them?"
+- question: "Which of the following are transition risk subcategories defined in IFRS S2 Appendix A? (Select all that apply)"
+  type: multi-select
   options:
     - "Policy and legal risks"
+    - "Sea level rise"
     - "Technological risks"
     - "Market risks"
-    - "Geopolitical risks"
-  answer: 3
-  explanation: "The five transition risk subcategories defined in IFRS S2 Appendix A are: policy and legal, technological, market, and reputational risks. Geopolitical risks are not one of the five defined transition risk categories, though they may affect how transition risks manifest."
+    - "Reputational risks"
+  answers: [0, 2, 3, 4]
+  explanation: "IFRS S2 Appendix A defines five transition risk subcategories: policy and legal, technological, market, and reputational risks. Sea level rise is a chronic physical risk, not a transition risk."

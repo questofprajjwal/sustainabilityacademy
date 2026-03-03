@@ -1,13 +1,41 @@
 import { z } from 'zod';
 
-export const QuizQuestionSchema = z.object({
+const MultipleChoiceSchema = z.object({
+  type: z.literal('multiple-choice').optional(),
   question: z.string().min(1),
   options: z.array(z.string()).min(2).max(6),
   answer: z.number().int().min(0),
   explanation: z.string().optional(),
-}).refine(q => q.answer < q.options.length, {
-  message: 'answer index must be within options range',
+}).refine(q => q.answer < q.options.length, { message: 'answer out of range' });
+
+const TrueFalseSchema = z.object({
+  type: z.literal('true-false'),
+  question: z.string().min(1),
+  answer: z.boolean(),
+  explanation: z.string().optional(),
 });
+
+const MultiSelectSchema = z.object({
+  type: z.literal('multi-select'),
+  question: z.string().min(1),
+  options: z.array(z.string()).min(2).max(8),
+  answers: z.array(z.number().int().min(0)).min(1),
+  explanation: z.string().optional(),
+}).refine(q => q.answers.every(a => a < q.options.length), { message: 'answer index out of range' });
+
+const MatchingSchema = z.object({
+  type: z.literal('matching'),
+  question: z.string().min(1),
+  pairs: z.array(z.object({ left: z.string(), right: z.string() })).min(2).max(8),
+  explanation: z.string().optional(),
+});
+
+export const QuizQuestionSchema = z.union([
+  MultipleChoiceSchema,
+  TrueFalseSchema,
+  MultiSelectSchema,
+  MatchingSchema,
+]);
 
 export const LessonMetaSchema = z.object({
   id: z.string().min(1),

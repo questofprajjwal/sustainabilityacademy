@@ -25,11 +25,13 @@
   answer: 1
   explanation: "Location-based Scope 2 uses average grid emission factors for the regions where electricity is purchased and consumed. This reflects the actual carbon intensity of the electricity grid being used, in contrast to market-based methods that account for renewable energy contracts or certificates."
 
-- question: "10 tonnes of methane (CH₄) need to be converted to CO₂ equivalent using IPCC AR6 values. The 100-year GWP for CH₄ is approximately 29.8. What is the CO₂e figure?"
-  options:
-    - "10 tCO₂e"
-    - "29.8 tCO₂e"
-    - "298 tCO₂e"
-    - "2,980 tCO₂e"
-  answer: 2
-  explanation: "CO₂e = quantity × GWP = 10 tonnes × 29.8 = 298 tCO₂e. This conversion is central to aggregating all seven greenhouse gases into a single comparable figure as required by IFRS S2."
+- question: "Match each GHG Protocol emission scope to its definition."
+  type: matching
+  pairs:
+    - left: "Scope 1"
+      right: "Direct emissions from owned or controlled sources"
+    - left: "Scope 2"
+      right: "Indirect emissions from purchased electricity, heat, or steam"
+    - left: "Scope 3"
+      right: "All other indirect value chain emissions"
+  explanation: "The GHG Protocol Corporate Standard organises emissions into three scopes based on source and ownership. IFRS S2 requires disclosure of all three scopes."

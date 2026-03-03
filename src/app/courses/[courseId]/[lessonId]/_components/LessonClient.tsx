@@ -41,10 +41,41 @@ export default function LessonClient({
     }
   }, [lessonId, progress.mounted]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // Restore scroll position from previous visit (only if meaningfully scrolled)
+  useEffect(() => {
+    if (!progress.mounted) return;
+    const saved = progress.getScrollPosition(lessonId);
+    if (saved > 100) {
+      // Defer until after paint so the full lesson content is in the DOM
+      const id = requestAnimationFrame(() => {
+        window.scrollTo({ top: saved, behavior: 'instant' });
+      });
+      return () => cancelAnimationFrame(id);
+    }
+  }, [progress.mounted, lessonId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Save scroll position (throttled to once per 500 ms)
+  useEffect(() => {
+    if (!progress.mounted) return;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    function onScroll() {
+      if (timer) return;
+      timer = setTimeout(() => {
+        timer = null;
+        progress.saveScrollPosition(lessonId, window.scrollY);
+      }, 500);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      if (timer) clearTimeout(timer);
+    };
+  }, [progress.mounted, lessonId]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const isCompleted = progress.mounted ? progress.isCompleted(lessonId) : false;
   const quizState = progress.mounted
     ? progress.getQuizState(lessonId)
-    : { answers: {}, submitted: {} };
+    : { answers: {}, multiSelectAnswers: {}, matchingAnswers: {}, submitted: {} };
 
   function handleMarkComplete() {
     if (!progress.mounted) return;
@@ -114,8 +145,17 @@ export default function LessonClient({
           onSaveAnswer={(qIdx, answer) =>
             progress.mounted && progress.saveAnswer(lessonId, qIdx, answer)
           }
+          onSaveMultiSelectAnswer={(qIdx, selected) =>
+            progress.mounted && progress.saveMultiSelectAnswer(lessonId, qIdx, selected)
+          }
+          onSaveMatchingAnswer={(qIdx, mapping) =>
+            progress.mounted && progress.saveMatchingAnswer(lessonId, qIdx, mapping)
+          }
           onSubmitAnswer={qIdx =>
             progress.mounted && progress.submitAnswer(lessonId, qIdx)
+          }
+          onResetQuiz={() =>
+            progress.mounted && progress.resetQuiz(lessonId)
           }
         />
       )}

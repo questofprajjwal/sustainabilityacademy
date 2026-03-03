@@ -29,12 +29,38 @@ export interface LessonMeta {
   vmRef?: string;
 }
 
-export interface QuizQuestion {
+interface BaseQuestion {
   question: string;
-  options: string[];
-  answer: number;
   explanation?: string;
 }
+
+export interface MultipleChoiceQuestion extends BaseQuestion {
+  type?: 'multiple-choice';
+  options: string[];
+  answer: number;
+}
+
+export interface TrueFalseQuestion extends BaseQuestion {
+  type: 'true-false';
+  answer: boolean;
+}
+
+export interface MultiSelectQuestion extends BaseQuestion {
+  type: 'multi-select';
+  options: string[];
+  answers: number[];
+}
+
+export interface MatchingQuestion extends BaseQuestion {
+  type: 'matching';
+  pairs: { left: string; right: string }[];
+}
+
+export type QuizQuestion =
+  | MultipleChoiceQuestion
+  | TrueFalseQuestion
+  | MultiSelectQuestion
+  | MatchingQuestion;
 
 // ─── Progress types ───────────────────────────────────────────────────────────
 
@@ -49,10 +75,13 @@ export interface CourseProgress {
   lastAccessedLesson: string | null;
   completedLessons: Record<string, number>;   // lessonId → timestamp
   quizzes: Record<string, QuizState>;          // lessonId → quiz state
+  scrollPositions?: Record<string, number>;   // lessonId → scrollY px
 }
 
 export interface QuizState {
   answers: Record<number, number>;
+  multiSelectAnswers: Record<number, number[]>;
+  matchingAnswers: Record<number, number[]>;
   submitted: Record<number, boolean>;
   score?: number;
 }

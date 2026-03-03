@@ -88,6 +88,8 @@ function migrateLegacy(): PlatformProgress {
             const quizData = JSON.parse(quizRaw) as { answers?: Record<number, number>; submitted?: Record<number, boolean> };
             quizzes[lessonId] = {
               answers: quizData.answers ?? {},
+              multiSelectAnswers: {},
+              matchingAnswers: {},
               submitted: quizData.submitted ?? {},
             };
           }
@@ -165,11 +167,16 @@ export function useProgress(courseId: string) {
       completedCount: 0,
       totalLessons: 0,
       percentComplete: 0,
-      getQuizState: () => ({ answers: {}, submitted: {} }),
+      getQuizState: () => ({ answers: {}, multiSelectAnswers: {}, matchingAnswers: {}, submitted: {} }),
       saveAnswer: () => {},
+      saveMultiSelectAnswer: () => {},
+      saveMatchingAnswer: () => {},
       submitAnswer: () => {},
       lastAccessedLesson: null,
       setLastAccessed: () => {},
+      getScrollPosition: () => 0,
+      saveScrollPosition: () => {},
+      clearScrollPosition: () => {},
       resetCourse: () => {},
       resetQuiz: () => {},
     };
@@ -201,7 +208,7 @@ export function useProgress(courseId: string) {
     percentComplete: 0, // computed by caller with totalLessons
 
     getQuizState(lessonId: string): QuizState {
-      return cp.quizzes[lessonId] ?? { answers: {}, submitted: {} };
+      return cp.quizzes[lessonId] ?? { answers: {}, multiSelectAnswers: {}, matchingAnswers: {}, submitted: {} };
     },
 
     saveAnswer(lessonId: string, qIndex: number, answer: number): void {
@@ -210,10 +217,42 @@ export function useProgress(courseId: string) {
         quizzes: {
           ...prev.quizzes,
           [lessonId]: {
-            ...(prev.quizzes[lessonId] ?? { answers: {}, submitted: {} }),
+            ...(prev.quizzes[lessonId] ?? { answers: {}, multiSelectAnswers: {}, matchingAnswers: {}, submitted: {} }),
             answers: {
               ...(prev.quizzes[lessonId]?.answers ?? {}),
               [qIndex]: answer,
+            },
+          },
+        },
+      }));
+    },
+
+    saveMultiSelectAnswer(lessonId: string, qIndex: number, selected: number[]): void {
+      updateCourse(prev => ({
+        ...prev,
+        quizzes: {
+          ...prev.quizzes,
+          [lessonId]: {
+            ...(prev.quizzes[lessonId] ?? { answers: {}, multiSelectAnswers: {}, matchingAnswers: {}, submitted: {} }),
+            multiSelectAnswers: {
+              ...(prev.quizzes[lessonId]?.multiSelectAnswers ?? {}),
+              [qIndex]: selected,
+            },
+          },
+        },
+      }));
+    },
+
+    saveMatchingAnswer(lessonId: string, qIndex: number, mapping: number[]): void {
+      updateCourse(prev => ({
+        ...prev,
+        quizzes: {
+          ...prev.quizzes,
+          [lessonId]: {
+            ...(prev.quizzes[lessonId] ?? { answers: {}, multiSelectAnswers: {}, matchingAnswers: {}, submitted: {} }),
+            matchingAnswers: {
+              ...(prev.quizzes[lessonId]?.matchingAnswers ?? {}),
+              [qIndex]: mapping,
             },
           },
         },
@@ -226,7 +265,7 @@ export function useProgress(courseId: string) {
         quizzes: {
           ...prev.quizzes,
           [lessonId]: {
-            ...(prev.quizzes[lessonId] ?? { answers: {}, submitted: {} }),
+            ...(prev.quizzes[lessonId] ?? { answers: {}, multiSelectAnswers: {}, matchingAnswers: {}, submitted: {} }),
             submitted: {
               ...(prev.quizzes[lessonId]?.submitted ?? {}),
               [qIndex]: true,
@@ -244,6 +283,28 @@ export function useProgress(courseId: string) {
         lastAccessedAt: Date.now(),
         lastAccessedLesson: lessonId,
       }));
+    },
+
+    getScrollPosition(lessonId: string): number {
+      return cp.scrollPositions?.[lessonId] ?? 0;
+    },
+
+    saveScrollPosition(lessonId: string, y: number): void {
+      updateCourse(prev => ({
+        ...prev,
+        scrollPositions: {
+          ...(prev.scrollPositions ?? {}),
+          [lessonId]: y,
+        },
+      }));
+    },
+
+    clearScrollPosition(lessonId: string): void {
+      updateCourse(prev => {
+        const positions = { ...(prev.scrollPositions ?? {}) };
+        delete positions[lessonId];
+        return { ...prev, scrollPositions: positions };
+      });
     },
 
     resetCourse(): void {

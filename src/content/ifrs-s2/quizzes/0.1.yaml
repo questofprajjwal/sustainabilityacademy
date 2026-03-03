@@ -16,14 +16,10 @@
   answer: 1
   explanation: "Before IFRS S2, climate disclosure was largely voluntary. This created three problems: inconsistency (different frameworks used), incompleteness (selective disclosure), and incomparability (different metrics and methodologies)."
 
-- question: "How many comment letters did the ISSB's March 2022 IFRS S2 Exposure Draft attract?"
-  options:
-    - "Around 100"
-    - "Around 300"
-    - "Around 690"
-    - "Around 2,000"
-  answer: 2
-  explanation: "The IFRS S2 Exposure Draft attracted 690 comment letters and survey responses — one of the most extensive consultations in accounting standard-setting history."
+- question: "IFRS S2 requires entities to reduce their greenhouse gas emissions."
+  type: true-false
+  answer: false
+  explanation: "IFRS S2 is a disclosure standard, not a conduct standard. It requires entities to disclose information about climate-related risks and opportunities — it imposes no obligation to reduce emissions."
 
 - question: "Which type of investor is most likely to need financed emissions data from IFRS S2?"
   options:

@@ -12,6 +12,8 @@ import AnalogyBox from './AnalogyBox';
 import ExampleBox from './ExampleBox';
 import FormulaBox from './FormulaBox';
 import ResponsiveTable from './ResponsiveTable';
+import CalculationExercise from './CalculationExercise';
+import DeepDive from './DeepDive';
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
@@ -21,6 +23,8 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ExampleBox,
     FormulaBox,
     ResponsiveTable,
+    CalculationExercise,
+    DeepDive,
 
     // Tables: add styles only — MDX content wraps tables in <ResponsiveTable> already
     table: (props: ComponentPropsWithoutRef<'table'>) => (
