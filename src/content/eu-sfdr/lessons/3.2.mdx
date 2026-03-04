@@ -1,6 +1,10 @@
 {/* source: RTS 2022/1288 Annex I Tables 1-2 */}
 
-The environmental PAI indicators are among the most data-intensive elements of the SFDR framework. They require financial market participants to gather, process, and aggregate emissions data, energy data, and biodiversity information at the level of individual investee companies. This lesson explains each environmental indicator in the mandatory Table 1 and covers the optional additional environmental indicators in Table 2, with a focus on calculation methodology.
+The environmental PAI indicators are among the most data-intensive elements of the SFDR framework. They require financial market participants to gather, process, and aggregate emissions data, energy data, and biodiversity information at the level of individual investee companies.
+
+In plain English: for each company in the portfolio, you need to know how much it pollutes, how much energy it uses, and whether it damages protected ecosystems, then attribute the right share of those impacts to your investment.
+
+This lesson explains each environmental indicator in the mandatory Table 1 and covers the optional additional environmental indicators in Table 2, with a focus on calculation methodology.
 
 ## Core Concepts: Enterprise Value and Portfolio Share
 
@@ -22,9 +26,13 @@ Where:
 - Result normalised per €1 million of total portfolio value
 </FormulaBox>
 
-The ESMA Q&As (Section III.1) confirm that "enterprise value" means specifically the sum of market capitalisation of ordinary shares, market capitalisation of preferred shares, book value of total debt, and non-controlling interests — at fiscal year-end, without deducting cash or cash equivalents. This precise definition is important because using net asset value or a different enterprise value definition would produce materially different results.
+The ESMA Q&As (Section III.1) confirm that "enterprise value" means specifically the sum of market capitalisation of ordinary shares, market capitalisation of preferred shares, book value of total debt, and non-controlling interests, at fiscal year-end, without deducting cash or cash equivalents. This precise definition is important because using net asset value or a different enterprise value definition would produce materially different results.
 
-## Indicator 1 — GHG Emissions
+<AnalogyBox>
+The formula allocates the investee's pollution to the portfolio based on the portfolio's ownership share. If you own 2% of a company's enterprise value, you "own" 2% of its emissions for PAI purposes. Think of it like shareholding in a polluting factory, you don't breathe the smoke yourself, but you bear a proportionate share of the environmental cost as an investor.
+</AnalogyBox>
+
+## Indicator 1, GHG Emissions
 
 **What it measures**: The total greenhouse gas (GHG) emissions associated with the portfolio's investments in investee companies.
 
@@ -40,9 +48,9 @@ Unit: tonnes CO₂ equivalent (tCO₂eq) per €1 million invested
 
 **Practical challenge**: Scope 3 data is often unavailable or unreliable, particularly for smaller companies. The RTS permits use of estimated Scope 3 where reported data is not available, but FMPs must disclose the proportion of estimated data used. For this reason, many PAI statements report Scope 1+2 and Scope 3 separately, with different data quality indicators.
 
-## Indicator 2 — Carbon Footprint
+## Indicator 2, Carbon Footprint
 
-**What it measures**: The absolute carbon footprint of the portfolio, normalised by portfolio market value. Like Indicator 1, it covers total GHG emissions (Scope 1 + 2 + 3), but the formula structure differs — it expresses the result per €1 million of portfolio value, providing a single normalised figure.
+**What it measures**: The absolute carbon footprint of the portfolio, normalised by portfolio market value. Like Indicator 1, it covers total GHG emissions (Scope 1 + 2 + 3), but the formula structure differs, it expresses the result per €1 million of portfolio value, providing a single normalised figure.
 
 <FormulaBox>
 **Carbon Footprint:**
@@ -55,9 +63,9 @@ Unit: tCO₂eq per €1 million invested
 
 The distinction between Indicators 1 and 2 is primarily structural: Indicator 1 reports Scope 1, 2, and 3 emissions as separate line items plus a total, while Indicator 2 aggregates them into a single normalised carbon footprint figure per million EUR invested.
 
-## Indicator 3 — GHG Intensity of Investee Companies
+## Indicator 3, GHG Intensity of Investee Companies
 
-**What it measures**: The emissions efficiency of investee companies — how many tonnes of CO₂eq are emitted per unit of revenue. This is a revenue-normalised metric that enables comparison across companies of different sizes.
+**What it measures**: The emissions efficiency of investee companies, how many tonnes of CO₂eq are emitted per unit of revenue. This is a revenue-normalised metric that enables comparison across companies of different sizes.
 
 <FormulaBox>
 **GHG Intensity:**
@@ -69,7 +77,7 @@ Unit: tCO₂eq per million EUR revenue
 
 Note that the denominator here is company revenue, not enterprise value. This makes Indicator 3 a measure of operational efficiency, whereas Indicators 1 and 2 measure financial exposure to emissions.
 
-## Indicator 4 — Fossil Fuel Sector Exposure
+## Indicator 4, Fossil Fuel Sector Exposure
 
 **What it measures**: The percentage of the portfolio invested in companies that derive any revenue from fossil fuel exploration, mining, extraction, production, processing, storage, refining, distribution, trading, or combustion (including coal, oil, and natural gas), as well as activities that produce fossil-fuel-related products or materials.
 
@@ -79,9 +87,17 @@ Note that the denominator here is company revenue, not enterprise value. This ma
 Fossil Fuel PAI = (Market Value of investments in fossil fuel companies / Total Portfolio Market Value) × 100%
 </FormulaBox>
 
-**Definition note**: The definition of "fossil fuel sector" in the RTS is broad — it includes not only energy producers but also companies that manufacture equipment primarily used in fossil fuel extraction or processing, and companies that transport fossil fuels. Determining which companies fall within scope requires careful analysis of revenue streams.
+**Definition note**: The definition of "fossil fuel sector" in the RTS is broad, it includes not only energy producers but also companies that manufacture equipment primarily used in fossil fuel extraction or processing, and companies that transport fossil fuels. Determining which companies fall within scope requires careful analysis of revenue streams.
 
-## Indicator 5 — Non-Renewable Energy Consumption and Production
+<ExampleBox>
+**Why indicator 4 matters in practice:**
+
+A fund that tracks a standard equity index like the MSCI World will typically show 4-8% fossil fuel exposure through Indicator 4, simply because oil companies, gas pipeline operators, and coal mining companies are part of major indices. A fund applying a fossil fuel exclusion policy would show 0%. This indicator makes that difference visible and comparable across fund disclosures.
+
+Many institutional investors, including large pension funds such as **APG** (Netherlands) and **PGGM**, use Indicator 4 trends in their fund manager assessment: they want to see fossil fuel exposure declining over time, not just stated as a commitment.
+</ExampleBox>
+
+## Indicator 5, Non-Renewable Energy Consumption and Production
 
 **What it measures**: The share of energy consumed or produced by investee companies that comes from non-renewable sources (fossil fuels, nuclear).
 
@@ -94,7 +110,7 @@ Unit: percentage (%)
 Where non-renewable energy includes all energy from fossil fuel sources and, depending on national methodology, nuclear energy.
 </FormulaBox>
 
-## Indicator 6 — Energy Consumption Intensity Per High Climate Impact Sector
+## Indicator 6, Energy Consumption Intensity Per High Climate Impact Sector
 
 **What it measures**: Energy consumption intensity (energy per unit of revenue) specifically for investments in **high climate impact sectors**. These sectors are identified in the RTS by NACE code and include: agriculture, forestry, fishing, energy, utilities, transport, manufacturing, construction, and mining.
 
@@ -106,9 +122,9 @@ Energy Intensity PAI = Σ [ (Investment in high-impact company i / Total Portfol
 Unit: GWh per million EUR revenue (for high climate impact sector companies only)
 </FormulaBox>
 
-The restriction to high-climate-impact sectors means that if the portfolio has no investments in those sectors, this indicator is zero or not applicable — which must be disclosed.
+The restriction to high-climate-impact sectors means that if the portfolio has no investments in those sectors, this indicator is zero or not applicable, which must be disclosed.
 
-## Indicator 7 — Biodiversity-Sensitive Areas
+## Indicator 7, Biodiversity-Sensitive Areas
 
 **What it measures**: The share of investments in companies operating in or near environmentally protected areas (biodiversity-sensitive areas) and engaging in activities that negatively affect those areas.
 
@@ -127,7 +143,7 @@ Biodiversity PAI = (Market Value of investments in companies with negative biodi
 
 **Data challenge**: This indicator is among the most difficult to measure in practice. Very few companies publicly disclose their impact on specific biodiversity sites. FMPs typically rely on specialist biodiversity data providers or make conservative assumptions that require disclosure in the PAI statement.
 
-## Optional Environmental Indicators — Table 2
+## Optional Environmental Indicators, Table 2
 
 Annex I Table 2 provides additional voluntary environmental indicators that FMPs can choose to report. These include:
 
