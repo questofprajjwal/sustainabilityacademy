@@ -32,14 +32,16 @@ export default function PlatformNav({ lastLessonHref }: Props) {
         Skip to content
       </a>
 
-      <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
+      <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-200/60">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
           {/* Logo */}
           <Link
             href="/"
-            className="font-semibold text-gray-900 hover:text-gray-600 transition-colors"
+            className="flex items-center gap-2.5 font-semibold text-gray-900 hover:text-gray-600 transition-colors"
           >
-            Sustainability Academy
+            <span className="w-6 h-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-md shadow-sm" aria-hidden />
+            <span className="hidden sm:inline">Sustainability Academy</span>
+            <span className="sm:hidden">SA</span>
           </Link>
 
           {/* Actions */}
@@ -47,37 +49,50 @@ export default function PlatformNav({ lastLessonHref }: Props) {
             {lastLessonHref && (
               <Link
                 href={lastLessonHref}
-                className="hidden sm:inline text-sm text-green-700 hover:text-green-800 font-medium transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 text-sm bg-green-600 text-white px-3.5 py-1.5 rounded-lg hover:bg-green-700 font-medium transition-colors shadow-sm"
               >
-                Continue learning
+                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 3l14 9-14 9V3z" />
+                </svg>
+                Continue
               </Link>
             )}
 
             {/* Progress export/import dropdown */}
             <div className="relative group">
               <button
-                className="px-2 py-1 text-sm text-gray-400 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300 rounded"
+                className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-300"
                 aria-label="Progress settings"
                 aria-haspopup="true"
               >
-                &middot;&middot;&middot;
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <circle cx="12" cy="5" r="1" fill="currentColor" />
+                  <circle cx="12" cy="12" r="1" fill="currentColor" />
+                  <circle cx="12" cy="19" r="1" fill="currentColor" />
+                </svg>
               </button>
               <div
-                className="absolute right-0 top-full mt-1 w-44 bg-white border border-gray-200 rounded-lg shadow-sm hidden group-focus-within:block group-hover:block z-10"
+                className="absolute right-0 top-full mt-1.5 w-48 bg-white border border-gray-200 rounded-xl shadow-lg hidden group-focus-within:block group-hover:block z-10 overflow-hidden"
                 role="menu"
               >
                 <button
                   onClick={exportProgress}
-                  className="w-full text-left px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors rounded-t-lg"
+                  className="w-full text-left px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors flex items-center gap-2"
                   role="menuitem"
                 >
+                  <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                  </svg>
                   Export progress
                 </button>
                 <button
                   onClick={() => fileRef.current?.click()}
-                  className="w-full text-left px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors rounded-b-lg"
+                  className="w-full text-left px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors flex items-center gap-2"
                   role="menuitem"
                 >
+                  <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                  </svg>
                   Import progress
                 </button>
                 <input

@@ -30,9 +30,9 @@ export default function CourseCard({ course, completedLessons = 0, totalLessons,
 
   const statusBadge =
     course.status === 'coming-soon' ? (
-      <span className="text-xs text-gray-400">Coming Soon</span>
+      <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">Coming Soon</span>
     ) : course.status === 'draft' ? (
-      <span className="text-xs text-yellow-600">Draft</span>
+      <span className="text-xs text-yellow-700 bg-yellow-50 px-2 py-0.5 rounded-full">Draft</span>
     ) : null;
 
   const categoryLabel = CATEGORY_LABELS[course.category] ?? course.category;
@@ -41,16 +41,19 @@ export default function CourseCard({ course, completedLessons = 0, totalLessons,
 
   return (
     <article
-      className={`bg-white border border-gray-200 rounded-lg overflow-hidden transition-colors ${
-        isDisabled ? 'opacity-60' : 'hover:bg-gray-50'
+      className={`group bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm transition-all duration-200 ${
+        isDisabled ? 'opacity-60' : 'hover:shadow-lg hover:-translate-y-1 hover:border-gray-300'
       }`}
     >
+      {/* Colored top bar */}
+      <div className={`h-1.5 ${colors.bg}`} />
+
       <div className="p-5">
         {/* Category + status */}
         <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-2">
-            <span className={`inline-block w-2 h-2 rounded-full ${colors.bg}`} aria-hidden />
-            <span className="text-xs text-gray-400 uppercase tracking-wide">
+          <div className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full ${colors.light}`}>
+            <span className={`inline-block w-1.5 h-1.5 rounded-full ${colors.bg}`} aria-hidden />
+            <span className={`text-xs font-medium ${colors.text}`}>
               {categoryLabel}
             </span>
           </div>
@@ -58,20 +61,30 @@ export default function CourseCard({ course, completedLessons = 0, totalLessons,
         </div>
 
         {/* Title & subtitle */}
-        <h3 className="font-semibold text-gray-900 text-base leading-snug mb-1">
+        <h3 className="font-semibold text-gray-900 text-base leading-snug mb-1.5 group-hover:text-gray-700 transition-colors">
           {course.title}
         </h3>
-        <p className="text-sm text-gray-500 mb-3 leading-relaxed">{course.subtitle}</p>
+        <p className="text-sm text-gray-500 mb-4 leading-relaxed line-clamp-2">{course.subtitle}</p>
 
         {/* Stats */}
         <div className="flex items-center gap-3 text-xs text-gray-400 mb-4">
-          <span>{total} lessons</span>
-          <span>&middot;</span>
-          <span>{course.estimatedHours}h</span>
+          <span className="flex items-center gap-1">
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+            {total} lessons
+          </span>
+          <span className="text-gray-300">|</span>
+          <span className="flex items-center gap-1">
+            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            {course.estimatedHours}h
+          </span>
           {hasProgress && (
             <>
-              <span>&middot;</span>
-              <span className="text-gray-600 font-medium">{completedLessons} done</span>
+              <span className="text-gray-300">|</span>
+              <span className={`font-medium ${colors.text}`}>{completedLessons} done</span>
             </>
           )}
         </div>
@@ -87,9 +100,12 @@ export default function CourseCard({ course, completedLessons = 0, totalLessons,
         {!isDisabled && (
           <Link
             href={resumeHref}
-            className="text-sm font-medium text-green-700 hover:text-green-800 transition-colors"
+            className={`inline-flex items-center gap-1.5 text-sm font-medium border ${colors.border} ${colors.text} px-3.5 py-1.5 rounded-lg ${colors.hoverLight} transition-all duration-200`}
           >
-            {hasProgress ? (percent >= 100 ? 'Review course' : 'Resume') : 'Start course'} &rarr;
+            {hasProgress ? (percent >= 100 ? 'Review course' : 'Resume') : 'Start course'}
+            <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </Link>
         )}
       </div>
