@@ -30,13 +30,9 @@ export default function CourseCard({ course, completedLessons = 0, totalLessons,
 
   const statusBadge =
     course.status === 'coming-soon' ? (
-      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
-        Coming Soon
-      </span>
+      <span className="text-xs text-gray-400">Coming Soon</span>
     ) : course.status === 'draft' ? (
-      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-700">
-        Draft
-      </span>
+      <span className="text-xs text-yellow-600">Draft</span>
     ) : null;
 
   const categoryLabel = CATEGORY_LABELS[course.category] ?? course.category;
@@ -45,44 +41,37 @@ export default function CourseCard({ course, completedLessons = 0, totalLessons,
 
   return (
     <article
-      className={`bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm transition-shadow ${
-        isDisabled ? 'opacity-70' : 'hover:shadow-md'
+      className={`bg-white border border-gray-200 rounded-lg overflow-hidden transition-colors ${
+        isDisabled ? 'opacity-60' : 'hover:bg-gray-50'
       }`}
     >
-      {/* Color header bar */}
-      <div className={`h-1.5 ${colors.bg}`} aria-hidden />
-
       <div className="p-5">
-        {/* Icon + status */}
-        <div className="flex items-start justify-between mb-3">
-          <span className="text-3xl" role="img" aria-label={course.title}>
-            {course.icon}
-          </span>
+        {/* Category + status */}
+        <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
-            {statusBadge}
-            <span
-              className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${colors.light} ${colors.text}`}
-            >
+            <span className={`inline-block w-2 h-2 rounded-full ${colors.bg}`} aria-hidden />
+            <span className="text-xs text-gray-400 uppercase tracking-wide">
               {categoryLabel}
             </span>
           </div>
+          {statusBadge}
         </div>
 
         {/* Title & subtitle */}
-        <h3 className="font-bold text-gray-900 text-base leading-snug mb-1">
+        <h3 className="font-semibold text-gray-900 text-base leading-snug mb-1">
           {course.title}
         </h3>
-        <p className="text-sm text-gray-500 mb-3 leading-snug">{course.subtitle}</p>
+        <p className="text-sm text-gray-500 mb-3 leading-relaxed">{course.subtitle}</p>
 
         {/* Stats */}
         <div className="flex items-center gap-3 text-xs text-gray-400 mb-4">
           <span>{total} lessons</span>
-          <span>·</span>
+          <span>&middot;</span>
           <span>{course.estimatedHours}h</span>
           {hasProgress && (
             <>
-              <span>·</span>
-              <span className="text-green-600 font-medium">{completedLessons} done</span>
+              <span>&middot;</span>
+              <span className="text-gray-600 font-medium">{completedLessons} done</span>
             </>
           )}
         </div>
@@ -98,9 +87,9 @@ export default function CourseCard({ course, completedLessons = 0, totalLessons,
         {!isDisabled && (
           <Link
             href={resumeHref}
-            className={`block w-full text-center py-2 text-sm font-medium rounded-lg transition-colors ${colors.btn}`}
+            className="text-sm font-medium text-green-700 hover:text-green-800 transition-colors"
           >
-            {hasProgress ? (percent >= 100 ? 'Review Course' : 'Resume') : 'Start Course'}
+            {hasProgress ? (percent >= 100 ? 'Review course' : 'Resume') : 'Start course'} &rarr;
           </Link>
         )}
       </div>

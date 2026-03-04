@@ -32,54 +32,53 @@ export default function PlatformNav({ lastLessonHref }: Props) {
         Skip to content
       </a>
 
-      <header className="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
+      <header className="sticky top-0 z-30 bg-white border-b border-gray-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center gap-2 font-bold text-gray-900 hover:text-green-700 transition-colors flex-shrink-0"
+            className="font-semibold text-gray-900 hover:text-gray-600 transition-colors"
           >
-            <span className="text-xl" aria-hidden>🌿</span>
-            <span className="hidden sm:inline">Sustainability Academy</span>
+            Sustainability Academy
           </Link>
 
           {/* Actions */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             {lastLessonHref && (
               <Link
                 href={lastLessonHref}
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+                className="hidden sm:inline text-sm text-green-700 hover:text-green-800 font-medium transition-colors"
               >
-                <span aria-hidden>▶</span> Continue Learning
+                Continue learning
               </Link>
             )}
 
             {/* Progress export/import dropdown */}
             <div className="relative group">
               <button
-                className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400"
+                className="px-2 py-1 text-sm text-gray-400 hover:text-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-300 rounded"
                 aria-label="Progress settings"
                 aria-haspopup="true"
               >
-                ⚙
+                &middot;&middot;&middot;
               </button>
               <div
-                className="absolute right-0 top-full mt-1 w-48 bg-white border border-gray-200 rounded-lg shadow-lg hidden group-focus-within:block group-hover:block z-10"
+                className="absolute right-0 top-full mt-1 w-44 bg-white border border-gray-200 rounded-lg shadow-sm hidden group-focus-within:block group-hover:block z-10"
                 role="menu"
               >
                 <button
                   onClick={exportProgress}
-                  className="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded-t-lg"
+                  className="w-full text-left px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors rounded-t-lg"
                   role="menuitem"
                 >
-                  ⬇ Export Progress
+                  Export progress
                 </button>
                 <button
                   onClick={() => fileRef.current?.click()}
-                  className="w-full text-left px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors rounded-b-lg"
+                  className="w-full text-left px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 transition-colors rounded-b-lg"
                   role="menuitem"
                 >
-                  ⬆ Import Progress
+                  Import progress
                 </button>
                 <input
                   ref={fileRef}
