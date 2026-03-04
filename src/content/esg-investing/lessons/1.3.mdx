@@ -61,6 +61,20 @@ For oil companies, most emissions occur when customers burn their products (Scop
 Investors should assess whether portfolio companies have: (1) a supplier code of conduct that sets clear environmental expectations for their supply chain; and (2) a mechanism to assess and improve environmental performance throughout that chain. The gap between corporate commitments and supply chain reality is often large — CDP data shows that while 71% of companies have zero deforestation targets, only 27% of their suppliers have matching policies.
 </HighlightBox>
 
+## Double Materiality: Looking in Both Directions
+
+One of the most important concepts in modern ESG analysis is **double materiality** — the idea that materiality needs to be assessed in two directions simultaneously.
+
+**Financial materiality** (sometimes called "single" or "outside-in" materiality) asks: how do environmental and social factors affect the company's financial performance? This is the traditional investor lens. Does water scarcity threaten operations? Does carbon pricing increase costs? These are questions about how the world affects the company.
+
+**Impact materiality** (or "inside-out" materiality) asks the opposite: how do the company's activities affect the environment and society? What harm or benefit does the company create for ecosystems, communities, and the climate? These are questions about how the company affects the world.
+
+Why does this matter for investors? Because the EU's Corporate Sustainability Reporting Directive (CSRD) — which applies to large companies operating in Europe — requires companies to assess and report on both dimensions. This means investors analysing European companies will increasingly receive data on both the financial risks and the real-world impacts of the companies they hold.
+
+<HighlightBox>
+The EU's Sustainable Finance Disclosure Regulation (SFDR) draws on both dimensions of materiality. Financial products must disclose how sustainability risks affect returns (financial materiality) and how investments affect sustainability outcomes (impact materiality). Understanding both directions is essential for any investor working within the EU regulatory framework.
+</HighlightBox>
+
 ## Key Environmental Megatrends and Drivers
 
 Several macro-level trends are amplifying environmental pressures and reshaping the business and policy environment:
@@ -83,6 +97,21 @@ Investors who fail to assess environmental materiality face several risks:
 - Exposure to regulatory disruption (such as carbon taxes or emission standards affecting high-carbon sectors)
 - Reputational contagion from portfolio companies facing environmental scandals
 - Missing opportunities in companies that are profiting from the environmental transition
+
+### The EU Taxonomy: Defining What Counts as "Green"
+
+The **EU Taxonomy for Sustainable Activities** is a classification system that defines which economic activities can be labelled environmentally sustainable. It covers six environmental objectives:
+
+1. Climate change mitigation
+2. Climate change adaptation
+3. Sustainable use and protection of water and marine resources
+4. Transition to a circular economy
+5. Pollution prevention and control
+6. Protection and restoration of biodiversity and ecosystems
+
+To qualify as "taxonomy-aligned," an activity must make a substantial contribution to at least one objective while doing no significant harm to the others, and must meet minimum social safeguards.
+
+For investors, the EU Taxonomy matters because it defines the playing field for green investment products. A fund that claims to invest in "sustainable" assets must increasingly justify those claims against the taxonomy's criteria. This is making ESG language more precise and harder to abuse with vague green claims.
 
 ### SASB and Sector-Specific Materiality
 
@@ -135,23 +164,41 @@ Two standard metrics from the TCFD are particularly important:
 **Total carbon emissions** (absolute):
 
 <FormulaBox>
-Total carbon emissions = Σᵢ (current value of investmentᵢ / issuer's market capitalisationᵢ) × issuer's Scope 1 and 2 emissionsᵢ
+Total carbon emissions = Σᵢ (current value of investmentᵢ / Enterprise Value Including Cashᵢ) × issuer's Scope 1 and 2 emissionsᵢ
 </FormulaBox>
 
-**Weighted average carbon intensity** (relative):
+**Weighted average carbon intensity** (WACI — relative):
 
 <FormulaBox>
-Weighted average carbon intensity = Σᵢ (current value of investmentᵢ / current portfolio value) × (issuer's Scope 1 and 2 emissionsᵢ / issuer's US$m of revenueᵢ)
+WACI = Σᵢ (portfolio weight of investmentᵢ) × (issuer's Scope 1 and 2 emissionsᵢ / issuer's revenueᵢ in US$m)
 </FormulaBox>
 
-Carbon footprinting has important limitations. It typically captures only Scope 1 and 2 emissions, missing the often larger Scope 3 footprint. It can suffer from double-counting across portfolios. And it is a backward-looking metric — it tells you what a company emitted last year, not what its trajectory looks like.
+Note: For financed emissions, the modern standard per the Partnership for Carbon Accounting Financials (PCAF) uses **Enterprise Value Including Cash (EVIC)** — not market capitalisation — as the denominator when calculating an investor's ownership share of emissions. EVIC captures both equity and debt, giving a more complete picture of how emissions are distributed across a company's capital structure.
+
+**Example: WACI calculation for a two-asset portfolio**
+
+Suppose you hold a portfolio with two stocks:
+
+- Company A: 60% portfolio weight, Scope 1+2 emissions of 500 tCO₂e, revenue of US$100m → carbon intensity = 5 tCO₂e / US$m
+- Company B: 40% portfolio weight, Scope 1+2 emissions of 2,000 tCO₂e, revenue of US$200m → carbon intensity = 10 tCO₂e / US$m
+
+WACI = (0.60 × 5) + (0.40 × 10) = 3.0 + 4.0 = **7.0 tCO₂e per US$m of revenue**
+
+This single figure lets you compare the portfolio's carbon intensity against a benchmark, track it over time, and identify that Company B — despite being the smaller position — contributes disproportionately to the portfolio's carbon footprint.
+
+Carbon footprinting has important limitations:
+
+- It typically captures only Scope 1 and 2 emissions, missing the often larger Scope 3 footprint
+- It can suffer from double-counting across portfolios
+- It is backward-looking — it tells you what a company emitted last year, not what its trajectory looks like
 
 More forward-looking approaches include:
 
 - **Science-based targets (SBTs)**: Emission reduction targets certified by the Science Based Targets initiative (SBTi) as consistent with the 1.5°C pathway.
-- **Temperature alignment**: Tools that assess whether a company or portfolio's emission trajectory is consistent with specific warming outcomes — a coal power plant and a renewable energy company with similar current emissions have very different implied warming trajectories.
+- **Temperature alignment**: Tools that assess whether a company or portfolio's emission trajectory is consistent with specific warming outcomes. A coal power plant and a renewable energy company with similar current emissions have very different implied warming trajectories.
+- **PACTA (Paris Agreement Capital Transition Assessment)**: A free, open-source tool that assesses whether the production plans of companies in a portfolio are aligned with different climate scenarios. It is particularly useful for equity and corporate bond portfolios with exposure to energy, automotive, and industrial sectors.
 - **Emissions trajectories**: Comparing a company's decarbonisation pathway against the reductions required to reach stated goals.
-- **Green capex and revenue analysis**: Assessing what share of a company's capital expenditure and revenue comes from climate-aligned or 'green' activities.
+- **Green capex and revenue analysis**: Assessing what share of a company's capital expenditure and revenue comes from climate-aligned or "green" activities.
 
 ### B. The Natural Capital Approach
 
@@ -208,7 +255,7 @@ At a sector level, adjustments are made to reflect the environmental risk premiu
 <DeepDive title="Levels of environmental risk analysis">
 Environmental risk is assessed at four interconnected levels:
 
-**Company level**: Assessing how well a specific company manages its environmental exposures — its energy efficiency, water use, waste management, and carbon trajectory — relative to peers. Analysts use internal scoring systems combining third-party ESG data with proprietary research. Adjustments are made to price-to-earnings ratios, cost assumptions, and capital expenditure forecasts.
+**Company level**: Assessing how well a specific company manages its environmental exposures — its energy efficiency, water use, waste management, and carbon trajectory — relative to peers. Analysts use internal scoring systems combining third-party ESG data with proprietary research. Adjustments flow into price-to-earnings ratios, cost assumptions, and capital expenditure forecasts.
 
 **Sector level**: Some sectors — chemicals, energy, steel, extractives, food and beverages, transport — carry systematically higher environmental risk premiums than others due to their inherent carbon intensity or asset location. Sector-level analysis adjusts for these structural factors before overlaying company-specific assessment.
 

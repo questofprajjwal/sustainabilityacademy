@@ -8,6 +8,10 @@ This lesson examines why SAA is such a natural home for ESG thinking, what the p
 
 Most ESG work to date has been done at the **security level** — analysing individual companies, their carbon emissions, board structures, or supply chain risks. This is valuable. But it misses the bigger picture.
 
+<AnalogyBox>
+Security selection is like picking the fastest car. Strategic asset allocation is recognising that the entire road is about to flood. No matter how well-tuned your car, you need to be on high ground. ESG risks — particularly climate change — are systemic. They affect entire asset classes simultaneously. No amount of careful stock-picking eliminates a risk that is embedded in the terrain itself.
+</AnalogyBox>
+
 Think of it this way: a portfolio manager might carefully select only low-carbon companies within the energy sector, yet still face enormous climate-related losses if a carbon pricing shock ripples through the entire economy. The risk that matters at the portfolio level is systemic — it affects multiple asset classes simultaneously and cannot be diversified away by picking the "right" individual stocks.
 
 <HighlightBox>
@@ -81,10 +85,12 @@ The challenge: MVO is notoriously sensitive to its inputs. Small changes in expe
 
 ### Black-Litterman Model
 
-The **Black-Litterman (BLM)** model offers a more robust alternative. Rather than requiring explicit return estimates for each asset class, BLM starts from global market equilibrium weights and allows the analyst to overlay specific "views." This makes it more naturally suited to incorporating ESG insights — for example, a view that carbon-intensive assets will underperform over the next decade — without requiring a precise quantitative estimate for each asset class return.
+The **Black-Litterman (BLM)** model is best understood as a refinement of MVO — not a separate alternative to it. It solves the classical sensitivity problem by starting from global market equilibrium weights and allowing the analyst to overlay specific "views," rather than requiring explicit return estimates for every asset class from scratch. This makes BLM more stable and more naturally suited to incorporating ESG insights.
+
+For example, an allocator can express a directional view that carbon-intensive assets will underperform over the next decade — without needing to specify the precise return differential. BLM blends that view with equilibrium assumptions, producing an allocation that reflects the ESG signal without over-fitting.
 
 <HighlightBox>
-The Black-Litterman model is considered particularly promising for ESG integration because it does not require precise return estimates for every asset class. Instead, it accepts directional views — such as "carbon-intensive assets face long-term headwinds" — and incorporates them alongside equilibrium assumptions.
+The Black-Litterman model is considered particularly promising for ESG integration because it does not require precise return estimates for every asset class. Instead, it accepts directional views — such as "carbon-intensive assets face long-term headwinds" — and incorporates them alongside equilibrium assumptions. This reduces the risk of extreme, unreliable allocations that plague classic MVO when ESG signals are imprecise.
 </HighlightBox>
 
 ### Factor Risk Allocation
@@ -96,6 +102,26 @@ The challenge here is that the macroeconomic links between ESG factors and facto
 ### Total Portfolio Analysis (TPA)
 
 TPA allocates capital based on a risk budget rather than traditional asset class "buckets." It is less constrained than MVO and allows for greater flexibility in recognising where ESG-related risks and opportunities actually sit in a portfolio — which may not map neatly onto conventional asset class labels.
+
+### Liability Driven Investment (LDI)
+
+**Liability Driven Investment** is used primarily by pension funds and insurance companies. Rather than optimising the portfolio in isolation, LDI aligns the assets to the fund's long-term liabilities — essentially treating the liability stream as the benchmark against which the portfolio is measured.
+
+For ESG integration, LDI creates a specific challenge: climate risks can affect both sides of the balance sheet simultaneously. Physical damage to infrastructure reduces asset values; demographic disruption from climate change (migration, health impacts) can alter liability profiles. A pension fund using LDI must therefore consider how climate scenarios affect both the asset side and the liability side over its multi-decade time horizon.
+
+In practice, ESG integration in an LDI context often means stress-testing the liability-matching portfolio under climate scenarios and ensuring that the portfolio's long-duration, fixed income holdings do not carry excessive transition risk exposure.
+
+### Regime Switching Models
+
+**Regime switching models** recognise that financial markets and the macroeconomy do not behave consistently over time — they cycle through distinct "regimes" with different volatility, return, and correlation characteristics. Common regimes include high-growth / low-inflation (risk-on) and recession / high-volatility (risk-off) states.
+
+Applied to ESG and climate, regime switching models allow analysts to model the portfolio's behaviour across different phases of the climate transition:
+
+- A **policy acceleration regime** (abrupt carbon pricing, rapid clean energy mandates)
+- A **smooth transition regime** (orderly Paris alignment)
+- A **climate deterioration regime** (failed transition, 3-4°C warming trajectory)
+
+Each regime carries different implications for asset class expected returns and correlations. A regime-aware SAA framework can pre-position the portfolio to be resilient across multiple possible transition pathways, rather than betting on a single scenario.
 
 ### Dynamic Asset Allocation (DAA) and the ESG Problem
 
@@ -123,7 +149,7 @@ Climate scenario tools have been developed by practitioners, notably Mercer and 
 <ExampleBox>
 **Scenario comparison for a representative pension fund portfolio:**
 
-In near-term projections (2020-2024), a Paris Disorderly Transition pathway — where climate policy arrives abruptly — represents an earnings correction shock. In longer-term projections (2025-2029), the Paris Orderly Transition portfolio converges toward the climate-uninformed baseline, while both disorderly and failed transition scenarios show deteriorating expected returns. The practical implication: delaying the ESG adjustment to SAA does not eliminate the risk — it simply defers the cost to a later period when rebalancing may be more disruptive.
+In near-term projections (2020–2024), a Paris Disorderly Transition pathway — where climate policy arrives abruptly — represents an earnings correction shock. In longer-term projections (2025–2029), the Paris Orderly Transition portfolio converges toward the climate-uninformed baseline, while both disorderly and failed transition scenarios show deteriorating expected returns. The practical implication: delaying the ESG adjustment to SAA does not eliminate the risk — it simply defers the cost to a later period when rebalancing may be more disruptive.
 </ExampleBox>
 
 ## The Net Zero Alignment Challenge
@@ -137,7 +163,35 @@ A growing number of institutional investors have made commitments to align their
 
 For SAA purposes, these commitments translate into concrete portfolio decisions: reducing exposure to high-carbon sectors, increasing allocation to climate solution sectors (renewable energy, sustainable infrastructure), and regularly reviewing alignment as decarbonisation pathways evolve.
 
-One concept increasingly discussed is the **Inevitable Policy Response (IPR)** — the idea that governments, faced with worsening climate damage, may suddenly implement aggressive climate policies in a "reflex reaction." The IPR scenario implies abrupt, disorderly transition risk. For SAA, this underscores the value of incorporating climate risk before it is forced upon the portfolio by policy shock.
+### The Inevitable Policy Response (IPR)
+
+The **Inevitable Policy Response (IPR)** is a concept developed by PRI and investment consultants that deserves particular attention in SAA frameworks. The core idea: governments have thus far responded to climate change gradually, but as physical damages accumulate and public pressure intensifies, policymakers may be forced into a sudden, aggressive "reflex reaction" — implementing sweeping climate regulations rapidly and unpredictably.
+
+For SAA, the IPR scenario implies a specific risk profile: portfolios that delay decarbonisation alignment are not avoiding risk — they are accumulating it. When policy eventually arrives with force, unprepared portfolios face disorderly repricing of carbon-intensive assets. Portfolios that align early convert the IPR from a tail risk into a manageable structural shift.
+
+<HighlightBox>
+The Inevitable Policy Response is not a prediction that climate policy will arrive on a neat schedule. It is a warning that the longer the delay, the more abrupt and disruptive the eventual response is likely to be. Early SAA adjustment is a form of insurance against that disruption.
+</HighlightBox>
+
+## Manager Selection with an ESG Lens
+
+For large institutional investors who allocate capital via external fund managers — rather than managing assets directly — the SAA framework must extend to how managers themselves are evaluated on ESG capabilities.
+
+Manager selection with an ESG lens is not simply about checking whether a manager has a published ESG policy. The key due diligence questions are:
+
+- **Is ESG embedded in team culture?** Does the investment team genuinely integrate ESG into their research process, or is it a compliance overlay handled by a separate team?
+- **Does the manager make proprietary ESG judgements?** Or do they simply use off-the-shelf ESG ratings without applying independent analysis to assess materiality?
+- **Does the manager engage and vote?** An active ownership capability — engaging with company management on ESG issues and voting proxies thoughtfully — is a meaningful signal of genuine ESG integration
+- **How is ESG performance measured and reported?** Can the manager demonstrate portfolio-level ESG metrics and explain how they have changed over time?
+- **How are ESG considerations reflected in portfolio construction?** Is there evidence that ESG views affect position sizing, sector tilts, and risk budgeting?
+
+These questions apply across asset classes. For alternative asset managers (private equity, real estate, infrastructure), due diligence should also cover how ESG is embedded in portfolio company monitoring and value creation plans.
+
+<ExampleBox>
+**Manager selection ESG due diligence in practice:**
+
+An asset owner evaluating two fixed income managers might find that Manager A has a published ESG policy and uses a third-party ESG rating overlay. Manager B has no published policy but has a proprietary ESG materiality framework built by its credit analysts, engages directly with issuers on governance and environmental practices, and can demonstrate ESG-driven changes to specific positions. Manager B likely represents more genuine ESG integration — despite scoring worse on a checklist audit. The institutional discipline here is to distinguish form from substance.
+</ExampleBox>
 
 ## Static vs. Dynamic Allocation: The ESG Trade-off
 

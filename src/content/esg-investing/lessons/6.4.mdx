@@ -1,6 +1,56 @@
 {/* source: ESG Integrated Portfolio Construction and Management, Chapter 8, Section 5 — Managing the risk and return dynamics of an ESG integrated portfolio */}
 
-The central question that any investment professional must answer when evaluating ESG integration is this: what does it actually do to the portfolio's risk and return profile? This lesson examines the frameworks for understanding that question — covering portfolio optimisation under ESG constraints, the tools for measuring ESG-related risk, the elusive search for ESG alpha, and the practical approaches to performance attribution.
+The central question that any investment professional must answer when evaluating ESG integration is this: what does it actually do to the portfolio's risk and return profile? This lesson examines the frameworks for understanding that question — covering the six core ESG strategies, portfolio optimisation under ESG constraints, the tools for measuring ESG-related risk, the elusive search for ESG alpha, and the practical approaches to performance attribution.
+
+## The Six Core ESG/SRI Strategies
+
+Before examining the risk and return implications, it is worth mapping the landscape of ESG strategies that portfolio managers can deploy. Six core approaches are recognised across the industry:
+
+<ResponsiveTable>
+<table>
+  <thead>
+    <tr>
+      <th>Strategy</th>
+      <th>Core Mechanism</th>
+      <th>Primary Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Full ESG Integration</strong></td>
+      <td>ESG factors systematically incorporated into financial analysis and portfolio construction for all holdings</td>
+      <td>Broad institutional mandates; mainstream active management</td>
+    </tr>
+    <tr>
+      <td><strong>Exclusionary Screening</strong></td>
+      <td>Remove specific companies, sectors or activities from the investable universe on ethical or risk grounds</td>
+      <td>Value-aligned investors; faith-based mandates; regulatory compliance</td>
+    </tr>
+    <tr>
+      <td><strong>Positive Alignment / Best-in-Class</strong></td>
+      <td>Select the highest ESG-rated companies within each sector; reward ESG leaders while maintaining sector diversification</td>
+      <td>ESG-tilted passive and active strategies; institutional ESG mandates</td>
+    </tr>
+    <tr>
+      <td><strong>Thematic Investing</strong></td>
+      <td>Allocate capital to specific sustainability themes (clean energy, water, circular economy, biodiversity) where revenue and business models are directly linked to the theme</td>
+      <td>Targeted sustainability objectives; satellite allocations within a broader portfolio</td>
+    </tr>
+    <tr>
+      <td><strong>Impact Investing</strong></td>
+      <td>Invest with the intention of generating measurable, positive social or environmental outcomes alongside financial returns; capital must demonstrably cause the outcome</td>
+      <td>Development finance; private markets; mission-aligned foundations and endowments</td>
+    </tr>
+    <tr>
+      <td><strong>Active Ownership</strong></td>
+      <td>Use shareholder rights (proxy voting, direct engagement with management) to drive ESG improvements in portfolio companies</td>
+      <td>Large institutional holders; universal owners; long-term investors with governance focus</td>
+    </tr>
+  </tbody>
+</table>
+</ResponsiveTable>
+
+These six strategies are not mutually exclusive. A large pension fund might apply full ESG integration across its entire portfolio, apply exclusionary screening for a subset of its equity holdings, allocate a portion thematically to climate solutions, and exercise active ownership rights across all its listed equity positions simultaneously.
 
 ## ESG and the Efficient Frontier
 
@@ -30,7 +80,7 @@ Carbon data is particularly well-suited to portfolio optimisation because:
 - Carbon metrics translate directly into linear constraints in an optimisation problem
 - Investors can specify a precise carbon reduction target (e.g., "achieve 50% lower weighted average carbon intensity than the benchmark") and solve for the portfolio that achieves this at minimum tracking error
 
-The relationship between carbon reduction depth and tracking error is well-documented. A portfolio targeting modest carbon reduction (say, 20-30% below benchmark intensity) can achieve this with very low tracking error — the overlap with the benchmark remains high. As the carbon constraint tightens, the portfolio increasingly deviates from the benchmark, reducing overlap and increasing tracking error.
+The relationship between carbon reduction depth and tracking error is well-documented. A portfolio targeting modest carbon reduction (say, 20–30% below benchmark intensity) can achieve this with very low tracking error — the overlap with the benchmark remains high. As the carbon constraint tightens, the portfolio increasingly deviates from the benchmark, reducing overlap and increasing tracking error.
 
 <FormulaBox>
 Weighted-Average Carbon Intensity (WACI) at the Portfolio Level:
@@ -51,7 +101,7 @@ Optimising for broader ESG scores (rather than just carbon) is more complex beca
 - Combining absolute metrics (like carbon tonnes) with relative metrics (like ESG scores) in the same optimisation can produce counterintuitive results
 - Multiple objectives (improve ESG score AND reduce carbon) typically require accepting higher tracking error than single-objective optimisation
 
-A practical example: to simultaneously achieve top-quartile MSCI ESG ratings and a 30-40% reduction in carbon emissions, a portfolio may need to accept tracking error in the range of 220-300 basis points. A more conservative approach targeting only ESG score improvement might manage at 150-200 basis points.
+A practical example: to simultaneously achieve top-quartile MSCI ESG ratings and a 30–40% reduction in carbon emissions, a portfolio may need to accept tracking error in the range of 220–300 basis points. A more conservative approach targeting only ESG score improvement might manage at 150–200 basis points.
 
 <ExampleBox>
 **Optimisation trade-off in practice:**
@@ -91,15 +141,44 @@ Studies suggest that around 80% of portfolio alpha (returns in excess of market 
 
 **Tracking error** — the standard deviation of the difference between a portfolio's return and its benchmark's return — is the central metric for understanding how much risk an ESG-constrained portfolio takes relative to its benchmark.
 
+<AnalogyBox>
+The portfolio is the dog; the benchmark is the walker. An ESG screen means the dog is not allowed to chase certain balls — low-ESG stocks that are thrown across the path. The more balls are thrown (the more excluded stocks the benchmark owns), the further the dog wanders from the walker's path. That distance is tracking error. A narrow exclusion list means the dog stays close; a broad exclusion list means the dog is constantly pulling in a different direction.
+</AnalogyBox>
+
 Key drivers of tracking error in ESG portfolios include:
 
-| ESG Constraint | Typical Tracking Error Impact |
-|----------------|------------------------------|
-| Narrow exclusion list (e.g., controversial weapons only) | Very low (0-30 bps) |
-| Broad exclusion list (fossil fuels, weapons, tobacco) | Moderate to high (60-120 bps) |
-| Best-in-class ESG tilt | Low to moderate (40-80 bps) |
-| Carbon optimised (modest reduction target) | Low (30-80 bps) |
-| Full ESG optimisation (high scores + low carbon) | Moderate to high (150-300 bps) |
+<ResponsiveTable>
+<table>
+  <thead>
+    <tr>
+      <th>ESG Constraint</th>
+      <th>Typical Tracking Error Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Narrow exclusion list (e.g., controversial weapons only)</td>
+      <td>Very low (0–30 bps)</td>
+    </tr>
+    <tr>
+      <td>Broad exclusion list (fossil fuels, weapons, tobacco)</td>
+      <td>Moderate to high (60–120 bps)</td>
+    </tr>
+    <tr>
+      <td>Best-in-class ESG tilt</td>
+      <td>Low to moderate (40–80 bps)</td>
+    </tr>
+    <tr>
+      <td>Carbon optimised (modest reduction target)</td>
+      <td>Low (30–80 bps)</td>
+    </tr>
+    <tr>
+      <td>Full ESG optimisation (high scores + low carbon)</td>
+      <td>Moderate to high (150–300 bps)</td>
+    </tr>
+  </tbody>
+</table>
+</ResponsiveTable>
 
 The management of tracking error is not just about keeping it low — it is about understanding what drives it. ESG-related tracking error often comes from:
 
@@ -186,6 +265,63 @@ The **SASB Materiality Map** provides an issue-by-issue assessment of which ESG 
 
 In asset classes with incomplete ESG data coverage (such as high yield credit or emerging markets debt), the **coverage ratio** — the percentage of portfolio value covered by ESG ratings data — is itself an important risk metric. A coverage ratio below 75% means that a significant portion of the portfolio's ESG risk exposure is not being measured or managed. Investors should monitor and disclose coverage gaps.
 
+## UN SDG Frameworks in Portfolio Reporting
+
+A growing number of institutional investors map their portfolio holdings to the **United Nations Sustainable Development Goals (SDGs)** — the 17 global goals covering poverty, climate action, health, clean energy, responsible consumption, and more.
+
+At the portfolio level, SDG mapping involves:
+
+- **Positive alignment**: Identifying holdings whose revenues, products or services contribute to achieving specific SDGs (e.g., a renewable energy company contributing to SDG 7 — Affordable and Clean Energy)
+- **Negative alignment**: Identifying holdings that may actively undermine SDG achievement (e.g., a company with high deforestation risk contradicting SDG 15 — Life on Land)
+- **Portfolio-level SDG exposure**: Aggregating positive and negative alignments to produce a portfolio-level view of net SDG contribution
+
+SDG mapping is not standardised — different data providers and managers use different methodologies to assess company-level SDG contributions. This creates comparability challenges. However, the SDG framework provides a common language for communicating sustainability objectives to beneficiaries, regulators and the public, which explains its widespread adoption in reporting.
+
+<ExampleBox>
+**SDG mapping in institutional reporting:**
+
+A large Nordic pension fund maps its entire listed equity portfolio to the 17 SDGs using a third-party data provider. It finds that 34% of portfolio market value is positively aligned with at least one SDG (primarily SDG 7, SDG 9, and SDG 13), while 8% is negatively aligned with SDGs related to climate action and responsible consumption. The fund sets a target to increase positive SDG alignment to 45% and eliminate the highest-severity negative alignments within five years, reporting progress annually.
+</ExampleBox>
+
+## The DNSH Principle: Do No Significant Harm
+
+The EU Taxonomy for Sustainable Finance introduces a critical negative screening criterion known as **Do No Significant Harm (DNSH)**. This principle applies to any investment that is being classified as "sustainable" under the EU framework.
+
+The EU Taxonomy identifies six environmental objectives:
+
+1. Climate change mitigation
+2. Climate change adaptation
+3. Sustainable use and protection of water and marine resources
+4. Transition to a circular economy
+5. Pollution prevention and control
+6. Protection and restoration of biodiversity and ecosystems
+
+Under the DNSH principle, an economic activity can only be classified as sustainable if it does not cause significant harm to any of these six objectives — even if it makes a positive contribution to one of them. An investment that helps with climate mitigation but causes severe water pollution, for example, fails the DNSH test and cannot be labelled as sustainable under EU rules.
+
+<HighlightBox>
+DNSH is a veto criterion, not a balancing test. An activity cannot be sustainable under the EU Taxonomy if it causes significant harm to any of the six environmental objectives — even if its contribution to one objective is large. This prevents "greenwashing by aggregation," where strong performance on one ESG dimension is used to mask harm on another.
+</HighlightBox>
+
+For portfolio managers, DNSH creates a practical due diligence requirement: for each investment they classify as sustainable, they must demonstrate not just what positive sustainability contribution it makes, but also that it does not violate any of the six environmental objectives. This requires more granular, multi-dimensional ESG data than a simple composite score provides.
+
+## EU Regulatory Context: SFDR, Article 9 Downgrades, and Greenwashing Risk
+
+The EU's **Sustainable Finance Disclosure Regulation (SFDR)** has introduced a mandatory classification system for investment products:
+
+- **Article 9 ("dark green") funds**: Have sustainable investment as their primary objective and must meet strict DNSH criteria across all environmental objectives
+- **Article 8 ("light green") funds**: Promote ESG characteristics as one factor among many; expected to cover the majority of ESG-labelled investment products in Europe
+- **Article 6 funds**: Do not actively promote sustainability but must explain how they consider sustainability risks
+
+**The Article 9 downgrade wave** illustrates the tension between regulatory ambition and market reality. When SFDR Level 2 requirements came into force in 2023 with more precise definitions and reporting requirements for Article 9 funds, many fund managers downgraded their Article 9 products to Article 8 — because the stricter data requirements and DNSH documentation were difficult to satisfy with existing portfolio holdings. Hundreds of billions of euros in AUM shifted classification.
+
+<ExampleBox>
+**Greenwashing and the SFDR downgrade wave:**
+
+Several large European asset managers reclassified their flagship "dark green" Article 9 funds to "light green" Article 8 status in late 2022 and early 2023. The reason: SFDR Level 2 required Article 9 funds to demonstrate that all investments met sustainable investment criteria — including DNSH documentation. Holdings in sectors like government bonds, listed derivatives, and certain infrastructure assets could not be clearly certified as meeting all sustainable investment requirements. The downgrades were not driven by the funds becoming less sustainable in practice, but by the regulatory framework raising the documentation bar. The episode illustrates how regulatory precision can expose gaps between marketing claims and verifiable ESG substance.
+</ExampleBox>
+
+**Greenwashing** — the practice of overstating or misrepresenting a fund's sustainability characteristics — remains a significant risk for institutional investors. Greenwashing can occur at multiple levels: in product labelling (claiming Article 9 status without meeting the criteria), in index methodology (using ESG labels on indices with minimal ESG improvement), and in marketing materials (highlighting ESG credentials that are peripheral to the actual investment process). Regulators in Europe, the UK and the US have all signalled increasing enforcement activity in this area.
+
 ## Managing ESG Risk in Practice: Quantitative Integration
 
 Quantitative approaches to ESG integration provide a more systematic and rigorous framework than purely qualitative assessments. Several practical tools have emerged:
@@ -194,25 +330,11 @@ Quantitative approaches to ESG integration provide a more systematic and rigorou
 
 **Stress testing against ESG shocks**: Portfolio analytics platforms allow managers to simulate hypothetical shocks — such as a sudden increase in carbon pricing, an abrupt regulatory change on water use, or a widespread governance controversy — to test how the portfolio would respond. This is analogous to interest rate or credit spread stress testing, but applied to ESG risk factors.
 
-**Portfolio-level ESG analytics dashboards**: Many managers now upload their portfolios to third-party ESG analytics platforms that provide a composite view of ESG exposure, controversy risk, carbon intensity and sector-level ESG comparisons. These platforms vary in sophistication: the more advanced ones combine multiple third-party data sources with proprietary ratings to reduce overreliance on any single provider.
+**Portfolio-level ESG analytics dashboards**: Many managers now upload their portfolios to third-party ESG analytics platforms that provide a composite view of ESG exposure, controversy risk, carbon intensity and sector-level ESG comparisons. The more advanced platforms combine multiple third-party data sources with proprietary ratings to reduce overreliance on any single provider.
 
 <HighlightBox>
 The most robust approach to ESG risk management combines quantitative tools (carbon intensity, climate VaR, factor attribution) with qualitative processes (active engagement, controversy monitoring, due diligence). Neither alone is sufficient — quantitative measures without qualitative context can miss emerging risks, while qualitative processes without quantitative anchors are difficult to aggregate, compare and communicate at the portfolio level.
 </HighlightBox>
-
-## EU Regulatory Context: SFDR and Its Implications
-
-The EU's **Sustainable Finance Disclosure Regulation (SFDR)** has introduced a mandatory classification system for investment products that has direct implications for how ESG portfolios are constructed and described:
-
-- **Article 9 ("dark green") funds**: Have sustainable investment as their primary objective and must meet strict "Do No Significant Harm" (DNSH) criteria across all environmental objectives
-- **Article 8 ("light green") funds**: Promote ESG characteristics as one factor among many, without sustainable investment being the defining objective; expected to cover the majority of ESG-labelled investment products in Europe
-- **Article 6 funds**: Do not actively promote sustainability but must explain how they consider sustainability risks in their investment process
-
-For portfolio managers, SFDR creates a direct link between investment strategy and mandatory disclosure obligations. A fund classified as Article 9 must demonstrate that its holdings genuinely advance sustainable objectives without causing significant harm to other sustainability goals. This requires more granular portfolio-level ESG data and more robust methodology than simply applying an ESG screen.
-
-**Principal Adverse Impact (PAI) indicators** — a set of standardised environmental and social metrics that must be reported at the portfolio level under SFDR — are pushing managers toward more systematic ESG data collection. Key indicators include weighted average carbon intensity, exposure to companies in fossil fuel activities, and gender pay gap metrics across holdings.
-
-The EU SFDR represents the most significant regulatory development in ESG portfolio management in recent years. While it primarily applies to European-domiciled funds and managers, its influence is spreading globally as international investors and fund selectors increasingly reference SFDR classification in their due diligence.
 
 ## Putting It Together: The ESG Portfolio Risk Framework
 
@@ -223,7 +345,8 @@ A comprehensive ESG portfolio risk framework for a sophisticated investor would 
 3. **Factor attribution**: Understand how ESG constraints affect factor exposure — avoid unintended concentrations in quality/growth vs. value/income
 4. **Tracking error management**: Explicitly budget ESG-related tracking error and monitor whether it remains within mandate parameters
 5. **Controversy monitoring**: Flag emerging ESG controversy events among holdings before they escalate into material risk events
-6. **Regulatory compliance**: Align reporting with SFDR, TCFD and other applicable frameworks
+6. **Regulatory compliance**: Align reporting with SFDR, TCFD and other applicable frameworks — including DNSH documentation for Article 9 funds
 7. **Stewardship integration**: Connect portfolio risk monitoring with active engagement priorities — focus engagement resources on holdings where ESG risk is highest and where engagement can plausibly drive improvement
+8. **SDG mapping**: Report portfolio-level alignment with the UN SDGs as a communication tool for beneficiaries and stakeholders
 
 The field is still evolving rapidly. ESG data quality, methodology convergence, and the statistical validation of ESG as an independent risk factor all remain works in progress. But the trajectory is clear: ESG risk management is moving from a qualitative, process-oriented exercise to an increasingly quantitative, measurable and attributable discipline — one that will eventually sit alongside interest rate risk, credit risk and liquidity risk as a standard component of institutional portfolio management.
