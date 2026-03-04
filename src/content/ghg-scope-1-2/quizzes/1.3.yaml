@@ -1,0 +1,44 @@
+- question: "The basic GHG emissions calculation formula is:"
+  options:
+    - "GHG Emissions = Activity Data ÷ Emission Factor"
+    - "GHG Emissions = Activity Data × Emission Factor"
+    - "GHG Emissions = Emission Factor × Global Warming Potential"
+    - "GHG Emissions = Carbon Content × Higher Heating Value"
+  answer: 1
+  explanation: "GHG Emissions = Activity Data × Emission Factor. Activity data is the quantitative measure of the activity (e.g., litres of fuel consumed, kWh purchased), and the emission factor converts it to a mass of greenhouse gas."
+
+- question: "What is the GWP100 value of methane (CH4) according to the IPCC Second Assessment Report (SAR) values used in many GHG reporting programs?"
+  options:
+    - "1 (same as CO2)"
+    - "21"
+    - "310"
+    - "23,900"
+  answer: 1
+  explanation: "The IPCC SAR (1996) GWP100 for CH4 is 21. This means 1 tonne of CH4 has the same warming effect as 21 tonnes of CO2 over 100 years. SF6 has the highest GWP of the six Kyoto gases at 23,900."
+
+- question: "A refrigeration facility leaks 0.5 tonnes of HFC-134a, which has a GWP of 1,430. What is the CO2e emission?"
+  options:
+    - "0.5 tCO2e"
+    - "71.5 tCO2e"
+    - "715 tCO2e"
+    - "1,430 tCO2e"
+  answer: 2
+  explanation: "CO2e = mass × GWP = 0.5 tonnes × 1,430 = 715 tCO2e. This illustrates why fugitive HFC emissions can be significant even from small physical quantities — a half-tonne leak is equivalent to 715 tonnes of CO2."
+
+- question: "Which of the three main calculation approaches is most commonly used by companies and requires multiplying a proxy measure of activity by a coefficient?"
+  options:
+    - "Direct measurement via continuous emissions monitoring"
+    - "Mass balance (carbon in minus carbon out)"
+    - "Emission factor approach"
+    - "Engineering estimation from equipment ratings"
+  answer: 2
+  explanation: "The emission factor approach is the most common method. It multiplies activity data (e.g., fuel quantity, kWh, distance) by an emission factor to obtain GHG emissions. Direct measurement (CEMS) and mass balance are less common due to technical demands and applicability constraints."
+
+- question: "Why might different GHG reporting programs require different GWP values for the same gas?"
+  options:
+    - "Each company is allowed to choose whichever IPCC report it prefers"
+    - "The GWP of gases changes each year as the climate warms"
+    - "Different programs reference different IPCC assessment reports (SAR, AR4, AR5) and each report updated the GWP values"
+    - "GWP values are set by national governments, not the IPCC"
+  answer: 2
+  explanation: "The IPCC has published updated GWP values in successive assessment reports: SAR (1996), AR4 (2007), AR5 (2013). Different programs specify different report vintages. For example, many Kyoto-linked programs use SAR values, while newer standards may use AR5. Always check which version a specific program requires."

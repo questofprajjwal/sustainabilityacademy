@@ -1,0 +1,143 @@
+id: ghg-scope-1-2
+title: "Scope 1 & 2 GHG Emissions"
+subtitle: "Measuring and reporting direct and energy-related greenhouse gas emissions"
+description: "A comprehensive course on Scope 1 and Scope 2 GHG accounting under the GHG Protocol Corporate Standard and Scope 2 Guidance. Covers accounting principles, organisational and operational boundaries, direct emissions from stationary combustion, mobile combustion, and fugitive sources, the location-based and market-based methods for Scope 2, emissions factors, inventory quality, reporting, verification, and target-setting."
+icon: "🏭"
+color: teal
+status: draft
+category: fundamentals
+estimatedHours: 14
+modules:
+  - id: 0
+    title: "GHG Accounting Foundations"
+    subtitle: "The GHG Protocol, principles, boundaries, and inventory design"
+    icon: "📐"
+    color: teal
+    lessons:
+      - id: "0.1"
+        title: "The GHG Protocol Corporate Standard"
+        duration: "35 min"
+        vmRef: "ghg-protocol-revised.pdf, Introduction (pp. 2-5)"
+      - id: "0.2"
+        title: "Accounting and Reporting Principles"
+        duration: "30 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 1 (pp. 6-9)"
+      - id: "0.3"
+        title: "Business Goals and Inventory Design"
+        duration: "30 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 2 (pp. 10-15)"
+      - id: "0.4"
+        title: "Setting Organisational Boundaries"
+        duration: "40 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 3 (pp. 16-23)"
+
+  - id: 1
+    title: "Operational Boundaries and the Three Scopes"
+    subtitle: "Defining direct and indirect emissions categories"
+    icon: "🔍"
+    color: blue
+    lessons:
+      - id: "1.1"
+        title: "Setting Operational Boundaries"
+        duration: "40 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 4 (pp. 24-33)"
+      - id: "1.2"
+        title: "Tracking Emissions Over Time"
+        duration: "35 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 5 (pp. 34-39)"
+      - id: "1.3"
+        title: "Identifying and Calculating GHG Emissions"
+        duration: "40 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 6 (pp. 40-47)"
+
+  - id: 2
+    title: "Scope 1: Direct Emissions"
+    subtitle: "Stationary combustion, mobile combustion, process and fugitive sources"
+    icon: "🔥"
+    color: orange
+    lessons:
+      - id: "2.1"
+        title: "Stationary Combustion Sources"
+        duration: "45 min"
+        vmRef: "stationaryemissions.pdf, Sections 1-3"
+      - id: "2.2"
+        title: "Mobile Combustion Sources"
+        duration: "40 min"
+        vmRef: "mobileemissions.pdf, Sections 1-4"
+      - id: "2.3"
+        title: "Fugitive Emissions: Refrigeration, AC, and Industrial Gases"
+        duration: "40 min"
+        vmRef: "fugitiveemissions.pdf, Sections 1-3"
+      - id: "2.4"
+        title: "Emission Factors, Data Quality, and Completeness"
+        duration: "35 min"
+        vmRef: "stationaryemissions.pdf, Sections 4-7; mobileemissions.pdf, Sections 5-8; fugitiveemissions.pdf, Sections 4-7"
+
+  - id: 3
+    title: "Scope 2: Purchased Energy"
+    subtitle: "Location-based and market-based methods, contractual instruments, and dual reporting"
+    icon: "⚡"
+    color: emerald
+    lessons:
+      - id: "3.1"
+        title: "Scope 2 Concepts and Business Goals"
+        duration: "35 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapters 1-2 (pp. 4-19)"
+      - id: "3.2"
+        title: "Scope 2 Accounting Methods: Location-Based and Market-Based"
+        duration: "45 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapter 4 (pp. 24-31)"
+      - id: "3.3"
+        title: "Identifying Scope 2 Emissions and Setting the Boundary"
+        duration: "40 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapter 5 (pp. 32-41)"
+      - id: "3.4"
+        title: "Calculating Scope 2 Emissions"
+        duration: "45 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapter 6 (pp. 42-57); electricityemissions.pdf, Sections 1-3"
+
+  - id: 4
+    title: "Scope 2: Reporting, Instruments, and Targets"
+    subtitle: "Disclosure requirements, energy attribute certificates, and reduction tracking"
+    icon: "📊"
+    color: violet
+    lessons:
+      - id: "4.1"
+        title: "Accounting and Reporting Requirements"
+        duration: "35 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapter 7 (pp. 58-65)"
+      - id: "4.2"
+        title: "Instrument Features and Policy Context"
+        duration: "40 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapter 8 (pp. 66-73)"
+      - id: "4.3"
+        title: "Energy Attribute Certificates and Claims"
+        duration: "40 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapter 10 (pp. 78-87)"
+      - id: "4.4"
+        title: "Reduction Targets and Tracking Emissions Over Time"
+        duration: "35 min"
+        vmRef: "Scope 2 Guidance.pdf, Chapter 9 (pp. 74-77); Chapter 11 (pp. 88-92)"
+
+  - id: 5
+    title: "Inventory Quality, Reporting, Verification, and Targets"
+    subtitle: "Managing inventory quality, public reporting, assurance, and GHG targets"
+    icon: "✅"
+    color: indigo
+    lessons:
+      - id: "5.1"
+        title: "Managing Inventory Quality"
+        duration: "35 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 7 (pp. 48-57)"
+      - id: "5.2"
+        title: "Reporting GHG Emissions"
+        duration: "35 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 9 (pp. 62-67)"
+      - id: "5.3"
+        title: "Verification of GHG Emissions"
+        duration: "35 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 10 (pp. 68-73)"
+      - id: "5.4"
+        title: "Setting GHG Targets"
+        duration: "35 min"
+        vmRef: "ghg-protocol-revised.pdf, Chapter 11 (pp. 74-85)"

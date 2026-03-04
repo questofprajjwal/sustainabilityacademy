@@ -1,0 +1,132 @@
+{/* source: EPA Center for Corporate Climate Leadership, Direct Emissions from Stationary Combustion Sources (December 2023), Sections 1-4 */}
+
+Stationary combustion is the single largest contributor to Scope 1 emissions for most industrial and commercial organizations. It covers any fixed piece of equipment that burns fuel on-site: boilers, furnaces, kilns, ovens, flares, thermal oxidizers, dryers, internal combustion engines used for power generation, and process heaters. If it stays in one place and burns carbon-bearing fuel or waste material, it is a stationary combustion source.
+
+## Greenhouse Gases Produced
+
+Combustion of fuels at stationary sources produces three greenhouse gases: carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). CO2 accounts for more than 99 percent of total CO2-equivalent emissions from commercial, industrial, and electricity generation combustion sources in the United States. CH4 and N2O together represent less than one percent of the total on a CO2-equivalent basis for most fuel types, though they are still required to be reported.
+
+Emissions of CH4 and N2O are more variable than CO2 because they depend not just on the fuel's carbon content but also on the type of combustion technology, the efficiency and vintage of the equipment, pollution control systems, and operational practices. The methods used to calculate CO2 can also be applied to CH4 and N2O by substituting the appropriate emission factors.
+
+<HighlightBox>
+Stationary combustion scope 1 sources produce CO2, CH4, and N2O. HFCs, PFCs, and SF6 are not products of combustion. They arise from refrigeration and industrial gas use and are accounted for separately as fugitive emissions.
+</HighlightBox>
+
+## Biomass Fuels
+
+Not all stationary combustion sources burn fossil fuels. Biomass fuels (non-fossil fuels such as agricultural waste, wood chips, or biomass-derived gases) may be combusted independently or co-fired with fossil fuels. The same calculation methods apply to determine CO2, CH4, and N2O emissions from these fuels.
+
+The GHG Protocol requires that CO2 emissions from biomass combustion be reported separately as "biomass CO2 emissions" and tracked independently from fossil CO2 emissions. Biomass CO2 is not included in an organization's total CO2-equivalent emissions inventory under current guidance. CH4 and N2O from biomass combustion, however, are included in the overall CO2-equivalent inventory.
+
+This distinction matters in practice: a facility co-firing natural gas and wood waste must calculate and report its wood-derived CO2 separately, while including all CH4 and N2O from both fuel streams in its main inventory figure.
+
+## Waste-Derived Fuels
+
+Stationary combustion sources sometimes burn waste-derived fuels: used tires, used motor oils, municipal solid waste (MSW), hazardous waste, landfill gas, and various byproduct gases. These are treated like any other fuel. Any GHG produced from combustion of a fossil-based waste product is included in the organization's inventory.
+
+For mixed waste streams such as MSW, the fossil and biomass fractions must be separated. The CO2 from combusting the fossil portion (plastics, synthetic materials) is included in the main inventory. The CO2 from combusting the biomass portion (yard waste, paper products) is reported as biomass CO2 and excluded from the CO2-equivalent total.
+
+Importantly, emissions from waste-derived fuel combustion cover only the actual combustion emissions. No "offset" credit is claimed for diverting waste from landfill, and no upstream emissions from waste collection or transport are included here.
+
+## Non-Combustion Emission Sources
+
+The combustion of fuel does not account for all GHG emissions associated with stationary combustion infrastructure. Natural gas use can result in fugitive methane emissions from leaks in gas transport lines, valves, and piping owned by the organization. Coal piles and fuel storage tanks can also be sources of fugitive methane. These non-combustion sources are typically minor compared to combustion emissions, but organizations must account for them using fugitive emissions guidance specific to their sector.
+
+<AnalogyBox>
+Think of stationary combustion like a kitchen stove: the emissions from burning the gas are the combustion emissions. But if there is a small gas leak at the fitting before the flame, that is a fugitive emission, separate from the act of cooking. Both need to be tracked, but through different methods.
+</AnalogyBox>
+
+## The Two Calculation Methods
+
+There are two main methods for estimating GHG emissions from stationary combustion sources.
+
+**Method 1: Continuous Emissions Monitoring System (CEMS)**
+
+A CEMS continuously measures pollutants in exhaust gases directly at the combustion source. Two approaches exist under 40 CFR Part 75: measuring CO2 concentration and flue gas flow rate to determine mass emissions, or using O2 concentration with theoretical CO2 production based on fuel characteristics. Annual CO2 emissions are determined by aggregating hourly readings.
+
+CEMS is required for certain large emitters under the U.S. Clean Air Act Acid Rain Program and the EPA Greenhouse Gas Reporting Program (GHGRP). If an organization has CEMS data that satisfies Title IV or GHGRP requirements, it should use those same figures in its GHG inventory. CEMS cannot calculate CH4 and N2O; the fuel analysis method must supplement it for those gases.
+
+**Method 2: Fuel Analysis Method**
+
+The fuel analysis method is a mass balance approach: determine the carbon content of the fuel and apply it to the quantity burned. It is the standard method for organizations not subject to CEMS requirements. Three equations are available, each suited to a different state of knowledge about fuel characteristics:
+
+<FormulaBox>
+**Equation 1 (least preferred):**
+Emissions = Fuel x EF₁
+Use when fuel consumption is known only in mass or volume units and heat content is unknown.
+EF₁ = emission factor per mass or volume unit.
+
+**Equation 2 (preferred when heat content is known):**
+Emissions = Fuel x HHV x EF₂
+HHV = higher heating value of the fuel (energy per mass or volume).
+EF₂ = emission factor per energy unit.
+
+**Equation 3 (most preferred for CO2 when carbon content is known):**
+Emissions = Fuel x CC x (44/12)
+CC = fuel carbon content (mass of carbon per mass or volume of fuel).
+44/12 = ratio of molecular weights of CO2 to carbon.
+</FormulaBox>
+
+Equation 3 is the most accurate for CO2 because CO2 emissions are stoichiometrically tied to the fuel's carbon content. It can only be used for CO2, so Equation 1 or 2 must be applied alongside it for CH4 and N2O.
+
+## Activity Data: Sources and Units
+
+The first input to any fuel analysis calculation is the quantity of fuel combusted. The preferred approach is direct measurement using fuel flow meters for liquids and gases, or weight-based systems such as coal feed belt scales. If direct measurement is unavailable, fuel purchase records are the next best source: monthly utility bills for natural gas, periodic invoices for fuel oil deliveries.
+
+Several factors can cause purchase data to differ from actual combustion:
+
+- Changes in on-site fuel storage inventory between the start and end of the reporting year
+- Fuel used as feedstock (where carbon is stored in a product rather than released through combustion)
+- Fugitive releases or fuel spills
+
+For inventory changes, actual fuel burned is calculated as: Fuel Burned = Fuel Purchased + (Fuel Stock at Start - Fuel Stock at End). Feedstock volumes must be subtracted from purchased quantities before calculating emissions.
+
+Activity data may be expressed in mass or volume units (kilograms, litres, cubic feet, short tons) or in energy units (MMBtu, therms). Energy units are preferred when available because they reduce uncertainty in emission factor application.
+
+## Fuel Carbon Content and Heat Content
+
+CO2 emissions are directly proportional to carbon content, which varies by fuel type and grade. Organizations should determine the actual carbon content of consumed fuels where possible, either from supplier-provided chemical analysis or from periodic fuel sampling. If carbon content is unavailable, heat content becomes the next best input for Equation 2.
+
+All EPA GHG Emission Factors Hub values are based on higher heating value (HHV). If fuel consumption data are expressed in lower heating value (LHV) units, which is common in non-U.S. reporting contexts, they must be converted before applying EPA emission factors: divide LHV energy by 0.95 for coal and petroleum products, and by 0.90 for natural gas.
+
+## Emission Factors
+
+When actual carbon content is unknown, default emission factors from the EPA GHG Emission Factors Hub provide the carbon content approximation. These factors are defined per unit of fuel mass or volume (for Equation 1) and per unit of energy content (for Equation 2). Factors per energy unit are preferred because they are less variable than per-mass or per-volume factors. For natural gas, the EPA default CO2 emission factor is 53.06 kg CO2/MMBtu.
+
+For fuels with highly variable composition such as coal or MSW, default factors carry greater uncertainty, and site-specific fuel analysis is strongly recommended.
+
+## Completeness Requirements
+
+A complete stationary combustion inventory includes all fuel-burning equipment within the organization's operational boundary. The GHG Protocol sets no minimum materiality threshold for exclusion. Every source must at minimum be assessed and estimated. Source types that must be considered include: boilers and furnaces, internal combustion engines, turbines, flares, process heaters and ovens, incinerators, thermal oxidizers, dryers, and natural gas chillers. Cross-checking against Title V air permit source lists or annual fuel use surveys is a practical way to verify completeness.
+
+<ExampleBox>
+**Example: Natural gas boiler using Equation 2**
+
+An organization burns natural gas in an on-site boiler. Utility bills show 61,500 therms consumed in the reporting year. Converting to energy: 61,500 therms x 0.1 MMBtu/therm = 6,150 MMBtu.
+
+Applying EPA default emission factors:
+- CO2: 6,150 MMBtu x 53.06 kg CO2/MMBtu x 10⁻³ metric tons/kg = 326.3 metric tons CO2
+- CH4: 6,150 x 1.0 g CH4/MMBtu x 10⁻⁶ metric tons/g = 0.00615 t CH4 x 28 GWP = 0.2 t CO2e
+- N2O: 6,150 x 0.10 g N2O/MMBtu x 10⁻⁶ metric tons/g = 0.000615 t N2O x 265 GWP = 0.2 t CO2e
+
+Total: 326.3 + 0.2 + 0.2 = 326.7 metric tons CO2e
+</ExampleBox>
+
+<CalculationExercise
+  question="A company burns 10,000 MMBtu of natural gas at its on-site boiler. Using the EPA default CO2 emission factor of 53.06 kg CO2/MMBtu, what are the total CO2 emissions in metric tonnes?"
+  answer={530.6}
+  unit="tCO2"
+  hints={[
+    "Multiply fuel consumption (MMBtu) by the emission factor (kg CO2/MMBtu) to get total kg of CO2.",
+    "Convert kg to metric tonnes by dividing by 1,000. So: 10,000 x 53.06 / 1,000 = ?"
+  ]}
+  solution="10,000 MMBtu x 53.06 kg CO2/MMBtu = 530,600 kg CO2. Dividing by 1,000 converts to 530.6 metric tonnes CO2."
+/>
+
+<DeepDive title="When should you use CEMS instead of fuel analysis?">
+For large emitters regulated under the U.S. Acid Rain Program or GHGRP, CEMS provides continuously measured CO2 data and is generally more accurate than fuel analysis for CO2. It eliminates the need to estimate carbon content or heat content from default tables.
+
+However, CEMS requires significant capital investment, ongoing calibration, and maintenance. It also cannot measure CH4 or N2O, so fuel analysis must supplement it regardless. For smaller facilities, or for equipment not covered by CEMS within an otherwise CEMS-equipped plant (such as an emergency generator or a duct burner), the fuel analysis method fills the gap.
+
+Where CEMS data meets Title IV or GHGRP quality standards, those exact figures should be carried directly into the corporate GHG inventory without recalculation.
+</DeepDive>

@@ -1,0 +1,44 @@
+- question: "A facility consumes 2,000,000 kWh of electricity. The location-based grid emission factor is 0.45 kg CO2e/kWh. What are the location-based Scope 2 emissions in metric tonnes CO2e?"
+  options:
+    - "90 tCO2e"
+    - "900 tCO2e"
+    - "9,000 tCO2e"
+    - "450 tCO2e"
+  answer: 1
+  explanation: "2,000,000 kWh × 0.45 kg CO2e/kWh = 900,000 kg CO2e ÷ 1,000 = 900 metric tonnes CO2e."
+
+- question: "At which step in the Scope 2 calculation process does a company distribute certificates proportionally across facilities?"
+  options:
+    - "Step 1 — identifying GHG emission sources"
+    - "Step 3 — collecting activity data"
+    - "Step 6 — matching emission factors to consumption"
+    - "Step 8 — rolling up to the corporate level"
+  answer: 2
+  explanation: "At Step 6 (match emission factors to consumption), companies that purchase certificates at an organisation-wide level distribute them proportionally across all facilities based on electricity consumption, ensuring each facility has the same percentage of consumption covered."
+
+- question: "For purchased steam where condensate is returned to the supplier, what adjusts the steam emission factor calculation?"
+  options:
+    - "The steam's temperature at point of delivery"
+    - "The net energy delivered from steam tables, reflecting the energy content after condensate return"
+    - "The supplier's stated generation fuel mix"
+    - "The distance from the steam generation facility to the facility"
+  answer: 1
+  explanation: "For steam with condensate return, the energy value selected from steam tables should reflect the net energy delivered (the energy in the steam minus the energy returned as condensate). This ensures the emission factor is applied only to the energy actually consumed."
+
+- question: "The Scope 2 calculation formula is: Scope 2 Emissions = Activity Data × Emission Factor. For a market-based calculation using RECs with a 0 kg CO2e/kWh factor, the result is:"
+  options:
+    - "The same as the location-based result, because the activity data is the same"
+    - "Zero for the portion covered by RECs, because the emission factor is zero"
+    - "Negative, reflecting the avoided emissions from renewable energy"
+    - "The residual mix factor applied to all consumption"
+  answer: 1
+  explanation: "When certificates with a 0 kg CO2e/kWh emission factor are applied, the market-based result for that portion of consumption is zero. Activity data × 0 emission factor = 0 emissions. The location-based result still reflects the physical grid intensity."
+
+- question: "For electricity generated through biomass combustion, how is it treated in reported Scope 2 emissions?"
+  options:
+    - "Excluded entirely — biomass electricity is considered zero emission for all purposes"
+    - "CH4 and N2O are included in reported Scope 2; CO2 from biofuel combustion is reported separately from the scopes"
+    - "Biomass electricity is classified as Scope 1 because biomass is a direct fuel"
+    - "All emissions including CO2 are included in the CO2-equivalent Scope 2 total"
+  answer: 1
+  explanation: "For biomass-generated electricity, CH4 and N2O emissions are included in reported Scope 2. CO2 from biofuel combustion is reported separately, outside the scope totals. This treatment is consistent with how eGRID handles biomass: its factors include biomass CH4 and N2O but not biomass CO2."

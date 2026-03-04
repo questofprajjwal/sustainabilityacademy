@@ -1,0 +1,44 @@
+- question: "Which of the following is a Scope 1 emission source?"
+  options:
+    - "Electricity purchased from the grid and consumed on-site"
+    - "CO2 from a cement kiln owned and operated by the reporting company"
+    - "Employee commuting in personal vehicles"
+    - "Emissions from a third-party logistics provider transporting goods"
+  answer: 1
+  explanation: "Scope 1 covers direct GHG emissions from sources owned or controlled by the company. A cement kiln owned and operated by the company is a direct (Scope 1) process emission source. Grid electricity is Scope 2; employee commuting and third-party logistics are Scope 3."
+
+- question: "Scope 2 emissions are defined as:"
+  options:
+    - "All indirect emissions throughout the value chain"
+    - "GHG emissions from the generation of purchased electricity consumed by the company"
+    - "Fugitive emissions from owned or controlled equipment"
+    - "Emissions from mobile combustion in company vehicles"
+  answer: 1
+  explanation: "Scope 2: electricity indirect GHG emissions — specifically from the generation of purchased electricity consumed by the company. These emissions physically occur at the power plant, not at the company's facilities."
+
+- question: "The DHL Express Nordic example illustrates what about Scope 3 reporting?"
+  options:
+    - "That Scope 3 is mandatory for all transport companies"
+    - "That outsourced transportation can represent the vast majority of a company's total emissions, making Scope 3 essential for risk management"
+    - "That Scope 3 should only include upstream supply chain emissions"
+    - "That Scope 3 emissions are always smaller than Scope 1 and 2 combined"
+  answer: 1
+  explanation: "DHL Express Nordic found that 98 percent of its Swedish emissions came from outsourced transport partners. Without Scope 3, it would have had only 7,317 tCO2 instead of the actual 334,951 tCO2 — missing the information needed to effectively manage its emissions."
+
+- question: "Under the GHG Protocol scope framework, when one company generates electricity and another purchases and consumes it:"
+  options:
+    - "Both companies report the same emissions in Scope 1, which is a permitted form of double counting"
+    - "The generator reports Scope 1 emissions; the consumer reports the associated Scope 2 emissions — the same physical emissions appear in different scopes for different entities"
+    - "Only the consumer reports the emissions, in Scope 2; the generator does not report them"
+    - "The emissions are split equally between the two companies in Scope 1"
+  answer: 1
+  explanation: "This cross-company accounting is a feature of the framework: the generator's Scope 1 emissions become the consumer's Scope 2 emissions. The same physical emissions are counted by different entities in different scopes — this prevents double counting within any single scope."
+
+- question: "What is the minimum reporting requirement under the GHG Protocol Corporate Standard?"
+  options:
+    - "Scope 1 only"
+    - "Scope 1 and Scope 2 separately"
+    - "Scopes 1, 2, and 3 all required"
+    - "Scope 1 and whichever Scope 3 categories are material"
+  answer: 1
+  explanation: "Companies shall separately account for and report Scopes 1 and 2 at a minimum. Scope 3 reporting is encouraged but voluntary."

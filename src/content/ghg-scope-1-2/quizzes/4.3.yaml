@@ -1,0 +1,44 @@
+- question: "Energy attribute certificates solve which fundamental problem in renewable energy accounting?"
+  options:
+    - "They provide a mechanism to physically redirect renewable electrons to specific consumers"
+    - "Because grid electricity is physically fungible, they provide a contractual mechanism to attribute specific generation attributes to specific consumers"
+    - "They calculate the avoided emissions from renewable projects for use in carbon offset markets"
+    - "They verify that a generation facility meets minimum efficiency standards"
+  answer: 1
+  explanation: "Grid electricity is physically indistinguishable by source. Certificates separate the non-physical attributes of generation from the physical energy flow, enabling those attributes to be tracked, transferred, and claimed. Without certificates, consumers cannot prove their electricity came from a specific renewable source."
+
+- question: "In the US, a Renewable Energy Certificate (REC) represents:"
+  options:
+    - "1 megawatt-hour of renewable electricity generation, conveying 'all environmental attributes' associated with that generation"
+    - "1 tonne of CO2 avoided by renewable energy generation"
+    - "Compliance with one year of renewable energy obligations"
+    - "Permission to claim a renewable energy source for a specific facility for one calendar year"
+  answer: 0
+  explanation: "In the US, one REC represents one MWh of eligible renewable electricity generation. Most US states define RECs as conveying 'all environmental attributes' — including the GHG emission rate — for that MWh. This fully aggregated approach means a single REC carries all claims for that generation."
+
+- question: "What does 'retirement' of an energy attribute certificate mean?"
+  options:
+    - "The generation facility has permanently closed"
+    - "The certificate has been sold to a final consumer"
+    - "The certificate is permanently and irreversibly removed from circulation in the tracking system on behalf of the claiming entity"
+    - "The certificate's vintage period has expired"
+  answer: 2
+  explanation: "Retirement is a permanent, irreversible action in the certificate tracking system that records the entity on whose behalf the certificate was retired. Only a retired certificate can support a Scope 2 claim. Retirement ensures no other consumer can claim the same generation attributes."
+
+- question: "How do Guarantees of Origin (GOs) in Europe differ from US RECs in one important aspect?"
+  options:
+    - "GOs represent 10 MWh of generation while RECs represent 1 MWh"
+    - "GOs were developed primarily for supplier fuel mix disclosure requirements; in some EU countries, subsidised generation's attributes must be cancelled or treated as a public benefit rather than available for individual voluntary claims"
+    - "GOs cannot be used for corporate Scope 2 accounting"
+    - "GOs cover all energy sources while RECs are restricted to renewable sources"
+  answer: 1
+  explanation: "GOs were created for EU supplier fuel mix disclosure (the liberalisation directive). However, in some EU member states, renewable projects receiving public subsidies must have their GO attributes retired collectively or cancelled rather than issued to individual voluntary purchasers — limiting their use for voluntary corporate claims in those markets."
+
+- question: "A company can only make a renewable energy claim for Scope 2 purposes if:"
+  options:
+    - "Its facility is physically co-located with a renewable generation facility"
+    - "It has signed a long-term power purchase agreement of at least 5 years"
+    - "It holds and retires the energy attribute certificates representing that generation"
+    - "Its total renewable procurement exceeds 50% of its annual electricity consumption"
+  answer: 2
+  explanation: "Ownership and retirement of certificates is the requirement. Without holding and retiring the certificates, the electricity is 'null power' — it has no traceable renewable attributes, regardless of whether the consumer is physically near a renewable plant or has a general renewable energy contract."

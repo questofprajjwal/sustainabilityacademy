@@ -1,0 +1,107 @@
+{/* source: GHG Protocol Scope 2 Guidance, Chapter 6 (pp. 42-57); EPA GHG Inventory Guidance: Indirect Emissions from Purchased Electricity, Sections 1-3 */}
+
+With the inventory boundary established and the applicable accounting methods identified, the next step is to perform the actual calculation. The Scope 2 Guidance sets out a clear sequence of steps, and the EPA's GHG Inventory Guidance for Purchased Electricity provides complementary detail on activity data sources and emission factor selection.
+
+## Step 1: Identify GHG Emission Sources for Scope 2
+
+Scope 2 includes emissions from all purchased and consumed electricity, heat, steam, or cooling. Companies identify these energy uses on the basis of utility bills or metered energy consumption at facilities within the inventory boundary. The key greenhouse gases emitted during generation of electricity by combustion of fuels are CO2, CH4, and N2O. In the US, CO2 represents approximately 99 percent of total CO2-equivalent emissions from fuels combusted for electricity production, with CH4 and N2O together representing roughly one percent. Nonetheless, all three gases should be accounted for wherever emission factors provide that data.
+
+## Step 2: Determine Whether the Market-Based Method Applies
+
+Companies assess whether differentiated energy products in the form of contractual instruments (direct contracts, certificates, or supplier-specific information) are available in any market where they have operations. If yes, both location-based and market-based totals must be calculated for the entire corporate inventory. If a multi-regional company has any operations in markets where the market-based method applies, a market-based total must be calculated for all operations, using location-based data as a proxy for any operations in markets where no contractual instruments exist.
+
+If no operations are in markets with contractual instruments, only the location-based total is required.
+
+## Step 3: Collect Activity Data
+
+Activity data is the quantity of energy purchased and consumed during the reporting period, measured in kWh or MWh (for electricity and cooling), GJ or BTU (for heat and steam), or other relevant energy units. The best source of activity data is utility bills or purchase records at the meter point entering the facility. This is preferred over sub-metering data, which may be incomplete.
+
+If purchase data are not available for certain facilities, estimates may be used, for example by allocating a building's total electricity use to tenants based on floor area and occupancy rate (the "Area Method"). The fraction of total emissions that is estimated should be limited so as not to materially affect inventory accuracy.
+
+For steam, activity data may be reported in mass units. Because steam emission factors are expressed per unit of energy, mass data must be converted to energy units using standard steam tables based on the steam's pressure and temperature.
+
+A critical rule: companies must use **total (gross) electricity purchases** from the grid for scope 2 calculations, not net purchases after generation exports. Net metering data from utility bills reflects a billing convention, not the physical gross consumption, and underestimates scope 2 activity data.
+
+## Step 4: Identify Distribution Scenarios and Certificate Sales
+
+Using the framework from Chapter 5, companies identify whether each energy source involves direct line transfers, grid purchases, on-site generation with certificate sales, or a combination. If energy attribute certificates from owned or direct-line generation have been sold to a third party, the company cannot claim the attributes of that generation and must use alternate emission factors for that portion of consumption.
+
+## Step 5: Choose Emission Factors for Each Method
+
+### Location-Based Emission Factor Hierarchy
+
+For the location-based method, emission factors are selected in order of preference based on their geographic precision:
+
+1. **Direct line emission factor**: used when electricity is purchased through a direct line from a known generation source
+2. **Regional or subnational emission factor**: used for grid-purchased electricity; represents average emissions from all generation in a defined grid distribution area. In the US, EPA eGRID subregion total output emission rates are the recommended source. For the UK, Defra publishes annual grid average emission factors.
+3. **National emission factor**: used when regional factors are not available; published by national governments or the IEA
+
+Location-based emission factors should be expressed in combustion-only (direct) GHG emission rates and should not include transmission and distribution losses or upstream lifecycle emissions.
+
+### Market-Based Emission Factor Hierarchy
+
+For the market-based method, the hierarchy from Table 6.3 of the Scope 2 Guidance applies, moving from most to least precise:
+
+1. Energy attribute certificates (RECs, GOs, I-RECs) or equivalent instruments meeting Scope 2 Quality Criteria
+2. Contracts (PPAs) for electricity from specified sources where certificates do not exist
+3. Supplier or utility-specific emission rates
+4. Residual mix factors (subnational or national)
+5. Grid average emission factors as last resort when no residual mix is available
+
+<HighlightBox>
+Residual mix factors prevent double counting in the market-based method. The residual mix represents all energy generation and its associated emissions that have not been claimed by contractual instruments. Companies should not attempt to calculate their own residual mix. Where no residual mix is available, companies must disclose this in their inventory and may use grid average factors as a substitute.
+</HighlightBox>
+
+## Step 6: Match Emission Factors to Consumption
+
+Each unit of electricity consumption must be matched with an emission factor appropriate for that consuming facility's location or market. If certificates apply to only part of a facility's consumption, the remainder must be calculated using other instruments or information lower in the hierarchy.
+
+Companies that purchase certificates at an organisation-wide level should distribute those certificates proportionally across all facilities based on electricity consumption, so each facility has the same percentage of its consumption covered.
+
+## Step 7: Calculate Emissions
+
+The calculation formula is:
+
+<FormulaBox>
+Scope 2 Emissions (CO2e) = Activity Data (kWh or MWh) x Emission Factor (CO2e per kWh or MWh)
+
+For each GHG separately: Emissions = Electricity x EF (where EF is the CO2, CH4, or N2O emission factor)
+
+Then: Total CO2e = CO2 emissions + (CH4 emissions x GWP100) + (N2O emissions x GWP100)
+
+Report final scope 2 by each method in metric tons CO2e (and in metric tons of each GHG where available).
+</FormulaBox>
+
+<CalculationExercise
+  question="A facility consumes 2,000,000 kWh of electricity in a reporting year. The location-based grid emission factor is 0.45 kg CO2e per kWh. What are the location-based Scope 2 emissions in metric tonnes CO2e?"
+  answer={900}
+  unit="tCO2e"
+  hints={[
+    "Convert the emission factor to metric tonnes: 0.45 kg CO2e/kWh = 0.00045 tCO2e/kWh.",
+    "Multiply consumption by the emission factor: 2,000,000 kWh x 0.00045 tCO2e/kWh.",
+    "Alternatively: 2,000,000 kWh x 0.45 kg CO2e/kWh = 900,000 kg CO2e = 900 tCO2e."
+  ]}
+  solution="2,000,000 kWh x 0.45 kg CO2e/kWh = 900,000 kg CO2e = 900 metric tonnes CO2e. This is the location-based Scope 2 result."
+/>
+
+## Step 8: Roll Up to Corporate Level
+
+Companies gather facility-level calculations from all operations and aggregate them to produce corporate-level scope 2 totals: one location-based total and, where applicable, one market-based total. It is important to plan this aggregation process carefully to ensure all facilities collect data on a consistent basis and the same emission factor vintage is used across comparable operations. Companies should use the newest emission factors available at the time they calculate emissions for a reporting year.
+
+## Treatment of Steam, Heat, and Cooling
+
+The same location-based and market-based hierarchies apply to steam, heat, and cooling, though fewer emission factor options are generally available. Direct line emission factors are applicable, as are regional factors that consider the extent of a district energy system. If factors from the supplier are not available, an emission factor for purchased steam or heat can be estimated based on the fuels used for generation and the thermal efficiency: the emission factor per unit of energy for purchased steam equals the emission factor per unit of energy of the fuel used, divided by the thermal efficiency of generation. For steam where condensate is returned to the supplier, the energy value selected from steam tables should reflect the net energy delivered.
+
+For purchased cooling generated by an electric chiller, the emission factor equals the electricity emission factor divided by the chiller's coefficient of performance (COP).
+
+## Treatment of Biofuel
+
+For electricity generated through combustion of biomass (non-fossil) fuels, CH4 and N2O emissions are included in reported scope 2 emissions and CO2 from biofuel combustion is reported separately from the scopes. This applies to both location-based and market-based emissions. Grid average emission factors in eGRID include biomass CH4 and N2O emissions but do not include biomass CO2, which is consistent with this treatment.
+
+## Optional: Avoided Emissions
+
+Companies may separately report the estimated grid emissions avoided by their low-carbon energy generation and use. This is calculated using project-level methodology and reported outside the scopes as supplemental information. It must not be used to reduce the corporate scope 2 inventory total.
+
+<DeepDive title="Combined Heat and Power (CHP) allocation">
+In a cogeneration or combined heat and power plant, a single fuel input produces both electricity and thermal energy (steam or heat). Because the emissions from a CHP plant arise from one combustion process, they must be allocated proportionally to each energy output rather than assigned entirely to one output. The GHG Protocol publishes specific guidance on CHP allocation methods. Companies purchasing electricity or heat from a CHP plant should check with the CHP supplier to confirm that the allocation of emissions across energy outputs follows best practices.
+</DeepDive>

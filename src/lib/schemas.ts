@@ -61,7 +61,7 @@ export const CourseSchema = z.object({
   icon: z.string(),
   color: z.string(),
   status: z.enum(['published', 'draft', 'coming-soon']),
-  category: z.enum(['methodologies', 'markets', 'esg', 'fundamentals', 'green-finance']),
+  category: z.enum(['methodologies', 'markets', 'esg', 'fundamentals', 'green-finance', 'sustainability-standards']),
   estimatedHours: z.number().positive(),
   modules: z.array(ModuleSchema).min(1),
 });

@@ -1,0 +1,44 @@
+- question: "Which greenhouse gases are produced by stationary combustion sources?"
+  options:
+    - "CO2 only"
+    - "CO2 and CH4 only"
+    - "CO2, CH4, and N2O"
+    - "CO2, CH4, N2O, and HFCs"
+  answer: 2
+  explanation: "Stationary combustion produces CO2, CH4, and N2O. HFCs, PFCs, and SF6 are not products of combustion — they arise from refrigeration and industrial gas use and are accounted for separately as fugitive emissions."
+
+- question: "A company burns natural gas in a boiler. Utility bills show 61,500 therms consumed. Converted to energy, that is 6,150 MMBtu. Using the EPA default CO2 factor of 53.06 kg CO2/MMBtu, what are the approximate CO2 emissions?"
+  options:
+    - "61.5 metric tonnes CO2"
+    - "326 metric tonnes CO2"
+    - "530 metric tonnes CO2"
+    - "3,263 metric tonnes CO2"
+  answer: 1
+  explanation: "6,150 MMBtu × 53.06 kg CO2/MMBtu = 326,319 kg CO2 ÷ 1,000 = 326.3 metric tonnes CO2. Note: 1 therm = 0.1 MMBtu, so 61,500 therms = 6,150 MMBtu."
+
+- question: "Equation 3 for stationary combustion (Emissions = Fuel × CC × 44/12) uses the ratio 44/12 because:"
+  options:
+    - "44 is the molecular weight of CO2 and 12 is the atomic weight of carbon"
+    - "44 percent of CO2 is carbon and 12 percent is oxygen"
+    - "These are the default heat content values for natural gas"
+    - "44/12 is the EPA conversion factor for MMBtu to metric tonnes"
+  answer: 0
+  explanation: "CO2 has a molecular weight of 44 (12 for carbon + 16 × 2 for two oxygen atoms). Carbon has an atomic weight of 12. The ratio 44/12 converts the mass of carbon in the fuel directly to the mass of CO2 produced when that carbon is fully oxidised."
+
+- question: "Why is CO2 from biomass combustion treated differently from fossil CO2 in a GHG inventory?"
+  options:
+    - "Biomass CO2 has a lower GWP than fossil CO2"
+    - "Biomass CO2 must be reported separately and is excluded from the CO2-equivalent total under current guidance"
+    - "Biomass combustion does not actually produce CO2"
+    - "Biomass CO2 is counted under Scope 2, not Scope 1"
+  answer: 1
+  explanation: "The GHG Protocol requires biomass CO2 to be reported separately as 'biomass CO2 emissions' and not included in the CO2-equivalent total. However, CH4 and N2O from biomass combustion ARE included in the CO2e total."
+
+- question: "CEMS (Continuous Emissions Monitoring Systems) is the most accurate approach for CO2, but has a key limitation. What is it?"
+  options:
+    - "CEMS can only be used at facilities larger than 1,000 MMBtu/hr"
+    - "CEMS cannot measure CH4 or N2O, so fuel analysis must supplement it for those gases"
+    - "CEMS data cannot be used directly in a corporate GHG inventory"
+    - "CEMS only works with natural gas, not liquid fuels or coal"
+  answer: 1
+  explanation: "CEMS continuously measures CO2 in flue gas but cannot measure CH4 or N2O. The fuel analysis method must be used alongside CEMS for these gases. Where CEMS data meets Title IV or GHGRP quality standards, those exact figures should be used in the corporate inventory."

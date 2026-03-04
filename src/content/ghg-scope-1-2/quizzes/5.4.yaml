@@ -1,0 +1,44 @@
+- question: "What is the fundamental difference between an absolute GHG target and an intensity target?"
+  options:
+    - "Absolute targets apply only to Scope 1; intensity targets apply to all scopes"
+    - "An absolute target commits to a specific reduction in total tCO2e; an intensity target commits to a reduction in emissions per unit of output"
+    - "Intensity targets require base year recalculation for acquisitions; absolute targets do not"
+    - "Absolute targets are set by regulators; intensity targets are chosen voluntarily"
+  answer: 1
+  explanation: "An absolute target (e.g., 'reduce emissions 25% below 1994 levels') commits to a specific quantity of atmospheric reduction. An intensity target (e.g., 'reduce tCO2e per tonne of product by 12%') commits to efficiency improvement. An absolute target is environmentally more robust but harder to meet during organic growth."
+
+- question: "A company has base year scope 1 and scope 2 emissions of 120,000 tCO2e and sets a 30% absolute reduction target. What is the maximum allowable emissions in the target year?"
+  options:
+    - "36,000 tCO2e"
+    - "84,000 tCO2e"
+    - "90,000 tCO2e"
+    - "108,000 tCO2e"
+  answer: 1
+  explanation: "A 30% reduction means retaining 70% of base year emissions. 120,000 tCO2e × 0.70 = 84,000 tCO2e maximum allowable in the target year."
+
+- question: "Why did Royal Dutch/Shell find it challenging to cascade its absolute corporate GHG target to individual employees and plant managers?"
+  options:
+    - "Absolute targets cannot be converted to intensity metrics"
+    - "Absolute emissions at a plant depend on both corporate-level variables (output quantity) and facility-level variables (efficiency), making it impossible to assign the full absolute target at the plant level"
+    - "Shell's operational structure prevented sharing of emissions data between business units"
+    - "Plant managers were not trained in GHG accounting methodology"
+  answer: 1
+  explanation: "Shell found that absolute GHG emissions at a plant are a function of: quantity of product manufactured (corporate variable), best process energy use per tonne (business-level variable), and a plant efficiency index (facility-level variable). Therefore an absolute target could only be set at the corporate level; lower levels needed intensity or efficiency targets aligned to their decision authority."
+
+- question: "Science-based targets (SBTs) differ from conventional corporate targets in what key way?"
+  options:
+    - "SBTs cover Scope 3 emissions; conventional targets cover only Scope 1 and 2"
+    - "SBTs are set by working backwards from a global carbon budget consistent with limiting warming to 1.5°C or well below 2°C, rather than purely on business feasibility"
+    - "SBTs are intensity targets only; conventional targets can be absolute or intensity"
+    - "SBTs require annual third-party verification; conventional targets do not"
+  answer: 1
+  explanation: "Science-based targets are aligned with the level of decarbonisation required by the Paris Agreement. They are set by working backwards from a global carbon budget, applying sectoral decarbonisation pathways to determine what reduction is required from each company's sector. Conventional targets are based primarily on what the company considers feasible or strategically useful."
+
+- question: "When tracking progress against an absolute target, when must base year emissions be recalculated?"
+  options:
+    - "Each year when new emission factors are published"
+    - "Only when the company changes its Scope 2 accounting method"
+    - "For significant structural changes (acquisitions, divestitures) following the standard's recalculation rules, to maintain like-for-like comparisons"
+    - "Every five years to account for changes in GWP values"
+  answer: 2
+  explanation: "Base year emissions must be recalculated for significant structural changes — acquisitions and divestitures that transfer emission sources between companies — following the same rules as the general inventory recalculation policy. This ensures structural changes do not artificially inflate or deflate reported progress. Emission factor updates alone do not trigger recalculation."

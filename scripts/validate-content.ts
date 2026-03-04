@@ -157,7 +157,7 @@ function validateCourse(courseDir: string): boolean {
   }
 
   // Check MDX files for known component references
-  const knownComponents = ['HighlightBox', 'AnalogyBox', 'ExampleBox', 'FormulaBox', 'ResponsiveTable'];
+  const knownComponents = ['HighlightBox', 'AnalogyBox', 'ExampleBox', 'FormulaBox', 'ResponsiveTable', 'CalculationExercise', 'DeepDive'];
   if (existsSync(lessonsDir)) {
     const mdxFiles = readdirSync(lessonsDir).filter(f => f.endsWith('.mdx'));
     for (const mdxFile of mdxFiles) {

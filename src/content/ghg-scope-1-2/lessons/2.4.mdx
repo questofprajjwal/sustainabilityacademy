@@ -1,0 +1,164 @@
+{/* source: EPA Center for Corporate Climate Leadership, Direct Emissions from Stationary Combustion Sources (December 2023), Sections 4-7; Direct Emissions from Mobile Combustion Sources (December 2023), Sections 5-8; Direct Fugitive Emissions from Refrigeration, Air Conditioning, Fire Suppression, and Industrial Gases (December 2023), Sections 4-7 */}
+
+The accuracy and credibility of a Scope 1 inventory depend on four interlocking elements: choosing the right emission factors, gathering high-quality activity data, ensuring completeness across all source categories, and maintaining robust documentation and quality controls. This lesson consolidates the cross-cutting principles that apply to stationary combustion, mobile combustion, and fugitive emissions alike.
+
+## Choosing Between Default and Site-Specific Emission Factors
+
+An emission factor converts a unit of activity (fuel burned, distance traveled, gas released) into a mass of greenhouse gas. The hierarchy of preference, from most to least accurate, is:
+
+**1. Site-specific measurement (CEMS)**
+For stationary combustion, a calibrated Continuous Emissions Monitoring System provides directly measured CO2 concentrations in flue gas. This eliminates assumptions about fuel carbon content. CEMS data that meets 40 CFR Part 75 or 40 CFR Part 98 quality standards should be used directly in the corporate inventory.
+
+**2. Site-specific fuel analysis**
+When CEMS is unavailable, the actual carbon content or heat content of consumed fuels, obtained through chemical analysis or from the fuel supplier, produces more accurate results than national defaults. Fuel-specific carbon content is used in Equation 3 (Emissions = Fuel x CC x 44/12) for CO2. Fuel-specific heat content is used in Equation 2 (Emissions = Fuel x HHV x EF per energy unit).
+
+**3. National default emission factors**
+When neither CEMS nor site-specific analysis is available, default emission factors from the EPA GHG Emission Factors Hub are applied. These factors represent national averages based on typical fuel characteristics and combustion technology. They carry more uncertainty, particularly for variable fuels such as coal, biomass, and waste-derived fuels, where actual carbon content can differ significantly from the national average.
+
+**4. IPCC default emission factors**
+For organizations outside the U.S. or for fuel types not covered by EPA factors, IPCC Guidelines for National Greenhouse Gas Inventories provide international default factors. These carry the highest uncertainty and should only be used when no more specific data is available.
+
+<HighlightBox>
+The emission factor hierarchy (most to least preferred): site-specific CEMS data > site-specific fuel analysis > national default (EPA) > international default (IPCC). Always use the most specific data available for each fuel type and source.
+</HighlightBox>
+
+## Activity Data Quality Tiers
+
+Activity data quality follows a parallel hierarchy. The tier of data available determines both the accuracy of the emissions estimate and the level of uncertainty to report.
+
+**Tier 1 (highest quality):** Fuel consumption directly metered at the combustion device, or distance traveled from odometer readings with fuel measured from receipts. Carbon or heat content confirmed by supplier or fuel sampling.
+
+**Tier 2:** Fuel consumption from purchase records (utility bills, delivery invoices), adjusted for inventory changes, feedstock use, and fugitive losses. Distance data from vehicle operator logs or centralized fleet management systems.
+
+**Tier 3:** Fuel consumption estimated from operating hours multiplied by a rated fuel consumption rate. Used for equipment where metering is impractical (emergency generators, backup boilers). Distance estimated from fuel economy factors applied to known fuel consumption.
+
+**Tier 4 (lowest quality, not recommended):** Fuel consumption estimated from cost of fuel purchased, converted to physical units using average fuel prices. The EPA explicitly recommends against this approach; organizations should contact suppliers to obtain data in physical or energy units instead.
+
+## Completeness: Identifying All Relevant Sources
+
+A GHG inventory is only as credible as its coverage. Completeness means identifying every emission source within the organizational and operational boundaries and either quantifying it or justifying its exclusion.
+
+The GHG Protocol establishes no minimum materiality threshold that automatically excuses a source from inclusion. The materiality of a source can only be established after it has been assessed. An estimate based on available data must be developed for all sources.
+
+**For stationary combustion:** The full list of combustion equipment must be inventoried. Common sources that are missed include: emergency generators (run infrequently but may consume significant fuel), cooling systems using natural gas chillers, flares and thermal oxidizers, and kilns or ovens in process facilities. Cross-checking against Title V air permit source lists and annual fuel use surveys is the recommended approach.
+
+**For mobile combustion:** The full fleet must be captured. Sources often missed include: forklifts and ground support equipment that are owned but operated on-site and tracked separately from road vehicles, small boats, and agricultural equipment at remote sites. Fleet insurance records provide an effective completeness check.
+
+**For fugitive emissions:** Every piece of refrigerant-containing equipment must be accounted for. All refrigerant types must be tracked separately. Third-party data from property managers or equipment service contractors must be formally requested and documented.
+
+<AnalogyBox>
+Completeness is like a financial audit: you cannot exclude a line item simply because it is inconvenient to measure. Every asset and liability must be identified, even if some are estimated. The same discipline applies to emissions: identify every source, quantify each one at the level of accuracy the data permits, and document the basis for any estimate.
+</AnalogyBox>
+
+## Uncertainty Assessment
+
+Every emissions calculation carries uncertainty. Understanding and managing uncertainty is essential for producing a defensible inventory.
+
+**Sources of uncertainty in stationary and mobile combustion:**
+- Fuel consumption data accuracy: Direct metering has low uncertainty. Purchase records have moderate uncertainty if inventory adjustments are made correctly. Fuel economy estimates have higher uncertainty.
+- Emission factor variability: Default emission factors are national averages. For variable fuels (coal, MSW, biomass), actual carbon content can differ substantially from the default, introducing significant uncertainty.
+- Coverage gaps: Missing sources (unmetered equipment, fuel types purchased outside the primary procurement channel) create systematic undercount errors.
+
+**Sources of uncertainty in fugitive emissions:**
+- Screening Method factors are highly uncertain. Leak rates vary between individual pieces of equipment and change over the equipment's life. The Screening Method should be treated as a rough order-of-magnitude estimate only.
+- Material balance methods are considerably more accurate but carry one structural limitation: equipment can leak for two or more years before requiring a recharge, meaning emissions over that period are not detected until the service event occurs.
+
+**Minimizing uncertainty:**
+- Use higher-tier activity data wherever material sources are present.
+- Apply site-specific carbon or heat content data from suppliers rather than defaults.
+- Upgrade from Screening Method to Material Balance Method for significant refrigerant sources.
+- Invest in direct metering for high-consumption combustion equipment.
+
+## Documentation Requirements
+
+Documentation serves two purposes: it makes the inventory transparent and verifiable by third parties, and it creates the institutional memory needed to recalculate prior years if methodologies change.
+
+<ResponsiveTable>
+<table>
+  <thead>
+    <tr>
+      <th>Data Type</th>
+      <th>Required Documentation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fuel consumption (stationary and mobile)</td>
+      <td>Purchase receipts or utility bills; delivery receipts; metered fuel records; stock inventory documentation</td>
+    </tr>
+    <tr>
+      <td>Heat content and carbon content (if not using defaults)</td>
+      <td>Supplier receipts; fuel sampling and analysis reports; EIA, EPA, or industry publications used</td>
+    </tr>
+    <tr>
+      <td>Distance traveled (mobile sources)</td>
+      <td>Official odometer logs; vehicle maintenance records; fuel card records showing mileage</td>
+    </tr>
+    <tr>
+      <td>Fuel economy data</td>
+      <td>Company fleet records; vehicle manufacturer documentation; fueleconomy.gov data used</td>
+    </tr>
+    <tr>
+      <td>Refrigerant purchases and recovery</td>
+      <td>Purchase receipts; delivery receipts; repair invoices; contractor service records showing amounts charged and recovered</td>
+    </tr>
+    <tr>
+      <td>Equipment nameplate capacity</td>
+      <td>Delivery receipts; physical inspection records; equipment nameplates; shipping or disposal records</td>
+    </tr>
+    <tr>
+      <td>All assumptions and calculations</td>
+      <td>Calculation workbooks; methodology notes; emission factor sources and version dates</td>
+    </tr>
+  </tbody>
+</table>
+</ResponsiveTable>
+
+All documentation should be collected into an Inventory Management Plan (IMP), which records the methodology, data sources, emission factors, and assumptions used for each source category and each reporting year.
+
+## Inventory QA/QC: Internal Checks and Cross-Checks
+
+Quality assurance (QA) and quality control (QC) processes catch errors before they propagate into reported figures. The GHG Protocol Chapter 7 provides a general framework; the EPA guidance for each source type provides specific checks.
+
+**Stationary combustion QA/QC checks:**
+- Compare fuel consumption data from combustion devices against fuel purchasing data, adjusting for inventory changes. Unexplained discrepancies indicate data errors or missing sources.
+- Compare fuel energy use data against Department of Energy reports or surveys for the same facility or sector.
+- If both CEMS and fuel analysis data are available, compare the results. Large divergences signal calibration issues or calculation errors.
+- Check that emission factors from suppliers fall within a reasonable range of U.S. average emission factors for the same fuel type.
+- Verify that heating values used in calculations are HHV, not LHV, when applying EPA emission factors.
+
+**Mobile combustion QA/QC checks:**
+- Cross-check fuel energy use data against Department of Energy fleet reports or sector surveys.
+- If both fuel use and distance data are available, divide distance by fuel use to calculate implied fuel economy. Compare this against expected values from fueleconomy.gov for the vehicle types in the fleet. Significant deviations indicate data collection errors.
+- Compare supplier-provided emission factors against U.S. average factors for the same fuel type.
+
+**Fugitive emissions QA/QC checks:**
+- Reconcile the refrigerant inventory at the end of the year against beginning inventory, purchases, sales, and service records. Unexplained losses represent untracked emissions.
+- Cross-check equipment lists against maintenance contracts, insurance records, and lease agreements to identify equipment that may have been omitted.
+- Compare year-over-year refrigerant purchases. Large unexplained increases may indicate equipment failures that have not been formally reported as emissions events.
+
+**Year-over-year consistency review:**
+
+One of the most powerful QC tools is a consistent trend review. Material unexplained changes in emissions from year to year should always be investigated. The explanations fall into three categories: real changes in activity (more production, more fleet miles), changes in methodology or emission factors, or data errors. Distinguishing between these requires good documentation from prior years.
+
+<HighlightBox>
+The three most common errors in Scope 1 inventories:
+1. **Missing sources:** Equipment or vehicle types within the operational boundary that were never identified.
+2. **Wrong emission factor tier:** Using per-volume default factors when energy-unit factors are available, or using IPCC defaults when EPA factors apply.
+3. **Unit conversion errors:** Failing to convert LHV to HHV before applying EPA energy-based factors, or confusing short tons with metric tonnes in coal calculations.
+</HighlightBox>
+
+<DeepDive title="What is an Inventory Management Plan and why does it matter?">
+An Inventory Management Plan (IMP) is a structured document that describes how an organization identifies, measures, calculates, and reports its GHG emissions. It is recommended by both the GHG Protocol and EPA guidance as the central record for all inventory decisions.
+
+A well-constructed IMP records:
+- The organizational and operational boundary setting criteria
+- The list of emission sources identified within those boundaries, and the rationale for any exclusions
+- The calculation methodology and equation used for each source type
+- The activity data sources, collection methods, and responsible personnel for each source
+- The emission factors used, their origin, and the version or publication date
+- All assumptions made where data was estimated rather than measured
+- The QA/QC procedures applied and their results
+
+The IMP matters because GHG inventories are increasingly subject to third-party verification. Verifiers require traceable evidence for every reported figure. An IMP that records these decisions contemporaneously, rather than reconstructed after the fact, is far easier to verify and far more defensible under scrutiny. It also ensures that when personnel change, the methodology survives the transition.
+</DeepDive>

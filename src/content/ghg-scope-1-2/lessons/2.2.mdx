@@ -1,0 +1,131 @@
+{/* source: EPA Center for Corporate Climate Leadership, Direct Emissions from Mobile Combustion Sources (December 2023), Sections 1-5 */}
+
+Mobile combustion covers GHG emissions from fuel burned in vehicles and equipment that move. The defining characteristic is not the fuel type but the fact that the source is mobile: it can travel from location to location. For Scope 1 reporting, the key question is not what moves, but who owns or controls it.
+
+## What Counts as a Mobile Source
+
+Mobile combustion sources include on-road vehicles (cars, trucks, buses, vans, pickup trucks, SUVs) and non-road vehicles and equipment (aircraft, ships, boats, locomotives, forklifts, construction equipment, agricultural equipment). Any of these that combust fuel generate CO2, CH4, and N2O emissions.
+
+Two important exclusions apply to mobile sources under this guidance:
+
+1. Electric vehicles and plug-in hybrids running on electricity do not generate combustion emissions. Their electricity consumption is accounted for under Scope 2.
+2. Refrigerant leakage from mobile air conditioning systems (truck refrigeration units, car AC) is a fugitive emission, not a combustion emission, and is quantified separately under fugitive emissions guidance.
+
+## Scope 1 vs Scope 3: The Ownership Boundary
+
+The most important classification decision for mobile sources is the scope boundary.
+
+<HighlightBox>
+**Scope 1:** Fuel combustion in vehicles owned or controlled by the reporting organization. This includes company-owned cars, delivery trucks, forklifts, company aircraft, and vessels.
+
+**Scope 3:** Transportation-related emissions that are not owned or controlled by the organization. This includes employee-owned vehicles used for business travel and commuting, third-party logistics providers, and contracted freight.
+</HighlightBox>
+
+The test is operational control or ownership, not the purpose of the trip. A company-owned delivery truck making a customer delivery is Scope 1. An employee driving their own car to a client meeting is Scope 3, Category 6 (business travel) or Category 7 (employee commuting).
+
+<AnalogyBox>
+Ownership determines scope for mobile sources in the same way it does for buildings. A company burns gas in a boiler it owns: Scope 1. A company pays a supplier to ship goods in the supplier's truck: Scope 3. The activity is similar, but the control relationship is what matters.
+</AnalogyBox>
+
+## Greenhouse Gases Included
+
+Mobile combustion produces CO2, CH4, and N2O. For modern on-road vehicles (less than 20 years old), CH4 and N2O typically account for less than one percent of total GHG emissions. For older on-road vehicles and for non-road or alternative fuel vehicles such as buses running on compressed natural gas, CH4 and N2O can represent five percent or more of total GHG emissions.
+
+This difference arises because CH4 and N2O emissions from mobile sources depend heavily on emissions control equipment, particularly the type of catalytic converter fitted, and on vehicle miles traveled. The calculation approach for CH4 and N2O therefore differs from that used for CO2.
+
+## Biofuels in Mobile Sources
+
+Many transport fuels are blends of fossil and biomass-derived components. E10 (10 percent ethanol, 90 percent gasoline) is the default motor gasoline in the United States. E85 contains 51 to 83 percent ethanol. B20 is a blend of 20 percent biodiesel and 80 percent petroleum diesel. Sustainable aviation fuel (SAF) ranges from 10 to 50 percent biofuel by blend.
+
+The GHG Protocol requires that CO2 from biofuel combustion be reported separately as biomass CO2 and excluded from the CO2-equivalent total. Fossil CO2 from the same blend is included in the inventory. CH4 and N2O from biofuel combustion are included in the CO2-equivalent total regardless of fuel origin.
+
+In practice, organizations should use the blend percentage to estimate the fossil and biofuel portions. If blend data is unavailable and a vehicle uses gasoline, organizations may assume 10 percent ethanol as the default. For flex-fuel vehicles where the actual fuel type is unknown, fossil fuel should be assumed.
+
+## Calculating CO2 Emissions
+
+CO2 emissions from mobile sources are calculated using the same three-equation fuel analysis framework as stationary combustion. The approach depends on what is known about fuel characteristics:
+
+<FormulaBox>
+**Equation 1 (least preferred):**
+Emissions = Fuel x EF₁
+Use when fuel consumption is known only in mass or volume units.
+EF₁ = CO2 emission factor per mass or volume unit.
+
+**Equation 2 (preferred):**
+Emissions = Fuel x HHV x EF₂
+Use when actual fuel heat content (HHV) is known.
+EF₂ = CO2 emission factor per energy unit.
+
+**Equation 3 (most preferred for CO2):**
+Emissions = Fuel x CC x (44/12)
+Use when actual carbon content of the fuel is known.
+CC = fuel carbon content in mass of carbon per mass or volume of fuel.
+</FormulaBox>
+
+For diesel, the EPA default CO2 emission factor is 2.68 kg CO2/litre (10.15 kg CO2/gallon). For petrol/gasoline, the factor is 2.35 kg CO2/litre (8.87 kg CO2/gallon). These per-volume factors are used with Equation 1.
+
+## Calculating CH4 and N2O Emissions
+
+CH4 and N2O emissions from mobile sources are calculated using one of two equations, depending on vehicle type:
+
+<FormulaBox>
+**Equation 4 (distance-based, for on-road vehicles):**
+Emissions = Distance x EF₄
+Distance = vehicle-miles or vehicle-kilometers traveled.
+EF₄ = CH4 or N2O emission factor per distance unit, by vehicle type and model year.
+
+**Equation 5 (fuel-based, for non-road vehicles):**
+Emissions = Fuel x EF₅
+Fuel = volume of fuel combusted.
+EF₅ = CH4 or N2O emission factor per volume unit, by fuel type.
+</FormulaBox>
+
+Equation 4 applies to on-road vehicles because their CH4 and N2O emissions are strongly influenced by vehicle type and emissions control technology (catalytic converter design), which are best represented by distance-based factors correlated with model year. Equation 5 applies to non-road vehicles such as aircraft, ships, locomotives, and forklifts, where distance data is less standardized.
+
+## Choosing Activity Data
+
+Fuel consumption data is the preferred activity data for all CO2 calculations and for CH4 and N2O calculations from non-road vehicles. The most accurate method is to gather data from fuel receipts or purchase records. For vehicles fueled at commercial stations, this is typically obtained through fuel card records. For on-site fueling, it comes from delivery records.
+
+For on-road vehicles, distance traveled is additionally required for CH4 and N2O calculations using Equation 4. Distance data should be in vehicle-miles or vehicle-kilometers (not passenger-miles, which are used for Scope 3 transport). The best source is vehicle odometer readings, obtainable from operator logs or vehicle maintenance records.
+
+If fuel use data is unavailable, fuel economy factors can convert distance to fuel consumption. The recommended source for on-road vehicles is fueleconomy.gov, using the combined city-highway mpg value for the specific vehicle make, model, and year. Estimating from fuel economy is less accurate than direct fuel records but is preferable to estimating from fuel cost alone.
+
+For heavy-duty and non-road vehicles, activity data may be expressed in hours of operation, horsepower-hours, or ton-miles shipped, with fuel consumption rates available from vehicle suppliers or manufacturer documentation.
+
+## Completeness
+
+A complete mobile combustion inventory captures all vehicles and equipment within the organization's operational boundary. To verify completeness, the inventory list should be compared against fleet management records and insurance records. Vehicle types that must be considered include: passenger cars, vans, pickup trucks and SUVs; heavy-duty on-road trucks; combination trucks; buses; aircraft; ships and boats; locomotives; forklifts; construction equipment; and agricultural equipment.
+
+<ExampleBox>
+**Example: Freight truck fleet**
+
+A logistics company operates 50 diesel trucks, each traveling 120,000 km per year, consuming approximately 1,000 litres of diesel per truck per year.
+
+Total diesel consumed: 50 trucks x 1,000 litres = 50,000 litres
+
+CO2 emissions (Equation 1):
+50,000 litres x 2.68 kg CO2/litre = 134,000 kg CO2 = 134 metric tonnes CO2
+
+For CH4 and N2O, the company applies distance-based emission factors by truck model year from the EPA GHG Emission Factors Hub, multiplied by total vehicle-kilometers traveled, then converted to CO2e using GWP values.
+</ExampleBox>
+
+<CalculationExercise
+  question="A company's truck fleet consumes 50,000 litres of diesel during the reporting year. Using an EPA CO2 emission factor of 2.68 kg CO2/litre, what are the total CO2 emissions in metric tonnes?"
+  answer={134}
+  unit="tCO2"
+  hints={[
+    "Multiply total fuel volume (litres) by the CO2 emission factor (kg CO2/litre) to get total kg.",
+    "Divide kg by 1,000 to convert to metric tonnes. So: 50,000 x 2.68 / 1,000 = ?"
+  ]}
+  solution="50,000 litres x 2.68 kg CO2/litre = 134,000 kg CO2. Dividing by 1,000 gives 134 metric tonnes CO2."
+/>
+
+<DeepDive title="Handling biofuel blends in practice">
+When a fleet operates on blended fuels such as B20, organizations should separate the fossil and biomass fuel volumes before applying emission factors.
+
+For a vehicle consuming 10,000 litres of B20:
+- Fossil diesel portion: 10,000 x 0.80 = 8,000 litres, apply fossil CO2 emission factor (included in inventory)
+- Biodiesel portion: 10,000 x 0.20 = 2,000 litres, apply biomass CO2 emission factor (reported separately, excluded from CO2e total)
+
+If the exact blend ratio is unknown, the most recent blend percentage data from the fuel supplier should be requested. For gasoline vehicles where blend data is unavailable, a 10 percent ethanol assumption (E10) is the recommended default per EPA guidance.
+</DeepDive>

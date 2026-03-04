@@ -1,0 +1,44 @@
+- question: "What are the four components of an inventory quality management system (QMS) according to the GHG Protocol?"
+  options:
+    - "Planning, data collection, calculation, and reporting"
+    - "Methods, data, inventory processes and systems, and documentation"
+    - "Boundary setting, source identification, emission factor selection, and verification"
+    - "Internal review, external review, stakeholder engagement, and publication"
+  answer: 1
+  explanation: "The GHG Protocol identifies four QMS components: (1) Methods — selection and updating of calculation methodologies; (2) Data — activity data collection and validation; (3) Inventory processes and systems — institutional and managerial procedures; (4) Documentation — records of methods, data, and assumptions."
+
+- question: "The Vauxhall Motors example about GHG inventory QA/QC found that using one-way rather than round-trip air travel distance would result in:"
+  options:
+    - "A 25% overestimate of air travel emissions"
+    - "Emissions reported at 50% of their actual value"
+    - "No material difference once other factors are accounted for"
+    - "A 10% undercount, below the materiality threshold"
+  answer: 1
+  explanation: "Using one-way distance instead of round-trip distance for air travel would produce reported emissions 50 percent below the actual value — a material error. This illustrates why even simple-seeming calculations require explicit assumption verification."
+
+- question: "What distinguishes 'scientific uncertainty' from 'estimation uncertainty' in a GHG inventory?"
+  options:
+    - "Scientific uncertainty is about data collection; estimation uncertainty is about model choice"
+    - "Scientific uncertainty arises from incomplete understanding of the emission process itself (e.g., GWP values); estimation uncertainty arises from the mathematical models and input values used in calculations"
+    - "Scientific uncertainty is immeasurable; estimation uncertainty can always be eliminated with better data"
+    - "They refer to the same concept — all uncertainty in GHG inventories is scientific"
+  answer: 1
+  explanation: "Scientific uncertainty arises from incomplete understanding of physical processes, like GWP values. Estimation uncertainty arises from the calculation itself and has two subtypes: model uncertainty (mathematical relationships) and parameter uncertainty (the input values used). Estimation uncertainty is the most accessible for companies to assess and reduce."
+
+- question: "As a rule of thumb, a material discrepancy in a GHG inventory is generally defined as one that:"
+  options:
+    - "Exceeds 1% of total inventory emissions"
+    - "Exceeds 5% of the total inventory for the part of the organisation being assessed"
+    - "Is greater than 1,000 tCO2e in absolute terms"
+    - "Affects more than one emission source category"
+  answer: 1
+  explanation: "As a rule of thumb, a discrepancy is considered material if its value exceeds 5% of the total inventory for the part of the organisation being assessed. However, context matters — a 2% error that prevents achieving a corporate target may also be considered material even if below 5%."
+
+- question: "What is the primary purpose of establishing a QMS as an 'evolving, multi-year effort' rather than a one-time exercise?"
+  options:
+    - "To spread the cost of implementing QA/QC across multiple budget cycles"
+    - "To ensure quality control findings from previous years are addressed in subsequent inventories, driving continuous improvement"
+    - "Because GHG reporting standards change each year, requiring annual updates"
+    - "To qualify for external verification more quickly"
+  answer: 1
+  explanation: "The QMS should include steps to ensure all quality control findings from prior years are systematically addressed in subsequent inventories. This creates a feedback loop for continuous improvement rather than correcting the same errors repeatedly."

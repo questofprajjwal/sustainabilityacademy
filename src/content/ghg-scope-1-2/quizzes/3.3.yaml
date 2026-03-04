@@ -1,0 +1,44 @@
+- question: "A company generates solar electricity on-site and sells all the associated RECs to a third party. How must the company treat its own on-site solar consumption for Scope 2?"
+  options:
+    - "As zero emissions, because the energy was generated renewably on-site"
+    - "As Scope 1 emissions, because the generation equipment is owned on-site"
+    - "Using the location-based and residual mix emission factors, because the environmental attributes have been sold and cannot be claimed"
+    - "Excluded from Scope 2, because on-site generation never belongs in Scope 2"
+  answer: 2
+  explanation: "By selling the RECs, the company transfers the environmental attributes of its solar generation to the buyer. It can no longer claim zero emissions for that consumption. For market-based purposes, it must use the residual mix or other appropriate factor — the same as if it had purchased grid electricity."
+
+- question: "Which of the following does NOT belong in Scope 2 activity data?"
+  options:
+    - "Electricity purchased and consumed at a leased office"
+    - "Steam purchased from a district heating system and used in operations"
+    - "Electricity generated on-site from owned solar panels and consumed entirely on-site"
+    - "Cooling purchased from a third-party chiller plant"
+  answer: 2
+  explanation: "Electricity generated on-site in owned or operated equipment and consumed entirely on-site is Scope 1, not Scope 2. Scope 2 requires that energy be acquired from an entity outside the reporting company's boundary. Leased office electricity, purchased steam, and purchased cooling all belong in Scope 2."
+
+- question: "A company using net metering receives a utility bill showing net electricity consumption of 800,000 kWh (after subtracting on-site solar exports). For Scope 2 calculation, which figure should be used?"
+  options:
+    - "800,000 kWh — the net figure on the bill is correct for GHG accounting"
+    - "The total (gross) electricity purchased from the grid, before subtracting solar exports"
+    - "Zero, because net metering implies the company is a net zero electricity consumer"
+    - "The average of net and gross consumption"
+  answer: 1
+  explanation: "Companies must use total (gross) purchases from the grid for Scope 2 calculations. Net metering is a billing convention that offsets grid imports against exports, but for GHG accounting the gross quantity of electricity drawn from the grid represents the actual consumption that caused generation emissions."
+
+- question: "Under Scenario 2 (energy transferred via a direct line from one company to another, not via the grid), who reports which scope?"
+  options:
+    - "Only the consumer reports emissions, in Scope 1"
+    - "Company A (generator) reports Scope 1; Company B (consumer via direct line) reports Scope 2"
+    - "Both companies report Scope 1 — direct lines eliminate the Scope 2 category"
+    - "No emissions are reported because direct lines are between related companies"
+  answer: 1
+  explanation: "In a direct line scenario, the generating company (Company A) reports Scope 1 emissions from generation. The consuming company (Company B), receiving energy exclusively through the direct line, reports Scope 2 emissions from consumption. This applies to industrial parks, third-party on-site solar, and central building boilers."
+
+- question: "The location-based method accepts that grid electricity is physically indistinguishable by source and uses statistical averages. The market-based method resolves this through:"
+  options:
+    - "On-site metering that identifies the source of each electron"
+    - "Real-time data from grid operators showing dispatch schedules"
+    - "Contractual instruments (certificates, PPAs, supplier-specific rates) that attribute specific generation to specific consumers"
+    - "Supplier invoices that specify the fuel mix used to generate each kWh delivered"
+  answer: 2
+  explanation: "Because grid electricity is physically fungible, the only mechanism to attribute a specific generation source to a specific consumer is contractual. Energy attribute certificates, PPAs, and supplier-specific emission rates provide this contractual traceability — the foundation of the market-based method."

@@ -1,0 +1,44 @@
+- question: "Scope 2 emissions are best described as:"
+  options:
+    - "Direct emissions from sources owned or controlled by the company"
+    - "Indirect emissions from the generation of purchased electricity, steam, heat, or cooling consumed by the company"
+    - "All indirect emissions throughout the value chain, including supply chain and product use"
+    - "Emissions from company-owned vehicles and mobile equipment"
+  answer: 1
+  explanation: "Scope 2 covers indirect GHG emissions from the generation of purchased or acquired electricity, steam, heat, or cooling. The emissions physically occur at the power plant or generation facility, not at the company's premises."
+
+- question: "Why is Scope 2 particularly important for companies in technology, retail, and manufacturing sectors?"
+  options:
+    - "These sectors have no Scope 1 direct emissions"
+    - "For many such companies, Scope 2 can represent the single largest share of their total GHG inventory and is directly responsive to procurement decisions"
+    - "Scope 2 is mandatory for technology companies under the EU ETS"
+    - "These sectors are exempt from Scope 3 reporting, making Scope 2 the only indirect emission category"
+  answer: 1
+  explanation: "The electricity and heat generation sector accounts for at least one-third of global GHG emissions. For many technology, retail, and manufacturing companies, purchased electricity is the dominant energy input, making Scope 2 their largest GHG category — and the most directly addressable through procurement."
+
+- question: "Which of the following questions did the GHG Protocol Scope 2 Guidance primarily resolve?"
+  options:
+    - "Whether companies must report CH4 and N2O from electricity generation"
+    - "How renewable energy purchases, green power programs, and supplier-specific emission factors should be handled in a consistent way"
+    - "Whether Scope 2 reporting is mandatory for all companies"
+    - "How to set organisational boundaries for electricity utilities"
+  answer: 1
+  explanation: "The Scope 2 Guidance resolved three key problems: (1) whether buying from a wind farm reduces a company's Scope 2 figure; (2) which green power instruments legitimately reduce the reported figure; and (3) when to use supplier-specific versus grid-average emission factors."
+
+- question: "Which business goal does the market-based method best serve for Scope 2?"
+  options:
+    - "Assessing GHG intensity risks tied to the physical grid serving a company's facilities"
+    - "Demonstrating the impact of specific procurement choices and engaging with energy supply markets"
+    - "Comparing aggregate GHG performance across a sector"
+    - "Satisfying mandatory regulatory reporting requirements"
+  answer: 1
+  explanation: "The market-based method reflects individual procurement decisions — which electricity product or supplier a company selects. It is most useful for demonstrating the impact of deliberate procurement choices. The location-based method better serves grid intensity risk assessment."
+
+- question: "How does one company's Scope 1 emission relate to another company's Scope 2 emission?"
+  options:
+    - "They are always counted twice, which is a known flaw in the GHG Protocol"
+    - "One company's Scope 1 from energy generation legitimately becomes another company's Scope 2 from purchasing that energy — this cross-company accounting is an intended feature"
+    - "They should be netted against each other to avoid double counting"
+    - "Only the consumer's Scope 2 is reported; the generator excludes it from Scope 1"
+  answer: 1
+  explanation: "Cross-company accounting — generator's Scope 1 becomes consumer's Scope 2 — is a feature of the framework, not a problem. This allows multiple entities along a value chain to consistently report and act on the same physical emissions where they have the most direct influence."

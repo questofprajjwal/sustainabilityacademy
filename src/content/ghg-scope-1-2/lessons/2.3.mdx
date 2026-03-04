@@ -1,0 +1,172 @@
+{/* source: EPA Center for Corporate Climate Leadership, Direct Fugitive Emissions from Refrigeration, Air Conditioning, Fire Suppression, and Industrial Gases (December 2023), Sections 1-3 */}
+
+Fugitive emissions are releases of greenhouse gases that occur outside of any intentional combustion process. They are not burned, they are leaked, vented, or discharged during normal equipment operation, servicing, or disposal. For most organizations, the primary fugitive emission sources are refrigeration and air conditioning (RAC) systems, fire suppression equipment, and the purchase and use of industrial gases.
+
+## Why Fugitive Emissions Matter
+
+The gases involved in fugitive releases are not CO2. They are hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and, in older equipment, chlorofluorocarbons (CFCs) and hydrochlorofluorocarbons (HCFCs). The defining characteristic of these gases is their extremely high global warming potential (GWP).
+
+<HighlightBox>
+Selected GWP values (AR5, 100-year):
+- SF6: 23,500 (used in electrical switchgear and industrial processes)
+- HFC-23: 12,400 (used in fire suppression)
+- HFC-134a: 1,430 (common automotive and commercial refrigerant)
+- HFC-32: 677 (used in split air conditioners)
+
+A single kilogram of SF6 released to atmosphere is climatically equivalent to over 23 tonnes of CO2. Small physical volumes of these gases can represent large CO2-equivalent emissions.
+</HighlightBox>
+
+Despite the relatively small physical quantities involved compared to combustion emissions, fugitive refrigerant and industrial gas releases can be a material component of a Scope 1 inventory, particularly for organizations with large commercial refrigeration systems, data centers relying on SF6 electrical equipment, or fire suppression systems in critical infrastructure.
+
+## Manufacturing vs Use-Phase Emissions
+
+This guidance and all Scope 1 reporting apply only to use-phase emissions: releases that occur while the organization owns and operates the equipment, during installation, during servicing, and at disposal. They do not include emissions from the manufacturing of refrigerants or fire suppressants, which are Scope 3 indirect emissions attributed to the equipment manufacturer. Scope 1 fugitive emissions arise from:
+
+- Normal operational leakage from refrigeration, AC, and fire suppression systems
+- Catastrophic or accidental leaks
+- Refrigerant losses during equipment installation, repair, and removal
+- Deliberate discharge of fire suppressants to extinguish fires
+- Venting of purchased industrial gases after use in manufacturing, testing, or laboratory applications
+
+## Scope of Equipment Covered
+
+Refrigeration and air conditioning equipment covered by this guidance includes: household refrigeration, domestic and commercial air conditioning (including heat pumps), chillers, retail food refrigeration systems, cold storage warehouses, refrigerated transport, industrial process refrigeration, and commercial unitary AC systems. Fire suppression systems include both fixed systems (building-integrated) and portable equipment.
+
+Industrial gases such as CO2, SF6, and various HFCs are used in welding, manufacturing, semiconductor fabrication, testing, and laboratory applications. When these gases are purchased, used, and released, they are Scope 1 emissions.
+
+## The Four Calculation Methods
+
+The EPA guidance provides four methods with varying accuracy and data requirements. Selection depends on the type of equipment, the quality of records maintained, and whether emissions are found to be material after initial screening.
+
+**Method 1: Screening Method**
+
+The Screening Method estimates emissions by multiplying equipment refrigerant capacity by default emission factors for the equipment category. It covers installation, operation, and disposal phases separately.
+
+For refrigeration and AC equipment:
+- Installation emissions = refrigerant charged into new equipment x assembly loss factor (% of charge)
+- Operation emissions = refrigerant capacity x annual leak rate (% of capacity per year) x time in service
+- Disposal emissions = refrigerant capacity remaining at disposal x (1 - recovery efficiency)
+
+For fire suppression equipment, total capacity is multiplied by a fixed emission factor: 2.5 percent for fixed systems, 3.5 percent for portable equipment.
+
+The Screening Method requires the least data but has the highest uncertainty. Emission factors are broad averages that vary significantly between individual pieces of equipment and change over time. It should be used only as an initial screen to determine whether emissions are material. If they are found to be significant relative to other Scope 1 sources, one of the more accurate methods below should be adopted.
+
+**Method 2: Method for Purchased Gases**
+
+This method applies when an organization purchases industrial gases (such as SF6 for electrical switchgear or CO2 for laboratory use), uses them in a process, and then releases them. The assumption is that all gas purchased in the reporting period is used and released in that period.
+
+The calculation is straightforward: sum the mass of each gas type purchased, multiply by its GWP from the EPA GHG Emission Factors Hub, and sum to get total CO2-equivalent emissions. For bulk purchases intended for multi-year use, the purchased quantity should be divided by the expected years of use to apportion to the current period.
+
+This method is not appropriate for organizations that maintain an inventory of industrial gases in storage containers or that use gases to charge equipment on an ongoing basis; for those cases, the material balance methods are more accurate.
+
+**Method 3: Material Balance Method**
+
+The Material Balance Method is the recommended approach for organizations that own and maintain refrigerant-containing equipment and track refrigerant stocks. It calculates emissions as the mass of refrigerant that cannot be accounted for through purchases, sales, and changes in equipment capacity.
+
+<FormulaBox>
+**Equation (Material Balance):**
+Emissions = (I_B - I_E) + P - S + (C_B - C_E)
+
+Where:
+I_B = refrigerant inventory in storage at the beginning of the reporting period
+I_E = refrigerant inventory in storage at the end of the reporting period
+P = refrigerant purchased or otherwise acquired during the period
+S = refrigerant sold or otherwise disposed of during the period
+C_B = total refrigerant capacity of equipment at the beginning of the period
+C_E = total refrigerant capacity of equipment at the end of the period
+</FormulaBox>
+
+This equation is applied separately for each type of refrigerant. The resulting mass of emissions is multiplied by the refrigerant's GWP to get CO2-equivalent emissions. The method captures all net flows of refrigerant: what was brought in, what left in containers or equipment, and the net change in what the equipment was designed to hold.
+
+**Method 4: Simplified Material Balance Method**
+
+The Simplified Material Balance Method is appropriate for organizations that do not maintain their own stock of refrigerants and instead rely on service contractors for all equipment servicing. In these cases, the organization has fewer data flows to track because it does not hold refrigerant in storage.
+
+<FormulaBox>
+**Equation (Simplified Material Balance):**
+Emissions = (P_N - C_N) + P_S + (C_D - R_D)
+
+Where:
+P_N = refrigerant purchased to charge new equipment during installation
+C_N = total refrigerant capacity of new equipment installed (omit if pre-charged)
+P_S = refrigerant purchased to service existing equipment
+C_D = total refrigerant capacity of equipment disposed of during the period
+R_D = refrigerant recovered from retiring equipment
+</FormulaBox>
+
+The three terms represent the three emission events: net losses during installation (P_N minus C_N), operating losses replaced by service purchases (P_S), and disposal losses (capacity at retirement minus what was recovered). This method requires service contractors to record and report the quantities they charge to and recover from equipment.
+
+## Choosing the Right Method
+
+<ResponsiveTable>
+<table>
+  <thead>
+    <tr>
+      <th>Method</th>
+      <th>Best for</th>
+      <th>Data required</th>
+      <th>Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Screening Method</td>
+      <td>Initial materiality assessment; organizations with minimal refrigeration</td>
+      <td>Equipment type, capacity, generic leak rates</td>
+      <td>Low</td>
+    </tr>
+    <tr>
+      <td>Method for Purchased Gases</td>
+      <td>Industrial gas users (welding, lab, SF6 switchgear)</td>
+      <td>Gas purchase records by type</td>
+      <td>Medium</td>
+    </tr>
+    <tr>
+      <td>Material Balance Method</td>
+      <td>Organizations maintaining their own refrigerant inventory</td>
+      <td>Beginning/end stock, purchases, sales, capacity changes</td>
+      <td>High</td>
+    </tr>
+    <tr>
+      <td>Simplified Material Balance</td>
+      <td>Organizations using service contractors for all RAC servicing</td>
+      <td>Refrigerant charged and recovered by contractors</td>
+      <td>High</td>
+    </tr>
+  </tbody>
+</table>
+</ResponsiveTable>
+
+## Activity Data and GWP-Based Emission Factors
+
+Unlike combustion sources where emission factors convert fuel to CO2, fugitive emission calculations work in mass of gas released. The emission factor applied is the gas's GWP, which converts the physical mass of the released gas into CO2-equivalent tonnes.
+
+For the Screening Method, IPCC default emission factors provide leak rates and recovery efficiencies by equipment category. For example, medium and large commercial refrigeration systems carry a default annual operating leak rate of 35 percent of capacity per year, and an installation loss factor of 3 percent.
+
+GWP values are sourced from the EPA GHG Emission Factors Hub, which uses IPCC Fifth Assessment Report (AR5) 100-year GWP values. Organizations should use the most current values available at the time of calculation.
+
+## Completeness
+
+Every piece of refrigeration, AC, or fire suppression equipment within the operational boundary must be accounted for. For organizations using the Screening Method, each piece of equipment of each type must be inventoried. For the Material Balance Methods, all refrigerant types and blends used across all equipment must be tracked separately.
+
+A practical completeness check is to compare the refrigerant inventory against equipment lists, maintenance contracts, and insurance records. If a third party manages any refrigerant tracking (for example, a property management company handling building AC), that party must provide the necessary data.
+
+<ExampleBox>
+**Example: Why SF6 leaks matter**
+
+A utility company operates electrical switchgear containing 100 kg of SF6. A small leak releases 2 kg during the reporting year (a 2 percent annual leak rate).
+
+Physical leak: 2 kg SF6
+
+CO2-equivalent: 2 kg x 23,500 GWP = 47,000 kg CO2e = 47 metric tonnes CO2e
+
+For comparison, burning approximately 885 litres of diesel produces the same CO2-equivalent warming impact. A small, almost undetectable SF6 leak is equivalent in climate terms to a significant diesel fuel purchase.
+</ExampleBox>
+
+<DeepDive title="What happened to CFCs and HCFCs?">
+Historically, refrigeration and AC equipment used ozone-depleting substances (ODSs): primarily chlorofluorocarbons (CFCs) and hydrochlorofluorocarbons (HCFCs). Under the Montreal Protocol and the U.S. Clean Air Act Title VI, these substances are being phased out of production and use.
+
+CFCs and HCFCs are excluded from most GHG inventories because their global warming impact is complicated by their stratospheric ozone-depleting properties. The GHG Protocol allows them to be reported as separate memo items, with no GWP applied and no contribution to the CO2-equivalent total.
+
+HFCs were introduced as non-ozone-depleting replacements for CFCs and HCFCs. They do not deplete ozone but do have significant GWPs and are fully included in GHG inventories. Organizations that switched from ODSs to HFCs may see their GHG inventory increase because HFCs, unlike the ODSs they replaced, are counted in the total. This transition effect should be documented to explain year-over-year changes to stakeholders.
+</DeepDive>

@@ -1,0 +1,44 @@
+- question: "Why can a small physical quantity of fugitive refrigerant release represent a large CO2-equivalent emission?"
+  options:
+    - "Refrigerants are heavier than air and concentrate near the ground"
+    - "HFCs, PFCs, and SF6 have extremely high Global Warming Potentials (GWPs) compared to CO2"
+    - "Fugitive releases persist in the atmosphere for longer than combustion emissions"
+    - "Fugitive emissions occur at higher temperatures, amplifying their warming effect"
+  answer: 1
+  explanation: "The gases involved in fugitive releases (HFCs, PFCs, SF6) have very high GWPs. For example, SF6 has a GWP of 23,500 — one kilogram of SF6 is climatically equivalent to over 23 tonnes of CO2. Small physical volumes can represent large CO2-equivalent emissions."
+
+- question: "A utility company's electrical switchgear contains 100 kg of SF6. A 2% annual leak releases 2 kg. Using SF6 GWP of 23,500, what is the CO2-equivalent emission?"
+  options:
+    - "2 tCO2e"
+    - "47 tCO2e"
+    - "470 tCO2e"
+    - "235 tCO2e"
+  answer: 1
+  explanation: "2 kg SF6 × 23,500 GWP = 47,000 kg CO2e = 47 metric tonnes CO2e. For comparison, burning approximately 885 litres of diesel produces the same warming impact."
+
+- question: "Which fugitive emission calculation method is most accurate for an organisation that maintains its own refrigerant inventory in storage containers?"
+  options:
+    - "Screening Method — uses default leak rates per equipment type"
+    - "Method for Purchased Gases — sums mass of gas purchased"
+    - "Material Balance Method — tracks beginning/end stocks, purchases, sales, and capacity changes"
+    - "Simplified Material Balance — tracks contractor charge and recovery records"
+  answer: 2
+  explanation: "The Material Balance Method is recommended for organisations that own and maintain refrigerant stocks. It calculates emissions as the mass that cannot be accounted for through purchases, sales, and equipment capacity changes — capturing all net refrigerant flows."
+
+- question: "Why does the GHG Protocol allow CFCs and HCFCs to be excluded from the CO2-equivalent total and reported as memo items only?"
+  options:
+    - "CFCs and HCFCs have no global warming effect"
+    - "Their global warming impact is complicated by their ozone-depleting properties, and they are excluded under the Montreal Protocol framework"
+    - "CFCs and HCFCs are only used in consumer products, not industrial equipment"
+    - "They have very low GWP values and are therefore not material"
+  answer: 1
+  explanation: "CFCs and HCFCs are ozone-depleting substances being phased out under the Montreal Protocol. Their climate impact is complex due to indirect effects from ozone depletion. The GHG Protocol allows them as separate memo items with no GWP applied. HFCs (their replacement) are fully included in inventories."
+
+- question: "Scope 1 fugitive emissions from refrigeration systems include emissions during which phases?"
+  options:
+    - "Only operational leakage during normal use"
+    - "Only disposal at end of equipment life"
+    - "Installation, normal operation, servicing, and disposal — the full use-phase"
+    - "Manufacturing of the refrigerant before it is purchased"
+  answer: 2
+  explanation: "Scope 1 fugitive emissions are use-phase emissions: releases during equipment installation, normal operational leakage, losses during servicing and repair, and disposal. Manufacturing emissions of refrigerants before purchase are Scope 3 indirect emissions attributed to the equipment manufacturer."

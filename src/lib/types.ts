@@ -8,7 +8,7 @@ export interface Course {
   icon: string;
   color: string;
   status: 'published' | 'draft' | 'coming-soon';
-  category: 'methodologies' | 'markets' | 'esg' | 'fundamentals';
+  category: 'methodologies' | 'markets' | 'esg' | 'fundamentals' | 'green-finance' | 'sustainability-standards';
   estimatedHours: number;
   modules: Module[];
 }

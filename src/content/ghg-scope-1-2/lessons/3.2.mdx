@@ -1,0 +1,107 @@
+{/* source: GHG Protocol Scope 2 Guidance, Chapter 4 (pp. 24-31) */}
+
+Calculating scope 2 emissions requires a method for determining the GHG emissions associated with a company's electricity consumption. Two fundamentally different methods have been used by companies, programs, and policy makers to allocate the GHG emissions created by electricity generation to the end consumers of a given grid. The Scope 2 Guidance terms these the location-based method and the market-based method. Understanding what each method measures, what it omits, and when it applies is essential before attempting any scope 2 calculation.
+
+## The Location-Based Method
+
+The location-based method calculates scope 2 GHG emissions based on average energy generation emission factors for defined geographic locations, including local, subnational, or national grid boundaries.
+
+The method applies in all locations because the physics of energy production and distribution function the same way across virtually all grids: electricity demand causes the need for generation and distribution, and the generation profile serving a region reflects the full mix of resources required to maintain grid stability. This includes baseload resources, intermediate resources, and peaking resources, as well as the spinning reserves that grid operators maintain to handle fluctuations.
+
+The location-based method uses statistical emissions information aggregated and averaged within a defined geographic boundary and time period. Examples of location-based emission factors include:
+
+- The US EPA's eGRID subregion total output emission rates, which represent average emission factors for all plants generating electricity in a given grid region
+- The UK government's Defra annual grid average emission factor
+- IEA national electricity emission factors for countries worldwide
+
+<HighlightBox>
+The location-based method reflects the GHG intensity of the grid on which operations occur, regardless of what the company has contractually purchased. It shows the average emissions associated with electricity production in a geographic area.
+</HighlightBox>
+
+A key feature of this method is that grid average emission factors should not reflect any adjustments for market-based contractual claims by suppliers or end-users. Specifically, location-based grid average emission factors should not factor out certificates or supplier-specific purchases. By contrast, in the market-based method, a residual mix factor does exactly that: it represents the emissions that remain after contractual claims have been removed.
+
+## The Market-Based Method
+
+The market-based method calculates scope 2 GHG emissions based on GHG emissions emitted by the generators from which the reporter contractually purchases electricity bundled with contractual instruments, or from contractual instruments alone.
+
+In short, the market-based method reflects the GHG emissions associated with the choices a consumer makes regarding its electricity supplier or product. These choices include selecting a retail electricity supplier, a specific generator, a differentiated electricity product such as a green tariff, or purchasing unbundled energy attribute certificates. The emission factors used in this method derive from contractual instruments that meet the Scope 2 Quality Criteria.
+
+The contractual instruments that can supply emission factors for the market-based method include, in descending order of precision:
+
+1. **Energy attribute certificates** (such as RECs in the US and Canada, Guarantees of Origin in Europe, and I-RECs internationally), including electricity contracts such as PPAs that also convey certificates
+2. **Contracts** for electricity from specified sources, such as power purchase agreements in markets where certificates do not exist
+3. **Supplier-specific emission rates**, representing the GHG intensity of the electricity delivered by a utility or supplier, incorporating all the electricity they deliver
+4. **Residual mix factors**, representing the emissions and generation that remain after certificates, contracts, and supplier-specific factors have been claimed and removed from the calculation
+5. **Grid average emission factors** (the same as location-based), used only as a last resort when no other market-based data are available
+
+<HighlightBox>
+When contractual instruments are available, companies operating in those markets must report both a location-based total and a market-based total. This dual reporting is a requirement of the Scope 2 Guidance, not an option.
+</HighlightBox>
+
+## The Emission Rate Approach
+
+Both methods share several common features. Each uses generation-only emission factors assessed at the point of energy generation. These factors do not include transmission and distribution losses or upstream lifecycle emissions associated with the fuel or technology. Those upstream emissions belong in scope 3, category 3. Emission factors also should not include offsets purchased by a supplier on behalf of its customers; those are reported separately from the scopes.
+
+This approach is termed the "emission rate approach." It treats energy and contractual information about that energy the same way corporate accounting treats any other product information: the emission factor derived from the contractual instrument is applied to a quantity of energy consumption, consistent with the usage boundaries of that instrument. This is different from an "avoided emissions" approach, which would calculate what emissions would have been in a counterfactual scenario and subtract them. The Scope 2 Guidance does not support an avoided emissions approach for scope 2 inventory totals, though avoided emissions may be reported separately as supplemental information.
+
+## Decision-Making Value of Each Method
+
+The two methods provide different decision-making signals, not competing ones. Table 4.1 of the Scope 2 Guidance sets out the comparison clearly.
+
+<ResponsiveTable>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Location-Based Method</th>
+<th>Market-Based Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it shows</td>
+<td>GHG intensity of grids where operations occur</td>
+<td>Individual corporate procurement actions</td>
+</tr>
+<tr>
+<td>Most useful for</td>
+<td>Comparing GHG intensity of operations across different grid regions; assessing aggregate sector performance</td>
+<td>Demonstrating impact of supplier or product choices; engaging with energy supply markets</td>
+</tr>
+<tr>
+<td>What it omits</td>
+<td>Differentiated electricity purchases or supplier offerings</td>
+<td>Average emissions in the location where electricity use occurs</td>
+</tr>
+<tr>
+<td>Applies to</td>
+<td>All electricity grids globally</td>
+<td>Markets providing contractual instruments or supplier-specific data</td>
+</tr>
+</tbody>
+</table>
+</ResponsiveTable>
+
+The location-based method is most useful for assessing the GHG risks linked to physical location decisions: where a company locates facilities matters because different grids have different emission intensities, and the location-based result will change when a company shifts to a different grid region. The market-based method is most useful for assessing and demonstrating the impact of deliberate procurement decisions: which electricity product or supplier a company selects is reflected directly in its market-based scope 2 total.
+
+<ExampleBox>
+**Example: Same facility, two different scope 2 results**
+
+A manufacturer operates a facility in a coal-heavy grid region with a grid average emission factor of 0.75 kg CO2e/kWh (location-based). The facility consumes 10,000 MWh per year.
+
+Location-based scope 2: 10,000 MWh x 0.75 kg CO2e/kWh = 7,500 metric tons CO2e
+
+The manufacturer signs a power purchase agreement with a new wind farm and retains the associated energy attribute certificates. The certificates carry an emission factor of 0 kg CO2e/kWh. The residual mix factor for the region is 0.85 kg CO2e/kWh (higher than grid average because renewable attributes have been claimed out of it).
+
+For the 10,000 MWh covered by the wind PPA (certificates retained): 10,000 MWh x 0 = 0 metric tons CO2e (market-based)
+
+Market-based scope 2 total: 0 metric tons CO2e
+
+Both results are reported. The location-based result shows the facility's physical grid impact. The market-based result shows the outcome of the procurement decision.
+</ExampleBox>
+
+## Why Both Are Required
+
+Reporting only one method total would create an incomplete picture. Relying solely on the location-based method would hide the effect of procurement decisions that are often legally significant and strategically important. Relying solely on the market-based method would obscure the physical GHG intensity of the grids on which operations occur, and would miss reliability and non-GHG environmental risks associated with local generation resources.
+
+The guidance requires dual reporting precisely because these two perspectives on scope 2 emissions serve different analytical purposes and different stakeholder audiences. Companies must label each result clearly according to the method used, and must specify which method is used for goal-setting and for communicating scope 3 or product-level information.

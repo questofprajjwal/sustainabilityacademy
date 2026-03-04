@@ -75,23 +75,19 @@ Several established asset allocation frameworks can incorporate ESG factors, eac
 
 ### Mean-Variance Optimisation (MVO)
 
-The classic **Markowitz mean-variance approach** finds the portfolio on the efficient frontier that delivers the maximum expected return for a given level of risk (measured as volatility). ESG factors can modify the inputs:
+The classic **Markowitz mean-variance approach** builds portfolios based on expected returns, volatility, and correlations. When factoring in ESG:
 
-- **Expected returns** may need adjustment if certain asset classes face elevated long-term risks from climate change or regulatory shifts
-- **Volatility estimates** may need revision if stranded asset risk introduces fat-tail scenarios not captured by historical data
-- **Correlations** between asset classes may shift under stress scenarios involving climate shocks
+- **Expected returns** might need lowering for asset classes facing long-term climate risks.
+- **Volatility** could spike if stranded assets are written down.
+- **Correlations** between asset classes may shift dramatically during a climate shock.
 
-The challenge: MVO is notoriously sensitive to its inputs. Small changes in expected return estimates can produce dramatically different allocations. This makes it difficult to cleanly integrate forward-looking ESG signals without introducing significant model instability.
+*The Challenge:* MVO is notoriously sensitive to inputs. Gently tweaking an ESG return estimate can radically (and unreasonably) change the entire portfolio allocation.
 
 ### Black-Litterman Model
 
-The **Black-Litterman (BLM)** model is best understood as a refinement of MVO, not a separate alternative to it. It solves the classical sensitivity problem by starting from global market equilibrium weights and allowing the analyst to overlay specific "views," rather than requiring explicit return estimates for every asset class from scratch. This makes BLM more stable and more naturally suited to incorporating ESG insights.
+The **Black-Litterman (BLM)** model solves MVO's sensitivity problem. Instead of requiring exact return estimates from scratch, it starts with the market's baseline weights and lets you overlay your specific "views."
 
-For example, an allocator can express a directional view that carbon-intensive assets will underperform over the next decade, without needing to specify the precise return differential. BLM blends that view with equilibrium assumptions, producing an allocation that reflects the ESG signal without over-fitting.
-
-<HighlightBox>
-The Black-Litterman model is considered particularly promising for ESG integration because it does not require precise return estimates for every asset class. Instead, it accepts directional views, such as "carbon-intensive assets face long-term headwinds", and incorporates them alongside equilibrium assumptions. This reduces the risk of extreme, unreliable allocations that plague classic MVO when ESG signals are imprecise.
-</HighlightBox>
+*Why it works for ESG:* You don't need a precise numeric estimate. You can simply input a directional view, like "carbon-intensive assets face long-term headwinds", and BLM will smoothly adjust the portfolio without the extreme overreactions that plague classic MVO.
 
 ### Factor Risk Allocation
 

@@ -1,0 +1,44 @@
+- question: "The location-based method calculates Scope 2 emissions based on:"
+  options:
+    - "The GHG emission rate of the specific generator a company has contracted with"
+    - "Average energy generation emission factors for defined geographic grid locations"
+    - "The lowest available emission factor from any supplier in the market"
+    - "The company's historical Scope 2 emissions adjusted for renewable purchases"
+  answer: 1
+  explanation: "The location-based method uses average emission factors for the geographic area (grid region) in which operations occur. Examples include US EPA eGRID subregion factors, UK Defra grid average factors, and IEA national electricity emission factors."
+
+- question: "A facility consumes 10,000 MWh of electricity per year. The location-based grid emission factor is 0.75 kg CO2e/kWh and the company holds a wind PPA with an associated emission factor of 0 kg CO2e/kWh. What are the market-based Scope 2 emissions?"
+  options:
+    - "7,500 tCO2e (same as location-based)"
+    - "0 tCO2e (certificates from the PPA cover 100% of consumption)"
+    - "3,750 tCO2e (50% renewable)"
+    - "8,500 tCO2e (residual mix × consumption)"
+  answer: 1
+  explanation: "When the company holds and retires certificates from a wind PPA covering 100% of consumption with a 0 kg CO2e/kWh emission factor, its market-based Scope 2 total is 0 tCO2e. Both the location-based result (7,500 tCO2e) and market-based result (0 tCO2e) must be reported."
+
+- question: "What does the residual mix emission factor represent in market-based Scope 2 accounting?"
+  options:
+    - "The average emission factor for all generators in a country before any certificates are issued"
+    - "The GHG intensity of the electricity that remains after all certificate-based contractual claims have been removed"
+    - "The difference between a company's location-based and market-based results"
+    - "A backup emission factor used when grid average factors are unavailable"
+  answer: 1
+  explanation: "The residual mix represents all generation and associated emissions that have NOT been claimed by contractual instruments. When renewable certificates are claimed, they are removed from the residual mix, making the residual mix factor higher than the grid average. Companies without certificates should use the residual mix factor."
+
+- question: "Why must both location-based and market-based Scope 2 totals be reported when a company operates in markets with contractual instruments?"
+  options:
+    - "Because regulators require two separate figures for cross-country comparisons"
+    - "Because each method serves different analytical purposes — location-based shows grid intensity risk; market-based shows procurement impact — and neither alone provides a complete picture"
+    - "To allow companies to choose whichever total is lower for public reporting"
+    - "Because this requirement applies only to publicly listed companies"
+  answer: 1
+  explanation: "Dual reporting is required because the two methods serve different purposes. Location-based shows the physical GHG intensity of the grids where operations occur. Market-based shows the outcome of procurement decisions. Relying solely on one would hide information that is relevant to different stakeholder audiences."
+
+- question: "In the Scope 2 market-based method, what is the most precise type of emission factor, at the top of the hierarchy?"
+  options:
+    - "Grid average emission factors"
+    - "Supplier or utility-specific emission rates"
+    - "Energy attribute certificates (RECs, Guarantees of Origin, I-RECs)"
+    - "Residual mix factors"
+  answer: 2
+  explanation: "The market-based emission factor hierarchy, from most to least precise: (1) energy attribute certificates, (2) direct contracts/PPAs, (3) supplier-specific emission rates, (4) residual mix factors, (5) grid average factors as last resort. Certificates provide the most specific and traceable attribution of generation to consumption."

@@ -1,0 +1,142 @@
+{/* source: ghg-protocol-revised.pdf, Chapter 6 (pp. 40-47) */}
+
+Once the inventory boundary has been established, companies calculate GHG emissions using a five-step process: (1) identify GHG emission sources, (2) select a calculation approach, (3) collect activity data and choose emission factors, (4) apply calculation tools, and (5) roll up GHG emissions data to the corporate level.
+
+## Step 1: Identify GHG Emission Sources
+
+GHG emissions typically occur from four broad source categories:
+
+**Stationary combustion:** combustion of fuels in stationary equipment such as boilers, furnaces, burners, turbines, heaters, incinerators, engines, and flares. This is the most common Scope 1 source for most organisations.
+
+**Mobile combustion:** combustion of fuels in transportation devices including automobiles, trucks, buses, trains, airplanes, boats, ships, barges, and vessels owned or controlled by the company.
+
+**Process emissions:** emissions from physical or chemical processes, such as CO₂ from the calcination step in cement manufacturing, CO₂ from catalytic cracking in petrochemical processing, and PFC emissions from aluminium smelting. Process emissions are relevant only for certain industry sectors.
+
+**Fugitive emissions:** intentional and unintentional releases such as equipment leaks from joints, seals, packing, and gaskets; fugitive emissions from coal piles; wastewater treatment; cooling towers; gas processing facilities; methane from coal mines; and HFC emissions during use of refrigeration and air conditioning equipment.
+
+After identifying Scope 1 sources, the next step is to identify Scope 2 sources: indirect emission sources from the consumption of purchased electricity, heat, or steam. Almost all businesses generate indirect emissions due to the purchase of electricity for use in their processes or services.
+
+<ExampleBox>
+**United Technologies Corporation: More than meets the eye**
+
+In 1996, United Technologies Corporation (UTC) appointed a team to set boundaries for its new Natural Resource Conservation, Energy and Water Use Reporting Program. The team focused on what energy sources should be included. They decided jet fuel needed to be reported. Jet fuel was used by a number of UTC divisions for engine and flight hardware testing and for test firing. Although the amount used in any given year varied considerably, the total consumed annually was believed to be large. Jet fuel consumption reports proved that initial belief correct: jet fuel accounted for between 9 and 13 percent of UTC's total annual energy use since the program commenced. Had UTC not included jet fuel, a significant emissions source would have been overlooked.
+</ExampleBox>
+
+## Step 2: Select a Calculation Approach
+
+The most common approach for calculating GHG emissions is the application of **documented emission factors**: calculated ratios relating GHG emissions to a proxy measure of activity at an emission source. The IPCC (1996) refers to a hierarchy of calculation approaches and techniques ranging from the application of generic emission factors to direct monitoring.
+
+Three main approaches exist:
+
+- **Direct measurement:** monitoring GHG concentrations and flow rates in exhaust streams. Not common, as it is technically demanding and expensive.
+- **Mass balance:** tracking carbon inputs and outputs through a system (carbon in minus carbon out minus carbon stored equals carbon emitted). Applicable to certain industrial processes.
+- **Emission factors:** the most common approach. Multiply activity data by an emission factor to obtain GHG emissions.
+
+Companies should use the most accurate calculation approach available to them that is appropriate for their reporting context. In many cases, accurate emission data can be calculated from fuel use data even without direct monitoring.
+
+<FormulaBox>
+GHG Emissions = Activity Data × Emission Factor
+
+Where:
+- Activity Data = a quantitative measure of the level of activity that gives rise to GHG emissions (e.g., litres of fuel consumed, kWh of electricity purchased, tonnes of product manufactured)
+- Emission Factor = a coefficient that relates the activity data to the GHG emissions (e.g., kgCO₂ per litre of fuel, kgCO₂e per kWh of electricity)
+- Result is expressed in mass units, then converted to CO₂e using GWP values
+</FormulaBox>
+
+## Step 3: Collect Activity Data and Choose Emission Factors
+
+**Activity data** are quantitative measures of the level of activity that gives rise to GHG emissions. For Scope 1 stationary combustion, the most common activity data are the purchased quantities of commercial fuels such as natural gas and heating oil. For Scope 2, the primary activity datum is metered electricity consumption.
+
+**Emission factors** can be site-specific or default values:
+
+- **Default emission factors** are published values from recognised sources such as the IPCC, national governments, or industry associations. They are widely available and appropriate for most Scope 1 fuel combustion and Scope 2 electricity calculations where site-specific data are unavailable.
+- **Site-specific emission factors** are derived from direct measurement or characterisation of a specific fuel or process at a specific facility. Where available, site-specific factors are preferable to default values because they better reflect the actual GHG emissions of the reporting company's operations.
+
+For Scope 2, emission factors are typically expressed as kgCO₂ per kWh and vary by the electricity grid or supplier. Supplier-specific, local grid, or other published emission factors may all be used depending on availability and the specific reporting context.
+
+## The Six Kyoto Gases and Global Warming Potential
+
+Each of the six Kyoto Protocol gases must be reported in a common unit: **tonnes of CO₂ equivalent (tCO₂e)**. Conversion uses **Global Warming Potential (GWP)** values, which express the relative warming impact of a gas compared to CO₂ over a 100-year timeframe.
+
+<ResponsiveTable>
+<table>
+  <thead>
+    <tr>
+      <th>Gas</th>
+      <th>Chemical Formula</th>
+      <th>GWP (100-year, IPCC SAR)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Carbon dioxide</td>
+      <td>CO₂</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Methane</td>
+      <td>CH₄</td>
+      <td>21</td>
+    </tr>
+    <tr>
+      <td>Nitrous oxide</td>
+      <td>N₂O</td>
+      <td>310</td>
+    </tr>
+    <tr>
+      <td>HFCs (range)</td>
+      <td>Various</td>
+      <td>140 to 11,700</td>
+    </tr>
+    <tr>
+      <td>PFCs (range)</td>
+      <td>Various</td>
+      <td>6,500 to 9,200</td>
+    </tr>
+    <tr>
+      <td>Sulphur hexafluoride</td>
+      <td>SF₆</td>
+      <td>23,900</td>
+    </tr>
+  </tbody>
+</table>
+</ResponsiveTable>
+
+<HighlightBox>
+The GWP values in the table above are from the IPCC Second Assessment Report (SAR, 1996), which are the values used in the Kyoto Protocol and in many GHG reporting programs. Some programs and standards have updated to IPCC AR4 (2007) or AR5 (2013) values. Always check which GWP values a specific program or regulatory requirement specifies before reporting.
+</HighlightBox>
+
+<FormulaBox>
+CO₂e = Mass of Gas (tonnes) × GWP
+
+Example: 10 tonnes of CH₄ × 21 (GWP) = 210 tCO₂e
+Example: 1 tonne of SF₆ × 23,900 (GWP) = 23,900 tCO₂e
+</FormulaBox>
+
+<CalculationExercise
+  question="A refrigeration facility leaks 0.5 tonnes of HFC-134a during the year. HFC-134a has a GWP of 1,430 (IPCC AR4). What is the CO₂e emission from this leak?"
+  answer={715}
+  unit="tCO₂e"
+  hints={["Multiply the mass of the gas by its GWP.", "0.5 t × 1,430 = ?"]}
+  solution="0.5 tonnes HFC-134a × 1,430 (GWP) = 715 tCO₂e. This illustrates why fugitive HFC emissions can be significant even from small physical quantities."
+/>
+
+## Step 4: Apply Calculation Tools
+
+The GHG Protocol provides cross-sector and sector-specific calculation tools available on the GHG Protocol Initiative website. These tools consist of guidance sections and automated worksheets that provide step-by-step guidance on measuring and calculating emissions data.
+
+Cross-sector tools include: stationary combustion, mobile combustion, HFC use in refrigeration and air conditioning, and measurement and estimation uncertainty. Sector-specific tools cover aluminium and other non-ferrous metals production, iron and steel, nitric acid manufacture, ammonia manufacture, adipic acid manufacture, cement, lime, HFC-23 from HCFC-22 production, pulp and paper, semi-conductor wafer production, and office-based organisations.
+
+Most companies need to use more than one calculation tool. For example, to calculate GHG emissions from an aluminium production facility, a company would use the aluminium production tool, the stationary combustion tool (for electricity consumption), the mobile combustion tool (for transportation), and the HFC tool (for refrigeration).
+
+## Step 5: Roll Up Data to the Corporate Level
+
+To report a corporation's total GHG emissions, companies gather and summarise data from multiple facilities, possibly in different countries and business divisions. Standardised internal reporting formats ensure that data from different business units and facilities are comparable and that internal reporting rules are observed. Data collection systems may include: secure databases on company intranets with direct facility data entry, spreadsheet templates e-mailed to a corporate or division office, or paper reporting forms.
+
+<HighlightBox>
+The five steps for identifying and calculating GHG emissions assume that the inventory boundary has already been set. The calculation process only quantifies emissions within that boundary. Quality assurance and quality control (QA/QC) procedures should be applied throughout: checking data inputs, verifying unit conversions, reviewing emission factor selections, and cross-checking totals. Errors in any one step compound through the subsequent steps.
+</HighlightBox>
+
+<DeepDive title="Unit conversions and common pitfalls">
+Unit consistency is a frequent source of errors in GHG inventories. Activity data may be collected in different units across different facilities: litres, cubic metres, MMBtu, gigajoules, short tons, metric tonnes. Emission factors must match the unit of the activity data. Common conversions: 1 MWh = 3.6 GJ; 1 short ton = 0.907 metric tonnes; 1 MMBtu = 1.055 GJ. Always verify that the unit of the emission factor (e.g., kgCO₂/GJ) matches the unit of the activity data (e.g., GJ consumed) before multiplying. Also verify that the final result is in the correct unit before converting to CO₂e.
+</DeepDive>

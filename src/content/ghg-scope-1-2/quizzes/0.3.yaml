@@ -1,0 +1,35 @@
+- question: "The Tata Steel example illustrates which aspect of GHG inventory design?"
+  options:
+    - "How to set a base year for voluntary reduction targets"
+    - "Building institutional capacity so inventory data supports benchmarking, improvement tracking, and trading scheme eligibility"
+    - "Choosing between equity share and operational control consolidation approaches"
+    - "How to calculate process emissions from steel production"
+  answer: 1
+  explanation: "Tata Steel built a GHG inventory capable of benchmarking, measuring improvements, and enabling eligibility for emerging trading schemes. The inventory generated key performance indicators for energy consumption and GHG intensity per tonne of crude steel."
+
+- question: "A company focused on participation in a GHG emissions trading scheme has what specific design requirement compared to a company focused only on internal cost management?"
+  options:
+    - "It only needs to account for Scope 1 direct emissions, not Scope 2"
+    - "It needs a complete, auditable inventory designed to meet the specific requirements of the trading program from the start"
+    - "It can start with its largest facilities and expand coverage over time"
+    - "It should use the equity share approach rather than the operational control approach"
+  answer: 1
+  explanation: "A company focused on GHG markets needs a complete, auditable inventory from the start, designed to meet trading program requirements. A company focused on cost management can start with major sources and expand — the same activity has very different design requirements depending on the goal."
+
+- question: "Which is the first step in the GHG inventory design process described in this lesson?"
+  options:
+    - "Select calculation approaches for each emission source"
+    - "Choose a base year and establish a recalculation policy"
+    - "Set organisational boundaries"
+    - "Collect activity data and calculate emissions"
+  answer: 2
+  explanation: "The inventory design process begins with setting organisational boundaries (which entities to include), followed by setting operational boundaries, selecting a base year, identifying emission sources, collecting data, rolling up to the corporate level, and reporting."
+
+- question: "The IBM renewable electricity case demonstrates which business goal of a GHG inventory?"
+  options:
+    - "Managing GHG risks and identifying reduction opportunities, specifically through accounting for Scope 2 indirect emissions"
+    - "Participating in the EU Emissions Trading Scheme"
+    - "Complying with mandatory government reporting requirements"
+    - "Recognising early voluntary action for future regulatory credit"
+  answer: 0
+  explanation: "IBM identified significant potential to reduce Scope 2 emissions from purchased electricity, then acted on it through a wind energy contract. The Austin facility reduced its inventory by over 4,100 tCO2. This demonstrates how accounting for indirect emissions identifies reduction opportunities."

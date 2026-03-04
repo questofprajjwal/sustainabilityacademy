@@ -1,0 +1,44 @@
+- question: "Why does a GHG inventory need a base year?"
+  options:
+    - "To set a fixed reference point so that current emissions can be meaningfully compared to historical performance"
+    - "Because all GHG programs require 1990 as the base year"
+    - "To ensure emissions are reported in tonnes rather than other units"
+    - "To satisfy the requirement to report six gases separately"
+  answer: 0
+  explanation: "A base year is the historical reference point against which current emissions are compared. Without a stable base year, it is impossible to assess whether emissions have genuinely risen or fallen, or whether changes simply reflect changes in accounting."
+
+- question: "When MUST base year emissions be recalculated?"
+  options:
+    - "Every time a company updates its emission factors"
+    - "When structural changes (mergers, acquisitions, divestitures) have a significant impact on base year emissions"
+    - "When emissions increase more than 5 percent year-over-year"
+    - "Whenever a new GHG reporting standard is published"
+  answer: 1
+  explanation: "Base year emissions must be recalculated for structural changes that transfer ownership or control of emission sources between companies, significant methodology changes, and discovery of significant errors. Updating emission factor values alone does not trigger recalculation."
+
+- question: "ENDESA recalculated its base year emissions after selling its stake in the Viesgo power plants. This illustrates:"
+  options:
+    - "An organic growth adjustment — ENDESA's actual emissions changed"
+    - "A structural change recalculation — the divestment transferred existing emission sources to another company"
+    - "A methodology change — ENDESA switched from equity share to operational control"
+    - "A discovery of significant errors in prior year data"
+  answer: 1
+  explanation: "ENDESA's sale of its 87.5 percent holding in Viesgo is a structural change (divestment). The six power plants' emissions were removed from ENDESA's base year, maintaining a comparable historical series that reflects only the operations ENDESA still controls."
+
+- question: "Company C builds a new production line at an existing factory it already owns, causing emissions to increase. How should this be treated?"
+  options:
+    - "Recalculate the base year to include the new production line's projected emissions"
+    - "Report the higher emissions as genuine organic growth — no base year adjustment is required"
+    - "Exclude the new production line until it has been operational for one full year"
+    - "Report only the percentage change, not the absolute increase"
+  answer: 1
+  explanation: "An operational change (new production line at an owned facility) represents real changes in the company's own emissions. These are recorded as genuine increases, not base year adjustments. Only structural changes that transfer existing emission sources between companies require base year recalculation."
+
+- question: "A company may choose a multi-year average as its base year (e.g., an average of three consecutive years). What is the main reason for doing this?"
+  options:
+    - "It is required by all international GHG programs"
+    - "To smooth out unusual fluctuations that would make a single year unrepresentative"
+    - "To make the base year figure larger, giving more room to show reductions"
+    - "To comply with ISO 14064 requirements"
+  answer: 1
+  explanation: "A multi-year average (such as the UK ETS's 1998–2000 average) smooths out anomalies caused by production fluctuations, extreme weather, or one-off events that would make a single year's data unrepresentative of typical performance."

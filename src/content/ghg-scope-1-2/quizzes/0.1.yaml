@@ -1,0 +1,44 @@
+- question: "The GHG Protocol Corporate Standard was developed through a partnership between which two organisations?"
+  options:
+    - "IPCC and United Nations Environment Programme"
+    - "World Resources Institute (WRI) and World Business Council for Sustainable Development (WBCSD)"
+    - "International Standards Organisation (ISO) and World Bank"
+    - "Carbon Disclosure Project and Global Reporting Initiative"
+  answer: 1
+  explanation: "The GHG Protocol was launched in 1998 through a multi-stakeholder partnership convened jointly by WRI (a U.S.-based environmental NGO) and WBCSD (a Geneva-based coalition of 170 international companies)."
+
+- question: "How many greenhouse gases are covered by the GHG Protocol Corporate Standard?"
+  options:
+    - "Three (CO2, CH4, N2O)"
+    - "Four (CO2, CH4, N2O, HFCs)"
+    - "Six (CO2, CH4, N2O, HFCs, PFCs, SF6)"
+    - "Seven (the six Kyoto gases plus water vapour)"
+  answer: 2
+  explanation: "The Corporate Standard covers exactly the six greenhouse gases regulated under the Kyoto Protocol: CO2, CH4, N2O, HFCs, PFCs, and SF6. All are reported in tonnes of CO2 equivalent using IPCC GWP values."
+
+- question: "Which unit is used to report all six greenhouse gases in a common measure?"
+  options:
+    - "Metric tonnes of CO2 (tCO2)"
+    - "Tonnes of CO2 equivalent (tCO2e)"
+    - "Gigajoules of energy equivalent (GJ)"
+    - "Parts per million (ppm)"
+  answer: 1
+  explanation: "All six Kyoto Protocol gases are reported in tonnes of CO2 equivalent (tCO2e), using Global Warming Potential (GWP) values published by the IPCC to convert each gas."
+
+- question: "Which of the following is NOT one of the five business goals served by a corporate GHG inventory according to the GHG Protocol?"
+  options:
+    - "Managing GHG risks and identifying reduction opportunities"
+    - "Participating in mandatory reporting programs"
+    - "Calculating the carbon footprint of individual products sold to consumers"
+    - "Recognition for early voluntary action"
+  answer: 2
+  explanation: "The five business goals are: (1) managing GHG risks, (2) public reporting and voluntary programs, (3) mandatory reporting, (4) GHG markets, and (5) recognition for early voluntary action. Product-level footprinting is not one of them — that falls under different standards."
+
+- question: "The GHG Protocol uses the word 'shall' in certain chapters. What does this indicate?"
+  options:
+    - "The section is recommended but optional"
+    - "The section is guidance only, explaining how to implement requirements"
+    - "The section contains mandatory requirements"
+    - "The section applies only to large companies"
+  answer: 2
+  explanation: "The standard explicitly uses 'shall' to indicate mandatory requirements. Guidance sections use different language to explain how to implement those requirements in practice."
