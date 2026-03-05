@@ -1,0 +1,109 @@
+{/* source: Sustainalytics ESG Risk Ratings Methodology Abstract v3.1.1, pages 10-12 */}
+
+Once exposure has been established, the second dimension of the Sustainalytics model asks: what is the company actually doing about that risk? This lesson covers how management is assessed, introduces the concept of the Manageable Risk Factor, and explains how unmanaged risk is calculated from these two dimensions.
+
+## What Management Means in the Model
+
+The ESG Risk Ratings' second dimension is **Management**. It can be considered as a set of company commitments, actions, and outcomes that demonstrate how well a company is managing the ESG risks it is exposed to.
+
+Management is assessed through two types of indicators:
+
+- **Management Indicators:** These include policies, management systems, and certifications. They are the smallest assessment unit used to measure a company's management of ESG issues. They provide a systematic and consistent way of assessing clearly delineated and standardized criteria. These criteria are based on key areas of risk or best practices that help to distinguish between the performance of different companies.
+
+- **Event Indicators (Outcome-Focused Indicators):** These measure management performance either directly in quantitative terms, such as CO2 emissions or CO2 intensity, or via a company's involvement in controversies.
+
+For each material ESG issue and subindustry combination, management and event indicators are selected and weighted to explain and measure how well a company manages an issue. Importantly, indicators are not exclusively linked to just one issue. They may be applied to any issue where they are considered relevant and may therefore show up in the context of several material ESG issues.
+
+## Management Indicator Scoring
+
+Management Indicators are scored based on a predefined, indicator-specific scheme. This scheme is defined as a set of outcome categories and a linked score on a scale from 0 to 100.
+
+Exhibit 6 of the methodology provides an example using an Environmental Policy indicator:
+
+<ResponsiveTable>
+| Score | Outcome Category |
+|---|---|
+| 100 | The company has a very strong policy. |
+| 75 | The company has a strong policy. |
+| 50 | The company has an adequate policy. |
+| 25 | The company has a weak policy. |
+| 0 | Based on available evidence, the company does not have a policy. |
+</ResponsiveTable>
+
+The discounting effect in the management dimension increases with event severity, giving controversies a high impact on the rating and making it more dynamic. This means that a company with a strong policy but significant controversy involvement will still see its management score reduced.
+
+## Event Indicators
+
+Morningstar Sustainalytics assesses companies' level of involvement in controversial events that influence the environment, society, or a company's governance. Involvement in events may indicate that a company's management systems are not adequate to manage relevant ESG risks, and therefore events might reduce a company's management score for relevant ESG issues.
+
+Event Indicators are scored on a scale of **0 to 5**:
+- **0:** No evidence of relevant incidents.
+- **5:** Impact and severe risks.
+
+Every material ESG issue can have one or more event indicators linked to it.
+
+## The Manageable Risk Factor
+
+For some material ESG issues, the risk cannot be fully managed. The share of risk that is manageable versus the share that is unmanageable is predefined at the subindustry level by an **Issue Manageable Risk Factor (MRF)**.
+
+MRFs range from **30% to 100%** and represent the share of exposure to a material ESG issue that is deemed to be, at least theoretically, manageable by the company. MRFs are intended to achieve more realistic rating outcomes and to ensure the comparability of ratings across companies and subindustries.
+
+<HighlightBox>
+An MRF of 30% means that even if a company managed the issue perfectly, only 30% of its exposure to that issue could be reduced through management action. The remaining 70% is structurally unmanageable. This prevents the rating from implying that any company can fully eliminate all ESG risk through good management.
+</HighlightBox>
+
+## Calculating Unmanaged Risk: The Waterfall
+
+The final ESG Risk Ratings scores are a measure of unmanaged risk. This is defined as the portion of material ESG risk that is not yet managed by a company. The scoring system is best thought of as a waterfall with four levels. Exhibit 7 of the methodology explains this calculation based on a single material ESG issue.
+
+<ExampleBox>
+**Worked example from Exhibit 7 of the Sustainalytics methodology:**
+
+Starting point: Company Exposure = Subindustry Exposure x Issue Beta = 6 x 1.35 = **8.1**
+
+Step 1: Calculate Manageable Risk
+Manageable Risk = Company Exposure x MRF = 8.1 x 90% = **7.3**
+
+Step 2: Calculate Unmanageable Risk (the portion that cannot be managed regardless of effort)
+Unmanageable Risk = Company Exposure minus Manageable Risk = 8.1 minus 7.3 = **0.8**
+
+Step 3: Calculate Managed Risk (how much of the manageable portion the company has actually addressed)
+Managed Risk = Manageable Risk x Management Score (as %) = 7.3 x 31.9% = **2.3**
+
+Step 4: Calculate Management Gap
+Management Gap = Manageable Risk minus Managed Risk = 7.3 minus 2.3 = **5.0**
+
+Final: Unmanaged Risk = Company Exposure minus Managed Risk = 8.1 minus 2.3 = **5.8**
+
+This company's unmanaged risk score for this single MEI is 5.8, which falls in the medium risk category.
+</ExampleBox>
+
+The unmanaged risk formula can be stated simply as:
+
+<FormulaBox>
+Unmanaged Risk = Company Exposure minus Managed Risk
+</FormulaBox>
+
+The starting point at the top of the waterfall is the company's exposure to the issue, calculated as the product of the subindustry exposure and the issue beta. The overall ESG Risk Rating is produced by summing the unmanaged risk scores across all material ESG issues applicable to the company.
+
+## The Five Risk Categories
+
+Based on their total quantitative unmanaged risk score, companies are placed into one of five risk categories. These categories are absolute, meaning that a "high risk" assessment reflects a comparable degree of unmanaged ESG risk across all subindustries covered. This allows a bank to be compared with an oil company or any other company type.
+
+<ResponsiveTable>
+| Risk Category | Score Range |
+|---|---|
+| Negligible | 0 to less than 10 |
+| Low | 10 to less than 20 |
+| Medium | 20 to less than 30 |
+| High | 30 to less than 40 |
+| Severe | 40 and above |
+</ResponsiveTable>
+
+<HighlightBox>
+In peer benchmarking work, the risk category alone is often the first comparison point. However, the actual numerical score provides greater resolution. Two companies both rated "medium" could have scores of 20.1 and 29.9, representing meaningfully different levels of unmanaged risk. Always look at both the category and the underlying score when comparing peers.
+</HighlightBox>
+
+<DeepDive title="Why does the management score matter so much?">
+The management score has a compounding effect. A low management score means a large management gap, which flows directly into a high unmanaged risk score. In the worked example above, the management score was only 31.9%, leaving 68.1% of the manageable risk unaddressed. If the company improved its management score to 80%, the managed risk would rise from 2.3 to 5.84, and unmanaged risk would fall from 5.8 to 2.26, dropping it well into the negligible range for this specific issue. This is why the management dimension is a key lever for companies seeking to improve their ESG Risk Rating.
+</DeepDive>

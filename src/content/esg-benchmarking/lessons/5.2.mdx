@@ -1,0 +1,122 @@
+{/* source: MSCI ESG Ratings Methodology Appendix 5 (Normalizing the Weighted Average Score vs. industry peers), Section 3.6; GRI 2: General Disclosures 2021 pp. 5-20 */}
+
+Collecting and organising ESG data is the analytical foundation of a benchmarking engagement. But the deliverable your client needs is not a data table: it is a clear picture of where the company stands relative to its peers and a practical recommendation for what to do about the gaps. This lesson covers how to translate the numbers into a benchmarking narrative, how the MSCI percentile framework communicates relative positioning, and how to structure a client-ready output.
+
+## From Scores to Positioning
+
+### Understanding MSCI's Industry-Adjusted Score
+
+Once MSCI has calculated the Weighted Average Key Issue Score (WAKIS) for a company, that score is normalised relative to the ESG Rating Industry peer set. This is the Industry-Adjusted Score (IAS), which is what drives the final letter rating.
+
+As set out in Appendix 5 of the MSCI methodology, each company receives an IAS where the WAKIS is normalised based on score ranges set by the benchmark values in the peer set. The top benchmark value falls between the 95th and 100th percentile of modelled WAKIS scores within the ESG Rating Industry. The bottom benchmark value falls between the 0th and 5th percentile.
+
+The adjusted score of 10 is defined at or above the industry maximum score. The adjusted score of 0 is defined at or below the industry minimum score. The remaining companies' scores are linearly interpolated using the formula:
+
+`IAS = 10 x (WAKIS - industry minimum score) / (industry maximum score - industry minimum score)`
+
+This means that the IAS is explicitly an industry-relative measure. A company cannot improve its IAS by improving its absolute performance alone: it needs to improve relative to its peers.
+
+<AnalogyBox>
+The IAS works like grading on a curve. If you scored 70 out of 100 on a test and the class average was 65, you would be above average even if 70 is not an outstanding absolute score. In ESG benchmarking, the MSCI industry minimum and maximum set the endpoints of the curve. A company at the industry maximum receives a 10; one at or below the industry minimum receives a 0. Everyone else is placed proportionally between those endpoints.
+</AnalogyBox>
+
+### MSCI Percentile Rankings
+
+MSCI calculates percentile rankings for each company relative to its ESG Rating Industry. The company with the lowest points value within the industry is assigned a percentile rank of 100. The company with the highest points value is assigned a percentile rank of 0. In MSCI's convention, lower percentile ranks are better.
+
+For benchmarking purposes, the following percentile bands are used to communicate relative positioning:
+
+- **96 to 100 percentile (best-in-class):** The company is at the very top of its ESG Rating Industry.
+- **76 to 95 percentile (above average):** The company performs better than most of its industry peers.
+- **26 to 75 percentile (average):** The company is in the middle of its industry peer distribution.
+- **6 to 25 percentile (below average):** The company performs worse than most of its industry peers.
+- **0 to 5 percentile (worst-in-class):** The company is at the very bottom of its ESG Rating Industry.
+
+In a benchmarking report, these bands translate directly into the language of relative positioning that clients find actionable.
+
+## Quartile Analysis
+
+Quartile analysis is a simpler and often more accessible way to present relative positioning, particularly for clients who are less familiar with ESG rating agency conventions.
+
+Dividing the peer group into four equal parts by ESG performance score produces:
+
+- **Top quartile:** The top 25% of peers by score. Best-in-class performers sit here.
+- **Second quartile:** The 26th to 50th percentile range. Above-median performers.
+- **Third quartile:** The 51st to 75th percentile range. Below-median performers.
+- **Bottom quartile:** The bottom 25% of peers. Laggards sit here.
+
+Placing the client company within this quartile framework gives an immediate visual anchor. It also allows you to identify, for each KPI or pillar, which quartile the client occupies and which specific peer companies are in the top quartile on that dimension.
+
+<ExampleBox>
+**Example: Quartile positioning on the Carbon Emissions key issue**
+
+Your client is a specialty chemicals manufacturer. You have collected MSCI Carbon Emissions Key Issue Scores for the client and its nine closest peers. Sorting these scores from highest (best) to lowest (worst):
+
+- Peers A, B, C: scores 8.5, 8.1, 7.9 (top quartile)
+- Client, Peer D: scores 6.4, 6.1 (second quartile)
+- Peers E, F: scores 4.8, 4.2 (third quartile)
+- Peers G, H: scores 2.9, 2.1 (bottom quartile)
+
+The client is in the second quartile on Carbon Emissions but is 1.5 points below the top-quartile threshold. The gap to best-in-class (Peer A at 8.5) is 2.1 points. In your report, you would note that the client is above the industry median but not yet in the top quartile, and you would describe what Peer A is doing differently to earn its score.
+</ExampleBox>
+
+## Identifying Priority Gaps
+
+The purpose of a benchmarking report is not to describe the gap but to prioritise it. Not every gap between the client and best-in-class peers is equally important. To prioritise, apply two filters.
+
+**Filter 1: Key issue weight.** In MSCI's model, each key issue typically comprises 5% to 30% of the total ESG Rating. A gap on a key issue that carries 20% weight has much more impact on the overall rating than a gap on a key issue carrying 5% weight. Focus the client's attention on the high-weight key issues first.
+
+**Filter 2: Gap size.** Within the high-weight key issues, identify where the gap between the client and the top-quartile threshold is largest. A company that is below average on a high-weight key issue and far from the top quartile on that same issue has a clear priority for action.
+
+The combination of these two filters produces a shortlist of priority gaps that should drive the recommendation section of the benchmarking report.
+
+## Structuring the Client Report
+
+A benchmarking report for a client should follow a structure that moves from summary to detail and ends with concrete actions.
+
+### Executive Summary
+
+Open with a one-page summary of the client's overall position: current MSCI rating or Sustainalytics risk category, percentile rank within the ESG Rating Industry, and the two or three most important findings. Clients who read nothing else should understand from this page whether the company is a leader, an average performer, or a laggard relative to its peers, and what the top priority action is.
+
+### Overall Position
+
+Present the client's overall ESG score or unmanaged risk score alongside the peer group distribution. A simple chart showing the client's score against the minimum, median, and maximum of the peer group is effective. State the client's percentile rank and which MSCI band it falls into (best-in-class, above average, average, below average, or worst-in-class).
+
+### E, S, and G Breakdown
+
+Break the overall position into the three pillars. For each pillar, show the client's score against the peer quartile distribution. Identify which pillar is the client's relative strength and which is its relative weakness. This pillar-level view helps the client allocate effort: if the governance pillar score is dragging down the overall rating while the environmental pillar is already in the top quartile, the governance workstream should receive more attention.
+
+### Key Gaps and Recommendations
+
+For each priority gap identified using the two-filter approach above, provide:
+
+- The specific key issue or MEI where the gap exists.
+- The client's current score and the top-quartile score on that key issue.
+- What the top-quartile peers are doing differently. This requires reviewing what MSCI assesses in the Risk Management section for that key issue: strategy and governance commitments, initiatives and programs, and performance data.
+- A concrete recommendation for what the client should do to close the gap.
+
+<HighlightBox>
+When presenting recommendations, distinguish between actions that will improve the underlying performance and actions that will improve disclosure of existing performance. Both matter for ratings, but they are different types of work. A company that already has a strong environmental management system but does not disclose its water intensity data in a format that rating agencies can use is leaving rating score on the table through disclosure gaps rather than performance gaps. Identify which category each recommendation falls into.
+</HighlightBox>
+
+## Common Client Questions
+
+**"Our absolute emissions have been falling for three years. Why hasn't our MSCI score improved?"**
+
+The MSCI IAS is industry-relative. If your emissions have been falling but your peers' emissions have been falling faster, your relative position and therefore your score may not have improved. The relevant question is not how your absolute performance compares to your past performance, but how your performance trend compares to your peers' trends. Check the industry-adjusted score and percentile rank against the prior year to diagnose whether peers are improving faster.
+
+**"We are below average on Board independence. What is the minimum change needed to reach the top quartile?"**
+
+Use the peer group data to identify the board independence percentage of the company at the top-quartile threshold. The gap between the client's current board independence percentage and that threshold is the minimum target. Note that MSCI treats non-disclosure of board composition as absence of the required practice: if the client's board data is not publicly disclosed in a form that MSCI can access, improving disclosure may be the first step.
+
+**"How do we know whether our GRI sustainability report is helping our ratings?"**
+
+GRI 2: General Disclosures 2021 provides the baseline of organisational disclosures that rating agencies use. It requires reporting on activities and workers (including employee data by gender and region under Disclosure 2-7), governance structure and composition under Disclosure 2-9, remuneration under Disclosures 2-19 to 2-21, policy commitments under Disclosure 2-23, and mechanisms for raising concerns under Disclosure 2-26. If the client's GRI report covers these disclosures accurately and in detail, it provides the data inputs that feed into MSCI and Sustainalytics assessments. Cross-check the client's GRI content index against the specific indicators used in each key issue assessment to identify disclosure gaps that are likely affecting scores.
+
+**"Which peers should we prioritise learning from?"**
+
+Focus on peers in the top quartile on the key issues where your client has its largest gaps. Within that set, prioritise peers that are closest to the client in business model and geography, because their practices are more likely to be transferable. Use MSCI's risk management assessment structure (strategy, programs, performance) to identify specifically what those peers are disclosing that your client is not.
+
+<DeepDive title="How the MSCI industry minimum and maximum scores are set and updated">
+The industry top benchmark value falls between the 95th and 100th percentile of modelled WAKIS scores within an ESG Rating Industry. The bottom benchmark value falls between the 0th and 5th percentile. These values are set at the beginning of each calendar year based on the score distribution as of that point. The methodology includes provisions to handle two types of instability. First, the MSCI ESG Ratings coverage universe grows each year, and newly added companies with limited disclosure can lower the bottom benchmark value, thereby triggering upgrades across the industry. To mitigate this, companies with less than two years of ratings history are excluded when determining the bottom benchmark. Second, benchmark values are updated within a year if the mean WAKIS or either tail of the distribution changes by 0.2 or more since the last review, or if the current maximum score falls below the 90th percentile or the minimum score rises above the 10th percentile of the latest WAKIS distribution. These rules minimise unidirectional rating changes caused by benchmark drift rather than genuine changes in company performance.
+</DeepDive>
