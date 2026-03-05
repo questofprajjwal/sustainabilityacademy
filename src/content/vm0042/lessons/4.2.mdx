@@ -52,7 +52,7 @@
 
 <div class="bg-blue-50 border border-blue-200 rounded p-4 mb-4">
   <p class="font-semibold text-blue-800">📊 How VM0042 Uses the Monte Carlo Distribution</p>
-  <p class="text-sm mt-2 text-blue-900">VM0042 does not simply use the "5th percentile." Instead, it uses a <strong>probability-of-exceedance</strong> construct: the uncertainty deduction percentage is set so that the probability of the true value being <em>lower</em> than (mean − deduction) is only 5% — i.e., a 95% confidence lower bound.</p>
+  <p class="text-sm mt-2 text-blue-900">VM0042 does not simply use the "5th percentile." Instead, it uses a <strong>probability-of-exceedance</strong> construct: the uncertainty deduction percentage is set so that the probability of the true value being <em>lower</em> than (mean − deduction) is only 5%, i.e., a 95% confidence lower bound.</p>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-3 text-sm">
     <div class="bg-white p-3 rounded border">
       <p class="font-semibold text-gray-700">For a symmetric normal distribution:</p>
@@ -60,7 +60,7 @@
     </div>
     <div class="bg-white p-3 rounded border">
       <p class="font-semibold text-gray-700">For non-symmetric or skewed distributions:</p>
-      <p class="mt-1 text-gray-600">MC simulation directly gives you the 5th percentile value from the simulated distribution — no normal-distribution assumption needed. This is why MC is required for spectroscopy models with non-Gaussian error structures.</p>
+      <p class="mt-1 text-gray-600">MC simulation directly gives you the 5th percentile value from the simulated distribution, no normal-distribution assumption needed. This is why MC is required for spectroscopy models with non-Gaussian error structures.</p>
     </div>
   </div>
   <p class="mt-3 text-sm text-blue-800"><strong>Deduction schedule:</strong> If 95% confidence interval (CI) half-width &lt;15% of mean → 0% deduction. 15–20% → 5% deduction. 20–30% → 15% deduction. >30% → 35% deduction. Uncertainty is measured as a % of the point estimate.</p>

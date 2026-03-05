@@ -4,12 +4,12 @@
 
 <HighlightBox>
   <p class="font-semibold text-green-800">When does VMD0053 apply?</p>
-  <p class="text-green-900 mt-1">VM0042 Approach 1 allows the use of a <strong>biogeochemical model</strong> (e.g., DayCent, DNDC, RothC) to estimate SOC stock changes and GHG fluxes instead of relying entirely on field measurements. When you use such a model, you must follow <strong>VMD0053 v2.1</strong> — a binding methodology module that defines exactly how the model must be calibrated, validated, and its uncertainty quantified before any VCUs can be issued.</p>
+  <p class="text-green-900 mt-1">VM0042 Approach 1 allows the use of a <strong>biogeochemical model</strong> (e.g., DayCent, DNDC, RothC) to estimate SOC stock changes and GHG fluxes instead of relying entirely on field measurements. When you use such a model, you must follow <strong>VMD0053 v2.1</strong>, a binding methodology module that defines exactly how the model must be calibrated, validated, and its uncertainty quantified before any VCUs can be issued.</p>
 </HighlightBox>
 
 <AnalogyBox>
   <p class="font-semibold text-blue-800">🏋️ Analogy: The Certified Scale</p>
-  <p class="mt-2 text-blue-900">Imagine a carbon project is a weighing station for carbon. If you claim to weigh 10,000 tonnes of CO₂ reduction, your scale (the biogeochemical model) needs to be <em>certified</em> — meaning independently tested, shown to give accurate readings under conditions similar to your project, and its measurement error must be documented. VMD0053 is the certification standard for that scale.</p>
+  <p class="mt-2 text-blue-900">Imagine a carbon project is a weighing station for carbon. If you claim to weigh 10,000 tonnes of CO₂ reduction, your scale (the biogeochemical model) needs to be <em>certified</em>, meaning independently tested, shown to give accurate readings under conditions similar to your project, and its measurement error must be documented. VMD0053 is the certification standard for that scale.</p>
 </AnalogyBox>
 
 <ExampleBox>
@@ -17,7 +17,7 @@
   <ul class="mt-2 space-y-2 text-sm">
     <li><strong>DayCent (USA, Argentina, Brazil):</strong> Developed by Colorado State University, DayCent simulates daily soil C and N dynamics. It has peer-reviewed validation for corn, soy, and grassland systems and is the most commonly used model in Verra-registered IALM projects in the Americas.</li>
     <li><strong>RothC (UK, Australia, Europe):</strong> A simpler monthly-timestep model focused on SOC only (no N₂O or CH₄). Used for temperate cropland projects in Europe and Australia where N₂O is handled via Approach 3 default factors.</li>
-    <li><strong>DNDC (Asia):</strong> Best validated for CH₄ from flooded rice systems and N₂O from intensive N fertilization — making it the go-to for rice AWD projects in Vietnam, China, and India.</li>
+    <li><strong>DNDC (Asia):</strong> Best validated for CH₄ from flooded rice systems and N₂O from intensive N fertilization, making it the go-to for rice AWD projects in Vietnam, China, and India.</li>
   </ul>
 </ExampleBox>
 
@@ -27,9 +27,9 @@
 <ResponsiveTable>
 <table class="mb-6 text-sm">
   <tr><th>#</th><th>Criterion</th><th>What It Means in Practice</th></tr>
-  <tr><td><strong>1</strong></td><td>Publicly available documentation</td><td>Model concept, inputs, outputs, and how it represents carbon dynamics must be publicly documented — source code is NOT required</td></tr>
+  <tr><td><strong>1</strong></td><td>Publicly available documentation</td><td>Model concept, inputs, outputs, and how it represents carbon dynamics must be publicly documented, source code is NOT required</td></tr>
   <tr><td><strong>2</strong></td><td>Peer-reviewed</td><td>Must have published, peer-reviewed studies showing it successfully simulates carbon stock and GHG changes from ALM practices</td></tr>
-  <tr><td><strong>3</strong></td><td>Reproducible</td><td>Clear version control; same version used for baseline and project; all parameters reported; for stochastic models — random seed sequence provided</td></tr>
+  <tr><td><strong>3</strong></td><td>Reproducible</td><td>Clear version control; same version used for baseline and project; all parameters reported; for stochastic models, random seed sequence provided</td></tr>
   <tr><td><strong>4</strong></td><td>Validated per this module</td><td>Model prediction error calculated from independent datasets for each PC/CFG/ES combination used in the project</td></tr>
 </table>
 </ResponsiveTable>
@@ -54,7 +54,7 @@
       <li>Land cultivation, planting &amp; harvesting (crop rotations, cover crops)</li>
       <li>Grazing practices</li>
     </ol>
-    <p class="text-blue-800 text-xs mt-2"><strong>Domain of Practice Effects:</strong> Each PC must also be validated across its full "domain" — e.g., for Inorganic N Fertilizer, validation must cover variations in magnitude, form, timing, and application method. Simply validating one rate of urea does not validate the full PC.</p>
+    <p class="text-blue-800 text-xs mt-2"><strong>Domain of Practice Effects:</strong> Each PC must also be validated across its full "domain", e.g., for Inorganic N Fertilizer, validation must cover variations in magnitude, form, timing, and application method. Simply validating one rate of urea does not validate the full PC.</p>
   </div>
   <div class="bg-purple-50 border border-purple-200 rounded p-4 text-sm">
     <h4 class="font-bold text-purple-800 mb-2">Crop Functional Group (CFG)</h4>
@@ -108,7 +108,7 @@
       <li>• May use direct measurements (leaf area index, harvest index)</li>
       <li>• Same parameter sets used in validation AND in baseline/project simulations</li>
       <li>• Parameters defined at no finer than one IPCC climate zone OR nationally defined agricultural region</li>
-      <li>• Calibration and validation datasets must be <em>demonstrably independent</em> — different experimental sites, no overlapping studies</li>
+      <li>• Calibration and validation datasets must be <em>demonstrably independent</em>, different experimental sites, no overlapping studies</li>
     </ul>
   </div>
   <div class="bg-indigo-50 border border-indigo-200 rounded p-4 text-sm">
@@ -117,7 +117,7 @@
       <li>• Integrates prior knowledge + observed data via MCMC sampling</li>
       <li>• Uninformative priors: used when little prior knowledge exists → posterior driven by data</li>
       <li>• Informative priors: tight posterior closely follows the prior; data have less impact</li>
-      <li>• Particularly recommended for uncertainty quantification — confidence intervals reflect data availability</li>
+      <li>• Particularly recommended for uncertainty quantification, confidence intervals reflect data availability</li>
       <li>• Sparse data = wide confidence intervals (conservative for crediting)</li>
     </ul>
   </div>
