@@ -1,12 +1,13 @@
 {/* source: MSCI ESG Ratings Methodology Sections 2.1, 3.1 */}
 
-Before you can interpret a client's MSCI ESG Rating or advise them on how to improve it, you need to understand exactly which issues are being evaluated for their company, and why. This lesson walks through the full structure of the MSCI key issue framework, how issues are selected for each industry, and when a company may be evaluated on issues that other companies in its industry are not.
+Before you can interpret a client's MSCI ESG Rating or advise them on how to improve it, you must understand the exact architecture of the attack surface. You need to know precisely which issues MSCI is interrogating your client on, and why. 
 
-## The full hierarchy: 3 pillars, 10 themes, 33 key issues
+## The Architectural Hierarchy
 
-The MSCI ESG Ratings model is built on a three-level hierarchy. The three top-level pillars are Environment, Social, and Governance. These are divided into 10 themes. The themes are then broken down into 33 ESG Key Issues.
-
-The table below shows the complete hierarchy as published in Exhibit 1 of the MSCI ESG Ratings Methodology (April 2024).
+The MSCI ESG Ratings model is rigidly built on a three-level hierarchy.
+- **Pillars:** The top level (Environment, Social, Governance).
+- **Themes:** The 10 specific themes dividing the pillars.
+- **Key Issues:** The 33 brutally specific ESG issues that companies are actually scored on.
 
 <ResponsiveTable>
 
@@ -48,66 +49,45 @@ The table below shows the complete hierarchy as published in Exhibit 1 of the MS
 
 </ResponsiveTable>
 
-## Universal vs. industry-specific key issues
+## Universal vs. Bespoke Key Issues
 
-Not all 33 key issues apply to every company. The way MSCI handles this depends on which pillar the issue belongs to.
+A company is absolutely not evaluated on all 33 issues. MSCI deploys these issues based entirely on the pillar they belong to.
 
-**Governance key issues are universal.** All companies in all industries are evaluated on the six Governance Key Issues: Board, Pay, Ownership and Control, Accounting, Business Ethics, and Tax Transparency. These fall under two themes: Corporate Governance and Corporate Behavior. MSCI's position is that governance is universally important and should be evaluated in an integrated way regardless of industry.
+**Governance is Universal:** Every single company on earth is forcefully evaluated on all six Governance Key Issues. MSCI's position is absolute: terrible governance will destroy any company, regardless of what industry it is in.
 
-**Environmental and Social key issues are industry-specific.** Each company is evaluated on a selection of two to seven Environmental and Social Key Issues. Which issues apply depends on the company's GICS sub-industry classification. MSCI defines key issues for each of the 163 sub-industries defined by the Global Industry Classification Standard. The selection is based on the extent to which business activities in that industry generate large environmental or social externalities.
+**Environmental & Social Issues are Bespoke:** Each company is forced to defend itself against a highly customized selection of two to seven E&S Key Issues. MSCI selects these issues based entirely on the company's GICS sub-industry. The selection is driven by one brutal metric: does this specific industry generate massive negative externalities (damage) in this specific area?
 
 <HighlightBox>
-When you pull a client's MSCI ESG Rating report, the first thing to verify is which key issues have been assigned to their sub-industry. These are the issues that determine the majority of their score. Governance is fixed, but the Environmental and Social issues will vary depending on the GICS classification.
+**The Consultant's First Move:** The absolute first step in an MSCI benchmarking engagement is verifying exactly which 2 to 7 E&S Key Issues have been locked onto your client's sub-industry. You ignore the other 20+ issues completely. You only fight the battles MSCI assigns you.
 </HighlightBox>
 
-## How industry key issues are selected
+## How MSCI Selects Industry Key Issues
 
-The process of assigning key issues to a GICS sub-industry is grounded in a structured analysis of externalities.
+MSCI does not guess what is important. They run a heavy mathematical model to assign issues to industries based on **Externalities**.
 
-For each company, reported business segments are mapped to standard business activities. MSCI ESG Research uses the Standard Industrial Classification (SIC) system along with industry-specific adjustments to define these activities.
+1. MSCI maps every business segment in an industry to standard economic activities.
+2. They calculate the severity of the damage (the externality) that activity causes. For example, to assign the "Health and Safety" Key Issue, MSCI actively pulls fatal injury data from OSHA and the ILO for that specific industry.
+3. If the industry's externality score blasts past the 80th percentile globally, that Key Issue is permanently locked onto that sub-industry.
 
-Each business activity is then assessed on the level of externality it generates for each ESG Key Issue. For example, MSCI measures the externality for the Health and Safety Key Issue based on the extent to which companies' business segments are prone to injuries and fatalities, drawing on data from the International Labour Organization and occupational safety authorities such as OSHA.
+## The Wildcard: Company-Specific Key Issues
 
-The result is a Business Segment Exposure Score. MSCI then ranks all 163 GICS sub-industries on each key issue based on the average Business Segment Risk Exposure score of the underlying companies.
+Occasionally, a company is so bizarre, or behaves so outrageously, that MSCI breaks its own rules. MSCI will slap a **Company-Specific Key Issue** onto a single corporation, forcing them to defend an issue that none of their direct competitors have to face.
 
-An ESG Key Issue is typically added for a GICS sub-industry when the externality is at or above the 80th percentile of all sub-industries and the average Business Exposure Segment Risk Exposure score is greater than or equal to 5.0. It is typically removed when the externality falls to or below the 70th percentile and the average Business Exposure Score is 3.3 or less.
-
-In Q4 of each calendar year, MSCI ESG Research conducts a 30-day client consultation and comment period during which feedback is solicited on proposed changes to the industry key issues. The final set of key issues and weights must be approved by the sector team leader and the ESG Methodology Committee. Weights are set at the beginning of the calendar year and apply throughout that year.
-
-## Company-specific key issues
-
-In some cases, a company may face a unique Environmental or Social Key Issue that is not shared by other companies in its industry. When this happens, MSCI can add a Company-Specific Key Issue to that company's analysis. When it is added, the weights on the remaining key issues are reduced proportionally to accommodate it.
-
-The reverse also applies: if a company does not share a particular Environmental or Social Key Issue that other companies in its industry face, that issue is removed from its analysis and the weights on the remaining issues are increased proportionally.
-
-Company-specific key issues can be triggered by four types of circumstances, as documented in the MSCI methodology:
+When MSCI adds a new issue, they mathematically reduce the weight of all the other issues to accommodate it.
 
 <ExampleBox>
-**Company sources significant revenue from a secondary industry.** Rule: more than 20% of revenue or earnings from secondary business line. Addition: the most relevant key issue facing that secondary business line. Example: Tiffany (Retail) derives more than 20% of revenue from fine jewelry, so Controversial Sourcing is added.
+**Four Ways to Trigger a Custom Assessment:**
 
-**Company has a large footprint in a secondary industry.** Rule: high absolute size of secondary business line relative to peers. Addition: most relevant key issue facing secondary business line. Example: Disney (movies and entertainment) is among the world's largest toy manufacturers, so Supply Chain Labor Standards is added.
-
-**Company has a unique business model.** Rule: exception-based, requires ESG Ratings Methodology Committee approval. Addition: most relevant key issue. Example: Herbalife (personal products) sells weight supplements regulated by food safety bodies, so Product Safety and Quality is added.
-
-**Company faces a severe or very severe controversy on a non-key issue.** Rule: based on severity, status, and date of controversy. Addition: key issue mapped to that controversy. Example: Sysco Corporation faces severe controversy in Labor Management.
+1. **The Massive Side Hustle:** If a company makes more than 20% of its revenue from a secondary industry, MSCI adds the biggest risk from that shadow industry. *(Example: A retail chain making massive profits selling fine jewelry will suddenly have "Controversial Sourcing" bolted onto its rating).*
+2. **The Absolute Size Rule:** If the secondary business is small by percentage but objectively massive in absolute dollars. *(Example: A massive media conglomerate happens to manufacture millions of toys, triggering "Supply Chain Labor Standards").*
+3. **The Bizarre Business Model:** If a company does something totally unique for its sector. *(Example: A cosmetics brand selling ingestible diet pills triggers "Product Safety and Quality").*
+4. **The Horrific Controversy:** If a company is caught in a severe, highly public scandal regarding an issue they are not normally rated on, MSCI will instantly add that issue as a direct punishment.
 </ExampleBox>
 
-There are also industry-based rules that trigger company-specific key issues for certain types of companies:
-
-<ExampleBox>
-**Utilities with significant hydro operations.** Based on percentage of capacity, absolute capacity in megawatts, and geographic presence in biodiversity hotspots: Biodiversity and Land Use is added. Example: Eletrobras has total hydro capacity above 35,000 MW, representing 85% of capacity, and operates in biodiversity hotspots in Brazil.
-
-**Casinos operating hotels in water-stressed regions.** More than 20% of revenue from hotels in water-stressed zones: Water Stress is added. Example: Las Vegas Sands derives more than 20% of revenue from hotel operations located in highly water-stressed areas.
-
-**Semiconductor companies reliant on outsourced manufacturing.** Reliance on outsourced production versus in-house production: Supply Chain Labor is added. Example: Samsung Electronics outsources most of its production and has significant brand recognition.
-</ExampleBox>
-
-Analysis of a Company-Specific Key Issue contributes to the company's overall rating but does not contribute to the ratings of industry peers that are not significantly affected by that particular issue. All Company-Specific Key Issues are reviewed and approved by the ESG Ratings Methodology Committee.
-
-<DeepDive title="How common are company-specific key issues?">
-As of March 22, 2024, approximately 21% of companies were evaluated on a Company-Specific Key Issue. Companies in diversified industries such as industrial conglomerates, trading companies and distributors, diversified support services, diversified consumer services, specialty retail, and specialized real estate investment trusts are the most frequently evaluated on Company-Specific Key Issues. For these industries, analysis of each company's business model is undertaken at the outset of industry research.
+<DeepDive title="How common are these wildcard issues?">
+They are incredibly common. Over 20% of all companies rated by MSCI are currently fighting a Company-Specific Key Issue. This heavily impacts massive conglomerates, highly diversified retailers, and companies that have recently suffered brutal PR scandals.
 </DeepDive>
 
 <HighlightBox>
-As a consultant, always check whether your client has been assigned a Company-Specific Key Issue. This will show up in their MSCI rating report and may represent an issue that peers are not being assessed on. It can also represent an opportunity: if a key issue has been added due to a controversy, addressing that controversy can directly affect the weighting structure applied to your client.
+**The Controversy Defense:** If your client was slapped with a Company-Specific Key Issue purely because of a past scandal, that is highly actionable. If you can prove to MSCI that the client has aggressively fixed the problem and the controversy is dead, MSCI might remove the issue entirely, reverting the company back to the standard, easier playing field.
 </HighlightBox>

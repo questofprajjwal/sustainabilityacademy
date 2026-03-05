@@ -1,49 +1,55 @@
 {/* source: MSCI ESG Ratings Methodology Sections 2.3, 3.5, 3.6 */}
 
-With individual key issue scores calculated for each pillar, MSCI then combines these scores into a single company-level number, adjusts it relative to the industry peer group, and maps it to a letter rating. This lesson walks through that final calculation: the Weighted Average Key Issue Score, the industry adjustment, and how the result maps to the AAA-CCC scale.
+Once MSCI has calculated the brutal Exposure and Management scores for every individual issue, it must fuse them together into a single, definitive letter grade. This final calculation involves compiling the total score, forcing it through a violent industry curve, and mapping it to the final AAA to CCC rating.
 
-## The Weighted Average Key Issue Score (WAKIS)
+## The WAKIS: The Raw Score
 
-The Weighted Average Key Issue Score, referred to as the WAKIS, is the weighted average of all the individual scores that contribute to a company's overall rating. Specifically, it is calculated from:
+The first step is calculating the **Weighted Average Key Issue Score (WAKIS)**. This is the raw mathematical aggregate of everything the company has been tested on. 
 
-- All the individual Environmental and Social Key Issue Scores contributing to the rating of the company, and
-- The Governance Pillar Score.
+The WAKIS is built by multiplying every Environmental, Social, and Governance score by its assigned corporate weight.
 
-Each Environmental and Social Key Issue typically comprises 5% to 30% of the total ESG Rating. The weights for each key issue are determined for each GICS sub-industry based on two factors: the sub-industry's contribution to the negative externality associated with the key issue, and the expected time horizon for the key issue to materialise. A key issue with a high impact that is expected to materialise in the short term (under two years) receives the highest weight. A key issue with a low impact expected to materialise in the long term (five or more years) receives the lowest weight. The framework means that a High-Impact, Short-Term key issue would be weighted three times higher than a Low-Impact, Long-Term key issue.
+**How Weights are Assigned:**
+MSCI does not weigh issues equally. The weight of an Environmental or Social Key Issue (usually between 5% and 30%) is dictated entirely by two variables:
+1. **The Blast Radius:** How massive is the industry’s negative externality?
+2. **The Countdown:** How fast is the disaster approaching?
 
-Key Issue weights undergo a formal review and feedback process at the end of each calendar year. Company-specific key issues and weights are permitted, subject to committee approval, for companies with diversified business models, companies facing controversies, or companies where predefined rules apply.
+A high-impact risk that is detonating in the next 18 months will mathematically dominate the WAKIS. A low-impact risk that might materialize in a decade will barely register on the final score.
 
-## How the Governance Pillar Score works differently
+## The Ultimate Veto: The Governance Floor
 
-The Governance Pillar Score is calculated differently from the Environmental and Social Pillar Scores. Rather than using an exposure-management framework, the Governance Pillar uses a deduction-based model.
+The Governance Pillar is scored entirely differently, and it holds a terrifying veto power over the entire company rating. 
 
-The Governance Pillar Score starts at 10. Deductions are then applied based on the sum of deductions derived from Key Metrics included in the Corporate Governance Theme (comprising Ownership and Control, Board, Pay, and Accounting) and the Corporate Behavior Theme (comprising Business Ethics and Tax Transparency).
+Governance does not use the Exposure/Management equation. It uses a brutal deduction model. The company starts with a perfect 10.0. MSCI then violently deducts points for every single observable flaw in executive pay, board independence, accounting practices, or business ethics.
 
-The Governance Pillar weight in the WAKIS calculation is determined differently from Environmental and Social weights. For Governance, weight-setting is undertaken at the Pillar level, not at the individual key issue level. This is because the deduction-based scoring model in the Governance Pillar means that Key Issue weights within it are not published separately. The Governance Pillar weight is floored at a minimum of 33%. This means that no matter how heavily weighted the Environmental and Social issues are for a given sub-industry, Governance always accounts for at least one-third of the overall WAKIS.
+More critically, the Governance Pillar is legally floored at a massive **33% minimum weight** in the final WAKIS calculation. 
 
 <HighlightBox>
-The 33% floor on the Governance weight means that a client with weak governance practices will face a ceiling on their overall rating, regardless of how well they perform on Environmental and Social issues. Strong governance is a prerequisite for a top-tier MSCI rating.
+**The Governance Guillotine:** Because Governance controls an absolute minimum of 33% of the total score, a client with a corrupt board or toxic accounting practices faces a mathematical ceiling. Even if the client literally solves global warming and ends child labor (scoring perfect 10s on all E&S issues), terrible Governance will brutally cap their final letter rating. You cannot greenwash bad governance.
 </HighlightBox>
 
-## The Industry-Adjusted Company Score
+## The Brutal Industry Adjustment
 
-The WAKIS is not the final score. It is adjusted relative to the industry peer group to produce the Industry-Adjusted Company Score, which sits on a 0-10 scale.
+The WAKIS is just a raw number. MSCI's entire philosophy is relative competition. Therefore, MSCI takes the raw WAKIS and violently forces it onto a normalized 0-10 curve based entirely on how the rest of the industry performed.
 
-The adjustment works by normalising the WAKIS relative to the ESG Rating industry peer group, based on score ranges set by the benchmark values in the peer set. The benchmark values are determined by the performance of companies at the 5th and 95th percentiles of the peer group. This means the adjustment translates a company's raw WAKIS into a position within the peer group's distribution.
+MSCI looks at the absolute best competitor in the sub-industry (the 95th percentile) and the absolute worst competitor (the 5th percentile). They stretch that specific range across a 0-10 scale, and then map your client's raw score onto that stretched curve.
 
 <ExampleBox>
-Consider a company with a WAKIS of 6.2, operating in a peer group where the 5th percentile score is 5.0 and the 95th percentile score is 8.0. The peer group range spans 3.0 points (from 5.0 to 8.0). The company sits 1.2 points above the 5th percentile, which is 40% of the way through the range. When this is normalised to the 0-10 scale, the company would receive an Industry-Adjusted Company Score of approximately 4.0. This places the company in the BBB band (Average). The same WAKIS of 6.2 in a peer group with a wider distribution would produce a different Industry-Adjusted Company Score, which is why the adjustment step matters.
+**The Curve Dictates the Grade:**
+Imagine your client scores a raw WAKIS of 6.2. 
+If they operate in a lazy industry where the highest competitor only scored a 6.5, that 6.2 looks incredibly dominant. On the adjusted 0-10 curve, it translates to a massive 8.5 (an AA Rating).
+
+Now imagine they operate in an ultra-competitive tech sector where the best competitor scored an 8.5. That exact same raw score of 6.2 suddenly looks pathetically weak. On the adjusted curve, it translates to a 4.0 (a BBB Rating). 
+
+*Your client’s final score is entirely at the mercy of how aggressively their competitors are performing.*
 </ExampleBox>
 
-The industry minimum and maximum scores used for normalisation are updated according to a defined schedule. There are also defined exceptions to the 95th and 5th percentile boundaries to handle cases where extreme outliers would distort the normalisation.
+## The Final Letter Grade
 
-## Mapping the score to a letter rating
-
-The final Industry-Adjusted Company Score is mapped to a seven-band letter rating using the scale shown in Exhibit 2 of the MSCI methodology. The 0-10 scale is divided into seven equal parts, each corresponding to a letter rating.
+Once the WAKIS has been stretched and normalized through the industry curve, the resulting 0-10 score is mapped directly to the famous seven-band letter rating.
 
 <ResponsiveTable>
 
-| Letter Rating | Category | Final Industry-Adjusted Company Score |
+| Letter Rating | Status | Final Adjusted Score |
 |---|---|---|
 | AAA | Leader | 8.571 to 10.0 |
 | AA | Leader | 7.143 to 8.571 |
@@ -55,22 +61,14 @@ The final Industry-Adjusted Company Score is mapped to a seven-band letter ratin
 
 </ResponsiveTable>
 
-The three categories are:
+MSCI aggressively groups these into three brutal categories: **Leaders** (the companies dominating the risks), **Average** (the companies just surviving), and **Laggards** (the companies about to be destroyed by unmanaged ESG risks). 
 
-- **Leaders** (AAA and AA): companies that are leading their industry in managing the most significant ESG risks and opportunities.
-- **Average** (A, BBB, and BB): companies with a mixed or satisfactory track record of managing the most significant ESG risks and opportunities relative to peers.
-- **Laggards** (B and CCC): companies that are lagging their industry in managing the most significant ESG risks and opportunities.
+## The Committee Review Override
 
-## The committee review process
+The rating is entirely generated by cold algorithms, but MSCI maintains a human override. 
 
-The MSCI methodology includes a committee review process for certain cases. After the WAKIS is calculated and the industry adjustment is applied, the result is reviewed in predefined cases before the final letter rating is issued.
-
-This committee review applies in certain predefined circumstances and is intended to ensure that the quantitative output reflects the most current information available at the last ESG Rating action date. The Company ESG Rating is derived from the final Industry-Adjusted Company Score, based on an assessment of the underlying data available at that date.
+In highly specific, predefined scenarios, the final algorithmic score is halted and subjected to a human **Committee Review** before the letter rating is officially published. This is designed to catch massive, real-time events (like a sudden CEO arrest or a catastrophic oil spill) that the data scraping algorithms have not yet mathematically digested.
 
 <HighlightBox>
-From a consulting perspective, the committee review process is relevant when a client has recently undergone a major change in governance, operations, or controversy status. A change that occurred after the last data collection cycle may not yet be reflected in the rating. Understanding the timing of rating updates and when a review might be triggered is important for managing client expectations about when improvements will appear in their published rating.
+**The Consultant's Timing Strategy:** If your client achieves a massive corporate overhaul (e.g., electing a completely new board of directors), that new data will not instantly teleport into the MSCI algorithm. You must aggressively manage client expectations regarding the grueling MSCI data collection cycles, and understand exactly how to trigger out-of-cycle reviews to force MSCI to recognize the improvements. 
 </HighlightBox>
-
-<DeepDive title="How are supplemental pillar and theme scores calculated?">
-MSCI also calculates supplemental scores that do not directly contribute to the overall ESG Rating but provide additional insight. Pillar Scores for the Environmental and Social Pillars are calculated as the weighted average of all Key Issue Scores under each pillar, normalised by the total sum of weights underlying each pillar. Theme Scores for the eight Environmental and Social themes are calculated as the weighted average of Key Issue Scores underlying each theme, normalised by the total sum of weights underlying each theme. Theme Scores range from 0 to 10, with lower scores indicating more severe risk. For the Governance Pillar, a Theme Score is calculated for both the Corporate Governance and Corporate Behavior themes. Percentile rankings are also published for each Governance Theme and Key Issue, both relative to the company's Home Market and relative to the global coverage universe.
-</DeepDive>

@@ -1,101 +1,74 @@
 {/* source: MSCI ESG Ratings Methodology Appendix 4 (ESG Rating Industries), Section 3.1.1 (Company-Specific Key Issues); Sustainalytics ESG Risk Ratings Methodology pp. 4-12; GRI 2: General Disclosures 2021 pp. 5-20 */}
 
-Before you can benchmark a client company against its peers, you need to answer two questions: who are the right peers, and where does the data come from? Both decisions shape the validity of everything that follows. A peer group that is too broad will mix companies facing fundamentally different risks. A peer group that is too narrow will produce a sample too small to be statistically meaningful. Poor data quality will make the comparison unreliable regardless of how well the peer group is constructed.
+Before you can benchmark a client against its peers, you must definitively answer two operational questions: who exactly are the peers, and where does the data come from? 
 
-This lesson explains how the major rating frameworks define peer groups, how to handle companies that span multiple industries, and how to conduct the data collection process in a practical benchmarking engagement.
+A peer group that is too broad mixes companies facing fundamentally different existential risks. A peer group that is too narrow is statistically useless. Furthermore, poor data quality will annihilate the comparison regardless of how perfectly the peer group is constructed.
 
-## Defining the Peer Group
+This lesson explains how the major rating frameworks legally define peer groups, how they handle massive conglomerates, and how to execute the data collection process in reality.
 
-### MSCI: GICS Sub-Industry as the Primary Lens
+## The Architecture of Peer Groups
 
-MSCI assigns every company it rates to an ESG Rating Industry. ESG Rating Industries are based on GICS sub-industries, where applicable. MSCI ESG Research groups these GICS sub-industries to form peer sets in which companies face relatively similar key issues. As set out in Appendix 4 of the MSCI methodology, each ESG Rating Industry can be mapped to a GICS sub-industry, a GICS Industry, or several GICS sub-industries.
+### MSCI: The GICS Sub-Industry Lens
 
-The reason GICS sub-industry is the starting point is that key issues and key issue weights are determined at the GICS sub-industry level. Industry-adjusted scores and ESG letter ratings are relative within each ESG Rating Industry. Percentiles, quartiles, averages, and score distributions in MSCI reports are all calculated relative to the ESG Rating Industry. A company's MSCI ESG Rating of, say, BBB is meaningful only in the context of its ESG Rating Industry: it means that company is above average relative to other companies in that industry, not relative to all companies in the world.
+MSCI operates on a strict relative grading curve. A company is not graded against every company on earth; it is only graded against its **ESG Rating Industry**.
 
-Companies are assigned to ESG Rating Industries based on the company's GICS classification if available. For private or unlisted companies where no GICS classification is available, MSCI ESG Research makes its own determination.
+MSCI builds these industries using the Global Industry Classification Standard (GICS) sub-industries as the foundation. 
+
+*Why does this matter?* Because MSCI assigns Key Issues and weighting based entirely on the GICS code. A steel company faces massive carbon and water Key Issues. A software company does not. If you directly compared a steel company's absolute ESG score to a software company's score, the steel company would look like a catastrophic failure simply because it burns coal. 
+
+In the MSCI model, an ESG rating of "BBB" means one thing: the company is slightly above average *compared only to other companies in the exact same GICS code*.
 
 <HighlightBox>
-When starting a benchmarking engagement, identify your client's GICS sub-industry code first. This is the classification that determines which peers MSCI groups the client with and which key issues are weighted in the client's rating. If you are working with MSCI data, the ESG Rating Industry from Appendix 4 of the methodology is the definitive peer set definition.
+**The First Move:** When launching a benchmarking engagement, immediately demand the client's official GICS sub-industry code. If you are comparing your client to a company with a different GICS code, your entire benchmarking model is mathematically invalid in the eyes of MSCI.
 </HighlightBox>
 
-### Sustainalytics: Subindustry Level
+### Sustainalytics: The Subindustry Baseline
 
-Sustainalytics also assesses Material ESG Issues at the subindustry level. The assessment of material ESG issues occurs at the subindustry level and is reviewed annually through a comprehensive and structured process. The subindustry exposure score reflects the typical business model and business environment a company in that subindustry is operating in.
+Sustainalytics utilizes the exact same logic. They lock a company into a specific **Subindustry**. 
 
-For Sustainalytics, the subindustry definition determines which MEIs are activated, what the default exposure scores are, and what the manageable risk factors are. Comparing two companies from the same Sustainalytics subindustry means they start from the same set of material issues and the same exposure baseline, making comparisons valid.
+The subindustry assignment dictates exactly which Material ESG Issues (MEIs) are activated, what the baseline Exposure scores are, and what the Manageable Risk Factors (MRFs) are. Comparing two companies within the same Sustainalytics subindustry ensures they are fighting the exact same structural baseline of risk.
 
-### Why Peer Group Selection Matters
+## The Conglomerate Problem
 
-Industry-relative scores only make sense within a coherent industry group. The reason is straightforward: a steel company and a software company face fundamentally different environmental and social risk profiles. Comparing their absolute ESG scores directly would be misleading. The steel company faces high carbon emissions, significant water use, and toxic waste risks as part of its normal business operations. The software company does not. If you compared the steel company to the software company without industry adjustment, the steel company would appear to be a poor ESG performer simply because it is in a carbon-intensive industry.
+### MSCI: Company-Specific Key Issues
 
-Both MSCI and Sustainalytics build their scoring systems around within-industry comparisons precisely to avoid this problem. MSCI's industry-adjusted scoring normalises the Weighted Average Key Issue Score relative to the minimum and maximum scores within the ESG Rating Industry. Sustainalytics' unmanaged risk score is anchored to subindustry exposure baselines.
+What happens when a client spans multiple industries? (e.g., Disney makes movies, but also operates massive theme parks and manufactures toys).
 
-## Handling Companies That Span Multiple Industries
+MSCI solves this by deploying **Company-Specific Key Issues**. If a company has a bizarre, high-risk operational footprint that its peers do not share, MSCI will aggressively staple new Key Issues onto that specific company.
 
-### MSCI Company-Specific Key Issues
+MSCI triggers this when:
+1. **The 20% Revenue Threshold:** A company derives >20% of its revenue from a secondary, high-risk business line.
+2. **Massive Footprint:** The company is a massive player in a secondary market (Disney receiving Supply Chain Labor key issues because it is a massive toy manufacturer).
+3. **Severe Controversies:** If a company triggers a Category 5 controversy on an issue it normally isn't graded on, MSCI will instantly permanently attach that Key Issue to the company.
 
-Some companies operate across more than one industry in a meaningful way. MSCI handles this through the Company-Specific Key Issue approach. In some cases, a company may face a unique Environmental or Social Key Issue that is not shared by other companies in its industry. This arises from companies with diversified business models or subsets of companies within an industry that face a unique set of risks.
-
-The guidelines in MSCI's Exhibit 7a and 7b set out when a company-specific key issue is added:
-
-- A company sources more than 20% of revenue or earnings from a secondary business line. In this case, the most relevant key issue facing that secondary business line is added to the company's analysis. MSCI's example is Tiffany (retail), which sources more than 20% of revenue from fine jewellery and received a Controversial Sourcing company-specific key issue.
-- A company has a large footprint in a secondary business line relative to peers. MSCI's example is Disney (movies and entertainment), which is among the world's largest toy manufacturers and received a Supply-Chain Labor Standards company-specific key issue.
-- Industry-based rules apply to companies meeting defined thresholds. MSCI's examples include: utilities with total hydro capacity above 35,000 MW operating in biodiversity hotspots (Biodiversity and Land Use added); casinos deriving more than 20% of revenue from hotel operations in water-stressed regions (Water Stress added); and semiconductor companies reliant on outsourced manufacturing (Supply-Chain Labor added based on the ratio of outsourced to in-house production).
-- A company faces a severe or very severe controversy on a non-key issue. In this case, the key issue most relevant to that controversy is mapped to the company.
-
-When a company-specific key issue is added, it contributes to the company's overall rating but does not contribute to the ratings of industry peers that are not significantly affected by that particular key issue. The weights on the remaining key issues are reduced proportionally.
-
-As of March 2024, approximately 21% of companies in the MSCI ESG Ratings coverage universe were evaluated on a company-specific key issue.
-
-Companies in diversified industries such as industrial conglomerates, trading companies and distributors, diversified support services, diversified consumer services, specialty retail, and specialised real estate investment trusts are the most frequently evaluated on company-specific key issues.
+<HighlightBox>
+**The Weight Shift:** When MSCI slaps a Company-Specific Key Issue onto a client, it forces a mathematical recalculation. The new Key Issue is assigned a weight, and the weights of all the standard industry Key Issues are proportionally crushed to make room for it.
+</HighlightBox>
 
 ### Sustainalytics: Idiosyncratic Issues
 
-Sustainalytics handles company-specific events through the Idiosyncratic Issue building block. Idiosyncratic issues are triggered by company-specific events that are atypical for its business model and therefore not part of its material ESG issues at the subindustry level. An idiosyncratic issue becomes material only for the specific company in question, not for the entire subindustry, and represents a failure in a company's management rather than a structural feature of the industry.
+Sustainalytics handles bizarre operations through the **Idiosyncratic Issue** building block. If a company triggers a massive disaster completely unrelated to its normal subindustry (a software firm caught using child labor to mine server components), Sustainalytics drops an Idiosyncratic Issue onto them, artificially spiking their Exposure score to punish the management failure.
 
-## Practical Data Collection
+## The Data Collection Protocol
 
-### The Step-by-Step Process
+In a benchmarking engagement, data collection must be executed systematically. Do not rely on marketing brochures.
 
-In a benchmarking engagement, data collection typically follows this sequence.
+**Step 1: Lock the Peer Group:** Verify the exact GICS sub-industry and Sustainalytics subindustry mapping. Confirm the list with the client.
 
-**Step 1: Establish the peer group.** Identify the client's GICS sub-industry and map it to the relevant MSCI ESG Rating Industry using Appendix 4 of the MSCI methodology, and to the relevant Sustainalytics subindustry. Confirm the peer group with the client: sometimes there are legitimate reasons to add or remove specific companies.
+**Step 2: Extract the Rating Agency X-Rays:** Pull the official MSCI ESG Rating report and the Sustainalytics ESG Risk Rating report for the client and every single peer. Do not use public summaries. Use the raw data feeds that show the granular Key Issue and MEI scores.
 
-**Step 2: Pull the rating agency outputs.** Obtain the full ESG Rating reports from MSCI and Sustainalytics for the client and each peer. These reports provide overall scores, pillar scores, key issue or MEI scores, and percentile rankings within the industry. They are the most efficient single source for a cross-peer comparison.
+**Step 3: Audit the GRI Reports:** Pull the sustainability reports for the peer group. Prioritize reports audited under the **GRI 2: General Disclosures 2021** standard. GRI 2 forces companies to disclose hard data on governance, employee splits, and executive pay.
 
-**Step 3: Review sustainability reports.** For each company in the peer group, obtain the most recent sustainability or ESG report. Many companies now report under GRI Standards, and GRI 2: General Disclosures 2021 requires disclosure of organisational details, activities and workers, governance structure, strategy and policies, and stakeholder engagement. This provides the underlying disclosure that feeds into rating agency assessments.
+**Step 4: Pull the CDP Responses:** For carbon and water KPIs, extract the raw CDP (Carbon Disclosure Project) responses. Do not trust the glossy sustainability report numbers. CDP forces companies to disclose Scope 1, 2, and 3 emissions in a highly rigid, standardized format.
 
-**Step 4: Review CDP responses.** For the carbon and water KPIs, CDP (formerly the Carbon Disclosure Project) questionnaire responses are a primary source. Companies that respond to CDP provide detailed Scope 1, Scope 2, and often Scope 3 emissions data, energy use figures, water withdrawal and consumption data, and climate governance information in a standardised format.
+**Step 5: Pull Proxy Statements:** For executive compensation and board independence metrics, use SEC proxy statements (or regional equivalents), not sustainability reports.
 
-**Step 5: Review company annual reports and proxy statements.** For governance KPIs, annual reports and proxy circulars are the primary source for board composition, executive remuneration, ownership structure, and audit information. GRI 2: General Disclosures 2021 covers governance structure under Disclosure 2-9 and remuneration under Disclosures 2-19 through 2-21.
+### The Non-Disclosure Trap
 
-**Step 6: Check public databases.** For regulatory fines, environmental incidents, and health and safety data, public databases and regulatory filings supplement company-reported data. MSCI's methodology notes that for certain key issues, estimates are derived from industry averages, regional criteria, and extrapolation from company disclosures when company-disclosed figures are not available.
+What happens when a peer company simply refuses to publish data?
 
-<HighlightBox>
-Primary data sources for a benchmarking engagement:
+Both rating agencies are utterly ruthless regarding missing data:
+- **MSCI** will actively use industry averages or extrapolate data to plug the holes, ensuring the company cannot hide. If the company fails to disclose a governance policy (like a whistleblower hotline), MSCI mathematically assumes the policy does not exist and applies a massive deduction.
+- **Sustainalytics** assigns a punitive, below-average score to any management indicator the company attempts to hide.
 
-- MSCI ESG Ratings company reports (overall score, pillar scores, key issue scores, industry percentiles)
-- Sustainalytics ESG Risk Rating reports (unmanaged risk score, MEI scores, subindustry comparison)
-- Company sustainability or ESG reports (preferably GRI-aligned for comparability)
-- CDP climate and water questionnaire responses
-- Company annual reports and proxy statements (governance data)
-- Public regulatory databases (incidents, fines, enforcement actions)
-</HighlightBox>
-
-### Common Data Gaps and How to Handle Them
-
-Non-disclosure is common, particularly for smaller companies and those headquartered in markets with lower ESG reporting norms. Both MSCI and Sustainalytics have explicit methodologies for handling non-disclosure.
-
-MSCI's approach is to use industry averages, regional criteria, and extrapolation when company-disclosed figures are not available. Estimates are derived to allow uniform industry benchmarking. For governance indicators, MSCI treats non-disclosure of a policy or practice as absence of that policy or practice.
-
-Sustainalytics' approach is also based on defaults: where there is no company disclosure on an indicator in the performance category of management, the methodology assigns a performance level that is below average in the industry context rather than the worst possible score.
-
-For a benchmarking engagement, the recommended approach is:
-
-- Use industry median values as proxies for KPIs where a peer company has not disclosed. Flag clearly in your report that the figure is an estimate.
-- Note whether the non-disclosing company's omission has been flagged in its rating agency report. MSCI's company reports explicitly point out uncertainty in assessing performance where disclosure is lacking.
-- Do not treat non-disclosure as equivalent to zero for emissions or waste figures, as this would understate the company's likely footprint.
-
-<DeepDive title="How MSCI's ESG Rating Industry classification differs from standard GICS">
-MSCI ESG Rating Industries are based on GICS sub-industries but are not always a one-to-one mapping. A single ESG Rating Industry can encompass multiple GICS sub-industries where MSCI determines that those sub-industries face sufficiently similar key issues to form a coherent peer set. For example, in the Energy sector, Oil and Gas Drilling (GICS 10101010) and Oil and Gas Equipment and Services (GICS 10101020) are both mapped to the single ESG Rating Industry called Energy Equipment and Services. In other cases, what is a single broad GICS industry is split into multiple ESG Rating Industries to reflect different risk profiles. The full mapping table is in Appendix 4 of the MSCI ESG Ratings Methodology.
-</DeepDive>
+**Consultant Strategy:** In your benchmarking report, never record a blank space as a "zero." If a peer does not disclose carbon emissions, flag it as a critical disclosure failure, not a green victory. Use industry medians to estimate the gap and explicitly inform the client that the rating agencies are likely actively punishing the peer for the omission.
