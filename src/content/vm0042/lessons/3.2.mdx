@@ -49,6 +49,38 @@
   <li>Conduct sampling during the same season year-over-year</li>
 </ul>
 
+<DeepDive title="Why stratified random sampling? A plain-language walkthrough">
+  <p class="text-sm mb-3">Imagine you need to measure the average carbon content across a 2,000 hectare farm. You <em>could</em> randomly scatter 30 sampling points across the entire farm — but that would be like surveying voter preferences by randomly calling people across a whole country. You'd probably miss important subgroups.</p>
+
+  <p class="font-semibold text-sm mt-4 mb-2">The core idea: divide, then randomly sample within each division</p>
+  <p class="text-sm mb-3"><strong>Stratification</strong> means splitting your project area into zones (strata) where you expect soil carbon to behave similarly. VM0042 tells you to stratify by factors that actually drive SOC differences:</p>
+  <ul class="list-disc ml-6 text-sm space-y-1 mb-4">
+    <li><strong>Soil texture</strong> — clay soils hold more carbon than sandy soils</li>
+    <li><strong>Slope &amp; topography</strong> — hilltops erode carbon, valleys accumulate it</li>
+    <li><strong>Historical land use</strong> — a field cropped for 50 years has very different SOC than one that was pasture</li>
+    <li><strong>Current management</strong> — irrigated vs. rainfed, tilled vs. no-till</li>
+  </ul>
+
+  <p class="font-semibold text-sm mt-4 mb-2">Step-by-step: how a real project does it</p>
+  <ol class="list-decimal ml-6 text-sm space-y-2 mb-4">
+    <li><strong>Map your strata.</strong> Use soil maps, satellite imagery, and farmer records to draw boundaries. Example: Stratum A = sandy loam, rainfed, previously tilled. Stratum B = clay loam, irrigated, previously pasture.</li>
+    <li><strong>Randomly place sampling points within each stratum.</strong> This is the "random" part — you don't pick convenient locations. Use a random number generator to assign GPS coordinates inside each stratum boundary.</li>
+    <li><strong>Collect enough samples per stratum.</strong> VM0042 requires enough samples to achieve a desired confidence level (typically 90% confidence that the mean is within ±10–20% of the true value). In practice this means 3–5 composite samples per stratum for most projects, more for highly variable soils.</li>
+    <li><strong>Weight the results by stratum area.</strong> If Stratum A covers 1,200 ha and Stratum B covers 800 ha, the farm-level average SOC is: (Mean SOC_A × 1200 + Mean SOC_B × 800) ÷ 2000.</li>
+  </ol>
+
+  <p class="font-semibold text-sm mt-4 mb-2">Why not just pure random sampling?</p>
+  <p class="text-sm mb-3">Pure random sampling treats the whole farm as one uniform block. If your farm has both sandy hilltops (low SOC) and clay bottomlands (high SOC), random points might cluster in one zone by chance, giving a biased estimate. Stratification <strong>guarantees</strong> that each soil type is represented proportionally, which:</p>
+  <ul class="list-disc ml-6 text-sm space-y-1 mb-3">
+    <li><strong>Reduces variance</strong> — tighter confidence intervals with the same number of samples</li>
+    <li><strong>Lowers cost</strong> — you need fewer total samples to reach the same precision</li>
+    <li><strong>Makes auditors happy</strong> — the methodology explicitly requires it, so skipping stratification is a non-conformance finding</li>
+  </ul>
+
+  <p class="font-semibold text-sm mt-4 mb-2">Common pitfall: confusing strata with quantification units</p>
+  <p class="text-sm">A <strong>quantification unit (QU)</strong> is a group of fields using the same practices and the same quantification approach. <strong>Strata</strong> are subdivisions <em>within</em> a QU based on soil/landscape properties. One QU can contain multiple strata. Think of it as: QU = "what practice is being applied," strata = "what the land looks like underneath."</p>
+</DeepDive>
+
 <h3 class="text-xl font-bold mt-6 mb-3">Equivalent Soil Mass (ESM), Critical Concept</h3>
 <AnalogyBox>
   <p class="font-semibold text-blue-800">🍰 Analogy: Comparing Cakes</p>
