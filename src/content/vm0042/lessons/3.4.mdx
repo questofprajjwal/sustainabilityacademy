@@ -24,10 +24,12 @@
   <AnalogyBox>
     💧 Like taking water from your neighbour's pool to fill yours, total water hasn't increased, you just moved it.
   </AnalogyBox>
-  <FormulaBox>
-    LE<sub>OA</sub> = Σ (M_OA × CC<sub>oa</sub> × 0.12 × 44/12)
-    <p class="text-gray-400 mt-1">Where: M_OA = mass of organic amendment imported (t); CC = carbon content (tC/t); 0.12 = fraction expected to remain in soil</p>
-  </FormulaBox>
+  <EquationBreakdown
+    title="Equation 33 - Organic Amendment Leakage"
+    result="LE<sub>OA</sub> | Leakage from Organic Amendments | CO₂ that would have been stored in soils outside your project, but was lost because you diverted their organic matter, in tCO₂ | blue"
+    inputs="M<sub>OA</sub> | Mass of Amendment | Tonnes of compost or manure imported from outside the project boundary | green ;; CC<sub>oa</sub> | Carbon Content | Fraction of the amendment that is carbon (tC per tonne of material) | amber ;; 0.12 | Retention Factor | Only 12% of applied organic carbon is expected to remain in soil long-term (rest decomposes) | violet ;; 44/12 | C to CO₂ | Molecular weight ratio converting carbon to CO₂ (every 12g C = 44g CO₂) | rose"
+    operator="×"
+  />
   <p class="text-sm mt-2 text-green-700"><strong>Exemptions:</strong> No leakage deduction if: (1) manure is newly produced on-site, (2) manure diverted from an uncontrolled anaerobic lagoon, or (3) amendment was not previously used as a soil amendment.</p>
 </div>
 
@@ -62,11 +64,13 @@
   <p class="font-semibold text-amber-800">📐 Leakage Summary for a US No-Till Project</p>
   <ResponsiveTable>
 <table class="mt-2 text-sm">
-    <tr><th>Leakage Type</th><th>Applicable?</th><th>Reason</th></tr>
+    <thead><tr><th>Leakage Type</th><th>Applicable?</th><th>Reason</th></tr></thead>
+    <tbody>
     <tr><td>Type 1: Organic amendment</td><td class="text-green-700">No</td><td>Compost produced on-site from farm waste</td></tr>
     <tr><td>Type 2: Livestock displacement</td><td class="text-green-700">No</td><td>Cropland project, no livestock</td></tr>
     <tr><td>Type 3: Production decline</td><td class="text-amber-700">Yes (small)</td><td>Cover crops may slightly reduce main crop yield in Year 1</td></tr>
     <tr><td>Type 4: Residue diversion</td><td class="text-green-700">No</td><td>Baseline residues were tilled in, not used for energy</td></tr>
+    </tbody>
   </table>
 </ResponsiveTable>
   <p class="mt-2 text-sm text-amber-700">Net leakage is small (only Type 3, Year 1) and likely de minimis (&lt;5% of total benefit). Document and demonstrate.</p>

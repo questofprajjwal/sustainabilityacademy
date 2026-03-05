@@ -45,6 +45,7 @@ LearningPlatform/
 │   │   │   ├── ExampleBox.tsx        # Amber left-border worked example
 │   │   │   ├── FormulaBox.tsx        # Dark background formula block
 │   │   │   ├── Flowchart.tsx         # Mermaid flowchart renderer (client-side)
+│   │   │   ├── EquationBreakdown.tsx # Interactive color-coded equation explainer
 │   │   │   └── ResponsiveTable.tsx   # Horizontal-scroll table wrapper
 │   │   ├── learning/
 │   │   │   ├── Sidebar.tsx           # Course navigation sidebar
@@ -179,6 +180,7 @@ Available MDX components:
 | `<ResponsiveTable>` + `<table>` | Scrollable on mobile | Data tables |
 | `<CalculationExercise>` | Violet card, interactive | Practice calculations with hints |
 | `<DeepDive>` | Blue collapsible section | Optional deep-dive content |
+| `<EquationBreakdown>` | Interactive color-coded equation | Visual formula explainers with hover |
 | ` ```mermaid ` code block | Styled flowchart/diagram | Process flows, decision trees |
 
 **CalculationExercise props:**
@@ -246,6 +248,27 @@ graph TD
 ````
 
 Key files: `src/components/content/Flowchart.tsx` (renderer), `src/components/content/mdx-components.tsx` (pre override that intercepts mermaid blocks).
+
+**EquationBreakdown (Visual Equation Explainer):**
+
+Renders equations as interactive, color-coded visual breakdowns. Each variable gets a colored pill in the equation row and a matching explanation card below. Hovering any pill or card highlights the pair and fades the rest.
+
+- **Props are strings** (not objects/arrays) because MDX cannot reliably parse nested objects or arrays in JSX props.
+- **`result`**: pipe-delimited string - `"symbol | label | description | color"`
+- **`inputs`**: multiple inputs separated by `;;` - each is `"symbol | label | description | color"`
+- **Available colors**: `blue`, `green`, `amber`, `violet`, `rose`, `cyan`, `orange`
+- **HTML in symbols**: Use `<sub>` for subscripts (e.g. `EF<sub>CO₂</sub>`). Safe because these are rendered via `dangerouslySetInnerHTML`.
+- **`operator`**: defaults to `×`. Set to `+` or other operators as needed.
+
+```mdx
+<EquationBreakdown
+  title="Equation 6 - Fossil Fuel CO₂"
+  result="EFF<sub>j</sub> | Fossil Fuel Emissions | Total CO₂ from fuel, tCO₂/ha/yr | blue"
+  inputs="FFC<sub>j</sub> | Fuel Consumption | Litres of fuel burned per hectare per year | green ;; EF<sub>CO₂</sub> | Emission Factor | tCO₂ per litre of fuel burned | amber"
+/>
+```
+
+Key file: `src/components/content/EquationBreakdown.tsx`
 
 ### 4. Write quiz YAML files (optional per lesson)
 
