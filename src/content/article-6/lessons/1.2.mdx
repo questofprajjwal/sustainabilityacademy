@@ -1,0 +1,144 @@
+{/* source: Article 6.2 Reference Manual; Decision 2/CMA.3 Annex */}
+
+The most important technical concept in Article 6.2 -- the one that distinguishes it fundamentally from everything that came before in international carbon markets -- is the **corresponding adjustment**. Without corresponding adjustments, the Article 6.2 framework would be just another voluntary offset market. With them, it becomes a system capable of producing genuine, non-duplicated emission reductions that can be counted with confidence in national climate accounting.
+
+## The Core Problem: Double Counting
+
+When a country sells emission reductions to another country, an obvious question arises: which country gets credit for the reduction? If both countries count the same tonne, global reported emissions go down by two tonnes when only one tonne of actual reduction has occurred. This is **double counting**, and it was one of the central weaknesses of the voluntary carbon market and even of some aspects of the Kyoto Protocol's Clean Development Mechanism.
+
+Imagine Country A hosts a wind farm that avoids 100,000 tCO2e per year compared to the coal plant it replaces. Country A sells those 100 kilotonnes to Country B as carbon credits. Country B claims the 100 kilotonnes against its national target. Meanwhile, Country A also includes the wind farm's avoided emissions in its own national GHG inventory (because the project is on its territory and it reduced domestic emissions). Both countries count the same tonne. Globally, nothing has actually changed, but the books look better. This is exactly what corresponding adjustments are designed to prevent.
+
+## How Corresponding Adjustments Work
+
+A corresponding adjustment (CA) is a two-sided accounting entry that transfers the emission reduction from the host country's books to the acquiring country's books. Neither country gains an accounting advantage they have not earned; the same tonne simply moves from one national account to another.
+
+The mechanics work as follows:
+
+<FormulaBox>
+Host country adjustment:
+  Reported emissions = Actual domestic emissions + ITMOs transferred out
+
+Acquiring country adjustment:
+  Reported emissions = Actual domestic emissions - ITMOs transferred in
+
+Net global effect:
+  (Host reported) + (Acquiring reported)
+  = (Host actual + CA_out) + (Acquiring actual - CA_in)
+  = Host actual + Acquiring actual  [since CA_out = CA_in]
+  = Total actual global emissions (unchanged)
+</FormulaBox>
+
+In plain terms: the host country adds the transferred units back to its reported emissions total, as if the reduction had never happened domestically. The acquiring country subtracts the same number of units from its reported emissions, as if it had achieved the reduction itself. The global total is unaffected.
+
+<ResponsiveTable>
+
+| Accounting entry | Host country | Acquiring country |
+|-----------------|-------------|------------------|
+| Actual domestic emissions | 500 MtCO2e | 200 MtCO2e |
+| ITMOs transferred | +5 MtCO2e (CA out) | -5 MtCO2e (CA in) |
+| Reported emissions after CA | 505 MtCO2e | 195 MtCO2e |
+| NDC target | 490 MtCO2e | 195 MtCO2e |
+| NDC achievement? | Needs further action | Met (with ITMO help) |
+
+</ResponsiveTable>
+
+In this example, Country A (host) transferred 5 MtCO2e of ITMOs to Country B (acquiring). Country B uses them to meet its NDC target of 195 MtCO2e. Country A's reported emissions rise from 500 to 505 MtCO2e, making its NDC gap larger -- it cannot count reductions it has sold. This is the discipline that gives corresponding adjustments their environmental integrity.
+
+<HighlightBox>
+Corresponding adjustments do not make emission reductions occur -- they determine who gets credit for reductions that have already occurred. The underlying project's environmental performance is unchanged. What changes is the accounting: the credit moves from one national ledger to another, with no net change to global reported emissions.
+</HighlightBox>
+
+## The Authorisation Condition
+
+Corresponding adjustments are only required -- and only triggered -- when an ITMO has been formally **authorised** by the host country's Designated National Authority. This is a crucial distinction with wide-ranging consequences.
+
+**Authorised ITMOs:**
+- The host country has issued a formal authorisation letter designating the units for transfer.
+- Corresponding adjustments are mandatory.
+- The ITMO can be used for NDC achievement by the acquiring country.
+- The ITMO qualifies for CORSIA aviation offsetting.
+- From an environmental integrity perspective, the transfer is double-counting-proof.
+
+**Non-authorised ITMOs:**
+- No formal government authorisation has been issued.
+- Corresponding adjustments are not required.
+- The ITMO cannot be used for NDC achievement.
+- The transaction can proceed in the voluntary carbon market, but neither party can claim national accounting benefit.
+
+<AnalogyBox>
+Think of a corresponding adjustment like the transfer of a property title. If you sell your house and properly register the title transfer, the legal ownership moves from you to the buyer -- you cannot also claim to own it. That is an authorised transfer with a formal accounting adjustment.
+
+If you simply give someone the keys without registering the transfer, the situation is ambiguous. The buyer may use the house, but legally both of you might still claim it. This is similar to a non-authorised ITMO transaction: the emission reduction happens, but the accounting status is unresolved.
+</AnalogyBox>
+
+## When Is the CA Applied? The First-Transfer Rule
+
+One of the most technically contested questions in Article 6.2 negotiations was: at what precise moment must the corresponding adjustment be applied? The host country could prefer to delay it (reducing its own near-term NDC pressure), while acquiring countries want certainty as early as possible.
+
+The Glasgow Rulebook introduced the concept of **first transfer** as the triggering event for CAs. The first transfer is defined as the moment when the ITMO moves from the host country's registry or accounting system to another party's account -- whether that is the acquiring country's national registry, a third-party registry, or the UNFCCC International Registry.
+
+**COP29 clarification (Baku, November 2024)** sharpened this further. The Baku decisions confirmed:
+
+- The CA must be applied no later than the time of first transfer.
+- Countries may choose to apply the CA earlier -- at authorisation or at issuance of the underlying credit -- but must apply it at first transfer at the latest.
+- Once the CA has been applied and the first transfer has occurred, the ITMO is **irrevocable** from an accounting perspective. The host country cannot subsequently revoke the authorisation and reclaim the accounting benefit. This irrevocability protection was critical for market confidence: acquiring countries and private buyers need certainty that units they have purchased cannot be retroactively cancelled.
+
+<HighlightBox>
+The irrevocability rule is one of the most practically important outcomes of the COP29 negotiations. It gives buyers of authorised ITMOs legal certainty that their investment is secure once the first transfer occurs -- a necessary condition for private sector participation in the Article 6.2 market at scale.
+</HighlightBox>
+
+## Implications for Corporate Buyers
+
+The corresponding adjustment framework has profound consequences for corporate buyers in the voluntary carbon market, and for the integrity of corporate net-zero claims.
+
+When a company buys a carbon credit in the voluntary market and retires it, they are making a claim about their own emissions. But if the underlying emission reduction is also being counted by the host country government toward its NDC -- because no corresponding adjustment was applied -- the same tonne is being claimed twice: once by the government, once by the company.
+
+This creates a real problem for corporate buyers who want their purchases to represent genuine, additional climate action beyond what governments are already counting. The relevant question a corporate buyer should now ask is:
+
+**Was a corresponding adjustment applied to this credit?**
+
+- If yes: the host country has disclaimed the reduction from its own NDC accounting. The corporate buyer's claim represents a genuinely additional contribution beyond the host country's nationally-reported effort.
+- If no: the host country is still counting the same reduction. The corporate buyer's retirement does not represent additional climate action in any meaningful accounting sense -- it may support the project financially, but it does not improve the global accounting picture.
+
+<ExampleBox>
+**Example: The corporate buyer's dilemma**
+
+A European technology company purchases 10,000 carbon credits from a forest conservation project in Indonesia to support its annual carbon neutrality claim. The credits are certified by a reputable voluntary standard and the project's emission reductions are genuine and verified.
+
+However, the Indonesian government has not authorised these credits as ITMOs and has not applied a corresponding adjustment. Indonesia includes the forest's carbon stocks in its own NDC accounting. The same 10,000 tCO2e of avoided deforestation is counted by Indonesia toward its national target and claimed by the technology company toward its corporate neutrality claim.
+
+For investors and regulators assessing the company's net-zero credibility, this double-counting is increasingly a red flag. Leading net-zero frameworks such as the Science Based Targets initiative are moving toward requiring that only credits with corresponding adjustments can be used for certain claim types by 2030.
+</ExampleBox>
+
+## Scope 3 and Supply-Chain Claims
+
+The corresponding adjustment framework also intersects with how companies account for **Scope 3 emissions** -- indirect emissions from a company's supply chain and value chain. If a supplier in a developing country generates ITMOs that are authorised and transferred, and corresponding adjustments are applied, then the host country no longer claims credit for those reductions. The acquiring entity (whether a country or, eventually, a corporate buyer through an approved channel) holds the sole accounting claim.
+
+This creates incentives for companies sourcing from developing countries to invest in projects that generate properly-authorised ITMOs rather than non-authorised credits -- the former supports both the supplier country's NDC ambition management and the buyer's own claims.
+
+## Contrast with the Kyoto CDM
+
+It is worth pausing to contrast Article 6.2's CA mechanism with its predecessor under the Kyoto Protocol: the **Clean Development Mechanism (CDM)**. The CDM allowed developed countries (Annex I parties) to invest in emission reduction projects in developing countries and receive **Certified Emission Reductions (CERs)** in return. CERs could be used against Annex I country caps.
+
+The fundamental flaw was that the CDM had no equivalent of the corresponding adjustment. Developing countries were not subject to binding emission caps under Kyoto -- so they did not need to subtract anything from their own accounts when they generated CERs. The CER went to the developed country buyer, but the host country also effectively kept the emission reduction in its own favourable baseline accounting.
+
+<ResponsiveTable>
+
+| Feature | Kyoto CDM | Article 6.2 ITMOs |
+|---------|-----------|-------------------|
+| Corresponding adjustment | Not required | Required for authorised ITMOs |
+| Double-counting risk | High (no CA mechanism) | Low (CA eliminates it for authorised units) |
+| Host country obligation | No cap, no adjustment | Must apply CA, reducing NDC space |
+| Buyer uses | Annex I compliance | NDC achievement, CORSIA, voluntary market |
+| Government involvement | Developing country DNA approval | Both host and acquiring country DNAs required |
+| Irrevocability | Limited | Protected after first transfer (COP29) |
+
+</ResponsiveTable>
+
+The CDM generated enormous volumes of credits through the 2000s and 2010s, but independent research found that a significant fraction of issued CERs did not represent genuine additional emission reductions. The Article 6.2 framework, with its mandatory CA requirement and tighter governance, represents a deliberate attempt to close these loopholes. Whether it succeeds in practice will depend on the rigour of authorisation processes, the quality of host country GHG inventories, and the robustness of the international review system -- all of which are still being developed.
+
+<DeepDive title="What happens if a country's NDC does not cover the sector where the ITMO originated?">
+This is one of the trickier accounting questions in Article 6.2. If a host country's NDC covers only the energy sector but the ITMO originates from a forestry project, does the CA still apply? The Glasgow Rulebook says yes -- the CA must be applied to the host country's overall GHG inventory regardless of whether the specific sector is covered by the NDC target. This prevents countries from structuring deals in uncovered sectors to avoid the accounting cost of the CA. It also means that host countries considering ITMO exports need to think carefully about their overall emission budget, not just their sector-specific NDC commitments.
+</DeepDive>
+
+Corresponding adjustments are the accounting backbone of the entire Article 6.2 system. They are what separates a genuine international transfer of climate effort from a bookkeeping trick. Understanding them -- and the conditions under which they are and are not applied -- is essential for anyone working in international carbon markets, corporate sustainability, or climate policy.
