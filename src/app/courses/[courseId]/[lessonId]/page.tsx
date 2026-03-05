@@ -3,6 +3,7 @@ import { urlToLessonId } from '@/lib/url-helpers';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import remarkGfm from 'remark-gfm';
 import { getMDXComponents } from '@/components/content/mdx-components';
 import LessonClient from './_components/LessonClient';
 import type { Metadata } from 'next';
@@ -51,7 +52,7 @@ export default function LessonPage({ params }: Props) {
       navCtx={navCtx}
       courseColor={course.color}
     >
-      <MDXRemote source={mdxSource} components={getMDXComponents()} />
+      <MDXRemote source={mdxSource} components={getMDXComponents()} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
     </LessonClient>
   );
 }

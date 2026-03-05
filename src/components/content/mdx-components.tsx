@@ -28,19 +28,19 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
 
     // Tables: add styles only — MDX content wraps tables in <ResponsiveTable> already
     table: (props: ComponentPropsWithoutRef<'table'>) => (
-      <div className="overflow-x-auto my-8 shadow-sm rounded-lg border border-gray-100">
+      <div className="overflow-x-auto my-10 shadow-sm rounded-lg border border-gray-100">
         <table className="w-full border-collapse text-left" {...props} />
       </div>
     ),
     th: (props: ComponentPropsWithoutRef<'th'>) => (
       <th
-        className="bg-slate-800 text-white px-4 py-3 text-sm font-semibold tracking-wide"
+        className="bg-slate-800 text-white px-6 py-4 text-sm font-semibold tracking-wide"
         {...props}
       />
     ),
     td: (props: ComponentPropsWithoutRef<'td'>) => (
       <td
-        className="px-4 py-3 border-b border-gray-100 text-sm text-gray-700 bg-white"
+        className="px-6 py-4 border-b border-gray-100 text-sm text-gray-700 bg-white"
         {...props}
       />
     ),
