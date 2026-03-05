@@ -100,9 +100,9 @@ This is where low technology accounting differs substantially from high technolo
 PE_P,p,y = sum over k and t of (F_e x GWP_CH4 x M_t,k,p,y)
 
 Where:
-- F_e = average methane emissions from producing one tonne of biochar (tCH4 per tonne of biochar). Source: Cornelissen et al. (2016), Table 3, based on kiln type.
-- GWP_CH4 = global warming potential of methane. Use the value from the latest applicable VCS Standard. Current value = 28 (IPCC Fifth Assessment Report, AR5).
-- M_t,k,p,y = mass of biochar type t for application type k produced at facility p in year y (tonnes, dry weight basis)
+*   F_e = average methane emissions from producing one tonne of biochar (tCH4 per tonne of biochar). Source: Cornelissen et al. (2016), Table 3, based on kiln type.
+*   GWP_CH4 = global warming potential of methane. Use the value from the latest applicable VCS Standard. Current value = 28 (IPCC Fifth Assessment Report, AR5).
+*   M_t,k,p,y = mass of biochar type t for application type k produced at facility p in year y (tonnes, dry weight basis)
 
 Default value when kiln type is unknown: F_e = 0.049 tCH4 per tonne of biochar produced. This default is based on traditional kilns, which are among the higher-emitting kiln types.
 </FormulaBox>
@@ -171,23 +171,23 @@ A smallholder uses a traditional kiln (unknown type) to produce 100 tonnes (dry 
 
 **Scenario A: Rice husk feedstock**
 
-- F_Cp (Table 4, rice husks, pyrolysis) = 0.49
-- PR_de,k (unknown temperature) = 0.56
-- CC = 100 x 0.49 x 0.56 = 27.44 tonnes of carbon
-- Gross removal = 27.44 x 44/12 = 27.44 x 3.667 = 100.6 tCO2e
-- Methane emissions (PE_P) = 100 x 0.049 x 28 = 137.2 tCO2e
-- Net result: 100.6 - 137.2 = **-36.6 tCO2e (net positive emissions)**
+*   F_Cp (Table 4, rice husks, pyrolysis) = 0.49
+*   PR_de,k (unknown temperature) = 0.56
+*   CC = 100 x 0.49 x 0.56 = 27.44 tonnes of carbon
+*   Gross removal = 27.44 x 44/12 = 27.44 x 3.667 = 100.6 tCO2e
+*   Methane emissions (PE_P) = 100 x 0.049 x 28 = 137.2 tCO2e
+*   Net result: 100.6 - 137.2 = **-36.6 tCO2e (net positive emissions)**
 
 The project would not generate credits. The methane from the kiln outweighs the carbon stored in the biochar.
 
 **Scenario B: Wood feedstock**
 
-- F_Cp (Table 4, wood, pyrolysis) = 0.77
-- PR_de,k (unknown temperature) = 0.56
-- CC = 100 x 0.77 x 0.56 = 43.12 tonnes of carbon
-- Gross removal = 43.12 x 44/12 = 43.12 x 3.667 = 158.1 tCO2e
-- Methane emissions (PE_P) = 100 x 0.049 x 28 = 137.2 tCO2e
-- Net result: 158.1 - 137.2 = **20.9 tCO2e net removal**
+*   F_Cp (Table 4, wood, pyrolysis) = 0.77
+*   PR_de,k (unknown temperature) = 0.56
+*   CC = 100 x 0.77 x 0.56 = 43.12 tonnes of carbon
+*   Gross removal = 43.12 x 44/12 = 43.12 x 3.667 = 158.1 tCO2e
+*   Methane emissions (PE_P) = 100 x 0.049 x 28 = 137.2 tCO2e
+*   Net result: 158.1 - 137.2 = **20.9 tCO2e net removal**
 
 The wood biochar project generates a small but positive credit. This contrast illustrates two important points: feedstock choice matters significantly for low technology projects, and measuring production temperature to access a higher PR_de,k value can dramatically improve project viability.
 </ExampleBox>

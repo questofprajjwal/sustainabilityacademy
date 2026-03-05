@@ -14,14 +14,14 @@ The net GHG removal at the production stage is calculated as:
 ER_PS,y = sum over t of [ (sum over k of CC_t,k,y x 44/12) - (sum over p of PE_PS,t,p,y) ]
 
 Where:
-- ER_PS,y = GHG emission removals at the production stage in year y (tCO2e)
-- CC_t,k,y = organic carbon content on dry weight basis for biochar type t used for application type k in year y (tonnes of carbon)
-- PE_PS,t,p,y = project emissions at the production stage for biochar type t at facility p in year y (tCO2e)
-- 44/12 = coefficient to convert tonnes of organic carbon to tCO2e (the molecular weight ratio of CO2 to carbon: one tonne of carbon produces 44/12 = 3.667 tonnes of CO2)
-- t = biochar type index
-- k = application type index
-- p = facility index
-- y = year
+*   ER_PS,y = GHG emission removals at the production stage in year y (tCO2e)
+*   CC_t,k,y = organic carbon content on dry weight basis for biochar type t used for application type k in year y (tonnes of carbon)
+*   PE_PS,t,p,y = project emissions at the production stage for biochar type t at facility p in year y (tCO2e)
+*   44/12 = coefficient to convert tonnes of organic carbon to tCO2e (the molecular weight ratio of CO2 to carbon: one tonne of carbon produces 3.667 tonnes of CO2)
+*   t = biochar type index
+*   k = application type index
+*   p = facility index
+*   y = year
 </FormulaBox>
 
 The logic is straightforward. You take the carbon locked in the biochar and convert it to CO2 equivalent. Then you subtract all the emissions generated during production. The difference is the net removal credited to the project.
@@ -40,9 +40,9 @@ For high technology facilities, the organic carbon content locked into the bioch
 CC_t,k,y = sum over p of (M_t,k,p,y x F_Cp,t,p x PR_de,k)
 
 Where:
-- M_t,k,p,y = mass on dry weight basis of biochar type t for application type k produced at facility p in year y (tonnes)
-- F_Cp,t,p = organic carbon content of biochar type t at production facility p, expressed per tonne of biochar on a dry weight basis (fraction, e.g. 0.77 means 77% carbon by dry mass). For high technology facilities: determined by laboratory material analysis.
-- PR_de,k = permanence adjustment factor due to decay of biochar for application type k (dimensionless, between 0 and 1)
+*   M_t,k,p,y = mass on dry weight basis of biochar type t for application type k produced at facility p in year y (tonnes)
+*   F_Cp,t,p = organic carbon content of biochar type t at production facility p, expressed per tonne of biochar on a dry weight basis (fraction, e.g. 0.77 means 77 percent carbon by dry mass). For high technology facilities: determined by laboratory material analysis.
+*   PR_de,k = permanence adjustment factor due to decay of biochar for application type k (dimensionless, between 0 and 1)
 </FormulaBox>
 
 Note that M_t,k,p,y is measured on a dry weight basis. Water content in freshly produced biochar must be excluded. Most high technology facilities have continuous weighing systems that can record this directly.
@@ -93,10 +93,10 @@ For high technology facilities, project emissions at the production stage are ca
 PE_PS,p,y = (PE_D,p,y + PE_P,p,y + PE_C,p,y) x (sum of M_t,k,p,y / M_p,y)
 
 Where:
-- PE_D,p,y = emissions from pre-treatment of feedstock at facility p in year y (tCO2e)
-- PE_P,p,y = emissions from conversion of waste biomass into biochar at facility p in year y (tCO2e)
-- PE_C,p,y = emissions from auxiliary energy for pyrolysis at facility p in year y (tCO2e)
-- M_p,y = total mass of all biochar types on dry weight basis produced at facility p in year y (tonnes)
+*   PE_D,p,y = emissions from pre-treatment of feedstock at facility p in year y (tCO2e)
+*   PE_P,p,y = emissions from conversion of waste biomass into biochar at facility p in year y (tCO2e)
+*   PE_C,p,y = emissions from auxiliary energy for pyrolysis at facility p in year y (tCO2e)
+*   M_p,y = total mass of all biochar types on dry weight basis produced at facility p in year y (tonnes)
 
 The ratio (sum of M_t,k,p,y / M_p,y) allocates the facility-level emissions proportionally to the biochar types being accounted for. In most projects with a single biochar type, this ratio equals 1.
 
@@ -107,8 +107,8 @@ Pre-treatment includes drying, grinding, screening, and other steps to prepare t
 PE_D,p,y = PE_DE,p,y + PE_DF,p,y
 
 Where:
-- PE_DE,p,y = emissions from grid-connected electricity used for pre-treatment. Calculated using CDM TOOL05.
-- PE_DF,p,y = emissions from combustion of fossil fuels used for pre-treatment. Calculated using CDM TOOL03.
+*   PE_DE,p,y = emissions from grid-connected electricity used for pre-treatment. Calculated using CDM TOOL05.
+*   PE_DF,p,y = emissions from combustion of fossil fuels used for pre-treatment. Calculated using CDM TOOL03.
 
 If the energy source for pre-treatment is entirely renewable, PE_D,p,y = 0.
 
@@ -127,8 +127,8 @@ Some reactors require electricity or fossil fuel to start up the pyrolysis react
 PE_C,p,y = PE_CE,p,y + PE_CF,p,y
 
 Where:
-- PE_CE,p,y = emissions from grid electricity used to start or maintain the reactor. Calculated using CDM TOOL05.
-- PE_CF,p,y = emissions from fossil fuels used to start or maintain the reactor. Calculated using CDM TOOL03.
+*   PE_CE,p,y = emissions from grid electricity used to start or maintain the reactor. Calculated using CDM TOOL05.
+*   PE_CF,p,y = emissions from fossil fuels used to start or maintain the reactor. Calculated using CDM TOOL03.
 
 If the auxiliary energy source is entirely renewable, PE_C,p,y = 0.
 
@@ -149,10 +149,10 @@ Carbon removal (gross) = 342.65 x 44/12 = 342.65 x 3.667 = 1,256.4 tCO2e
 
 **Step 3: Calculate project emissions**
 
-- PE_D,p,y (pre-treatment electricity) = 2 tCO2e
-- PE_P,p,y (pyrolysis process) = 0 (high technology default)
-- PE_C,p,y (auxiliary energy) = 0 (no fossil fuels used)
-- Total PE_PS = 2 tCO2e
+*   PE_D,p,y (pre-treatment electricity) = 2 tCO2e
+*   PE_P,p,y (pyrolysis process) = 0 (high technology default)
+*   PE_C,p,y (auxiliary energy) = 0 (no fossil fuels used)
+*   Total PE_PS = 2 tCO2e
 
 **Step 4: Net removal**
 
