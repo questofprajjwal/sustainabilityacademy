@@ -6,7 +6,7 @@
  */
 
 import type { MDXComponents } from 'mdx/types';
-import type { ComponentPropsWithoutRef } from 'react';
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import HighlightBox from './HighlightBox';
 import AnalogyBox from './AnalogyBox';
 import ExampleBox from './ExampleBox';
@@ -14,6 +14,17 @@ import FormulaBox from './FormulaBox';
 import ResponsiveTable from './ResponsiveTable';
 import CalculationExercise from './CalculationExercise';
 import DeepDive from './DeepDive';
+import Flowchart from './Flowchart';
+
+/** Extract raw text from React children (handles MDX wrapping) */
+function extractText(node: ReactNode): string {
+  if (node == null || typeof node === 'boolean') return '';
+  if (typeof node === 'string') return node;
+  if (typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(extractText).join('');
+  if (typeof node === 'object' && 'props' in node) return extractText(node.props.children);
+  return '';
+}
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
@@ -25,6 +36,23 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ResponsiveTable,
     CalculationExercise,
     DeepDive,
+
+    // Fenced code blocks: intercept ```mermaid to render flowcharts
+    pre: ({ children, ...props }: ComponentPropsWithoutRef<'pre'> & { children?: ReactNode }) => {
+      // Check if the child is <code className="language-mermaid">
+      if (
+        children &&
+        typeof children === 'object' &&
+        'props' in children &&
+        typeof children.props.className === 'string' &&
+        children.props.className.includes('language-mermaid')
+      ) {
+        const chart = extractText(children.props.children);
+        return <Flowchart chart={chart} />;
+      }
+      // Default: render as normal <pre>
+      return <pre {...props}>{children}</pre>;
+    },
 
     // Tables: add styles only — MDX content wraps tables in <ResponsiveTable> already
     table: (props: ComponentPropsWithoutRef<'table'>) => (

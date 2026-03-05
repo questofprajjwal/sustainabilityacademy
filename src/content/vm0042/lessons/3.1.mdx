@@ -18,14 +18,18 @@
 <h3 class="text-xl font-bold mt-6 mb-3">Side-by-Side Comparison</h3>
 <ResponsiveTable>
 <table class="mb-6">
-  <tr><th>Feature</th><th>Approach 1: Measure & Model</th><th>Approach 2: Measure & Re-Measure</th><th>Approach 3: Default Factors</th></tr>
-  <tr><td><strong>Core method</strong></td><td>Biogeochemical model + soil measurements</td><td>Direct SOC measurement at project & control sites</td><td>IPCC emission factors & stock change factors</td></tr>
-  <tr><td><strong>GHGs covered</strong></td><td>CO₂ (SOC), CH₄ (soil), N₂O</td><td>CO₂ (SOC) only</td><td>CO₂ (fossil fuel, liming), CH₄, N₂O</td></tr>
-  <tr><td><strong>Precision</strong></td><td>High</td><td>High</td><td>Lower</td></tr>
-  <tr><td><strong>Cost</strong></td><td>High (model + sampling)</td><td>Moderate-High (sampling)</td><td>Low</td></tr>
-  <tr><td><strong>Uncertainty deduction</strong></td><td>Lower (model + sampling)</td><td>Moderate (sampling only)</td><td>Higher (default factor uncertainty)</td></tr>
-  <tr><td><strong>Best for</strong></td><td>Large projects, complex systems</td><td>Where modelling is impractical</td><td>Small/resource-constrained projects</td></tr>
-  <tr><td><strong>Soil sampling required?</strong></td><td>Yes, every 5 years (model true-up)</td><td>Yes, at each verification</td><td>Not for SOC, but needed for other params</td></tr>
+  <thead>
+    <tr><th>Feature</th><th>Approach 1: Measure &amp; Model</th><th>Approach 2: Measure &amp; Re-Measure</th><th>Approach 3: Default Factors</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Core method</strong></td><td>Biogeochemical model + soil measurements</td><td>Direct SOC measurement at project &amp; control sites</td><td>IPCC emission factors &amp; stock change factors</td></tr>
+    <tr><td><strong>GHGs covered</strong></td><td>CO₂ (SOC), CH₄ (soil), N₂O</td><td>CO₂ (SOC) only</td><td>CO₂ (fossil fuel, liming), CH₄, N₂O</td></tr>
+    <tr><td><strong>Precision</strong></td><td>High</td><td>High</td><td>Lower</td></tr>
+    <tr><td><strong>Cost</strong></td><td>High (model + sampling)</td><td>Moderate-High (sampling)</td><td>Low</td></tr>
+    <tr><td><strong>Uncertainty deduction</strong></td><td>Lower (model + sampling)</td><td>Moderate (sampling only)</td><td>Higher (default factor uncertainty)</td></tr>
+    <tr><td><strong>Best for</strong></td><td>Large projects, complex systems</td><td>Where modelling is impractical</td><td>Small/resource-constrained projects</td></tr>
+    <tr><td><strong>Soil sampling required?</strong></td><td>Yes, every 5 years (model true-up)</td><td>Yes, at each verification</td><td>Not for SOC, but needed for other params</td></tr>
+  </tbody>
 </table>
 </ResponsiveTable>
 
@@ -34,6 +38,38 @@
   <p class="font-semibold text-blue-800">🌦️ Analogy: Weather Forecasting</p>
   <p class="mt-1 text-sm text-blue-900">You take real temperature measurements to calibrate a forecast model, then let it predict future conditions. Periodically you check whether predictions match reality and adjust. In VM0042: soil samples = real measurements; biogeochemical model = the forecast model; model true-up = the reality check.</p>
 </AnalogyBox>
+
+```mermaid
+graph TD
+    A(["<b>Select Approved Model</b><br/>DNDC · DayCent · RothC · CENTURY"])
+    B(["<b>Validate Model</b><br/>Peer-reviewed · Public · Domain-validated"])
+    C(["<b>Collect Initial Soil Samples</b><br/>SOC · Bulk density · Texture"])
+    D(["<b>Run Baseline Scenario</b><br/>Using same parameters"])
+    E(["<b>Run Project Scenario</b><br/>Using same parameters"])
+    H(["<b>Estimate GHG Fluxes</b><br/>SOC + CH₄ + N₂O<br/>Most comprehensive approach"])
+    F{"<b>5-Year</b><br/>Check-In"}
+    G(["<b>Re-Sample Soil</b><br/>True-up the model"])
+
+    A --> B --> C
+    C --> D & E
+    D & E --> H
+    H --> F
+    F --> |"Every 5 years"| G
+    G --> |"Recalibrate"| D
+
+    style A fill:#eff6ff,stroke:#3b82f6,stroke-width:1.5px,color:#1e40af
+    style B fill:#fefce8,stroke:#ca8a04,stroke-width:1.5px,color:#854d0e
+    style C fill:#ecfdf5,stroke:#059669,stroke-width:1.5px,color:#065f46
+    style D fill:#eef2ff,stroke:#6366f1,stroke-width:1.5px,color:#3730a3
+    style E fill:#eef2ff,stroke:#6366f1,stroke-width:1.5px,color:#3730a3
+    style H fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#166534
+    style F fill:#fff7ed,stroke:#ea580c,stroke-width:1.5px,color:#9a3412
+    style G fill:#fdf2f8,stroke:#db2777,stroke-width:1.5px,color:#9d174d
+
+    linkStyle 6 stroke:#ea580c,stroke-width:2px
+    linkStyle 7 stroke:#db2777,stroke-width:2px,stroke-dasharray:5 5
+```
+
 <ul class="list-disc ml-6 text-sm space-y-2 mb-4">
   <li>Select an approved biogeochemical model (e.g., DNDC, DayCent, RothC, CENTURY)</li>
   <li>Model must be peer-reviewed, publicly available, and validated for your project domain</li>
