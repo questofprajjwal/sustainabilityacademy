@@ -137,11 +137,11 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <span className="text-base flex-shrink-0" aria-hidden>{mod.icon}</span>
-                  <div className="min-w-0">
-                    <p className={`text-xs font-semibold truncate ${colors.text}`}>
+                  <div className="min-w-0 flex-1">
+                    <p className={`text-xs font-semibold ${colors.text}`}>
                       Module {mod.id + 1}
                     </p>
-                    <p className="text-sm font-medium text-gray-800 truncate leading-tight">
+                    <p className="text-sm font-medium text-gray-800 leading-snug">
                       {mod.title}
                     </p>
                   </div>
@@ -193,7 +193,7 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
                       >
                         {isCompleted ? '✓' : ''}
                       </span>
-                      <span className="truncate leading-tight">{lesson.title}</span>
+                      <span className="leading-snug">{lesson.title}</span>
                     </Link>
                   );
                 })}
@@ -208,7 +208,7 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden md:flex w-72 flex-shrink-0 h-screen sticky top-0 border-r border-gray-200 overflow-hidden">
+      <aside className="hidden md:flex w-80 flex-shrink-0 h-screen sticky top-0 border-r border-gray-200 overflow-hidden">
         {sidebarContent}
       </aside>
 
