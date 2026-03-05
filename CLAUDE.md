@@ -44,6 +44,7 @@ LearningPlatform/
 │   │   │   ├── AnalogyBox.tsx        # Blue left-border analogy
 │   │   │   ├── ExampleBox.tsx        # Amber left-border worked example
 │   │   │   ├── FormulaBox.tsx        # Dark background formula block
+│   │   │   ├── Flowchart.tsx         # Mermaid flowchart renderer (client-side)
 │   │   │   └── ResponsiveTable.tsx   # Horizontal-scroll table wrapper
 │   │   ├── learning/
 │   │   │   ├── Sidebar.tsx           # Course navigation sidebar
@@ -178,6 +179,7 @@ Available MDX components:
 | `<ResponsiveTable>` + `<table>` | Scrollable on mobile | Data tables |
 | `<CalculationExercise>` | Violet card, interactive | Practice calculations with hints |
 | `<DeepDive>` | Blue collapsible section | Optional deep-dive content |
+| ` ```mermaid ` code block | Styled flowchart/diagram | Process flows, decision trees |
 
 **CalculationExercise props:**
 
@@ -212,6 +214,38 @@ Available MDX components:
   Global Warming Potential compares the heat absorbed by a greenhouse gas...
 </DeepDive>
 ```
+
+**Flowchart / Diagram (Mermaid):**
+
+Flowcharts use standard fenced ` ```mermaid ` code blocks — no imports or special components needed. The `pre` override in `mdx-components.tsx` detects `language-mermaid` code blocks and routes them to the `Flowchart` client component, which renders via Mermaid.js with SVG style injection.
+
+- **Why fenced code blocks?** MDX parses HTML-like syntax (`<br/>`, `<i>`) inside JSX props/children, breaking multi-line Mermaid definitions. Fenced code blocks are opaque to MDX — content passes through untouched.
+- **Styling:** The `Flowchart` component applies a base Mermaid theme, then injects a `<style>` block into the rendered SVG for edge labels (dark text, pill background), rounded node corners, and drop shadows.
+- **Per-chart colors:** Use Mermaid `style` directives inside the code block (e.g., `style A fill:#eff6ff,stroke:#3b82f6`). Keep to a cohesive palette — pastel fills with matching saturated borders.
+- **Edge labels:** Use `-->  |"label text"|` pipe syntax for visible edge labels. Avoid `-- "text" -->` syntax as labels may render invisible depending on theme.
+- **Node shapes:** Use `(["text"])` for stadium/pill shapes (modern look), `{"text"}` for diamond decisions.
+- **No HTML tags needed in nodes:** Use `<br/>` for line breaks inside node labels (this is Mermaid HTML, not MDX — safe inside code blocks).
+
+````mdx
+```mermaid
+graph TD
+    A(["<b>Step One</b><br/>Description here"])
+    B(["<b>Step Two</b><br/>More detail"])
+    C{"Decision?"}
+    D(["<b>Outcome</b>"])
+
+    A --> B --> C
+    C --> |"Yes"| D
+    C --> |"No"| A
+
+    style A fill:#eff6ff,stroke:#3b82f6,stroke-width:1.5px,color:#1e40af
+    style B fill:#ecfdf5,stroke:#059669,stroke-width:1.5px,color:#065f46
+    style C fill:#fff7ed,stroke:#ea580c,stroke-width:1.5px,color:#9a3412
+    style D fill:#f0fdf4,stroke:#16a34a,stroke-width:2px,color:#166534
+```
+````
+
+Key files: `src/components/content/Flowchart.tsx` (renderer), `src/components/content/mdx-components.tsx` (pre override that intercepts mermaid blocks).
 
 ### 4. Write quiz YAML files (optional per lesson)
 
