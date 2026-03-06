@@ -8,7 +8,16 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const course = getCourse(params.courseId);
-  return { title: `${course.title} — Sustainability Academy` };
+  const lessonCount = getAllLessons(course).length;
+  const description = `${course.description} ${lessonCount} lessons, ~${course.estimatedHours}h.`;
+  return {
+    title: course.title,
+    description,
+    openGraph: {
+      title: `${course.title} - Sustainability Academy`,
+      description,
+    },
+  };
 }
 
 export default function CourseOverviewPage({ params }: Props) {

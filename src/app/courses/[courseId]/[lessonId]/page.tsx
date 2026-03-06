@@ -21,11 +21,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const lessonId = urlToLessonId(params.lessonId);
   const navCtx = getLessonNavContext(course, lessonId);
   const lesson = course.modules.flatMap(m => m.lessons).find(l => l.id === lessonId);
+  const title = lesson?.title ?? lessonId;
+  const description = navCtx
+    ? `${course.title} - ${navCtx.moduleTitle}, lesson ${navCtx.lessonIndex} of ${navCtx.moduleLessonCount}.${lesson?.readingMinutes ? ` ${lesson.readingMinutes} min read.` : ''}`
+    : `${course.title} - ${title}`;
   return {
-    title: `${lesson?.title ?? lessonId} — ${course.title} — Sustainability Academy`,
-    description: navCtx
-      ? `Module ${navCtx.moduleTitle}: lesson ${navCtx.lessonIndex} of ${navCtx.moduleLessonCount}`
-      : undefined,
+    title: `${title} - ${course.title}`,
+    description,
+    openGraph: {
+      title: `${title} - ${course.title}`,
+      description,
+    },
   };
 }
 
