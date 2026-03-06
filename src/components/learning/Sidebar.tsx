@@ -193,7 +193,12 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
                       >
                         {isCompleted ? '✓' : ''}
                       </span>
-                      <span className="leading-snug">{lesson.title}</span>
+                      <span className="leading-snug flex-1">{lesson.title}</span>
+                      {lesson.readingMinutes && (
+                        <span className="text-xs text-gray-400 flex-shrink-0 ml-1">
+                          {lesson.readingMinutes}m
+                        </span>
+                      )}
                     </Link>
                   );
                 })}

@@ -79,7 +79,7 @@ const CourseSchema = z.object({
   icon: z.string(),
   color: z.string(),
   status: z.enum(['published', 'draft', 'coming-soon']),
-  category: z.enum(['methodologies', 'markets', 'esg', 'fundamentals', 'green-finance']),
+  category: z.enum(['methodologies', 'markets', 'esg', 'fundamentals', 'green-finance', 'sustainability-standards']),
   estimatedHours: z.number().positive(),
   modules: z.array(ModuleSchema).min(1),
 });
@@ -157,7 +157,7 @@ function validateCourse(courseDir: string): boolean {
   }
 
   // Check MDX files for known component references
-  const knownComponents = ['HighlightBox', 'AnalogyBox', 'ExampleBox', 'FormulaBox', 'ResponsiveTable', 'CalculationExercise', 'DeepDive'];
+  const knownComponents = ['HighlightBox', 'AnalogyBox', 'ExampleBox', 'FormulaBox', 'ResponsiveTable', 'CalculationExercise', 'DeepDive', 'EquationBreakdown', 'GlossaryTerm', 'CaseStudy'];
   if (existsSync(lessonsDir)) {
     const mdxFiles = readdirSync(lessonsDir).filter(f => f.endsWith('.mdx'));
     for (const mdxFile of mdxFiles) {

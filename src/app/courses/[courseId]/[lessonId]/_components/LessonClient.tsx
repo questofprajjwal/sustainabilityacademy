@@ -106,10 +106,10 @@ export default function LessonClient({
               <span>Lesson {navCtx.lessonIndex} of {navCtx.moduleLessonCount}</span>
             </>
           )}
-          {lessonMeta.duration && (
+          {(lessonMeta.readingMinutes || lessonMeta.duration) && (
             <>
               <span aria-hidden>·</span>
-              <span>⏱ {lessonMeta.duration}</span>
+              <span>{lessonMeta.readingMinutes ? `${lessonMeta.readingMinutes} min read` : `⏱ ${lessonMeta.duration}`}</span>
             </>
           )}
           {lessonMeta.vmRef && (

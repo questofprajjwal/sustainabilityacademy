@@ -27,6 +27,7 @@ export interface LessonMeta {
   title: string;
   duration?: string;
   vmRef?: string;
+  readingMinutes?: number;
 }
 
 interface BaseQuestion {

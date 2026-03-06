@@ -66,6 +66,14 @@ export const CourseSchema = z.object({
   modules: z.array(ModuleSchema).min(1),
 });
 
+export const GlossaryTermSchema = z.object({
+  term: z.string().min(1),
+  slug: z.string().regex(/^[a-z0-9-]+$/),
+  definition: z.string().min(1),
+  category: z.string().min(1),
+  related: z.array(z.string()).default([]),
+});
+
 export type CourseInput = z.infer<typeof CourseSchema>;
 export type ModuleInput = z.infer<typeof ModuleSchema>;
 export type LessonMetaInput = z.infer<typeof LessonMetaSchema>;

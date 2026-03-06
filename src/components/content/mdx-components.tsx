@@ -16,6 +16,8 @@ import CalculationExercise from './CalculationExercise';
 import DeepDive from './DeepDive';
 import Flowchart from './Flowchart';
 import EquationBreakdown from './EquationBreakdown';
+import GlossaryTerm from './GlossaryTerm';
+import CaseStudy from './CaseStudy';
 
 /** Extract raw text from React children (handles MDX wrapping) */
 function extractText(node: ReactNode): string {
@@ -38,6 +40,8 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     CalculationExercise,
     DeepDive,
     EquationBreakdown,
+    GlossaryTerm,
+    CaseStudy,
 
     // Fenced code blocks: intercept ```mermaid to render flowcharts
     pre: ({ children, ...props }: ComponentPropsWithoutRef<'pre'> & { children?: ReactNode }) => {

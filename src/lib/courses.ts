@@ -12,6 +12,7 @@ import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 import * as yaml from 'js-yaml';
 import { CourseSchema } from './schemas';
+import { computeReadingTime } from './reading-time';
 import type { Course, Module, LessonMeta, LessonNavContext, QuizQuestion } from './types';
 export { lessonIdToUrl, urlToLessonId } from './url-helpers';
 
@@ -36,7 +37,21 @@ export function getCourse(courseId: string): Course {
   if (!result.success) {
     throw new Error(`Invalid course.yaml for ${courseId}: ${result.error.message}`);
   }
-  return result.data as Course;
+  const course = result.data as Course;
+
+  // Hydrate readingMinutes from MDX word count (build-time only)
+  const lessonsDir = join(CONTENT_DIR, courseId, 'lessons');
+  for (const mod of course.modules) {
+    for (const lesson of mod.lessons) {
+      const mdxPath = join(lessonsDir, `${lesson.id}.mdx`);
+      if (existsSync(mdxPath)) {
+        const mdxContent = readFileSync(mdxPath, 'utf-8');
+        lesson.readingMinutes = computeReadingTime(mdxContent).minutes;
+      }
+    }
+  }
+
+  return course;
 }
 
 export function getAllCourses(): Course[] {
