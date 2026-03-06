@@ -182,6 +182,7 @@ Available MDX components:
 | `<DeepDive>` | Blue collapsible section | Optional deep-dive content |
 | `<EquationBreakdown>` | Interactive color-coded equation | Visual formula explainers with hover |
 | ` ```mermaid ` code block | Styled flowchart/diagram | Process flows, decision trees |
+| `![alt](/images/...)` | Static diagram image | Draw.io exported diagrams (complex visuals) |
 
 **CalculationExercise props:**
 
@@ -248,6 +249,21 @@ graph TD
 ````
 
 Key files: `src/components/content/Flowchart.tsx` (renderer), `src/components/content/mdx-components.tsx` (pre override that intercepts mermaid blocks).
+
+**Draw.io Diagrams (via `/drawio` skill):**
+
+For complex visual diagrams - multi-step processes, organizational structures, value chain maps, decision frameworks - use the `/drawio` skill to create professional `.drawio` files and export them as PNG images. These are more visually polished than Mermaid and better suited for diagrams that benefit from precise layout, color-coded steps, and custom styling.
+
+- **When to use Draw.io over Mermaid:** Use Draw.io when the diagram needs precise spatial layout (e.g., a U-shaped six-step process with iterative arrows), multiple colors per node, or when Mermaid syntax becomes unwieldy. Use Mermaid for simpler linear flows and decision trees.
+- **Workflow:** Use the `/drawio` skill to create the `.drawio` file in the project root, export to PNG, then place the PNG in `public/images/<course-id>/`.
+- **File convention:** Save exported PNGs to `public/images/<course-id>/<descriptive-name>.png` (e.g., `public/images/ghg-scope-3/six-step-accounting-process.png`).
+- **In MDX:** Reference with a standard Markdown image: `![Alt text](/images/<course-id>/<descriptive-name>.png)`
+- **When to create diagrams:** Proactively create Draw.io diagrams for multi-step processes, frameworks, hierarchies, and visual overviews that help learners grasp structure at a glance - especially in introductory or summary lessons.
+- **Avoid arrow/label overlaps:** When routing edges between nodes, verify that the arrow path and its label do not pass through or overlap any box. Use explicit entry/exit points (`entryX`, `entryY`, `exitX`, `exitY`) and waypoints to route arrows around boxes, not through them. For example, if two nodes are at the same vertical center, connect them side-to-side (`exitX=1;exitY=0.5` to `entryX=0;entryY=0.5`) rather than routing through intermediate coordinates that land inside another node. After export, visually inspect the PNG for overlaps before committing.
+
+```mdx
+![The Six-Step Scope 3 Accounting Process](/images/ghg-scope-3/six-step-accounting-process.png)
+```
 
 **EquationBreakdown (Visual Equation Explainer):**
 
