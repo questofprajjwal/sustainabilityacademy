@@ -6,7 +6,7 @@ icon: "🔗"
 color: violet
 status: published
 category: fundamentals
-estimatedHours: 18
+estimatedHours: 2
 modules:
   - id: 0
     title: "Scope 3 Foundations"

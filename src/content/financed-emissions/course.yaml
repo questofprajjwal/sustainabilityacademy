@@ -6,7 +6,7 @@ icon: "🏦"
 color: teal
 status: published
 category: green-finance
-estimatedHours: 20
+estimatedHours: 3
 modules:
   - id: 0
     title: "Introduction to Financed Emissions"

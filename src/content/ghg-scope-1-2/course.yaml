@@ -6,7 +6,7 @@ icon: "🏭"
 color: teal
 status: published
 category: fundamentals
-estimatedHours: 14
+estimatedHours: 3
 modules:
   - id: 0
     title: "GHG Accounting Foundations"

@@ -6,7 +6,7 @@ icon: "🌐"
 color: blue
 status: published
 category: markets
-estimatedHours: 10
+estimatedHours: 1
 modules:
   - id: 0
     title: "Foundations of Article 6"

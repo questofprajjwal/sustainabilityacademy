@@ -6,7 +6,7 @@ icon: "🌡️"
 color: cyan
 status: published
 category: esg
-estimatedHours: 24
+estimatedHours: 3
 modules:
   - id: 0
     title: "Foundations"

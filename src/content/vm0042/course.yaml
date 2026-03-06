@@ -6,7 +6,7 @@ icon: "🌾"
 color: green
 status: published
 category: markets
-estimatedHours: 38
+estimatedHours: 3
 modules:
   - id: 0
     title: "Foundations"

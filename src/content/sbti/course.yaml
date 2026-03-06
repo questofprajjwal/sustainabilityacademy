@@ -6,7 +6,7 @@ icon: "🎯"
 color: teal
 status: published
 category: fundamentals
-estimatedHours: 14
+estimatedHours: 1
 modules:
   - id: 0
     title: "Introduction to Science-Based Targets"

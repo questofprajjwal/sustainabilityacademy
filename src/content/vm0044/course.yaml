@@ -6,7 +6,7 @@ icon: "🌱"
 color: teal
 status: published
 category: markets
-estimatedHours: 8
+estimatedHours: 2
 modules:
   - id: 0
     title: "Foundations of Biochar Carbon Projects"

@@ -6,7 +6,7 @@ icon: "🇪🇺"
 color: blue
 status: published
 category: green-finance
-estimatedHours: 16
+estimatedHours: 4
 modules:
   - id: 0
     title: "Introduction to SFDR"

@@ -6,7 +6,7 @@ icon: "📈"
 color: indigo
 status: published
 category: green-finance
-estimatedHours: 24
+estimatedHours: 6
 modules:
   - id: 0
     title: "What is ESG Investing?"
