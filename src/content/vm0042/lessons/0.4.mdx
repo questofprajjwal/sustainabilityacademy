@@ -40,17 +40,9 @@
 
 <ExampleBox>
   <p class="font-semibold text-amber-800">💰 A Simplified Money Flow (1,000 ha smallholder project)</p>
-  <ResponsiveTable>
-<table class="mt-3 text-sm">
-    <tr><th>Stage</th><th>Transaction</th><th>Typical Numbers</th></tr>
-    <tr><td>Carbon generated</td><td>1,000 ha × 1.2 tCO₂e/ha/yr after deductions</td><td>1,200 VCUs/yr</td></tr>
-    <tr><td>VCU sale price</td><td>Sold to corporate buyer (spot or forward contract)</td><td>$22/VCU → $26,400/yr</td></tr>
-    <tr><td>Project developer share</td><td>Covers methodology, monitoring, verification costs + margin</td><td>approx. 50% → $13,200/yr</td></tr>
-    <tr><td>Farmer/aggregator share</td><td>Passed back per hectare enrolled</td><td>approx. 50% → approx. $13/ha/yr</td></tr>
-    <tr><td>Verra registry fee</td><td>Paid at issuance (approx. $0.20/VCU)</td><td>$240/yr</td></tr>
-    <tr><td>VVB audit fee</td><td>Amortised across the 10–30 year project life</td><td>$2,000–8,000/audit cycle</td></tr>
-  </table>
-</ResponsiveTable>
+<div class="my-6">
+  <img src="/images/vm0042/simplified-money-flow.drawio.png" alt="A Simplified Money Flow for a 1,000 ha project" class="w-full max-w-4xl mx-auto rounded shadow-sm" />
+</div>
   <p class="mt-3 text-amber-800 text-sm">Note: Developer/farmer splits vary widely (40/60 to 70/30) based on who bears upfront costs and risk.</p>
 </ExampleBox>
 
@@ -122,51 +114,10 @@
 
 <p class="mb-4">Here is the complete journey from a changed farming practice to a retired carbon credit, the process that VM0042 governs:</p>
 
-<FormulaBox>
-  <p class="text-green-400 font-bold mb-3 text-sm uppercase tracking-wide">The VM0042 Project Lifecycle</p>
-  <div class="space-y-3 text-sm">
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">①</span>
-      <div><span class="text-white font-semibold">Feasibility & Design</span><br/><span class="text-slate-300">Developer identifies eligible land, confirms applicability conditions, selects ALM practices (e.g. zero tillage + cover crops). Writes the Project Description Document (PDD).</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">②</span>
-      <div><span class="text-white font-semibold">Baseline Establishment</span><br/><span class="text-slate-300">Collect baseline soil samples, measure existing SOC stocks, document current farming practices. This snapshot becomes the "counterfactual", what would have happened without the project.</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">③</span>
-      <div><span class="text-white font-semibold">Validation (VVB Audit #1)</span><br/><span class="text-slate-300">An accredited VVB independently reviews the PDD. They check: Is the methodology applied correctly? Is additionality credible? Is the monitoring plan robust? A validated project is listed in Verra's pipeline.</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">④</span>
-      <div><span class="text-white font-semibold">Practice Change & Monitoring</span><br/><span class="text-slate-300">Farmers adopt the new practices. Developer implements the monitoring plan: periodic soil sampling, N₂O/CH₄ measurements, remote sensing cross-checks, and record-keeping per VM0042 requirements.</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">⑤</span>
-      <div><span class="text-white font-semibold">Quantification</span><br/><span class="text-slate-300">At the end of a monitoring period (typically 1–5 years), the developer applies the VM0042 formulas: calculate net ERRs = (baseline emissions) − (project emissions) − (leakage) − (uncertainty deduction).</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">⑥</span>
-      <div><span class="text-white font-semibold">Verification (VVB Audit #2)</span><br/><span class="text-slate-300">The VVB independently audits the monitoring data and the quantification calculations. They confirm that the claimed ERRs are real, measured, and conservatively estimated. A Verification Report is issued.</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">⑦</span>
-      <div><span class="text-white font-semibold">VCU Issuance</span><br/><span class="text-slate-300">Verra reviews the Verification Report. They issue VCUs: a portion (~10–20%) goes to the AFOLU buffer pool (insurance against reversals); the rest go to the project account in the Verra registry.</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">⑧</span>
-      <div><span class="text-white font-semibold">Sale & Revenue Distribution</span><br/><span class="text-slate-300">The developer sells VCUs to corporate buyers (spot market, broker, or direct forward contract). Revenue flows: developer takes margin, remainder distributed to farmers/aggregator per the project agreement.</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">⑨</span>
-      <div><span class="text-white font-semibold">Retirement & Claim</span><br/><span class="text-slate-300">The buyer retires the VCUs (marks them as used) on the Verra registry. The serial numbers are permanently cancelled, preventing double-counting. The buyer can now legitimately claim that tonne was offset.</span></div>
-    </div>
-    <div class="flex gap-3">
-      <span class="text-yellow-400 font-bold w-6 flex-shrink-0">🔁</span>
-      <div><span class="text-white font-semibold">Repeat for the Project Lifetime</span><br/><span class="text-slate-300">Steps ④–⑧ repeat for each monitoring period across the project's 20–30 year life. The baseline may be updated periodically. Buffer credits are released if no reversals occur.</span></div>
-    </div>
-  </div>
-</FormulaBox>
+<div class="my-6">
+  <img src="/images/vm0042/vm0042-project-lifecycle.drawio.png" alt="The VM0042 Project Lifecycle Flowchart" class="w-full max-w-4xl mx-auto rounded shadow-sm" />
+  <p class="text-sm text-center text-gray-500 mt-3">The complete 9-step project journey, governed by methodology rules.</p>
+</div>
 
 <h3 class="text-xl font-bold mt-6 mb-3">Where VM0042 Sits in This Workflow</h3>
 <p class="mb-4">VM0042 governs <strong>steps ②, ④, and ⑤</strong> in exhaustive detail. It answers: What counts as an eligible practice? How do you establish the baseline? Which carbon pools must you measure? What formulas apply? When can you use models vs. direct sampling? Every subsequent module in this course is an exploration of those rules.</p>
