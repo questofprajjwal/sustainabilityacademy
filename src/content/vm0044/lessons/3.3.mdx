@@ -6,19 +6,14 @@ Once biochar leaves the production facility, the project is not necessarily done
 
 The total GHG emissions at the application stage are:
 
-<FormulaBox>
-**Equation 11: Application Stage Project Emissions**
+<EquationBreakdown
+  title="Equation 11 - Application Stage Project Emissions"
+  result="PE<sub>AS,y</sub> | Application Stage Emissions | Total GHG emissions at the application stage in year y, in tCO2e | blue"
+  inputs="E<sub>P,t,k,y</sub> | Processing Emissions | Emissions from processing biochar type t for application k in year y, in tCO2e | green ;; E<sub>ap,t,k,y</sub> | Utilization Emissions | Emissions from applying/incorporating biochar type t for application k in year y, in tCO2e (typically zero) | amber"
+  operator="+"
+/>
 
-PE_AS,y = sum over k and t of (E_P,t,k,y + E_ap,t,k,y)
-
-Where:
-*   PE_AS,y = total GHG emissions at the application stage in year y (tCO2e)
-*   E_P,t,k,y = emissions from processing of biochar type t for application type k in year y (tCO2e)
-*   E_ap,t,k,y = emissions from utilization of biochar type t for application type k in year y (tCO2e)
-*   t = biochar type index
-*   k = application type index
-*   y = year
-</FormulaBox>
+The formula sums across all biochar types (t) and application types (k).
 
 ### E_P,t,k,y: Processing Emissions (Equation 12)
 
@@ -56,18 +51,12 @@ Leakage in carbon projects works like spillover effects in economics. If a city 
 
 VM0044 defines four leakage components:
 
-<FormulaBox>
-**Equation 13: Total Leakage**
-
-LE_y = LE_as,y + LE_bd,y + LE_ts,y + LE_tap,y
-
-Where:
-*   LE_y = total leakage emissions in year y (tCO2e)
-*   LE_as,y = leakage from activity shift
-*   LE_bd,y = leakage from biomass diversion
-*   LE_ts,y = leakage from transportation of waste biomass from sourcing site to production facility
-*   LE_tap,y = leakage from transportation of biochar from production facility to application site
-</FormulaBox>
+<EquationBreakdown
+  title="Equation 13 - Total Leakage"
+  result="LE<sub>y</sub> | Total Leakage | Total leakage emissions in year y, in tCO2e | blue"
+  inputs="LE<sub>as,y</sub> | Activity Shift Leakage | Emissions from activities displaced to other locations (always zero under VM0044) | green ;; LE<sub>bd,y</sub> | Biomass Diversion Leakage | Emissions from diverting biomass away from existing uses (zero - waste biomass only) | amber ;; LE<sub>ts,y</sub> | Sourcing Transport Leakage | Emissions from transporting waste biomass to production facility (zero if round-trip under 200 km) | violet ;; LE<sub>tap,y</sub> | Application Transport Leakage | Emissions from transporting biochar to the application site (zero if round-trip under 200 km) | rose"
+  operator="+"
+/>
 
 ### LE_as,y: Activity Shift Leakage
 

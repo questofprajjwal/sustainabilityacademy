@@ -82,13 +82,11 @@ Carbon data is particularly well-suited to portfolio optimisation because:
 
 The relationship between carbon reduction depth and tracking error is well-documented. A portfolio targeting modest carbon reduction (say, 20-30% below benchmark intensity) can achieve this with very low tracking error, the overlap with the benchmark remains high. As the carbon constraint tightens, the portfolio increasingly deviates from the benchmark, reducing overlap and increasing tracking error.
 
-<FormulaBox>
-**Weighted-Average Carbon Intensity (WACI)**
-
-WACI = Sum of: `(Position Weight) × (Issuer Emissions / Issuer Revenue)`
-
-*What it means:* This measures a portfolio's exposure to carbon-intensive companies, normalized by their revenue. It is the primary metric recommended by the TCFD for reporting portfolio-level carbon risk.
-</FormulaBox>
+<EquationBreakdown
+  title="Weighted-Average Carbon Intensity (WACI)"
+  result="WACI | Weighted-Average Carbon Intensity | Portfolio's exposure to carbon-intensive companies, normalized by revenue; the primary TCFD metric for portfolio-level carbon risk | blue"
+  inputs="w<sub>i</sub> | Position Weight | Each holding's weight as a proportion of total portfolio value | green ;; E<sub>i</sub> / Rev<sub>i</sub> | Issuer Carbon Intensity | Issuer's Scope 1 + 2 emissions divided by its revenue | amber"
+/>
 
 ### Broader ESG Optimisation
 
@@ -236,7 +234,7 @@ Beyond tracking error and attribution, several specific tools help measure ESG-r
 
 ### Weighted-Average Carbon Intensity
 
-As shown in the formula above, WACI measures a portfolio's revenue-normalised carbon exposure. It is the standard TCFD metric for reporting portfolio-level climate risk. UK TCFD reporting focuses on Scope 1 and Scope 2 emissions; EU SFDR accounting extends this to Scope 3 (indirect value chain emissions). Scope 3 remains the most difficult to measure and is subject to significant estimation uncertainty.
+As shown in the equation above, WACI measures a portfolio's revenue-normalised carbon exposure. It is the standard TCFD metric for reporting portfolio-level climate risk. UK TCFD reporting focuses on Scope 1 and Scope 2 emissions; EU SFDR accounting extends this to Scope 3 (indirect value chain emissions). Scope 3 remains the most difficult to measure and is subject to significant estimation uncertainty.
 
 ### Climate Value-at-Risk (Climate VaR)
 

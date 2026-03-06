@@ -24,11 +24,12 @@ Note: Tobacco exposure and land degradation are sometimes confused with mandator
 
 **What it measures**: The share of investments in investee companies that have been found to be in violation of the United Nations Global Compact (UNGC) principles or the OECD Guidelines for Multinational Enterprises.
 
-<FormulaBox>
-**UNGC/OECD Violations PAI (Indicator 10):**
-
-UNGC Violations PAI = (Market Value of investments in UNGC/OECD violating companies / Total Portfolio Market Value) × 100%
-</FormulaBox>
+<EquationBreakdown
+  title="UNGC/OECD Violations PAI (Indicator 10)"
+  result="PAI<sub>10</sub> | UNGC Violations PAI | Share of portfolio invested in companies found violating UNGC/OECD principles, as a percentage | blue"
+  inputs="MV<sub>viol</sub> | Violating Investments | Market value of investments in companies that have been found in violation of UNGC/OECD standards | green ;; MV<sub>total</sub> | Total Portfolio Value | Total market value of all investments in the portfolio | amber"
+  operator="/"
+/>
 
 The UNGC's ten principles cover human rights, labour standards, environment, and anti-corruption. The OECD Guidelines extend these to responsible business conduct in areas including supply chains, consumer interests, and taxation.
 
@@ -54,11 +55,12 @@ The key compliance point: the data provider you choose and the severity threshol
 
 This indicator is distinct from Indicator 10 in an important way: Indicator 10 measures actual violations (outcomes), while Indicator 11 measures the absence of governance processes (inputs). A company may not currently be in violation but still lack the mechanisms that would help prevent violations, it would not appear in Indicator 10 but would contribute to Indicator 11.
 
-<FormulaBox>
-**Lack of Compliance Mechanisms PAI (Indicator 11):**
-
-Lack of Mechanism PAI = (Market Value of investments in companies without UNGC/OECD compliance mechanisms / Total Portfolio Market Value) × 100%
-</FormulaBox>
+<EquationBreakdown
+  title="Lack of Compliance Mechanisms PAI (Indicator 11)"
+  result="PAI<sub>11</sub> | Lack of Mechanism PAI | Share of portfolio invested in companies without UNGC/OECD compliance mechanisms, as a percentage | blue"
+  inputs="MV<sub>no-mech</sub> | Non-Compliant Investments | Market value of investments in companies lacking UNGC/OECD compliance or grievance mechanisms | green ;; MV<sub>total</sub> | Total Portfolio Value | Total market value of all investments in the portfolio | amber"
+  operator="/"
+/>
 
 In practice, whether a company has appropriate compliance mechanisms is assessed through:
 - Codes of conduct and ethics policies
@@ -71,28 +73,25 @@ In practice, whether a company has appropriate compliance mechanisms is assessed
 
 **What it measures**: The average difference between the median or mean pay of male and female employees across investee companies, expressed as a percentage of male pay.
 
-<FormulaBox>
-**Gender Pay Gap PAI:**
-
-Gender Pay Gap PAI = Σ [ (Investment Value in company i / Total Portfolio Value) × Gender Pay Gap i ]
-
-Where: Gender Pay Gap i = (Average Male Pay - Average Female Pay) / Average Male Pay × 100%
-Unit: percentage (%)
-</FormulaBox>
+<EquationBreakdown
+  title="Gender Pay Gap PAI (Indicator 12)"
+  result="PAI<sub>12</sub> | Gender Pay Gap PAI | Weighted average unadjusted gender pay gap across the portfolio, in percentage | blue"
+  inputs="w<sub>i</sub> | Portfolio Weight | Investment value in company i divided by total portfolio value | green ;; GPG<sub>i</sub> | Gender Pay Gap | Company i's unadjusted gender pay gap: (Avg Male Pay - Avg Female Pay) / Avg Male Pay x 100% | amber"
+/>
 
 "Unadjusted" means the raw pay difference, without controlling for factors like role type, seniority, or hours worked. The unadjusted gap is a blunter but more widely available metric, adjusted pay gap data (which controls for role differences) is less commonly reported by companies.
 
 <ExampleBox>
 **Example, Interpreting the gender pay gap PAI:**
 
-A fund investing €100 million across five companies calculates the following gender pay gaps:
-- Company A: 15% gap (investment: €30M)
-- Company B: 8% gap (investment: €25M)
-- Company C: 20% gap (investment: €20M)
-- Company D: 5% gap (investment: €15M)
-- Company E: 12% gap (investment: €10M)
+A fund investing $100 million across five companies calculates the following gender pay gaps:
+- Company A: 15% gap (investment: $30M)
+- Company B: 8% gap (investment: $25M)
+- Company C: 20% gap (investment: $20M)
+- Company D: 5% gap (investment: $15M)
+- Company E: 12% gap (investment: $10M)
 
-Weighted average gender pay gap PAI = [(15% × 30) + (8% × 25) + (20% × 20) + (5% × 15) + (12% × 10)] / 100
+Weighted average gender pay gap PAI = [(15% x 30) + (8% x 25) + (20% x 20) + (5% x 15) + (12% x 10)] / 100
 = [450 + 200 + 400 + 75 + 120] / 100
 = 1,245 / 100 = **12.45%**
 
@@ -103,13 +102,11 @@ This figure is reported in the PAI statement. A reduction in this figure over ti
 
 **What it measures**: The average ratio of female board members to male board members across investee companies.
 
-<FormulaBox>
-**Board Gender Diversity PAI:**
-
-Board Diversity PAI = Σ [ (Investment Value in company i / Total Portfolio Value) × (Female Board Members i / Total Board Members i) ]
-
-Unit: percentage (%)
-</FormulaBox>
+<EquationBreakdown
+  title="Board Gender Diversity PAI (Indicator 13)"
+  result="PAI<sub>13</sub> | Board Diversity PAI | Weighted average female board representation across the portfolio, in percentage | blue"
+  inputs="w<sub>i</sub> | Portfolio Weight | Investment value in company i divided by total portfolio value | green ;; FBR<sub>i</sub> | Female Board Ratio | Female board members divided by total board members for company i | amber"
+/>
 
 This indicator measures governance representation rather than pay equality. A portfolio with a high board gender diversity PAI has more female board representation across its investee companies. An increasing trend over time would indicate positive progress.
 
@@ -125,11 +122,12 @@ The RTS specifies the following categories of controversial weapons:
 - Chemical weapons (Chemical Weapons Convention)
 - Biological weapons (Biological Weapons Convention)
 
-<FormulaBox>
-**Controversial Weapons PAI:**
-
-Controversial Weapons PAI = (Market Value of investments in controversial weapons companies / Total Portfolio Market Value) × 100%
-</FormulaBox>
+<EquationBreakdown
+  title="Controversial Weapons PAI (Indicator 14)"
+  result="PAI<sub>14</sub> | Controversial Weapons PAI | Share of portfolio invested in controversial weapons companies, as a percentage | blue"
+  inputs="MV<sub>weapons</sub> | Weapons Investments | Market value of investments in companies involved in controversial weapons manufacture or sale | green ;; MV<sub>total</sub> | Total Portfolio Value | Total market value of all investments in the portfolio | amber"
+  operator="/"
+/>
 
 This indicator is binary, a company either is or is not involved in controversial weapons manufacture or sale. Many FMPs apply sector exclusions for controversial weapons across all products (Article 6, 8, and 9), which would result in a 0% reading for this indicator. Where that is the case, it should be stated clearly in the PAI statement.
 
@@ -139,14 +137,11 @@ For the portion of a portfolio invested in government bonds and supranational bo
 
 **Indicator 1 (Table 4), GHG Intensity of Sovereign Issuers**
 
-<FormulaBox>
-**Sovereign GHG Intensity:**
-
-Sovereign GHG Intensity PAI = Σ [ (Investment Value in sovereign i / Current Value of All Investments) × (National GHG Emissionsi / GDPi) ]
-
-Unit: tCO₂eq per million USD (PPP-adjusted GDP)
-Where GDP is purchasing power parity (PPP) adjusted
-</FormulaBox>
+<EquationBreakdown
+  title="Sovereign GHG Intensity (Table 4, Indicator 1)"
+  result="PAI<sub>sov</sub> | Sovereign GHG Intensity | Weighted average GHG intensity of sovereign holdings, in tCO₂eq per million USD PPP-adjusted GDP | blue"
+  inputs="w<sub>i</sub> | Investment Weight | Investment value in sovereign i divided by total value of all investments | green ;; GHG<sub>i</sub> / GDP<sub>i</sub> | National GHG Intensity | Country i's total GHG emissions divided by its PPP-adjusted GDP | amber"
+/>
 
 Data sources include EDGAR (Emissions Database for Global Atmospheric Research), national GHG inventories, and the IEA. GDP data from the IMF or World Bank using PPP adjustment.
 

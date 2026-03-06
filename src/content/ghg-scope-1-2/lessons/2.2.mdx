@@ -45,22 +45,23 @@ In practice, organizations should use the blend percentage to estimate the fossi
 
 CO2 emissions from mobile sources are calculated using the same three-equation fuel analysis framework as stationary combustion. The approach depends on what is known about fuel characteristics:
 
-<FormulaBox>
-**Equation 1 (least preferred):**
-Emissions = Fuel x EF₁
-Use when fuel consumption is known only in mass or volume units.
-EF₁ = CO2 emission factor per mass or volume unit.
+<EquationBreakdown
+  title="Equation 1 - CO₂ from Fuel Volume/Mass (least preferred)"
+  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
+  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units (e.g., litres, gallons, kg) | green ;; EF<sub>1</sub> | Emission Factor | CO₂ emission factor per mass or volume unit of fuel (e.g., kg CO₂/litre) | amber"
+/>
 
-**Equation 2 (preferred):**
-Emissions = Fuel x HHV x EF₂
-Use when actual fuel heat content (HHV) is known.
-EF₂ = CO2 emission factor per energy unit.
+<EquationBreakdown
+  title="Equation 2 - CO₂ from Fuel Energy Content (preferred)"
+  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
+  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; HHV | Higher Heating Value | Energy content per mass or volume unit of fuel (e.g., MMBtu/litre) | amber ;; EF<sub>2</sub> | Emission Factor | CO₂ emission factor per energy unit (e.g., kg CO₂/MMBtu) | violet"
+/>
 
-**Equation 3 (most preferred for CO2):**
-Emissions = Fuel x CC x (44/12)
-Use when actual carbon content of the fuel is known.
-CC = fuel carbon content in mass of carbon per mass or volume of fuel.
-</FormulaBox>
+<EquationBreakdown
+  title="Equation 3 - CO₂ from Carbon Content (most preferred)"
+  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
+  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; CC | Carbon Content | Mass of carbon per mass or volume unit of fuel | amber ;; 44/12 | Molecular Weight Ratio | Ratio of CO₂ molecular weight to carbon atomic weight, converting carbon mass to CO₂ mass | violet"
+/>
 
 For diesel, the EPA default CO2 emission factor is 2.68 kg CO2/litre (10.15 kg CO2/gallon). For petrol/gasoline, the factor is 2.35 kg CO2/litre (8.87 kg CO2/gallon). These per-volume factors are used with Equation 1.
 
@@ -68,17 +69,17 @@ For diesel, the EPA default CO2 emission factor is 2.68 kg CO2/litre (10.15 kg C
 
 CH4 and N2O emissions from mobile sources are calculated using one of two equations, depending on vehicle type:
 
-<FormulaBox>
-**Equation 4 (distance-based, for on-road vehicles):**
-Emissions = Distance x EF₄
-Distance = vehicle-miles or vehicle-kilometers traveled.
-EF₄ = CH4 or N2O emission factor per distance unit, by vehicle type and model year.
+<EquationBreakdown
+  title="Equation 4 - Distance-Based (for on-road vehicles)"
+  result="E<sub>CH₄/N₂O</sub> | CH₄ or N₂O Emissions | Mass of CH₄ or N₂O emitted from on-road mobile combustion | blue"
+  inputs="D | Distance Traveled | Vehicle-miles or vehicle-kilometers traveled during the reporting period | green ;; EF<sub>4</sub> | Emission Factor | CH₄ or N₂O emission factor per distance unit, by vehicle type and model year | amber"
+/>
 
-**Equation 5 (fuel-based, for non-road vehicles):**
-Emissions = Fuel x EF₅
-Fuel = volume of fuel combusted.
-EF₅ = CH4 or N2O emission factor per volume unit, by fuel type.
-</FormulaBox>
+<EquationBreakdown
+  title="Equation 5 - Fuel-Based (for non-road vehicles)"
+  result="E<sub>CH₄/N₂O</sub> | CH₄ or N₂O Emissions | Mass of CH₄ or N₂O emitted from non-road mobile combustion | blue"
+  inputs="Fuel | Fuel Consumed | Volume of fuel combusted by non-road vehicles (e.g., litres, gallons) | green ;; EF<sub>5</sub> | Emission Factor | CH₄ or N₂O emission factor per volume unit, by fuel type | amber"
+/>
 
 Equation 4 applies to on-road vehicles because their CH4 and N2O emissions are strongly influenced by vehicle type and emissions control technology (catalytic converter design), which are best represented by distance-based factors correlated with model year. Equation 5 applies to non-road vehicles such as aircraft, ships, locomotives, and forklifts, where distance data is less standardized.
 

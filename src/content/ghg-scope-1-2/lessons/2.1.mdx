@@ -50,22 +50,23 @@ CEMS is required for certain large emitters under the U.S. Clean Air Act Acid Ra
 
 The fuel analysis method is a mass balance approach: determine the carbon content of the fuel and apply it to the quantity burned. It is the standard method for organizations not subject to CEMS requirements. Three equations are available, each suited to a different state of knowledge about fuel characteristics:
 
-<FormulaBox>
-**Equation 1 (least preferred):**
-Emissions = Fuel x EF₁
-Use when fuel consumption is known only in mass or volume units and heat content is unknown.
-EF₁ = emission factor per mass or volume unit.
+<EquationBreakdown
+  title="Equation 1 - Emissions from Fuel Volume/Mass (least preferred)"
+  result="E | GHG Emissions | Total emissions from stationary combustion, in kg or tonnes | blue"
+  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units (e.g., litres, kg, cubic feet) | green ;; EF<sub>1</sub> | Emission Factor | Emission factor per mass or volume unit of fuel (e.g., kg CO₂/litre) | amber"
+/>
 
-**Equation 2 (preferred when heat content is known):**
-Emissions = Fuel x HHV x EF₂
-HHV = higher heating value of the fuel (energy per mass or volume).
-EF₂ = emission factor per energy unit.
+<EquationBreakdown
+  title="Equation 2 - Emissions from Fuel Energy Content (preferred)"
+  result="E | GHG Emissions | Total emissions from stationary combustion, in kg or tonnes | blue"
+  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; HHV | Higher Heating Value | Energy content per mass or volume unit of fuel (e.g., MMBtu/kg) | amber ;; EF<sub>2</sub> | Emission Factor | Emission factor per energy unit (e.g., kg CO₂/MMBtu) | violet"
+/>
 
-**Equation 3 (most preferred for CO2 when carbon content is known):**
-Emissions = Fuel x CC x (44/12)
-CC = fuel carbon content (mass of carbon per mass or volume of fuel).
-44/12 = ratio of molecular weights of CO2 to carbon.
-</FormulaBox>
+<EquationBreakdown
+  title="Equation 3 - CO₂ from Carbon Content (most preferred)"
+  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
+  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; CC | Carbon Content | Mass of carbon per mass or volume unit of fuel | amber ;; 44/12 | Molecular Weight Ratio | Ratio of CO₂ molecular weight to carbon atomic weight, converting carbon mass to CO₂ mass | violet"
+/>
 
 Equation 3 is the most accurate for CO2 because CO2 emissions are stoichiometrically tied to the fuel's carbon content. It can only be used for CO2, so Equation 1 or 2 must be applied alongside it for CH4 and N2O.
 

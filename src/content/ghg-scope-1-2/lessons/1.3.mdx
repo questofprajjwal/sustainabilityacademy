@@ -34,14 +34,11 @@ Three main approaches exist:
 
 Companies should use the most accurate calculation approach available to them that is appropriate for their reporting context. In many cases, accurate emission data can be calculated from fuel use data even without direct monitoring.
 
-<FormulaBox>
-GHG Emissions = Activity Data × Emission Factor
-
-Where:
-- Activity Data = a quantitative measure of the level of activity that gives rise to GHG emissions (e.g., litres of fuel consumed, kWh of electricity purchased, tonnes of product manufactured)
-- Emission Factor = a coefficient that relates the activity data to the GHG emissions (e.g., kgCO₂ per litre of fuel, kgCO₂e per kWh of electricity)
-- Result is expressed in mass units, then converted to CO₂e using GWP values
-</FormulaBox>
+<EquationBreakdown
+  title="GHG Emissions Calculation"
+  result="E | GHG Emissions | Total greenhouse gas emissions in mass units, then converted to CO₂e using GWP values | blue"
+  inputs="AD | Activity Data | Quantitative measure of activity giving rise to emissions (e.g., litres of fuel consumed, kWh of electricity purchased, tonnes of product manufactured) | green ;; EF | Emission Factor | Coefficient relating activity data to GHG emissions (e.g., kgCO₂ per litre of fuel, kgCO₂e per kWh of electricity) | amber"
+/>
 
 ## Step 3: Collect Activity Data and Choose Emission Factors
 
@@ -106,12 +103,14 @@ Each of the six Kyoto Protocol gases must be reported in a common unit: **tonnes
 The GWP values in the table above are from the IPCC Second Assessment Report (SAR, 1996), which are the values used in the Kyoto Protocol and in many GHG reporting programs. Some programs and standards have updated to IPCC AR4 (2007) or AR5 (2013) values. Always check which GWP values a specific program or regulatory requirement specifies before reporting.
 </HighlightBox>
 
-<FormulaBox>
-CO₂e = Mass of Gas (tonnes) × GWP
+<EquationBreakdown
+  title="CO₂ Equivalent Conversion"
+  result="CO₂e | CO₂ Equivalent | Total climate impact expressed in tonnes of CO₂ equivalent | blue"
+  inputs="m | Mass of Gas | Mass of the greenhouse gas released, in tonnes | green ;; GWP | Global Warming Potential | Relative warming impact of the gas compared to CO₂ over 100 years (e.g., CH₄ = 21, SF₆ = 23,900) | amber"
+/>
 
-Example: 10 tonnes of CH₄ × 21 (GWP) = 210 tCO₂e
-Example: 1 tonne of SF₆ × 23,900 (GWP) = 23,900 tCO₂e
-</FormulaBox>
+Example: 10 tonnes of CH₄ x 21 (GWP) = 210 tCO₂e
+Example: 1 tonne of SF₆ x 23,900 (GWP) = 23,900 tCO₂e
 
 <CalculationExercise
   question="A refrigeration facility leaks 0.5 tonnes of HFC-134a during the year. HFC-134a has a GWP of 1,430 (IPCC AR4). What is the CO₂e emission from this leak?"

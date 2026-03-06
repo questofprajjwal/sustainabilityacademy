@@ -8,21 +8,14 @@ This lesson covers the accounting rules for high technology production facilitie
 
 The net GHG removal at the production stage is calculated as:
 
-<FormulaBox>
-**Equation 1: Production Stage Net Removals**
+<EquationBreakdown
+  title="Equation 1 - Production Stage Net Removals"
+  result="ER<sub>PS,y</sub> | Production Stage Net Removals | Net GHG emission removals at the production stage in year y, in tCO2e | blue"
+  inputs="CC<sub>t,k,y</sub> | Organic Carbon Content | Carbon locked in biochar type t for application k in year y, converted to tCO2e by multiplying by 44/12 (3.667) | green ;; PE<sub>PS,t,p,y</sub> | Production Stage Emissions | Project emissions from producing biochar type t at facility p in year y, in tCO2e (subtracted) | rose"
+  operator="−"
+/>
 
-ER_PS,y = sum over t of [ (sum over k of CC_t,k,y x 44/12) - (sum over p of PE_PS,t,p,y) ]
-
-Where:
-*   ER_PS,y = GHG emission removals at the production stage in year y (tCO2e)
-*   CC_t,k,y = organic carbon content on dry weight basis for biochar type t used for application type k in year y (tonnes of carbon)
-*   PE_PS,t,p,y = project emissions at the production stage for biochar type t at facility p in year y (tCO2e)
-*   44/12 = coefficient to convert tonnes of organic carbon to tCO2e (the molecular weight ratio of CO2 to carbon: one tonne of carbon produces 3.667 tonnes of CO2)
-*   t = biochar type index
-*   k = application type index
-*   p = facility index
-*   y = year
-</FormulaBox>
+The formula sums across all biochar types (t), application types (k), and facilities (p). The 44/12 factor converts tonnes of organic carbon to tCO2e (the molecular weight ratio of CO2 to carbon).
 
 The logic is straightforward. You take the carbon locked in the biochar and convert it to CO2 equivalent. Then you subtract all the emissions generated during production. The difference is the net removal credited to the project.
 
@@ -34,16 +27,11 @@ Think of it like a household budget. The carbon stored in the biochar is your in
 
 For high technology facilities, the organic carbon content locked into the biochar is calculated as:
 
-<FormulaBox>
-**Equation 2: Organic Carbon Content**
-
-CC_t,k,y = sum over p of (M_t,k,p,y x F_Cp,t,p x PR_de,k)
-
-Where:
-*   M_t,k,p,y = mass on dry weight basis of biochar type t for application type k produced at facility p in year y (tonnes)
-*   F_Cp,t,p = organic carbon content of biochar type t at production facility p, expressed per tonne of biochar on a dry weight basis (fraction, e.g. 0.77 means 77 percent carbon by dry mass). For high technology facilities: determined by laboratory material analysis.
-*   PR_de,k = permanence adjustment factor due to decay of biochar for application type k (dimensionless, between 0 and 1)
-</FormulaBox>
+<EquationBreakdown
+  title="Equation 2 - Organic Carbon Content"
+  result="CC<sub>t,k,y</sub> | Organic Carbon Content | Permanent organic carbon in biochar type t for application k in year y, in tonnes of carbon | blue"
+  inputs="M<sub>t,k,p,y</sub> | Biochar Mass | Dry weight of biochar type t for application k produced at facility p in year y, in tonnes | green ;; F<sub>Cp,t,p</sub> | Carbon Fraction | Organic carbon content per tonne of dry biochar (e.g. 0.77 means 77%), determined by lab analysis for high technology | amber ;; PR<sub>de,k</sub> | Permanence Factor | Fraction of carbon expected to remain stored after 100 years for application type k (from Table 3) | violet"
+/>
 
 Note that M_t,k,p,y is measured on a dry weight basis. Water content in freshly produced biochar must be excluded. Most high technology facilities have continuous weighing systems that can record this directly.
 

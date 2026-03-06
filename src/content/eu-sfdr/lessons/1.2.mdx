@@ -42,8 +42,8 @@ Annex I, Table 1 of the RTS specifies 14 mandatory PAI indicators for investment
 
 **Climate and Environment-Related (9 indicators):**
 
-1. **GHG emissions**, Scope 1, 2, and 3 greenhouse gas emissions and total GHG emissions (tCO₂eq per €1 million invested)
-2. **Carbon footprint**, total GHG emissions (Scope 1 + 2 + 3) of investee companies normalised by portfolio market value (tCO₂eq per €1 million invested)
+1. **GHG emissions**, Scope 1, 2, and 3 greenhouse gas emissions and total GHG emissions (tCO₂eq per $1 million invested)
+2. **Carbon footprint**, total GHG emissions (Scope 1 + 2 + 3) of investee companies normalised by portfolio market value (tCO₂eq per $1 million invested)
 3. **GHG intensity of investee companies**, GHG emissions (Scope 1 + 2 + 3) per unit of revenue (tCO₂eq per million EUR revenue)
 4. **Exposure to companies in the fossil fuel sector**, share of investments in companies active in fossil fuel extraction, processing, storage, transport, or manufacture of products
 5. **Share of non-renewable energy consumption and production**, proportion of non-renewable energy consumption and production relative to total energy
@@ -86,16 +86,11 @@ Several PAI indicators use the denominator "current value of all investments." T
 - For IORPs, it follows EIOPA balance sheet reporting formats
 - The denominator is the **market value** of all investments, not the net asset value
 
-<FormulaBox>
-**Carbon Footprint (PAI Indicator 2):**
-
-Carbon Footprint = Σ [ (Current Value of Investment in company i / Enterprise Value of company i) × GHG Emissions of company i ] / Total Portfolio Value × 1,000,000
-
-Where:
-- Enterprise Value = market cap of ordinary shares + market cap of preferred shares + book value of total debt + non-controlling interests (at fiscal year-end, before deducting cash)
-- GHG Emissions = Scope 1 + Scope 2 + Scope 3 total GHG emissions (tCO₂eq)
-- Result expressed in tCO₂eq per €1 million invested
-</FormulaBox>
+<EquationBreakdown
+  title="Carbon Footprint (PAI Indicator 2)"
+  result="CF | Carbon Footprint | Total attributed GHG emissions per million euros of portfolio value, in tCO₂eq | blue"
+  inputs="I<sub>i</sub> / EV<sub>i</sub> | Ownership Share | Investment value in company i divided by its enterprise value (market cap + debt + non-controlling interests, before deducting cash) | green ;; GHG<sub>i</sub> | Company Emissions | Company i's total Scope 1 + Scope 2 + Scope 3 GHG emissions in tCO₂eq | amber ;; MV<sub>total</sub> | Total Portfolio Value | Current market value of all investments, used to normalise per million euros | violet"
+/>
 
 ## Reference Period and Timing
 
@@ -111,12 +106,12 @@ From the second reporting year onwards, the PAI statement must include a **histo
 An asset manager decides to measure PAI indicators at the following four dates: 31 March, 30 June, 30 September, and 31 December. For each date, it records the portfolio composition and the ESG data for each holding. At year-end, it calculates the average of the four measurements for each indicator.
 
 For the GHG emissions indicator, the portfolio's weighted average Scope 1+2 emissions were:
-- 31 March: 125 tCO₂eq per €1M invested
-- 30 June: 118 tCO₂eq per €1M invested
-- 30 September: 122 tCO₂eq per €1M invested
-- 31 December: 115 tCO₂eq per €1M invested
+- 31 March: 125 tCO₂eq per $1M invested
+- 30 June: 118 tCO₂eq per $1M invested
+- 30 September: 122 tCO₂eq per $1M invested
+- 31 December: 115 tCO₂eq per $1M invested
 
-Annual average PAI for GHG emissions: (125 + 118 + 122 + 115) / 4 = **120 tCO₂eq per €1M invested**
+Annual average PAI for GHG emissions: (125 + 118 + 122 + 115) / 4 = **120 tCO₂eq per $1M invested**
 
 This figure is what appears in the PAI statement published by 30 June of the following year.
 </ExampleBox>

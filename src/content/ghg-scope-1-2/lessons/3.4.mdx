@@ -62,15 +62,13 @@ Companies that purchase certificates at an organisation-wide level should distri
 
 The calculation formula is:
 
-<FormulaBox>
-Scope 2 Emissions (CO2e) = Activity Data (kWh or MWh) x Emission Factor (CO2e per kWh or MWh)
+<EquationBreakdown
+  title="Scope 2 Emissions Calculation"
+  result="E<sub>Scope 2</sub> | Scope 2 Emissions | Total indirect emissions from purchased energy, in metric tonnes CO₂e | blue"
+  inputs="AD | Activity Data | Quantity of electricity, heat, steam, or cooling purchased and consumed (kWh or MWh) | green ;; EF | Emission Factor | CO₂e emitted per unit of energy consumed (e.g., kgCO₂e per kWh or tCO₂e per MWh) | amber"
+/>
 
-For each GHG separately: Emissions = Electricity x EF (where EF is the CO2, CH4, or N2O emission factor)
-
-Then: Total CO2e = CO2 emissions + (CH4 emissions x GWP100) + (N2O emissions x GWP100)
-
-Report final scope 2 by each method in metric tons CO2e (and in metric tons of each GHG where available).
-</FormulaBox>
+For each GHG separately, multiply electricity consumed by the gas-specific emission factor (CO₂, CH₄, or N₂O). Then sum to get the total: Total CO₂e = CO₂ emissions + (CH₄ emissions x GWP₁₀₀) + (N₂O emissions x GWP₁₀₀). Report final Scope 2 by each method in metric tonnes CO₂e (and in metric tonnes of each GHG where available).
 
 <CalculationExercise
   question="A facility consumes 2,000,000 kWh of electricity in a reporting year. The location-based grid emission factor is 0.45 kg CO2e per kWh. What are the location-based Scope 2 emissions in metric tonnes CO2e?"

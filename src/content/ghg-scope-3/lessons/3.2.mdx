@@ -4,7 +4,7 @@
 
 ## Who Does Category 10 Apply To?
 
-Category 10 is relevant only for companies that sell **intermediate inputs** — materials or components that are not used directly by the end consumer but are instead further processed. Examples:
+Category 10 is relevant only for companies that sell **intermediate inputs** - materials or components that are not used directly by the end consumer but are instead further processed. Examples:
 
 - A steel producer selling steel coil to an automotive manufacturer who stamps, cuts, and welds it into car parts
 - A chemical company selling ethylene to a plastics manufacturer who polymerises it into resins
@@ -28,9 +28,11 @@ The company collects actual processing energy and emissions data from its downst
 ### Method 2: Average-Data Method
 Uses industry-average data on energy intensity of processing operations per unit of material processed (e.g., kWh per tonne of steel fabricated, kWh per tonne of plastic compounded).
 
-<FormulaBox>
-Category 10 Emissions = Mass of Intermediate Product Sold (tonnes) × Average Processing Energy Intensity (kWh/tonne) × Grid Emission Factor (tCO₂e/MWh) ÷ 1,000
-</FormulaBox>
+<EquationBreakdown
+  title="Category 10 - Average-Data Method"
+  result="E<sub>Cat10</sub> | Category 10 Emissions | Total processing emissions from sold intermediate products, in tCO₂e | blue"
+  inputs="M | Mass Sold | Mass of intermediate product sold, in tonnes | green ;; EI | Energy Intensity | Average processing energy per tonne of material, in kWh/tonne | amber ;; EF<sub>grid</sub> | Grid Emission Factor | Emissions per MWh of grid electricity, in tCO₂e/MWh (divide by 1,000 to convert kWh to MWh) | violet"
+/>
 
 ### Method 3: Spend-Based Method
 Uses EIO factors per unit of downstream processing spend. Least accurate.
@@ -42,7 +44,7 @@ A key challenge in Category 10 is that a downstream processor typically uses the
 The standard recommends allocating processing emissions in proportion to the **mass** or **physical quantity** of the reporting company's product relative to all inputs processed. If steel represents 60% of the mass of inputs to the pressing operation, 60% of the pressing energy is attributed to the steel supplier's Category 10.
 
 <AnalogyBox>
-Think of Category 10 as the "downstream manufacturing tax" on selling intermediate goods. A steel company is not just responsible for making the steel — it is responsible for the downstream energy consumed to transform that steel into useful shapes. By measuring Category 10, the steel company gains insight into which downstream fabrication processes are most energy-intensive and may be able to support customers in adopting more efficient processes.
+Think of Category 10 as the "downstream manufacturing tax" on selling intermediate goods. A steel company is not just responsible for making the steel - it is responsible for the downstream energy consumed to transform that steel into useful shapes. By measuring Category 10, the steel company gains insight into which downstream fabrication processes are most energy-intensive and may be able to support customers in adopting more efficient processes.
 </AnalogyBox>
 
 <CalculationExercise
@@ -59,12 +61,12 @@ Category 10 is typically only material for companies selling significant volumes
 
 <DeepDive title="The steel-to-car value chain: where do processing emissions sit?">
 Consider the full value chain of an automotive steel panel:
-1. Iron ore mining and coking coal extraction — partially in steel company's Category 1
-2. Blast furnace steelmaking — steel company's Scope 1 and 2
-3. Hot rolling and cold rolling at steel mill — steel company's Scope 1 and 2
-4. Stamping and pressing at automotive OEM — steel company's **Category 10**
-5. Welding and assembly at automotive OEM — still partly **Category 10**
-6. Vehicle use by consumer — automotive company's Category 11
+1. Iron ore mining and coking coal extraction - partially in steel company's Category 1
+2. Blast furnace steelmaking - steel company's Scope 1 and 2
+3. Hot rolling and cold rolling at steel mill - steel company's Scope 1 and 2
+4. Stamping and pressing at automotive OEM - steel company's **Category 10**
+5. Welding and assembly at automotive OEM - still partly **Category 10**
+6. Vehicle use by consumer - automotive company's Category 11
 
-The steel company "owns" the processing emissions at the OEM because it was the steel company's product that was being transformed. This is why Category 10 requires collaboration with downstream customers — it's genuinely their emissions data that the upstream seller needs to account for.
+The steel company "owns" the processing emissions at the OEM because it was the steel company's product that was being transformed. This is why Category 10 requires collaboration with downstream customers - it's genuinely their emissions data that the upstream seller needs to account for.
 </DeepDive>

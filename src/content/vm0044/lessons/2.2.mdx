@@ -48,14 +48,14 @@ For VM0044, the relevant activity on the positive list is the processing of wast
 
 The VCS threshold is 5 percent. If more than 5 percent of the maximum technically possible biochar production is already happening globally without carbon finance, the activity would no longer qualify as additional on the positive list. The methodology calculates this using the Activity Penetration metric (APy).
 
-<FormulaBox>
-APy = (OAy / MAPy) x 100
+<EquationBreakdown
+  title="Activity Penetration"
+  result="AP<sub>y</sub> | Activity Penetration | Percentage of maximum possible biochar production that is actually occurring in year y | blue"
+  inputs="OA<sub>y</sub> | Observed Adoption | Actual global biochar production in year y, in tonnes | green ;; MAP<sub>y</sub> | Maximum Adoption Potential | Maximum theoretically possible biochar production in year y, in tonnes | amber"
+  operator="÷"
+/>
 
-Where:
-APy = Activity Penetration in year y (expressed as a percentage)
-OAy = Observed Adoption in year y (actual global biochar production, in tonnes)
-MAPy = Maximum Adoption Potential in year y (maximum theoretically possible production, in tonnes)
-</FormulaBox>
+Note: The result is multiplied by 100 to express as a percentage.
 
 <ExampleBox>
 The calculation in Appendix 1 of VM0044 uses the following data:
@@ -94,4 +94,3 @@ To satisfy the additionality requirements of VM0044, the project documentation m
 4.  **Investment analysis results:** A financial model completed under VT0008, using either Option 1 or Option 2, showing that the project would not be financially viable without carbon revenue.
 
 All four elements must be included in the Project Description document submitted for validation. The third-party validator will review each element before the project can be registered and begin generating credits.
-

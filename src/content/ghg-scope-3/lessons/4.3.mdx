@@ -1,6 +1,6 @@
 {/* source: Scope3_Calculation_Guidance_0[1].pdf, Category 15 (pp. 136-151) */}
 
-**Category 15 — Investments** covers GHG emissions associated with the reporting company's investments in the reporting year, not already included in Scope 1 or Scope 2. This is the principal Scope 3 category for **financial institutions** — banks, insurance companies, pension funds, asset managers, and private equity firms — where financed emissions often represent 99% or more of total GHG impact.
+**Category 15 — Investments** covers GHG emissions associated with the reporting company's investments in the reporting year, not already included in Scope 1 or Scope 2. This is the principal Scope 3 category for **financial institutions** - banks, insurance companies, pension funds, asset managers, and private equity firms - where financed emissions often represent 99% or more of total GHG impact.
 
 ## Who Does Category 15 Apply To?
 
@@ -25,19 +25,25 @@ The standard covers five types of financial products:
 
 ## The Core Calculation Principle: Attribution
 
-The fundamental challenge in Category 15 is **attribution** — how much of an investee company's total emissions should be attributed to the investor? The GHG Protocol uses the concept of **proportional ownership**: the investor claims the fraction of the investee's emissions equal to their ownership share (for equity) or their loan share (for debt).
+The fundamental challenge in Category 15 is **attribution** - how much of an investee company's total emissions should be attributed to the investor? The GHG Protocol uses the concept of **proportional ownership**: the investor claims the fraction of the investee's emissions equal to their ownership share (for equity) or their loan share (for debt).
 
 ### Equity Investments
 
-<FormulaBox>
-Category 15 (Equity) = Σ [ (Equity Owned / Total Equity of Investee) × Investee Total Emissions (Scope 1 + 2) ]
-</FormulaBox>
+<EquationBreakdown
+  title="Category 15 - Equity Investments"
+  result="E<sub>equity</sub> | Financed Emissions (Equity) | Investor's attributed share of investee emissions from equity holdings, in tCO₂e | blue"
+  inputs="Equity<sub>owned</sub> | Equity Owned | Value of equity held by the investor in the investee company | green ;; Equity<sub>total</sub> | Total Investee Equity | Total equity capitalisation of the investee company | amber ;; E<sub>investee</sub> | Investee Emissions | Investee's total Scope 1 + Scope 2 emissions, in tCO₂e | violet"
+  operator="(÷) then ×"
+/>
 
 ### Debt Investments (Loans and Bonds)
 
-<FormulaBox>
-Category 15 (Debt) = Σ [ (Outstanding Loan or Bond Value / Total Debt + Equity of Investee) × Investee Total Emissions (Scope 1 + 2) ]
-</FormulaBox>
+<EquationBreakdown
+  title="Category 15 - Debt Investments"
+  result="E<sub>debt</sub> | Financed Emissions (Debt) | Investor's attributed share of investee emissions from debt holdings, in tCO₂e | blue"
+  inputs="Debt<sub>outstanding</sub> | Outstanding Loan/Bond | Value of the investor's outstanding loan or bond holding | green ;; (D+E)<sub>total</sub> | Total Debt + Equity | Total capital structure (debt plus equity) of the investee company | amber ;; E<sub>investee</sub> | Investee Emissions | Investee's total Scope 1 + Scope 2 emissions, in tCO₂e | violet"
+  operator="(÷) then ×"
+/>
 
 This is the **PCAF (Partnership for Carbon Accounting Financials)** attribution approach, which extends and operationalises the GHG Protocol Category 15 guidance for financial institutions.
 
@@ -106,12 +112,12 @@ Category 15 transforms the climate risk calculation for financial institutions:
 
 ## Net Zero for Finance
 
-Financial institution net-zero commitments (e.g., through the Glasgow Financial Alliance for Net Zero — GFANZ) rely entirely on Category 15 measurement. These commitments require banks and investors to:
+Financial institution net-zero commitments (e.g., through the Glasgow Financial Alliance for Net Zero - GFANZ) rely entirely on Category 15 measurement. These commitments require banks and investors to:
 - Measure financed emissions across all asset classes
 - Set intermediate 2030 targets aligned with 1.5°C pathways
 - Engage with high-emitting portfolio companies on transition plans
 - Phase out financing of new fossil fuel development
 
-<DeepDive title="Scope 3 Category 15 and the TNFD — biodiversity financed impacts">
-Analogous to financed emissions, the **Taskforce on Nature-related Financial Disclosures (TNFD)** framework (released 2023) requires financial institutions to assess and disclose their **financed nature impacts** — the biodiversity, water, and land use impacts of their lending and investment portfolios. Just as PCAF operationalises GHG Protocol Category 15, sector-specific TNFD guidance is emerging to operationalise financed nature impact assessment. Financial institutions are increasingly expected to disclose both financed emissions and financed nature impacts as part of comprehensive sustainability reporting.
+<DeepDive title="Scope 3 Category 15 and the TNFD - biodiversity financed impacts">
+Analogous to financed emissions, the **Taskforce on Nature-related Financial Disclosures (TNFD)** framework (released 2023) requires financial institutions to assess and disclose their **financed nature impacts** - the biodiversity, water, and land use impacts of their lending and investment portfolios. Just as PCAF operationalises GHG Protocol Category 15, sector-specific TNFD guidance is emerging to operationalise financed nature impact assessment. Financial institutions are increasingly expected to disclose both financed emissions and financed nature impacts as part of comprehensive sustainability reporting.
 </DeepDive>

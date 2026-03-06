@@ -62,18 +62,14 @@ Think of reversal risk like fire insurance for a building. You assess the likeli
 
 The sourcing stage covers the collection and transport of waste biomass to the production facility. Equation 14 calculates net GHG emission reductions at this stage.
 
-<FormulaBox>
-**Equation 14: GHG Emission Reductions at the Sourcing Stage**
-
-ER_SS,y = BE_SS,y - PE_SS,y
-
-Where:
-*   ER_SS,y = GHG emission reductions at the sourcing stage in year y (tCO2e)
-*   BE_SS,y = baseline emissions at the sourcing stage in year y, conservatively set to zero (tCO2e)
-*   PE_SS,y = project emissions at the sourcing stage in year y, conservatively set to zero because waste biogenic material is treated as renewable biomass (tCO2e)
+<EquationBreakdown
+  title="Equation 14 - GHG Emission Reductions at the Sourcing Stage"
+  result="ER<sub>SS,y</sub> | Sourcing Stage Reductions | Net GHG emission reductions at the sourcing stage in year y, in tCO2e | blue"
+  inputs="BE<sub>SS,y</sub> | Baseline Emissions | Emissions that would have occurred at the sourcing stage without the project, conservatively set to zero | green ;; PE<sub>SS,y</sub> | Project Emissions | Emissions at the sourcing stage from the project activity, set to zero because waste biomass is treated as renewable | rose"
+  operator="−"
+/>
 
 Result: ER_SS,y = 0 - 0 = 0 for most projects.
-</FormulaBox>
 
 The baseline emissions are set to zero as a conservative default. The project emissions are also set to zero because the feedstock is waste biomass treated as renewable. As a result, the sourcing stage contributes zero net emission reductions under the standard approach.
 
@@ -81,18 +77,14 @@ The baseline emissions are set to zero as a conservative default. The project em
 
 Equation 15 combines all four stages into a single annual net removal figure. This is the final number used for carbon credit issuance.
 
-<FormulaBox>
-**Equation 15: Net Annual GHG Emissions Reductions and Removals**
+<EquationBreakdown
+  title="Equation 15 - Net Annual GHG Emissions Reductions and Removals"
+  result="ER<sub>y</sub> | Net Annual Removals | Net GHG emissions reductions and removals in year y, in tCO2e - this is the final credit quantity | blue"
+  inputs="ER<sub>SS,y</sub> | Sourcing Stage Reductions | GHG reductions at the sourcing stage, typically zero under conservative default | green ;; ER<sub>PS,y</sub> | Production Stage Removals | Carbon removals from locking carbon into biochar, the main positive term (Equation 1) | amber ;; PE<sub>AS,y</sub> | Application Stage Emissions | GHG emissions from processing and applying biochar, subtracted from the total | violet ;; LE<sub>y</sub> | Leakage Emissions | Emissions outside the project boundary caused by project activities, subtracted from the total | rose"
+  operator="+"
+/>
 
-ER_y = ER_SS,y + ER_PS,y - PE_AS,y - LE_y
-
-Where:
-*   ER_y = net GHG emissions reductions and removals in year y (tCO2e)
-*   ER_SS,y = GHG emission reductions at the sourcing stage (typically zero under the conservative default)
-*   ER_PS,y = GHG emission removals at the production stage (the main carbon removal term, calculated via Equation 1)
-*   PE_AS,y = GHG emissions at the application stage (subtracted because these are positive emissions from the project)
-*   LE_y = total leakage emissions in year y (subtracted because leakage reduces the net benefit)
-</FormulaBox>
+The formula adds the sourcing and production stage terms, then subtracts application emissions and leakage. The production stage term (ER_PS,y) is always positive and dominates; PE_AS,y and LE_y are subtracted.
 
 The production stage term (ER_PS,y) is always positive and is the dominant driver of net removals. The application stage and leakage terms are always subtracted, reducing the final credit amount.
 

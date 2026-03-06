@@ -27,21 +27,25 @@ Category 9 covers all legs of product distribution after the point of sale:
 
 - Transportation in **company-owned or operated** vehicles (Scope 1)
 - Inbound logistics to the company's own facilities (Category 4)
-- Transport by customers in their own vehicles after purchase point — the standard treats customer travel to stores as part of Category 11 (use of sold products) or outside the company's boundary
+- Transport by customers in their own vehicles after purchase point - the standard treats customer travel to stores as part of Category 11 (use of sold products) or outside the company's boundary
 
 ## Calculation Methods
 
 Category 9 uses the same methods as Category 4:
 
 ### Distance-Based Method (Recommended)
-<FormulaBox>
-Category 9 Emissions = Σ [Mass (tonnes) × Distance (km) × Emission Factor (tCO₂e/tonne-km)]
-</FormulaBox>
+<EquationBreakdown
+  title="Category 9 - Distance-Based Method"
+  result="E<sub>Cat9</sub> | Category 9 Emissions | Total downstream transport emissions, in tCO₂e | blue"
+  inputs="m | Mass | Weight of products shipped, in tonnes | green ;; d | Distance | Distance travelled per shipment, in km | amber ;; EF | Emission Factor | Emissions per tonne-km for the transport mode, in tCO₂e/tonne-km | violet"
+/>
 
 ### Fuel-Based Method
-<FormulaBox>
-Category 9 Emissions = Fuel Consumed (litres or kg) × Fuel Emission Factor (tCO₂e/litre or kg)
-</FormulaBox>
+<EquationBreakdown
+  title="Category 9 - Fuel-Based Method"
+  result="E<sub>Cat9</sub> | Category 9 Emissions | Total downstream transport emissions, in tCO₂e | blue"
+  inputs="FC | Fuel Consumed | Total fuel used for downstream transport, in litres or kg | green ;; EF<sub>fuel</sub> | Fuel Emission Factor | Emissions per unit of fuel burned, in tCO₂e/litre or kg | amber"
+/>
 
 ### Spend-Based Method
 For initial screening using EIO factors per £/$/€ of logistics spend.
@@ -60,8 +64,8 @@ For initial screening using EIO factors per £/$/€ of logistics spend.
 
 For companies selling through multiple channels (direct, wholesale, retail, e-commerce), each channel has different logistics:
 
-- **Direct-to-consumer (D2C)**: High emissions per unit — individual parcels, last-mile by van
-- **Bulk wholesale to retailer**: Low emissions per unit — consolidated pallets by truck
+- **Direct-to-consumer (D2C)**: High emissions per unit - individual parcels, last-mile by van
+- **Bulk wholesale to retailer**: Low emissions per unit - consolidated pallets by truck
 - **E-commerce with returns**: Returns logistics (reverse logistics) may be as significant as outbound
 
 The standard allows companies to estimate Category 9 at the channel level, using channel-specific emission factors rather than a single average for all distribution.

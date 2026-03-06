@@ -8,51 +8,44 @@
 </HighlightBox>
 
 <AnalogyBox>
-  <p class="font-semibold text-blue-800">🎯 Analogy: Testing a Rifle Scope</p>
+  <p class="font-semibold text-blue-800">Analogy: Testing a Rifle Scope</p>
   <p class="mt-2 text-blue-900">A bias test is like checking whether a rifle consistently shoots left of target (systematic bias). A prediction error test checks how scattered the shots are around where they land (precision). A scope that always shoots left by 5 cm can be corrected, you know the offset. A scope with completely scattered shots is unusable because you cannot predict where the next shot lands. VMD0053's two tests mirror this: bias tells you the systematic offset; prediction error tells you the scatter.</p>
 </AnalogyBox>
 
 <h3 class="text-xl font-bold mt-6 mb-3">The Bias Test (Section 5.2.4)</h3>
 <p class="mb-3 text-sm">Bias is the systematic tendency of a model to overestimate or underestimate effects. Even a biased model can still be used, but large biases produce large prediction errors, which result in larger credit deductions.</p>
 
-<FormulaBox>
-  <p class="font-bold text-green-300 mb-2">Equation 1: Per-Study Bias</p>
-  <p class="font-mono text-lg text-yellow-200">bias = Σ(P_i − O_i) / n</p>
-  <div class="grid grid-cols-2 gap-x-4 mt-3 text-sm text-slate-300">
-    <div>P_i = predicted value for observation i (tCO₂e)</div>
-    <div>O_i = observed value for observation i (tCO₂e)</div>
-    <div>n = number of observations in the study</div>
-    <div>i = index of current observation</div>
-  </div>
-  <p class="text-slate-300 text-sm mt-2">Mean bias = unweighted mean of all per-study biases <em>(unweighted so that one large study with many observations does not automatically dominate model acceptance)</em></p>
-</FormulaBox>
+<EquationBreakdown
+  title="Equation 1 - Per-Study Bias"
+  result="bias | Per-Study Bias | The average difference between what the model predicted and what was actually observed across all observations in one study, in tCO₂e | blue"
+  inputs="P<sub>i</sub> | Predicted Value | The model's predicted value for observation i, in tCO₂e | green ;; O<sub>i</sub> | Observed Value | The actual measured value for observation i, in tCO₂e | amber ;; n | Number of Observations | Total count of paired observations in the study, used as the divisor | violet"
+  operator="-"
+/>
 
-<FormulaBox>
-  <p class="font-bold text-green-300 mb-2">Equation 2: Pooled Measurement Uncertainty (PMU)</p>
-  <p class="font-mono text-base text-yellow-200">σ_meas = √[ Σ σ_j² (n_j − 1) / Σ (n_j − 1) ]</p>
-  <div class="grid grid-cols-2 gap-x-4 mt-3 text-sm text-slate-300">
-    <div>σ_j = standard error of the j-th observation</div>
-    <div>n_j = number of replicates in the j-th observation</div>
-    <div>k = number of observations across all studies</div>
-    <div></div>
-  </div>
-  <p class="text-slate-300 text-sm mt-2"><strong>Bias validity test:</strong> |mean bias| ≤ PMU → model PASSES the bias test</p>
-</FormulaBox>
+<p class="text-sm text-slate-600 mb-4">Mean bias = unweighted mean of all per-study biases (unweighted so that one large study with many observations does not automatically dominate model acceptance).</p>
+
+<EquationBreakdown
+  title="Equation 2 - Pooled Measurement Uncertainty (PMU)"
+  result="σ<sub>meas</sub> | Pooled Measurement Uncertainty | The combined measurement uncertainty across all validation observations, used as the threshold for the bias test, in tCO₂e | blue"
+  inputs="σ<sub>j</sub> | Observation Standard Error | Standard error of the j-th observation from field measurements | green ;; n<sub>j</sub> | Replicate Count | Number of measurement replicates in the j-th observation | amber ;; k | Observation Count | Total number of observations across all validation studies | violet"
+/>
+
+<p class="text-sm text-slate-600 mb-4"><strong>Bias validity test:</strong> |mean bias| &le; PMU means the model PASSES the bias test.</p>
 
 <ExampleBox>
-  <p class="font-semibold text-amber-800">📐 Worked Bias Calculation (from VMD0053 Figure 5)</p>
+  <p class="font-semibold text-amber-800">Worked Bias Calculation (from VMD0053 Figure 5)</p>
   <p class="mt-2 text-sm">Three studies measuring the effect of reduced tillage on SOC change (values in tCO₂e):</p>
   <ResponsiveTable>
 <table class="text-sm mt-2">
     <tr><th>Study</th><th>Observations (modeled vs observed)</th><th>Per-study bias</th></tr>
-    <tr><td>Study 1</td><td>(1.1 vs 4.5) and (12.2 vs 3.1)</td><td>((1.1−4.5) + (12.2−3.1)) / 2 = +2.85</td></tr>
-    <tr><td>Study 2</td><td>(0.6 vs 1.2)</td><td>(0.6−1.2) / 1 = −0.60</td></tr>
-    <tr><td>Study 3</td><td>(−3.3 vs 3.5) and (4.5 vs 4.0)</td><td>((−3.3−3.5) + (4.5−4.0)) / 2 = −3.15</td></tr>
+    <tr><td>Study 1</td><td>(1.1 vs 4.5) and (12.2 vs 3.1)</td><td>((1.1-4.5) + (12.2-3.1)) / 2 = +2.85</td></tr>
+    <tr><td>Study 2</td><td>(0.6 vs 1.2)</td><td>(0.6-1.2) / 1 = -0.60</td></tr>
+    <tr><td>Study 3</td><td>(-3.3 vs 3.5) and (4.5 vs 4.0)</td><td>((-3.3-3.5) + (4.5-4.0)) / 2 = -3.15</td></tr>
   </table>
 </ResponsiveTable>
-  <p class="font-mono text-sm bg-slate-100 p-2 rounded mt-2">Mean bias = (2.85 + (−0.60) + (−3.15)) / 3 = (−0.90) / 3 = −0.30</p>
+  <p class="font-mono text-sm bg-slate-100 p-2 rounded mt-2">Mean bias = (2.85 + (-0.60) + (-3.15)) / 3 = (-0.90) / 3 = -0.30</p>
   <p class="text-sm mt-2">PMU calculated from all study standard errors = <strong>1.6 tCO₂e</strong></p>
-  <p class="text-sm font-bold text-amber-800 mt-1">Bias test: |−0.30| = 0.30 ≤ 1.6 (PMU) → Model PASSES bias test ✓</p>
+  <p class="text-sm font-bold text-amber-800 mt-1">Bias test: |-0.30| = 0.30 &le; 1.6 (PMU) - Model PASSES bias test</p>
 </ExampleBox>
 
 <div class="bg-slate-50 border border-slate-200 rounded p-4 mb-6 text-sm">
@@ -63,34 +56,32 @@
 <h3 class="text-xl font-bold mt-6 mb-3">The Prediction Error Test (Section 5.2.5)</h3>
 <p class="mb-3 text-sm">Even an unbiased model may be imprecise, its predictions scatter widely around observed values. VMD0053 quantifies this as <strong>model prediction error</strong>, which is used to deduct credits under VM0042's uncertainty framework.</p>
 
-<FormulaBox>
-  <p class="font-bold text-green-300 mb-2">Model Prediction Error Variance</p>
-  <p class="font-mono text-base text-yellow-200">σ²_model = Σ [(mod_j − obs_j) − μ_(mod−obs)]² / (k − 1)</p>
-  <div class="mt-3 text-sm text-slate-300">
-    <p>where μ_(mod−obs) = mean of all (modeled − observed) differences across k observations</p>
-    <p class="mt-1">σ_model = √σ²_model (the standard deviation of prediction errors)</p>
-  </div>
-</FormulaBox>
+<EquationBreakdown
+  title="Model Prediction Error Variance"
+  result="σ²<sub>model</sub> | Prediction Error Variance | How widely the model's errors scatter around their own mean - larger values mean less precise predictions, in (tCO₂e)² | blue"
+  inputs="mod<sub>j</sub> | Modeled Value | The model's predicted value for observation j, in tCO₂e | green ;; obs<sub>j</sub> | Observed Value | The actual measured value for observation j, in tCO₂e | amber ;; μ<sub>(mod-obs)</sub> | Mean Residual | The average of all (modeled minus observed) differences across k observations | violet ;; k | Observation Count | Total number of paired modeled-observed observations across all studies | rose"
+  operator="-"
+/>
 
-<FormulaBox>
-  <p class="font-bold text-green-300 mb-2">90% Prediction Interval (frequentist models)</p>
-  <p class="font-mono text-base text-yellow-200">PI_i = [μ_i − 1.64 × σ_model, μ_i + 1.64 × σ_model]</p>
-  <div class="mt-3 text-sm text-slate-300">
-    <p>μ_i = modeled effect of practice change for observation i</p>
-    <p class="mt-1">1.64 = z-score for 90% confidence under standard normal distribution</p>
-  </div>
-  <p class="text-slate-300 text-sm mt-2"><strong>Confidence coverage test:</strong> At least 90% of observed validation data values must fall within these intervals → model PASSES</p>
-  <p class="text-slate-400 text-xs mt-1"><em>Note: A prediction interval tells you where a future individual observation is expected to fall. A confidence interval tells you uncertainty in an estimated mean. VMD0053 uses prediction intervals, the harder test, because it is checking individual data points, not just the average.</em></p>
-</FormulaBox>
+<p class="text-sm text-slate-600 mb-4">σ<sub>model</sub> = the square root of σ²<sub>model</sub> (the standard deviation of prediction errors).</p>
+
+<EquationBreakdown
+  title="90% Prediction Interval (Frequentist Models)"
+  result="PI<sub>i</sub> | Prediction Interval | The range within which 90% of actual observations should fall if the model is valid, for observation i | blue"
+  inputs="μ<sub>i</sub> | Modeled Effect | The model's predicted effect of practice change for observation i, in tCO₂e | green ;; 1.64 | Z-Score | The z-score for 90% confidence under the standard normal distribution | amber ;; σ<sub>model</sub> | Prediction Error SD | Standard deviation of model prediction errors from the variance calculation above | violet"
+/>
+
+<p class="text-sm text-slate-600 mb-2"><strong>Confidence coverage test:</strong> At least 90% of observed validation data values must fall within these intervals for the model to PASS.</p>
+<p class="text-xs text-slate-500 mb-4"><em>Note: A prediction interval tells you where a future individual observation is expected to fall. A confidence interval tells you uncertainty in an estimated mean. VMD0053 uses prediction intervals, the harder test, because it is checking individual data points, not just the average.</em></p>
 
 <ExampleBox>
-  <p class="font-semibold text-amber-800">📐 Prediction Error: Continuing the Worked Example</p>
+  <p class="font-semibold text-amber-800">Prediction Error: Continuing the Worked Example</p>
   <p class="mt-2 text-sm">From the five modeled-observed pairs in our earlier example, suppose:</p>
-  <p class="font-mono text-sm bg-slate-100 p-2 rounded mt-1">σ²_model = 35.2 → σ_model = √35.2 = 5.9 tCO₂e</p>
-  <p class="text-sm mt-2">For modeled value μ_i = 6.8: 90% PI = [6.8 − 1.64×5.9, 6.8 + 1.64×5.9] = [−2.9, 16.5]</p>
-  <p class="text-sm">For modeled value μ_i = −4.0: 90% PI = [−4.0 − 9.7, −4.0 + 9.7] = [−13.7, 5.7]</p>
+  <p class="font-mono text-sm bg-slate-100 p-2 rounded mt-1">σ²_model = 35.2 - σ_model = √35.2 = 5.9 tCO₂e</p>
+  <p class="text-sm mt-2">For modeled value μ_i = 6.8: 90% PI = [6.8 - 1.64x5.9, 6.8 + 1.64x5.9] = [-2.9, 16.5]</p>
+  <p class="text-sm">For modeled value μ_i = -4.0: 90% PI = [-4.0 - 9.7, -4.0 + 9.7] = [-13.7, 5.7]</p>
   <p class="text-sm mt-2">The test: Are all (or at least 90% of) observed values within their respective intervals?</p>
-  <p class="text-sm font-bold text-amber-800 mt-1">If yes → model PASSES confidence coverage test → σ_model is used in VM0042 credit deductions</p>
+  <p class="text-sm font-bold text-amber-800 mt-1">If yes - model PASSES confidence coverage test - σ_model is used in VM0042 credit deductions</p>
 </ExampleBox>
 
 <div class="bg-blue-50 border border-blue-200 rounded p-4 mb-6 text-sm">
@@ -102,7 +93,7 @@
 <ResponsiveTable>
 <table class="mb-6 text-sm">
   <tr><th>Option</th><th>When Used</th><th>Method</th></tr>
-  <tr><td><strong>Option A: Analytical</strong></td><td>Sufficient field trial data available</td><td>Direct calculation of variance of (modeled − observed) differences</td></tr>
+  <tr><td><strong>Option A: Analytical</strong></td><td>Sufficient field trial data available</td><td>Direct calculation of variance of (modeled - observed) differences</td></tr>
   <tr><td><strong>Option B: Monte Carlo</strong></td><td>Models with parameter uncertainty (e.g., Bayesian)</td><td>Posterior predictive distributions (PPDs) resampled iteratively to estimate prediction error</td></tr>
 </table>
 </ResponsiveTable>
@@ -114,14 +105,14 @@
   <div class="bg-slate-50 border border-slate-200 rounded p-4 text-sm">
     <h4 class="font-bold text-slate-800 mb-2">What the MVR Must Contain</h4>
     <ul class="space-y-1 text-slate-700">
-      <li>• Model version and calibration process description</li>
-      <li>• All internal model parameter sets with proof of climate-zone-level resolution</li>
-      <li>• Full citation of calibration and validation datasets</li>
-      <li>• Per-study bias and mean bias across all studies (ranked highest to lowest)</li>
-      <li>• All PMU values used for each PC/CFG/ES combination</li>
-      <li>• Graphs of measured vs modeled with 90% prediction interval coverage</li>
-      <li>• Scatterplot and histogram of residuals (modeled − observed)</li>
-      <li>• Mean squared error for each combination</li>
+      <li>- Model version and calibration process description</li>
+      <li>- All internal model parameter sets with proof of climate-zone-level resolution</li>
+      <li>- Full citation of calibration and validation datasets</li>
+      <li>- Per-study bias and mean bias across all studies (ranked highest to lowest)</li>
+      <li>- All PMU values used for each PC/CFG/ES combination</li>
+      <li>- Graphs of measured vs modeled with 90% prediction interval coverage</li>
+      <li>- Scatterplot and histogram of residuals (modeled - observed)</li>
+      <li>- Mean squared error for each combination</li>
     </ul>
   </div>
   <div class="bg-indigo-50 border border-indigo-200 rounded p-4 text-sm">
@@ -139,10 +130,10 @@
 <div class="bg-amber-50 border border-amber-200 rounded p-4 mb-6 text-sm">
   <p class="font-semibold text-amber-800">IME Minimum Qualifications</p>
   <ul class="mt-1 space-y-1 text-amber-900">
-    <li>• ≥5 years relevant experience quantifying GHG fluxes from ALM using biogeochemical models</li>
-    <li>• Demonstrated use of the specific model type or conceptually similar models (peer-reviewed publications or project reports as evidence)</li>
-    <li>• Freedom from conflict of interest (organizational affiliations must be disclosed)</li>
-    <li>• Two references from researchers or academic staff</li>
+    <li>- ≥5 years relevant experience quantifying GHG fluxes from ALM using biogeochemical models</li>
+    <li>- Demonstrated use of the specific model type or conceptually similar models (peer-reviewed publications or project reports as evidence)</li>
+    <li>- Freedom from conflict of interest (organizational affiliations must be disclosed)</li>
+    <li>- Two references from researchers or academic staff</li>
   </ul>
 </div>
 
@@ -176,10 +167,10 @@
 <div class="bg-green-50 border border-green-200 rounded p-4 text-sm">
   <p class="font-semibold text-green-800">Summary: What VMD0053 Delivers</p>
   <ul class="mt-2 space-y-2 text-green-900">
-    <li>✓ Bias test ensures the model is not systematically distorting results</li>
-    <li>✓ Prediction error quantifies model imprecision → directly fed into VM0042's credit deduction formula</li>
-    <li>✓ Confidence coverage test (90% of observations within 90% prediction intervals) ensures statistical validity</li>
-    <li>✓ IME review provides independent expert oversight, same role the VVB plays for project data</li>
-    <li>✓ Public MVR and IME report ensure transparency and reproducibility</li>
+    <li>- Bias test ensures the model is not systematically distorting results</li>
+    <li>- Prediction error quantifies model imprecision - directly fed into VM0042's credit deduction formula</li>
+    <li>- Confidence coverage test (90% of observations within 90% prediction intervals) ensures statistical validity</li>
+    <li>- IME review provides independent expert oversight, same role the VVB plays for project data</li>
+    <li>- Public MVR and IME report ensure transparency and reproducibility</li>
   </ul>
 </div>

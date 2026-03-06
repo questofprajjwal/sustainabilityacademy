@@ -20,26 +20,21 @@ The EU Taxonomy and SFDR sustainable investment (Article 2(17)) are different st
 
 The RTS (Articles 50-51 and Annex II/IV for pre-contractual, Annexes VI/VIII for periodic reports) requires Taxonomy alignment to be expressed as a **proportion of the portfolio's total investments** aligned with environmentally sustainable economic activities.
 
-<FormulaBox>
-**Taxonomy Alignment Ratio:**
-
-Taxonomy Alignment % = Market Value of Taxonomy-aligned investments / Market Value of all investments × 100%
-
-Where "Taxonomy-aligned investments" = investments in companies, projects, or assets whose economic activities meet:
-(1) Substantial contribution to at least one of the six Taxonomy environmental objectives
-(2) Do No Significant Harm to the remaining five objectives (using Taxonomy DNSH criteria)
-(3) Minimum social safeguards (ILO Core Labour Standards, UNGC, UNGPs)
-(4) Technical screening criteria as specified in Commission Delegated Regulation (EU) 2021/2139 and subsequent acts
-</FormulaBox>
+<EquationBreakdown
+  title="Taxonomy Alignment Ratio"
+  result="TA% | Taxonomy Alignment | Proportion of total investments aligned with the EU Taxonomy, as a percentage | blue"
+  inputs="MV<sub>aligned</sub> | Taxonomy-Aligned Investments | Market value of investments meeting all four Taxonomy requirements: substantial contribution, DNSH, minimum social safeguards, and technical screening criteria | green ;; MV<sub>all</sub> | All Investments | Market value of all investments in the portfolio | amber"
+  operator="/"
+/>
 
 ## What Counts as a Taxonomy-Aligned Investment
 
 For investments in **non-financial companies** (most equity and corporate bond investments), Taxonomy alignment is assessed based on what proportion of the company's revenue (turnover), capital expenditure (CapEx), or operating expenditure (OpEx) is derived from Taxonomy-aligned economic activities.
 
 The RTS (Recital 33 and Article 17) provides for two approaches to calculating the Taxonomy-aligned portion in the numerator:
-- **Turnover-based**: The proportion of the portfolio company's revenue from Taxonomy-aligned activities × the portfolio's investment value
-- **CapEx-based**: The proportion of the portfolio company's capital expenditure on Taxonomy-aligned activities × the portfolio's investment value
-- **OpEx-based**: The proportion of the portfolio company's operational expenditure on Taxonomy-aligned activities × the portfolio's investment value
+- **Turnover-based**: The proportion of the portfolio company's revenue from Taxonomy-aligned activities x the portfolio's investment value
+- **CapEx-based**: The proportion of the portfolio company's capital expenditure on Taxonomy-aligned activities x the portfolio's investment value
+- **OpEx-based**: The proportion of the portfolio company's operational expenditure on Taxonomy-aligned activities x the portfolio's investment value
 
 The RTS (Recital 36) notes that turnover-based KPIs should be the default, with CapEx and OpEx used where the features of the financial product (e.g., a fund specifically investing in green infrastructure projects) make those metrics more representative.
 
@@ -56,16 +51,16 @@ Both approaches are permitted. The chosen approach must be disclosed and applied
 <ExampleBox>
 **Example, Taxonomy alignment calculation with sovereign bonds:**
 
-A fund has total investments of €100M:
-- €60M in non-financial companies (€15M Taxonomy-aligned, €45M not aligned)
-- €25M in financial companies (€5M Taxonomy-aligned, €20M not aligned)
-- €15M in sovereign bonds (no Taxonomy-aligned classification available)
+A fund has total investments of $100M:
+- $60M in non-financial companies ($15M Taxonomy-aligned, $45M not aligned)
+- $25M in financial companies ($5M Taxonomy-aligned, $20M not aligned)
+- $15M in sovereign bonds (no Taxonomy-aligned classification available)
 
 **Option 1 (sovereigns in denominator):**
-Taxonomy Alignment = (€15M + €5M) / €100M = 20%
+Taxonomy Alignment = ($15M + $5M) / $100M = 20%
 
 **Option 2 (sovereigns excluded):**
-Taxonomy Alignment = (€15M + €5M) / (€100M - €15M) = €20M / €85M = 23.5%
+Taxonomy Alignment = ($15M + $5M) / ($100M - $15M) = $20M / $85M = 23.5%
 
 Both figures are valid under the RTS, provided the methodology is clearly disclosed.
 </ExampleBox>

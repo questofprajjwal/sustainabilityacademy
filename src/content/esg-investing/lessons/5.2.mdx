@@ -26,7 +26,7 @@ Relying solely on one external rating provider is dangerous. ESG ratings from di
 
 ### The Disclosure Challenge
 
-A persistent difficulty is that ESG disclosure is often voluntary, especially outside the EU. A lack of disclosure doesn't necessarily mean a company has poor ESG management; it often just reflects a limited reporting budget. 
+A persistent difficulty is that ESG disclosure is often voluntary, especially outside the EU. A lack of disclosure doesn't necessarily mean a company has poor ESG management; it often just reflects a limited reporting budget.
 
 Additionally, most ESG performance data is unaudited. Analysts should treat self-reported figures (like carbon emissions or water usage) as informative but not definitive, seeking corroborating evidence wherever possible.
 
@@ -112,11 +112,12 @@ In a DCF framework, ESG analysis can directly shape the math:
 - **Terminal Value**: Reducing long-term growth assumptions due to elevated regulatory risk.
 - **Capital Expenditure (CapEx)**: Forecasting additional compliance, remediation, or stranded asset costs.
 
-<FormulaBox>
-DCF Value = Σ [Cash Flow_t / (1 + WACC + ESG_adjustment)^t] + Terminal Value
-
-Where ESG_adjustment reflects the incremental cost of capital due to material ESG risks (e.g., +1% for weak environmental management, +0.5% for elevated governance risk).
-</FormulaBox>
+<EquationBreakdown
+  title="ESG-Adjusted DCF Valuation"
+  result="V | DCF Value | Present value of future cash flows adjusted for material ESG risks | blue"
+  inputs="CF<sub>t</sub> | Cash Flows | Projected free cash flow in year t, adjusted for ESG-related revenue, cost, or capex impacts | green ;; WACC + ESG<sub>adj</sub> | Adjusted Discount Rate | Weighted average cost of capital plus an incremental ESG risk premium reflecting material ESG risks | amber ;; TV | Terminal Value | Long-term value beyond the forecast period, reflecting ESG-adjusted growth assumptions | violet"
+  operator="+"
+/>
 
 <ExampleBox>
 **Example, Carbon tax impact on free cash flow:** A new carbon tax regulation is expected to reduce a chemical company's 2026 EBITDA margins by 200 basis points. The analyst reduces forecasted free cash flow accordingly, cutting projected 2026 FCF from $480 million to roughly $440 million, and carries that revised assumption forward through the forecast period. The adjustment is made to cash flows, not also to the discount rate: adjusting both for the same risk would double-count the impact and overstate the ESG penalty.
@@ -130,9 +131,9 @@ Note that the sizing of any ESG adjustment to discount rates or forecasts is a m
 
 ### Climate Scenario Analysis
 
-Beyond adjusting individual company models, many institutional investors now stress-test their entire portfolios against different climate pathways. The Task Force on Climate-related Financial Disclosures (TCFD) recommends scenario analysis as standard practice, typically modelling portfolio impacts under a 1.5°C warming pathway, a 2°C pathway, and a 3°C+ "business as usual" scenario.
+Beyond adjusting individual company models, many institutional investors now stress-test their entire portfolios against different climate pathways. The Task Force on Climate-related Financial Disclosures (TCFD) recommends scenario analysis as standard practice, typically modelling portfolio impacts under a 1.5C warming pathway, a 2C pathway, and a 3C+ "business as usual" scenario.
 
-Under a 1.5°C scenario, carbon-intensive sectors face aggressive transition risks (carbon taxes, stranded assets, regulatory phase-outs) but renewable energy and efficiency companies benefit. Under a 3°C+ scenario, physical climate risks dominate, flooding, drought, and extreme weather create operational and asset impairment risks for a different set of sectors. Running a portfolio through both lenses reveals which exposures are robust across scenarios and which are fragile under specific pathways.
+Under a 1.5C scenario, carbon-intensive sectors face aggressive transition risks (carbon taxes, stranded assets, regulatory phase-outs) but renewable energy and efficiency companies benefit. Under a 3C+ scenario, physical climate risks dominate, flooding, drought, and extreme weather create operational and asset impairment risks for a different set of sectors. Running a portfolio through both lenses reveals which exposures are robust across scenarios and which are fragile under specific pathways.
 
 ### Valuation Multiple Adjustments
 

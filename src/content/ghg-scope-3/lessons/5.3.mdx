@@ -6,7 +6,7 @@ Allocation is the process of assigning a portion of a shared activity's emission
 
 Allocation becomes necessary in several common scenarios:
 
-**Multi-product facilities**: A supplier's factory produces three products for multiple customers. How much of the factory's total Scope 1 and 2 emissions should be attributed to Product A vs. Product B vs. Product C — and to Customer 1 vs. Customer 2?
+**Multi-product facilities**: A supplier's factory produces three products for multiple customers. How much of the factory's total Scope 1 and 2 emissions should be attributed to Product A vs. Product B vs. Product C - and to Customer 1 vs. Customer 2?
 
 **Shared transport**: A truck delivers goods for three different companies in a single journey. How much of the journey's fuel consumption and emissions does each company claim in its Category 4 inventory?
 
@@ -22,7 +22,7 @@ The standard's general principle for allocation: avoid it where possible by subd
 
 The standard recommends a hierarchy of allocation approaches, in order of preference:
 
-### 1. Subdivision (Preferred — Avoids Allocation)
+### 1. Subdivision (Preferred - Avoids Allocation)
 Where possible, physically separate or subdivide activities rather than allocating shared emissions. For example:
 - If a supplier has two dedicated production lines (one for Product A, one for Product B), attribute each line's metered energy to its product rather than allocating total factory energy.
 - If a logistics vehicle makes a dedicated run for one customer, assign all emissions to that customer rather than allocating across multiple customers.
@@ -37,9 +37,12 @@ When subdivision is not feasible, allocate based on a **physical relationship** 
 - **Energy content**: Allocate by calorific value (appropriate for co-produced fuels)
 - **Number of units**: Allocate by unit count (appropriate for batch processes)
 
-<FormulaBox>
-Allocated Emissions = Total Activity Emissions × (Physical Quantity of Product A / Total Physical Quantity of All Products)
-</FormulaBox>
+<EquationBreakdown
+  title="Physical Allocation"
+  result="E<sub>A</sub> | Allocated Emissions | Emissions attributed to Product A, in tCO₂e | blue"
+  inputs="E<sub>total</sub> | Total Activity Emissions | Total emissions from the shared activity, in tCO₂e | green ;; Q<sub>A</sub> | Quantity of Product A | Physical quantity (mass, volume, or units) of Product A | amber ;; Q<sub>total</sub> | Total Quantity | Physical quantity of all products combined | violet"
+  operator="× (÷)"
+/>
 
 <CalculationExercise
   question="A factory produces 600 tonnes of Product A and 400 tonnes of Product B in the same production run. Total facility Scope 1+2 emissions for the period are 500 tCO₂e. Allocate emissions to Product A by mass."
@@ -50,11 +53,14 @@ Allocated Emissions = Total Activity Emissions × (Physical Quantity of Product 
 />
 
 ### 3. Economic Allocation
-When physical allocation is not meaningful — for example, when products have very different economic values per unit mass — the standard allows allocation by **economic value** (revenue or market price).
+When physical allocation is not meaningful - for example, when products have very different economic values per unit mass - the standard allows allocation by **economic value** (revenue or market price).
 
-<FormulaBox>
-Allocated Emissions = Total Activity Emissions × (Revenue from Product A / Total Revenue from All Products)
-</FormulaBox>
+<EquationBreakdown
+  title="Economic Allocation"
+  result="E<sub>A</sub> | Allocated Emissions | Emissions attributed to Product A, in tCO₂e | blue"
+  inputs="E<sub>total</sub> | Total Activity Emissions | Total emissions from the shared activity, in tCO₂e | green ;; R<sub>A</sub> | Revenue from Product A | Revenue earned from Product A | amber ;; R<sub>total</sub> | Total Revenue | Revenue from all products combined | violet"
+  operator="× (÷)"
+/>
 
 Economic allocation is particularly common in:
 - Multi-product chemical plants (where products have very different market values per kg)
@@ -75,15 +81,15 @@ The standard requires that allocation methods be applied **consistently**:
 - The allocation method must not change between the base year and subsequent reporting years without a base year restatement.
 
 <AnalogyBox>
-Think of allocation like splitting a shared restaurant bill. If four people order very different amounts, splitting equally (by headcount) is unfair — it doesn't reflect what each person caused. Splitting by what each person ordered (physical mass, like the weight of food) is fairer. Splitting by the price of what each person ordered (economic value) is fairer still if prices reflect the value received. The standard recommends starting with physical allocation because it is most directly tied to the production process, not the market.
+Think of allocation like splitting a shared restaurant bill. If four people order very different amounts, splitting equally (by headcount) is unfair - it doesn't reflect what each person caused. Splitting by what each person ordered (physical mass, like the weight of food) is fairer. Splitting by the price of what each person ordered (economic value) is fairer still if prices reflect the value received. The standard recommends starting with physical allocation because it is most directly tied to the production process, not the market.
 </AnalogyBox>
 
 ## System Expansion as an Alternative
 
-For some by-product situations, the standard permits **system expansion** rather than allocation — expanding the boundary to include the avoided emissions from the by-product displacing an alternative product. For example, if a chemical process produces valuable hydrogen as a by-product that displaces fossil hydrogen, the avoided emissions from fossil hydrogen production can be credited against the chemical process's total emissions.
+For some by-product situations, the standard permits **system expansion** rather than allocation - expanding the boundary to include the avoided emissions from the by-product displacing an alternative product. For example, if a chemical process produces valuable hydrogen as a by-product that displaces fossil hydrogen, the avoided emissions from fossil hydrogen production can be credited against the chemical process's total emissions.
 
 System expansion is optional and complex; companies should document their rationale carefully when using it.
 
 <DeepDive title="Allocation in circular economy supply chains">
-Circular economy models — recycling, remanufacturing, industrial symbiosis — create particularly complex allocation challenges. When a manufacturer uses recycled aluminium (produced by melting down scrap), how much of the energy used in the recycling process should be allocated to the manufacturer's Category 1, versus being credited to the original consumer who sent the can to recycling? The standard provides guidance for end-of-life recycling allocation: companies can use the "cut-off" approach (no burden or credit for recycled content), the "end-of-life recycling" approach (credit for recycling potential), or allocate 50:50 between original manufacturer and recycler. Each approach produces different results; transparency about the method used is essential.
+Circular economy models - recycling, remanufacturing, industrial symbiosis - create particularly complex allocation challenges. When a manufacturer uses recycled aluminium (produced by melting down scrap), how much of the energy used in the recycling process should be allocated to the manufacturer's Category 1, versus being credited to the original consumer who sent the can to recycling? The standard provides guidance for end-of-life recycling allocation: companies can use the "cut-off" approach (no burden or credit for recycled content), the "end-of-life recycling" approach (credit for recycling potential), or allocate 50:50 between original manufacturer and recycler. Each approach produces different results; transparency about the method used is essential.
 </DeepDive>

@@ -6,9 +6,9 @@
 
 Whether a leased asset appears in Scope 1/2 or Category 8 depends on the **consolidation approach** used to set the company's organisational boundary:
 
-- **Equity share approach**: The company reports emissions proportional to its equity stake. Leased assets where the company does not hold equity are excluded from Scope 1/2 — so their emissions go into Category 8.
-- **Financial control approach**: The company reports emissions from assets over which it has financial control. A lessee typically does not have financial control over the lessor's asset — so the asset's emissions fall in Category 8.
-- **Operational control approach**: The company reports emissions from all assets over which it has operational control. Under this approach, leased assets the company operates ARE included in Scope 1/2 — and therefore **not** in Category 8.
+- **Equity share approach**: The company reports emissions proportional to its equity stake. Leased assets where the company does not hold equity are excluded from Scope 1/2 - so their emissions go into Category 8.
+- **Financial control approach**: The company reports emissions from assets over which it has financial control. A lessee typically does not have financial control over the lessor's asset - so the asset's emissions fall in Category 8.
+- **Operational control approach**: The company reports emissions from all assets over which it has operational control. Under this approach, leased assets the company operates ARE included in Scope 1/2 - and therefore **not** in Category 8.
 
 <HighlightBox>
 If a company uses the operational control approach, it almost certainly already captures leased asset emissions in Scope 1 and Scope 2, and Category 8 will be zero or negligible. Category 8 is most relevant for companies using equity share or financial control consolidation who lease significant operational assets.
@@ -28,12 +28,14 @@ If a company uses the operational control approach, it almost certainly already 
 Since Category 8 captures operational emissions of leased assets, the calculation methods mirror Scope 1 and 2:
 
 ### Method 1: Asset-Specific Method (Most Accurate)
-Collects actual energy consumption, fuel use, and process emissions data from the leased asset. Requires the lessor to share energy billing or metering data — often available for leased buildings.
+Collects actual energy consumption, fuel use, and process emissions data from the leased asset. Requires the lessor to share energy billing or metering data - often available for leased buildings.
 
-<FormulaBox>
-Category 8 Emissions = Fuel Consumed (unit) × Fuel Emission Factor (tCO₂e/unit)
-                     + Electricity Consumed (MWh) × Grid Emission Factor (tCO₂e/MWh)
-</FormulaBox>
+<EquationBreakdown
+  title="Category 8 - Asset-Specific Method"
+  result="E<sub>Cat8</sub> | Category 8 Emissions | Total operational emissions from upstream leased assets, in tCO₂e | blue"
+  inputs="FC | Fuel Consumed | Volume or mass of fuel burned at the leased asset (litres, kg, or m³) | green ;; EF<sub>fuel</sub> | Fuel Emission Factor | tCO₂e per unit of fuel burned | amber ;; Elec | Electricity Consumed | Electricity used at the leased asset, in MWh | violet ;; EF<sub>grid</sub> | Grid Emission Factor | tCO₂e per MWh of grid electricity | rose"
+  operator="+"
+/>
 
 ### Method 2: Lessor-Reported Data
 Where the lessor maintains a GHG inventory for their asset portfolio, the lessee may obtain allocated emissions data directly. Common for large commercial real estate lessors who publish sustainability reports.
@@ -41,9 +43,11 @@ Where the lessor maintains a GHG inventory for their asset portfolio, the lessee
 ### Method 3: Average-Data Method
 Uses average energy intensity for the asset type (e.g., kWh/m²/year for office space) multiplied by the leased floor area and grid emission factor.
 
-<FormulaBox>
-Category 8 Building Emissions = Leased Area (m²) × Energy Intensity (kWh/m²/year) × Grid Emission Factor (tCO₂e/MWh) ÷ 1,000
-</FormulaBox>
+<EquationBreakdown
+  title="Category 8 - Average-Data Building Emissions"
+  result="E<sub>bldg</sub> | Building Emissions | Estimated emissions from a leased building using average energy intensity, in tCO₂e | blue"
+  inputs="A | Leased Area | Floor area of the leased space, in m² | green ;; EI | Energy Intensity | Average energy use per unit area per year, in kWh/m²/year | amber ;; EF<sub>grid</sub> | Grid Emission Factor | tCO₂e per MWh of grid electricity (divided by 1,000 to convert kWh) | violet"
+/>
 
 <CalculationExercise
   question="A company leases 2,000 m² of office space in a building with an average energy intensity of 220 kWh/m²/year. The grid emission factor is 0.207 tCO₂e/MWh. What are the Category 8 emissions for this leased office?"
@@ -70,8 +74,8 @@ Consider a company that leases 10 floors in an office tower but pays the landlor
 
 Category 8 (Upstream Leased Assets) and Category 13 (Downstream Leased Assets) are mirror images:
 
-- **Category 8**: Company is the **lessee** — leasing assets **from** another party
-- **Category 13**: Company is the **lessor** — leasing assets **to** another party
+- **Category 8**: Company is the **lessee** - leasing assets **from** another party
+- **Category 13**: Company is the **lessor** - leasing assets **to** another party
 
 A real estate company, for example, would have Category 13 emissions (from buildings it owns and leases out), not Category 8 emissions from its tenants' operations.
 

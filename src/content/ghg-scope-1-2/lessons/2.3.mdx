@@ -63,18 +63,12 @@ This method is not appropriate for organizations that maintain an inventory of i
 
 The Material Balance Method is the recommended approach for organizations that own and maintain refrigerant-containing equipment and track refrigerant stocks. It calculates emissions as the mass of refrigerant that cannot be accounted for through purchases, sales, and changes in equipment capacity.
 
-<FormulaBox>
-**Equation (Material Balance):**
-Emissions = (I_B - I_E) + P - S + (C_B - C_E)
-
-Where:
-I_B = refrigerant inventory in storage at the beginning of the reporting period
-I_E = refrigerant inventory in storage at the end of the reporting period
-P = refrigerant purchased or otherwise acquired during the period
-S = refrigerant sold or otherwise disposed of during the period
-C_B = total refrigerant capacity of equipment at the beginning of the period
-C_E = total refrigerant capacity of equipment at the end of the period
-</FormulaBox>
+<EquationBreakdown
+  title="Material Balance Method"
+  operator="+"
+  result="E | Fugitive Emissions | Mass of refrigerant released to the atmosphere during the reporting period | blue"
+  inputs="(I<sub>B</sub> - I<sub>E</sub>) | Net Inventory Change | Refrigerant in storage at beginning minus end of period - a decrease means refrigerant left storage | green ;; P | Purchases | Refrigerant purchased or otherwise acquired during the period | amber ;; -S | Sales | Refrigerant sold or otherwise disposed of during the period (subtracted) | violet ;; (C<sub>B</sub> - C<sub>E</sub>) | Net Capacity Change | Total equipment capacity at beginning minus end of period - a decrease means equipment was retired or downsized | rose"
+/>
 
 This equation is applied separately for each type of refrigerant. The resulting mass of emissions is multiplied by the refrigerant's GWP to get CO2-equivalent emissions. The method captures all net flows of refrigerant: what was brought in, what left in containers or equipment, and the net change in what the equipment was designed to hold.
 
@@ -82,19 +76,14 @@ This equation is applied separately for each type of refrigerant. The resulting 
 
 The Simplified Material Balance Method is appropriate for organizations that do not maintain their own stock of refrigerants and instead rely on service contractors for all equipment servicing. In these cases, the organization has fewer data flows to track because it does not hold refrigerant in storage.
 
-<FormulaBox>
-**Equation (Simplified Material Balance):**
-Emissions = (P_N - C_N) + P_S + (C_D - R_D)
+<EquationBreakdown
+  title="Simplified Material Balance Method"
+  operator="+"
+  result="E | Fugitive Emissions | Mass of refrigerant released to the atmosphere during the reporting period | blue"
+  inputs="(P<sub>N</sub> - C<sub>N</sub>) | Installation Losses | Refrigerant purchased to charge new equipment minus total capacity of that new equipment (omit C<sub>N</sub> if pre-charged) | green ;; P<sub>S</sub> | Service Purchases | Refrigerant purchased to service existing equipment, replacing operational leaks | amber ;; (C<sub>D</sub> - R<sub>D</sub>) | Disposal Losses | Total capacity of equipment disposed of minus refrigerant recovered from retiring equipment | violet"
+/>
 
-Where:
-P_N = refrigerant purchased to charge new equipment during installation
-C_N = total refrigerant capacity of new equipment installed (omit if pre-charged)
-P_S = refrigerant purchased to service existing equipment
-C_D = total refrigerant capacity of equipment disposed of during the period
-R_D = refrigerant recovered from retiring equipment
-</FormulaBox>
-
-The three terms represent the three emission events: net losses during installation (P_N minus C_N), operating losses replaced by service purchases (P_S), and disposal losses (capacity at retirement minus what was recovered). This method requires service contractors to record and report the quantities they charge to and recover from equipment.
+The three terms represent the three emission events: net losses during installation (P<sub>N</sub> minus C<sub>N</sub>), operating losses replaced by service purchases (P<sub>S</sub>), and disposal losses (capacity at retirement minus what was recovered). This method requires service contractors to record and report the quantities they charge to and recover from equipment.
 
 ## Choosing the Right Method
 

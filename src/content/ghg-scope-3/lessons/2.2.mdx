@@ -11,7 +11,7 @@
 - Cycling and walking are typically excluded (zero-emission modes)
 
 <HighlightBox>
-Employee commuting is one of the categories most directly shaped by company decisions on work location. A company that moves its headquarters to a transit-accessible urban centre, or implements a remote-work policy, materially reduces Category 7 emissions — even without changing its own operations at all.
+Employee commuting is one of the categories most directly shaped by company decisions on work location. A company that moves its headquarters to a transit-accessible urban centre, or implements a remote-work policy, materially reduces Category 7 emissions - even without changing its own operations at all.
 </HighlightBox>
 
 ## What Is Not Included
@@ -30,9 +30,11 @@ Collects data directly from employees via an annual travel survey capturing:
 
 This provides actual commute patterns rather than estimates.
 
-<FormulaBox>
-Category 7 Emissions = Σ [Employees × Commute Days/Year × One-Way Distance (km) × 2 (return) × Mode Share × Emission Factor (tCO₂e/passenger-km)]
-</FormulaBox>
+<EquationBreakdown
+  title="Category 7 - Employee Commuting Emissions (Survey-Based)"
+  result="E<sub>Cat7</sub> | Category 7 Emissions | Total annual emissions from employee commuting, in tCO₂e | blue"
+  inputs="N | Employees | Number of employees commuting by this transport mode | green ;; D<sub>days</sub> | Commute Days | Number of working days commuted per year | amber ;; d | One-Way Distance | One-way commute distance in km, multiplied by 2 for the return trip | violet ;; MS | Mode Share | Fraction of trips using this transport mode (0-1) | rose ;; EF | Emission Factor | tCO₂e per passenger-km for the commute mode | cyan"
+/>
 
 ### Method 2: Distance-Based Method Without Survey
 Uses average commute distances from national or regional statistics, applied to headcount.
@@ -111,9 +113,9 @@ When calculating Category 7 in a hybrid-work environment:
 - **Shuttle buses**: Company-operated or contracted shuttle buses consolidate multiple commuters into a single vehicle (though driver-only emissions are Scope 1)
 
 <AnalogyBox>
-Category 7 is the one Scope 3 category where the company can directly influence employee behaviour rather than supplier behaviour. A well-designed commuting policy — remote work + transit subsidies + EV charging — can reduce Category 7 emissions by 40–70% without changing a single business process.
+Category 7 is the one Scope 3 category where the company can directly influence employee behaviour rather than supplier behaviour. A well-designed commuting policy - remote work + transit subsidies + EV charging - can reduce Category 7 emissions by 40-70% without changing a single business process.
 </AnalogyBox>
 
-<DeepDive title="Teleworking emissions — beyond Category 7">
+<DeepDive title="Teleworking emissions - beyond Category 7">
 When employees work from home, they consume electricity and heating in their home offices rather than commuting to an office. Some sustainability practitioners argue that these "home office" emissions should be included in the company's Scope 3 inventory, even though they are not captured in any of the 15 standard categories. The GHG Protocol does not currently require or formally accommodate home office emissions reporting, but some companies disclose it voluntarily as a supplementary metric alongside Category 7.
 </DeepDive>

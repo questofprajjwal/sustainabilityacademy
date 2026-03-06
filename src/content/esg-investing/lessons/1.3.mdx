@@ -165,15 +165,19 @@ Two standard metrics from the TCFD are particularly important:
 
 **Total carbon emissions** (absolute):
 
-<FormulaBox>
-Total carbon emissions = Σᵢ (current value of investmentᵢ / Enterprise Value Including Cashᵢ) × issuer's Scope 1 and 2 emissionsᵢ
-</FormulaBox>
+<EquationBreakdown
+  title="Total Carbon Emissions (Absolute)"
+  result="TCE | Total Carbon Emissions | Absolute GHG emissions attributed to the portfolio based on ownership share, in tCO₂e | blue"
+  inputs="I<sub>i</sub> / EVIC<sub>i</sub> | Ownership Share | Current value of investment in company i divided by its Enterprise Value Including Cash | green ;; E<sub>i</sub> | Issuer Emissions | Company i's Scope 1 and Scope 2 GHG emissions in tCO₂e | amber"
+/>
 
 **Weighted average carbon intensity** (WACI, relative):
 
-<FormulaBox>
-WACI = Σᵢ (portfolio weight of investmentᵢ) × (issuer's Scope 1 and 2 emissionsᵢ / issuer's revenueᵢ in US$m)
-</FormulaBox>
+<EquationBreakdown
+  title="Weighted Average Carbon Intensity (WACI)"
+  result="WACI | Weighted Average Carbon Intensity | Portfolio's exposure to carbon-intensive companies, normalized by revenue | blue"
+  inputs="w<sub>i</sub> | Portfolio Weight | Each holding's weight as a proportion of total portfolio value | green ;; E<sub>i</sub> / Rev<sub>i</sub> | Issuer Carbon Intensity | Company i's Scope 1 and 2 emissions divided by its revenue in US$m | amber"
+/>
 
 Note: For financed emissions, the modern standard per the Partnership for Carbon Accounting Financials (PCAF) uses **Enterprise Value Including Cash (EVIC)**, not market capitalisation, as the denominator when calculating an investor's ownership share of emissions. EVIC captures both equity and debt, giving a more complete picture of how emissions are distributed across a company's capital structure.
 
@@ -181,10 +185,10 @@ Note: For financed emissions, the modern standard per the Partnership for Carbon
 
 Suppose you hold a portfolio with two stocks:
 
-- Company A: 60% portfolio weight, Scope 1+2 emissions of 500 tCO₂e, revenue of US$100m → carbon intensity = 5 tCO₂e / US$m
-- Company B: 40% portfolio weight, Scope 1+2 emissions of 2,000 tCO₂e, revenue of US$200m → carbon intensity = 10 tCO₂e / US$m
+- Company A: 60% portfolio weight, Scope 1+2 emissions of 500 tCO₂e, revenue of US$100m - carbon intensity = 5 tCO₂e / US$m
+- Company B: 40% portfolio weight, Scope 1+2 emissions of 2,000 tCO₂e, revenue of US$200m - carbon intensity = 10 tCO₂e / US$m
 
-WACI = (0.60 × 5) + (0.40 × 10) = 3.0 + 4.0 = **7.0 tCO₂e per US$m of revenue**
+WACI = (0.60 x 5) + (0.40 x 10) = 3.0 + 4.0 = **7.0 tCO₂e per US$m of revenue**
 
 This single figure lets you compare the portfolio's carbon intensity against a benchmark, track it over time, and identify that Company B, despite being the smaller position, contributes disproportionately to the portfolio's carbon footprint.
 
@@ -196,7 +200,7 @@ Carbon footprinting has important limitations:
 
 More forward-looking approaches include:
 
-- **Science-based targets (SBTs)**: Emission reduction targets certified by the Science Based Targets initiative (SBTi) as consistent with the 1.5°C pathway.
+- **Science-based targets (SBTs)**: Emission reduction targets certified by the Science Based Targets initiative (SBTi) as consistent with the 1.5C pathway.
 - **Temperature alignment**: Tools that assess whether a company or portfolio's emission trajectory is consistent with specific warming outcomes. A coal power plant and a renewable energy company with similar current emissions have very different implied warming trajectories.
 - **PACTA (Paris Agreement Capital Transition Assessment)**: A free, open-source tool that assesses whether the production plans of companies in a portfolio are aligned with different climate scenarios. It is particularly useful for equity and corporate bond portfolios with exposure to energy, automotive, and industrial sectors.
 - **Emissions trajectories**: Comparing a company's decarbonisation pathway against the reductions required to reach stated goals.
@@ -216,12 +220,12 @@ The **Task Force on Nature-related Financial Disclosures (TNFD)**, established i
 
 The TCFD recommends that companies disclose the resilience of their strategy against at least two scenarios:
 
-1. A scenario consistent with 2°C or lower warming (which implies significant policy action and energy transition)
+1. A scenario consistent with 2C or lower warming (which implies significant policy action and energy transition)
 2. A scenario with increased physical climate risks (which implies insufficient policy action and severe physical impacts)
 
 The key steps in investor climate scenario analysis are:
 
-1. **Establish objectives**, are you assessing financial impact, alignment with a 2°C pathway, or both?
+1. **Establish objectives**, are you assessing financial impact, alignment with a 2C pathway, or both?
 2. **Select scenarios**, use established frameworks (e.g. those published by the Network for Greening the Financial System, or the IEA)
 3. **Apply to investments**, top-down mapping of sector exposure, followed by bottom-up analysis of individual companies
 4. **Review findings and consider actions**, engagement, portfolio reweighting, or further research

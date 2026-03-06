@@ -14,16 +14,16 @@ Most environmental PAI indicators are calculated using a common methodological f
 **General PAI Attribution Formula:**
 
 Attribution of Investee Metric to Portfolio =
-  (Current Value of Investment in investee i / Enterprise Value of investee i) × Metric of investee i
+  (Current Value of Investment in investee i / Enterprise Value of investee i) x Metric of investee i
 
 Portfolio-Level Indicator =
-  Σ [Attribution for each investee i] / Current Value of All Investments × 1,000,000
+  Sum [Attribution for each investee i] / Current Value of All Investments x 1,000,000
 
 Where:
 - Enterprise Value = market capitalisation (ordinary + preferred shares) + book value of total debt + non-controlling interests (at fiscal year-end, without deducting cash)
 - Current Value of Investment = market value of the portfolio's holding in the investee company at measurement date
 - Metric = the relevant environmental data point (e.g., tCO₂eq emissions, GWh energy consumption)
-- Result normalised per €1 million of total portfolio value
+- Result normalised per $1 million of total portfolio value
 </FormulaBox>
 
 The ESMA Q&As (Section III.1) confirm that "enterprise value" means specifically the sum of market capitalisation of ordinary shares, market capitalisation of preferred shares, book value of total debt, and non-controlling interests, at fiscal year-end, without deducting cash or cash equivalents. This precise definition is important because using net asset value or a different enterprise value definition would produce materially different results.
@@ -38,28 +38,23 @@ The formula allocates the investee's pollution to the portfolio based on the por
 
 **Scope**: Covers Scope 1 (direct emissions from owned or controlled sources), Scope 2 (indirect emissions from purchased energy), and Scope 3 (all other indirect emissions in the value chain) where data is available.
 
-<FormulaBox>
-**GHG Emissions Indicator:**
-
-GHG Emissions PAI = Σ [ (Investment Value in company i / Enterprise Value of company i) × (Scope 1i + Scope 2i + Scope 3i) ] / Total Portfolio Value × 1,000,000
-
-Unit: tonnes CO₂ equivalent (tCO₂eq) per €1 million invested
-</FormulaBox>
+<EquationBreakdown
+  title="GHG Emissions PAI (Indicator 1)"
+  result="PAI<sub>1</sub> | GHG Emissions PAI | Portfolio-attributed GHG emissions per million euros invested, in tCO₂eq | blue"
+  inputs="I<sub>i</sub> / EV<sub>i</sub> | Ownership Share | Investment value in company i divided by its enterprise value | green ;; GHG<sub>i</sub> | Company Emissions | Company i's total Scope 1 + 2 + 3 GHG emissions in tCO₂eq | amber ;; MV<sub>total</sub> | Total Portfolio Value | Current market value of all investments, used to normalise per million euros | violet"
+/>
 
 **Practical challenge**: Scope 3 data is often unavailable or unreliable, particularly for smaller companies. The RTS permits use of estimated Scope 3 where reported data is not available, but FMPs must disclose the proportion of estimated data used. For this reason, many PAI statements report Scope 1+2 and Scope 3 separately, with different data quality indicators.
 
 ## Indicator 2, Carbon Footprint
 
-**What it measures**: The absolute carbon footprint of the portfolio, normalised by portfolio market value. Like Indicator 1, it covers total GHG emissions (Scope 1 + 2 + 3), but the formula structure differs, it expresses the result per €1 million of portfolio value, providing a single normalised figure.
+**What it measures**: The absolute carbon footprint of the portfolio, normalised by portfolio market value. Like Indicator 1, it covers total GHG emissions (Scope 1 + 2 + 3), but the formula structure differs, it expresses the result per $1 million of portfolio value, providing a single normalised figure.
 
-<FormulaBox>
-**Carbon Footprint:**
-
-Carbon Footprint = Σ [ (Investment Value in company i / Enterprise Value of company i) × GHG Emissionsi ] / Total Portfolio Value × 1,000,000
-
-Where GHG Emissions = Scope 1 + Scope 2 + Scope 3 total GHG emissions
-Unit: tCO₂eq per €1 million invested
-</FormulaBox>
+<EquationBreakdown
+  title="Carbon Footprint (Indicator 2)"
+  result="CF | Carbon Footprint | Total attributed GHG emissions per million euros of portfolio value, in tCO₂eq | blue"
+  inputs="I<sub>i</sub> / EV<sub>i</sub> | Ownership Share | Investment value in company i divided by its enterprise value | green ;; GHG<sub>i</sub> | Company Emissions | Company i's total Scope 1 + 2 + 3 GHG emissions in tCO₂eq | amber ;; MV<sub>total</sub> | Total Portfolio Value | Current market value of all investments, used to normalise per million euros | violet"
+/>
 
 The distinction between Indicators 1 and 2 is primarily structural: Indicator 1 reports Scope 1, 2, and 3 emissions as separate line items plus a total, while Indicator 2 aggregates them into a single normalised carbon footprint figure per million EUR invested.
 
@@ -67,13 +62,11 @@ The distinction between Indicators 1 and 2 is primarily structural: Indicator 1 
 
 **What it measures**: The emissions efficiency of investee companies, how many tonnes of CO₂eq are emitted per unit of revenue. This is a revenue-normalised metric that enables comparison across companies of different sizes.
 
-<FormulaBox>
-**GHG Intensity:**
-
-GHG Intensity PAI = Σ [ (Investment Value in company i / Total Portfolio Value) × (Scope 1i + Scope 2i + Scope 3i) / Revenue of company i ]
-
-Unit: tCO₂eq per million EUR revenue
-</FormulaBox>
+<EquationBreakdown
+  title="GHG Intensity (Indicator 3)"
+  result="GI | GHG Intensity PAI | Weighted average emissions intensity of investee companies, in tCO₂eq per million EUR revenue | blue"
+  inputs="w<sub>i</sub> | Portfolio Weight | Investment value in company i divided by total portfolio value | green ;; GHG<sub>i</sub> / Rev<sub>i</sub> | Company Emissions Intensity | Company i's Scope 1 + 2 + 3 emissions divided by its revenue | amber"
+/>
 
 Note that the denominator here is company revenue, not enterprise value. This makes Indicator 3 a measure of operational efficiency, whereas Indicators 1 and 2 measure financial exposure to emissions.
 
@@ -81,11 +74,12 @@ Note that the denominator here is company revenue, not enterprise value. This ma
 
 **What it measures**: The percentage of the portfolio invested in companies that derive any revenue from fossil fuel exploration, mining, extraction, production, processing, storage, refining, distribution, trading, or combustion (including coal, oil, and natural gas), as well as activities that produce fossil-fuel-related products or materials.
 
-<FormulaBox>
-**Fossil Fuel Exposure:**
-
-Fossil Fuel PAI = (Market Value of investments in fossil fuel companies / Total Portfolio Market Value) × 100%
-</FormulaBox>
+<EquationBreakdown
+  title="Fossil Fuel Exposure (Indicator 4)"
+  result="FFE | Fossil Fuel PAI | Share of portfolio invested in fossil fuel companies, as a percentage | blue"
+  inputs="MV<sub>ff</sub> | Fossil Fuel Investments | Market value of investments in companies active in the fossil fuel sector | green ;; MV<sub>total</sub> | Total Portfolio Value | Total market value of all investments in the portfolio | amber"
+  operator="/"
+/>
 
 **Definition note**: The definition of "fossil fuel sector" in the RTS is broad, it includes not only energy producers but also companies that manufacture equipment primarily used in fossil fuel extraction or processing, and companies that transport fossil fuels. Determining which companies fall within scope requires careful analysis of revenue streams.
 
@@ -101,26 +95,21 @@ Many institutional investors, including large pension funds such as **APG** (Net
 
 **What it measures**: The share of energy consumed or produced by investee companies that comes from non-renewable sources (fossil fuels, nuclear).
 
-<FormulaBox>
-**Non-Renewable Energy PAI:**
-
-Non-Renewable Energy PAI = Σ [ (Investment Value in company i / Total Portfolio Value) × (Non-Renewable Energy i / Total Energy i) ]
-
-Unit: percentage (%)
-Where non-renewable energy includes all energy from fossil fuel sources and, depending on national methodology, nuclear energy.
-</FormulaBox>
+<EquationBreakdown
+  title="Non-Renewable Energy PAI (Indicator 5)"
+  result="NRE | Non-Renewable Energy PAI | Weighted average share of non-renewable energy across the portfolio, as a percentage | blue"
+  inputs="w<sub>i</sub> | Portfolio Weight | Investment value in company i divided by total portfolio value | green ;; NRE<sub>i</sub> / TE<sub>i</sub> | Non-Renewable Share | Company i's non-renewable energy divided by its total energy consumption | amber"
+/>
 
 ## Indicator 6, Energy Consumption Intensity Per High Climate Impact Sector
 
 **What it measures**: Energy consumption intensity (energy per unit of revenue) specifically for investments in **high climate impact sectors**. These sectors are identified in the RTS by NACE code and include: agriculture, forestry, fishing, energy, utilities, transport, manufacturing, construction, and mining.
 
-<FormulaBox>
-**Energy Intensity (High Climate Impact Sectors):**
-
-Energy Intensity PAI = Σ [ (Investment in high-impact company i / Total Portfolio Value) × (Energy Consumption i / Revenue of company i) ]
-
-Unit: GWh per million EUR revenue (for high climate impact sector companies only)
-</FormulaBox>
+<EquationBreakdown
+  title="Energy Intensity - High Climate Impact Sectors (Indicator 6)"
+  result="EI | Energy Intensity PAI | Weighted average energy consumption per unit of revenue for high-impact sector companies, in GWh per million EUR | blue"
+  inputs="w<sub>hi</sub> | High-Impact Weight | Investment in high-impact company i divided by total portfolio value | green ;; EC<sub>i</sub> / Rev<sub>i</sub> | Energy Intensity | Company i's energy consumption in GWh divided by its revenue in million EUR | amber"
+/>
 
 The restriction to high-climate-impact sectors means that if the portfolio has no investments in those sectors, this indicator is zero or not applicable, which must be disclosed.
 
@@ -135,11 +124,12 @@ Biodiversity-sensitive areas include:
 
 This indicator is binary at the company level (the company either operates in/near these areas and causes negative effects, or it does not), aggregated to a portfolio percentage.
 
-<FormulaBox>
-**Biodiversity PAI:**
-
-Biodiversity PAI = (Market Value of investments in companies with negative biodiversity impacts in sensitive areas / Total Portfolio Market Value) × 100%
-</FormulaBox>
+<EquationBreakdown
+  title="Biodiversity PAI (Indicator 7)"
+  result="Bio | Biodiversity PAI | Share of portfolio invested in companies with negative biodiversity impacts in sensitive areas, as a percentage | blue"
+  inputs="MV<sub>bio</sub> | Biodiversity-Impacting Investments | Market value of investments in companies negatively affecting biodiversity-sensitive areas | green ;; MV<sub>total</sub> | Total Portfolio Value | Total market value of all investments in the portfolio | amber"
+  operator="/"
+/>
 
 **Data challenge**: This indicator is among the most difficult to measure in practice. Very few companies publicly disclose their impact on specific biodiversity sites. FMPs typically rely on specialist biodiversity data providers or make conservative assumptions that require disclosure in the PAI statement.
 
