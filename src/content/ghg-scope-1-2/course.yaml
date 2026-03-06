@@ -141,3 +141,7 @@ modules:
         title: "Setting GHG Targets"
         duration: "35 min"
         vmRef: "ghg-protocol-revised.pdf, Chapter 11 (pp. 74-85)"
+      - id: "5.5"
+        title: "The ISO 14060 Family of GHG Standards"
+        duration: "30 min"
+        vmRef: "ISO 14064-1:2018; ISO 14064-2:2019; ISO 14064-3:2019"

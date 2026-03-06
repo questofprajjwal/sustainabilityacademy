@@ -22,3 +22,7 @@
 
 ## Module 6: Targets, Assurance, and Reporting
 - `Corporate-Value-Chain-Accounting-Reporing-Standard_041613_2.pdf` — Chapters 9-11 (pp. 98-123)
+
+## ISO 14064 Standards (referenced in select lessons)
+- `ISO 14064-1.pdf` — ISO 14064-1:2018 (Sections 4-5) — Referenced in Lesson 0.3 (principles comparison)
+- `ISO 14064-3.pdf` — ISO 14064-3:2019 (Sections 4-5) — Referenced in Lesson 6.2 (verification and validation)
