@@ -24,6 +24,13 @@ export default function Footer() {
             <span>Green Finance</span>
             <span className="text-gray-700">|</span>
             <Link
+              href="/glossary"
+              className="text-gray-500 hover:text-gray-300 transition-colors"
+            >
+              Glossary
+            </Link>
+            <span className="text-gray-700">|</span>
+            <Link
               href="/disclaimer"
               className="text-gray-500 hover:text-gray-300 transition-colors"
             >

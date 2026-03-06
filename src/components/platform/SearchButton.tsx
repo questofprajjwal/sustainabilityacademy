@@ -13,7 +13,7 @@ export default function SearchButton() {
     <>
       <button
         onClick={handleOpen}
-        className="flex items-center gap-2 px-3 py-1.5 text-sm text-gray-400 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+        className="flex items-center gap-2 px-4 py-1.5 text-sm text-gray-400 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors sm:w-48"
         aria-label="Search lessons (Cmd+K)"
       >
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

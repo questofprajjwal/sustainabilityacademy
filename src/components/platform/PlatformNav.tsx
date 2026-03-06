@@ -48,12 +48,6 @@ export default function PlatformNav({ lastLessonHref }: Props) {
           {/* Search + Nav + Actions */}
           <div className="flex items-center gap-3">
             <SearchButton />
-            <Link
-              href="/glossary"
-              className="hidden sm:inline text-sm text-gray-500 hover:text-gray-700 transition-colors"
-            >
-              Glossary
-            </Link>
             {lastLessonHref && (
               <Link
                 href={lastLessonHref}
