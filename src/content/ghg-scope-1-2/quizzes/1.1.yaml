@@ -1,44 +1,26 @@
-- question: "Which of the following is a Scope 1 emission source?"
+- question: "A facility co-fires wood chips alongside natural gas in its boiler. How should the CO2 from wood chip combustion be treated in the GHG inventory?"
   options:
-    - "Electricity purchased from the grid and consumed on-site"
-    - "CO2 from a cement kiln owned and operated by the reporting company"
-    - "Employee commuting in personal vehicles"
-    - "Emissions from a third-party logistics provider transporting goods"
+    - "Include it in the Scope 1 total along with natural gas CO2"
+    - "Report it separately and exclude it from the Scope 1 CO2e total"
+    - "Exclude it entirely - biomass emissions are not reported at all"
+    - "Include it in Scope 3 as an upstream emission"
   answer: 1
-  explanation: "Scope 1 covers direct GHG emissions from sources owned or controlled by the company. A cement kiln owned and operated by the company is a direct (Scope 1) process emission source. Grid electricity is Scope 2; employee commuting and third-party logistics are Scope 3."
+  explanation: "Biomass CO2 is reported separately and excluded from the Scope 1 CO2e total because biomass is considered carbon-neutral (the CO2 was recently absorbed from the atmosphere). However, CH4 and N2O from biomass combustion ARE included in the main inventory regardless of fuel origin. You must know the fuel breakdown to split fossil vs biomass CO2 correctly."
 
-- question: "Scope 2 emissions are defined as:"
+- question: "An office complex burned 80,000 therms of natural gas last year. A junior analyst applies the EPA emission factor of 53.06 kg CO2/MMBtu directly to 80,000. What mistake did they make, and what is the correct CO2 result?"
   options:
-    - "All indirect emissions throughout the value chain"
-    - "GHG emissions from the generation of purchased electricity consumed by the company"
-    - "Fugitive emissions from owned or controlled equipment"
-    - "Emissions from mobile combustion in company vehicles"
+    - "No mistake - the answer is 4,244,800 kg CO2"
+    - "They forgot to convert therms to MMBtu (1 therm = 0.1 MMBtu). Correct answer: 424.5 tonnes CO2"
+    - "They used the wrong emission factor - therms require a different factor"
+    - "They forgot to add CH4 and N2O, so the total should be much higher"
   answer: 1
-  explanation: "Scope 2: electricity indirect GHG emissions — specifically from the generation of purchased electricity consumed by the company. These emissions physically occur at the power plant, not at the company's facilities."
+  explanation: "1 therm = 0.1 MMBtu, not 1 MMBtu. This is a common 10x error. The correct calculation: 80,000 therms x 0.1 = 8,000 MMBtu. Then 8,000 x 53.06 kg CO2/MMBtu = 424,480 kg = 424.5 tonnes CO2. Confusing therms with MMBtu is one of the most frequent unit conversion mistakes in GHG accounting."
 
-- question: "The DHL Express Nordic example illustrates what about Scope 3 reporting?"
+- question: "A factory uses pet coke with a known carbon content from the supplier's lab certificate. Which equation should they use for the most accurate CO2 calculation?"
   options:
-    - "That Scope 3 is mandatory for all transport companies"
-    - "That outsourced transportation can represent the vast majority of a company's total emissions, making Scope 3 essential for risk management"
-    - "That Scope 3 should only include upstream supply chain emissions"
-    - "That Scope 3 emissions are always smaller than Scope 1 and 2 combined"
-  answer: 1
-  explanation: "DHL Express Nordic found that 98 percent of its Swedish emissions came from outsourced transport partners. Without Scope 3, it would have had only 7,317 tCO2 instead of the actual 334,951 tCO2 — missing the information needed to effectively manage its emissions."
-
-- question: "Under the GHG Protocol scope framework, when one company generates electricity and another purchases and consumes it:"
-  options:
-    - "Both companies report the same emissions in Scope 1, which is a permitted form of double counting"
-    - "The generator reports Scope 1 emissions; the consumer reports the associated Scope 2 emissions — the same physical emissions appear in different scopes for different entities"
-    - "Only the consumer reports the emissions, in Scope 2; the generator does not report them"
-    - "The emissions are split equally between the two companies in Scope 1"
-  answer: 1
-  explanation: "This cross-company accounting is a feature of the framework: the generator's Scope 1 emissions become the consumer's Scope 2 emissions. The same physical emissions are counted by different entities in different scopes — this prevents double counting within any single scope."
-
-- question: "What is the minimum reporting requirement under the GHG Protocol Corporate Standard?"
-  options:
-    - "Scope 1 only"
-    - "Scope 1 and Scope 2 separately"
-    - "Scopes 1, 2, and 3 all required"
-    - "Scope 1 and whichever Scope 3 categories are material"
-  answer: 1
-  explanation: "Companies shall separately account for and report Scopes 1 and 2 at a minimum. Scope 3 reporting is encouraged but voluntary."
+    - "Equation 1 - fuel volume times a default per-unit emission factor"
+    - "Equation 2 - fuel quantity times heat content times an energy-based emission factor"
+    - "Equation 3 - fuel quantity times actual carbon content times the 44/12 molecular ratio"
+    - "Any equation gives the same result for pet coke"
+  answer: 2
+  explanation: "Equation 3 uses the actual carbon content of the fuel and the 44/12 molecular ratio to convert carbon mass to CO2 mass. It is the most accurate method because it directly measures what gets oxidised, rather than relying on default factors. For variable fuels like pet coke, the difference between default factors and actual carbon content can be 10-20%. When you have a supplier certificate, always use it."

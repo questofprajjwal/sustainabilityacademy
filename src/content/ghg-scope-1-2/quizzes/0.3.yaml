@@ -1,35 +1,26 @@
-- question: "The Tata Steel example illustrates which aspect of GHG inventory design?"
+- question: "Holland Industries owns 33.3% of Kahuna Chemicals but operates the plant. Under the operational control approach, what percentage of Kahuna's emissions does Holland report?"
   options:
-    - "How to set a base year for voluntary reduction targets"
-    - "Building institutional capacity so inventory data supports benchmarking, improvement tracking, and trading scheme eligibility"
-    - "Choosing between equity share and operational control consolidation approaches"
-    - "How to calculate process emissions from steel production"
-  answer: 1
-  explanation: "Tata Steel built a GHG inventory capable of benchmarking, measuring improvements, and enabling eligibility for emerging trading schemes. The inventory generated key performance indicators for energy consumption and GHG intensity per tonne of crude steel."
-
-- question: "A company focused on participation in a GHG emissions trading scheme has what specific design requirement compared to a company focused only on internal cost management?"
-  options:
-    - "It only needs to account for Scope 1 direct emissions, not Scope 2"
-    - "It needs a complete, auditable inventory designed to meet the specific requirements of the trading program from the start"
-    - "It can start with its largest facilities and expand coverage over time"
-    - "It should use the equity share approach rather than the operational control approach"
-  answer: 1
-  explanation: "A company focused on GHG markets needs a complete, auditable inventory from the start, designed to meet trading program requirements. A company focused on cost management can start with major sources and expand — the same activity has very different design requirements depending on the goal."
-
-- question: "Which is the first step in the GHG inventory design process described in this lesson?"
-  options:
-    - "Select calculation approaches for each emission source"
-    - "Choose a base year and establish a recalculation policy"
-    - "Set organisational boundaries"
-    - "Collect activity data and calculate emissions"
+    - "0% - Holland only owns a minority stake"
+    - "33.3% - matching their equity share"
+    - "100% - Holland operates the plant"
+    - "66.7% - shared with the other partners"
   answer: 2
-  explanation: "The inventory design process begins with setting organisational boundaries (which entities to include), followed by setting operational boundaries, selecting a base year, identifying emission sources, collecting data, rolling up to the corporate level, and reporting."
+  explanation: "Under the operational control approach, it is all or nothing: if you operate the facility (hold the operating licence, introduce and implement operating policies), you report 100% of its emissions regardless of your equity stake. Holland operates Kahuna, so it reports 100%. Under equity share, it would only report 33.3%."
 
-- question: "The IBM renewable electricity case demonstrates which business goal of a GHG inventory?"
+- question: "A company owns a power plant on its factory premises that generates electricity for its own production lines. How should these emissions be classified?"
   options:
-    - "Managing GHG risks and identifying reduction opportunities, specifically through accounting for Scope 2 indirect emissions"
-    - "Participating in the EU Emissions Trading Scheme"
-    - "Complying with mandatory government reporting requirements"
-    - "Recognising early voluntary action for future regulatory credit"
-  answer: 0
-  explanation: "IBM identified significant potential to reduce Scope 2 emissions from purchased electricity, then acted on it through a wind energy contract. The Austin facility reduced its inventory by over 4,100 tCO2. This demonstrates how accounting for indirect emissions identifies reduction opportunities."
+    - "Scope 2 - it is electricity generation"
+    - "Scope 1 - the company owns and controls the generation source"
+    - "Scope 3 - energy generation is an upstream activity"
+    - "Split between Scope 1 and Scope 2"
+  answer: 1
+  explanation: "Scope 2 covers purchased electricity from sources outside your organisational boundary. A captive power plant that you own and control is within your boundary - so its emissions are Scope 1 (direct). This is a common mistake: people see 'electricity' and assume Scope 2, but the test is ownership/control of the generation source, not the type of energy."
+
+- question: "DHL Express Nordic found that 98% of its emissions in Sweden came from outsourced partner transportation. If DHL uses the operational control approach, where do those partner transport emissions fall?"
+  options:
+    - "Scope 1 - DHL pays for the transport"
+    - "Scope 2 - it is purchased energy for transport"
+    - "Scope 3 - DHL does not own or control the partner vehicles"
+    - "They should be excluded entirely"
+  answer: 2
+  explanation: "Under operational control, you report 100% of emissions from operations you control and 0% from operations you do not. DHL does not own or control the partner firms' vehicles - they are third-party logistics providers. Their emissions fall into DHL's Scope 3 (Category 4: upstream transportation). This example shows why Scope 3 matters: ignoring it meant ignoring 98% of DHL's actual footprint."

@@ -1,82 +1,149 @@
-{/* source: GHG Protocol Scope 2 Guidance, Chapters 1-2 (pp. 4-19) */}
+{/* source: ghg-protocol-revised.pdf Chapter 5 (pp. 34-39); GHG Protocol Scope 2 Guidance Chapter 9 (pp. 74-77), Chapter 11 (pp. 88-92) */}
 
-Scope 2 emissions are the indirect greenhouse gas emissions that occur from the generation of purchased or acquired electricity, steam, heat, or cooling consumed by the reporting company. The emissions themselves take place at the power plant or heat generation facility, owned and operated by another entity. What makes scope 2 "indirect" is precisely this separation: the reporting company causes the emissions through its consumption decisions, but does not own the source that produces them.
+Your client wants to set a 30% reduction target. The first question any verifier, investor, or framework will ask: "Reduction from what?" That is the base year - and getting it right is one of the most consequential decisions in a GHG inventory.
 
-The GHG Protocol Scope 2 Guidance, published by WRI and WBCSD, was developed to resolve specific accounting questions that the original Corporate Standard left open. Chief among these were: how to handle renewable energy purchases, which contractual instruments should count toward a company's reported emissions, and how to apply supplier-specific emission factors. The guidance took four years of international consultation with businesses, NGOs, GHG reporting programs, energy utilities, government agencies, and academic institutions.
+## What a Base Year Is and Why It Matters
 
-## Why Purchased Energy Matters at Scale
+A base year is a fixed historical reference point against which all future emissions are compared. It answers: "How much were we emitting before we started trying to reduce?"
 
-The electricity and heat generation sector is responsible for at least one third of global GHG emissions, according to IPCC data. Every time a company switches on a light, runs a data center, or heats a factory floor, it draws on a generation system that may be burning coal, natural gas, or a mix of resources. The cumulative demand of millions of commercial and industrial consumers shapes which generation technologies utilities build and dispatch.
-
-This is why scope 2 is not a minor accounting category. For many companies, particularly those in technology, retail, and manufacturing, scope 2 can represent the single largest share of their total GHG inventory. It is also the category most directly responsive to procurement decisions: a company can reduce scope 2 emissions by purchasing from lower-carbon sources without changing a single physical process inside its facilities.
-
-<HighlightBox>
-Scope 2 covers purchased and consumed electricity, steam, heat, and cooling. Emissions occur at the generation source, not at the point of consumption. Electricity generated on-site in owned or operated equipment belongs to scope 1, not scope 2.
-</HighlightBox>
-
-## Key Accounting Questions the Guidance Resolves
-
-Before the Scope 2 Guidance, companies faced three unresolved problems.
-
-**Renewable energy purchases.** When a company buys electricity from a wind farm, does its scope 2 figure fall to zero for that portion of its consumption? The answer depends on whether the company holds the environmental attributes associated with that generation, and whether those attributes are tracked and retired in a way that prevents anyone else from claiming them.
-
-**Green power programs.** Many utilities offer green tariffs or green power products. The prior Corporate Standard noted these programs but provided no consistent method for determining which instruments could legitimately reduce a reported scope 2 figure. Different companies were making different assumptions, making disclosed numbers incomparable.
-
-**Supplier-specific emission factors.** Where a utility discloses the GHG intensity of its delivered electricity product, should that factor be used instead of a regional grid average? The guidance establishes a clear hierarchy answering this question and sets criteria that any instrument must meet before it can be applied.
+Without a stable base year, year-on-year comparisons fall apart. If a company reports 45,000 tCO2e this year and 50,000 last year, that looks like progress. But what if they sold a factory in between? The drop is not a real reduction - it is an accounting artefact. The base year exists to prevent exactly this confusion.
 
 <AnalogyBox>
-Think of energy attribute certificates like certified-organic labels on food. The certification system ensures that the organic attributes of a batch of produce are tracked from farm to shelf, and that only one buyer can claim them. Without such a system, multiple buyers could claim the same organic origin for the same batch. Energy attribute certificates work the same way: they track the environmental attributes of a unit of electricity generation from the power plant to the consumer, and are retired so no one else can claim the same attributes.
+Think of a base year like your starting weight in a fitness program. If you lose 5 kg but then gain a limb (through a merger, so to speak), you need to adjust your starting weight to reflect the new "you" - otherwise the comparison is meaningless.
 </AnalogyBox>
 
-## Business Goals of Scope 2 Accounting
+## How to Choose a Base Year
 
-The Scope 2 Guidance identifies four core business goals that motivate careful accounting for purchased energy emissions.
+The rule is straightforward: pick the **earliest year for which you have verifiable data**. Not the year that makes your trend look best. Not the year your competitor chose. The year where you can actually defend the numbers if a verifier asks to see the receipts.
 
-**Identifying and understanding risks and opportunities.** Electricity is a vital input to most corporate operations, and it increasingly carries GHG-related risks. Climate regulations targeting the energy sector, changing fuel costs, investor scrutiny over energy purchasing decisions, and consumer preferences for low-carbon products all create financial exposure. The location-based method highlights risks tied to the physical grid serving a company's facilities. The market-based method reveals risks and opportunities tied to contractual relationships and procurement choices. Using both methods together provides the most complete risk picture.
+Some organisations use 1990 to align with the Kyoto Protocol, but getting reliable data from the early 1990s is nearly impossible for most companies. A more practical choice is usually the first year you conducted a proper inventory.
 
-Specific risk categories include: regulatory risk from CO2 taxes or carbon pricing applied to electricity; reputational risk from renewable energy claims that are not substantiated by properly tracked instruments; energy cost risks from fuel price volatility correlated with carbon intensity; and legal risk from contractual instruments that convey legally enforceable rights that, if ignored, may cause misrepresentation of environmental performance.
+You can also use a **multi-year average** (say, 2019-2021) if a single year would be unrepresentative - perhaps due to an unusual shutdown, a pandemic, or a production anomaly. The UK Emissions Trading Scheme used a 1998-2000 average for exactly this reason.
 
-**Setting reduction targets and tracking performance.** Comprehensive scope 2 accounting provides a consistent basis for GHG reduction targets. A company can set targets for absolute emissions, emission intensity, or renewable energy procurement percentage. Both method totals can serve as performance indicators. The market-based method in particular enables a company to directly demonstrate the impact of specific procurement actions, such as signing a power purchase agreement with a new solar facility.
+<HighlightBox>
+For Scope 2, your base year must include both location-based and market-based data where applicable. If you only have location-based data for a historical base year, you can use it as a proxy for the market-based figure - but you must disclose this clearly.
+</HighlightBox>
 
-**Engaging energy suppliers and partners.** Reducing emissions from the energy sector requires participation by generators, suppliers, retailers, and consumers. Scope 2 accounting motivates companies to engage their energy suppliers on the GHG intensity of delivered products and to seek out suppliers offering lower-carbon options. On the supply side, consumer demand expressed through procurement can help justify investment in new low-carbon generation capacity.
+## The Critical Distinction: Structural vs. Operational Changes
 
-**Enhancing stakeholder information and corporate reputation.** Transparent scope 2 disclosure helps shareholders, regulators, customers, and communities understand a company's energy strategy and its GHG implications. Reporting both location-based and market-based totals gives stakeholders a fuller view of the company's physical footprint and its procurement intentions.
+This is where most practitioners get tripped up. The question is simple: **when do you recalculate the base year, and when do you leave it alone?**
+
+### Structural changes - MUST recalculate
+
+A structural change transfers ownership or control of emission sources between companies. The emissions did not appear or disappear from the atmosphere - they just moved from one company's books to another's.
+
+Examples: mergers, acquisitions, divestments, outsourcing or insourcing of emitting activities.
+
+When a structural change is significant, you go back and adjust the base year as if the current structure had always existed. This keeps you comparing like with like.
+
+### Operational changes - do NOT recalculate
+
+An operational change alters production output, product mix, or capacity at facilities the company already owns or controls. These represent real changes in emissions to the atmosphere.
+
+Examples: opening a new production line, ramping up output, shutting down a facility you own, switching fuels.
+
+These changes are genuine performance shifts. Recording them as increases or decreases against the original base year is exactly how the system is designed to work.
+
+<ExampleBox>
+**ENDESA: Recalculation after divestiture**
+
+ENDESA, a Spanish power company, sold its 87.5% stake in Viesgo to Italian utility ENEL in January 2002. This was a structural change - existing emission sources moved from ENDESA's control to ENEL's. ENDESA removed the historical emissions from Viesgo's six power plants from its base year. Without this recalculation, ENDESA would have appeared to reduce emissions simply by selling assets - not by actually emitting less.
+</ExampleBox>
+
+## The Significance Threshold
+
+Not every tiny structural change triggers a full recalculation. Companies set a **significance threshold** - a minimum size of change that warrants adjustment.
+
+The GHG Protocol does not prescribe a specific number, but programs do. California's Climate Action Registry uses **10% of base year emissions**, applied cumulatively. So if you make three small acquisitions that each add 4% to your base year, the third one pushes you over 10% and triggers recalculation for all three.
+
+Your recalculation policy must apply the threshold consistently in both directions - for increases and decreases in emissions.
+
+## Three Other Recalculation Triggers
+
+Beyond structural changes, base year recalculation is also required when:
+
+1. **Changes in calculation methodology** significantly affect the base year figure (e.g., switching from spend-based to activity-based emission factors)
+2. **Improvements in data accuracy** that significantly change historical figures (e.g., discovering that meters at a major facility were miscalibrated)
+3. **Discovery of significant errors** - or cumulative small errors that together are significant
+
+However, routine emission factor updates (like a new eGRID release) are **not** a recalculation trigger. Use the newest factors for the current year only.
+
+## When You Do NOT Recalculate
+
+Two common scenarios where you leave the base year alone:
+
+1. **Acquiring operations that did not exist in the base year.** If you acquire a company founded in 2023 and your base year is 2020, there is nothing to add to 2020.
+
+2. **Outsourcing activities already captured in your Scope 2 or Scope 3.** If you outsource electricity generation but already report Scope 2, no recalculation is needed - the emissions are still in your inventory under a different scope.
+
+## Scope 2 and Supply Transformation
+
+For Scope 2 reduction targets, it matters how you achieve the reduction - not just for optics, but for the quality of the claim.
+
+**Long-term PPAs** with new renewable energy projects represent genuine supply transformation. When a company signs a 15-year PPA for a solar farm not yet built, it provides the revenue certainty that makes the project financeable. This directly contributes to changing the grid's generation mix.
+
+**Spot certificate purchases** from existing facilities allocate existing renewable attributes but do not necessarily drive new capacity. They reduce the market-based Scope 2 total legitimately, but the link to actual grid decarbonisation is weaker.
+
+Both are valid for accounting purposes. But if your client asks "are we actually changing anything?" - the answer depends on which approach they are using.
+
+## Common Mistakes
+
+These come up in almost every first-time inventory:
 
 <ResponsiveTable>
 <table>
-<thead>
-<tr>
-<th>Business Goal</th>
-<th>What Scope 2 Accounting Provides</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Risk and opportunity identification</td>
-<td>Location-based result shows grid intensity exposure; market-based shows contractual exposure</td>
-</tr>
-<tr>
-<td>Target setting and tracking</td>
-<td>Consistent baseline and annual totals against which reduction progress can be measured</td>
-</tr>
-<tr>
-<td>Supplier engagement</td>
-<td>Quantified demand signal that can motivate suppliers to offer lower-carbon products</td>
-</tr>
-<tr>
-<td>Stakeholder reporting</td>
-<td>Disclosed totals support investor disclosure, sustainability reports, and regulatory filings</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Mistake</th>
+      <th>Why It Is Wrong</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Not recalculating base year after an acquisition</td>
+      <td>Makes it look like emissions increased due to poor performance, when it was actually a structural change</td>
+    </tr>
+    <tr>
+      <td>Recalculating base year for production increases</td>
+      <td>Organic growth is a real change - that is genuine performance data, not an accounting adjustment</td>
+    </tr>
+    <tr>
+      <td>Using different emission factor vintages for base year vs. current year</td>
+      <td>Creates an apples-to-oranges comparison. Use the factor appropriate for each reporting year</td>
+    </tr>
+    <tr>
+      <td>Setting the base year to the highest-emission year</td>
+      <td>Verifiers will flag this. Choose based on data quality, not strategic advantage</td>
+    </tr>
+    <tr>
+      <td>Forgetting to include both Scope 2 methods in the base year</td>
+      <td>If you report dual Scope 2 now, you need both methods for the base year - otherwise you cannot track market-based progress</td>
+    </tr>
+  </tbody>
 </table>
 </ResponsiveTable>
 
-## Scope 2 and the Broader GHG Framework
+## Putting It Into Practice
 
-Scope 2 sits between scope 1 (direct emissions from owned and controlled sources) and scope 3 (upstream and downstream value chain emissions). One important interaction: when a company calculates scope 3, category 3 (fuel- and energy-related activities not included in scope 1 or 2), it must disclose whether it uses a market-based or location-based scope 2 total as the basis for that calculation. Companies must also specify which scope 2 method they used for goal-setting and for any scope 3 or product-level communication.
+<CalculationExercise
+  question="A company's base year (2020) Scope 1+2 emissions were 50,000 tCO2e. In 2022, they acquired a subsidiary whose operations added 8,000 tCO2e annually (and had been operating since 2018). What should the recalculated base year total be?"
+  answer={58000}
+  unit="tCO2e"
+  hints={[
+    "This is a structural change - existing emissions transferred from one company to another.",
+    "You need to add the subsidiary's emissions to the base year as if it had always been part of the company.",
+    "50,000 + 8,000 = ?"
+  ]}
+  solution="The acquisition is a structural change, so the base year must be recalculated. Add the subsidiary's annual emissions to the original base year: 50,000 + 8,000 = 58,000 tCO2e. Now all future comparisons reflect the company's current structure."
+/>
 
-Another structural feature: one company's scope 1 emissions from energy generation become another company's scope 2 emissions from purchasing that generation. This is an inherent and intended feature of the GHG accounting framework, not a form of double counting. It allows multiple entities along a value chain to consistently report and act on those emissions where they have the most direct influence.
-
-<HighlightBox>
-The Scope 2 Guidance is policy-neutral. It does not require development of certificate markets, express preferences about market design, or promote specific generation technologies. It provides accounting mechanics that function across diverse electricity markets worldwide.
-</HighlightBox>
+<CalculationExercise
+  question="Using the recalculated base year of 58,000 tCO2e, the company sets a 30% absolute reduction target by 2030. What is the maximum allowable emissions figure in 2030?"
+  answer={40600}
+  unit="tCO2e"
+  hints={[
+    "A 30% reduction means the company can emit at most 70% of the recalculated base year.",
+    "58,000 x 0.70 = ?"
+  ]}
+  solution="58,000 tCO2e x (1 - 0.30) = 58,000 x 0.70 = 40,600 tCO2e. The target is measured against the recalculated base year, not the original one - this is why getting recalculation right matters so much for target credibility."
+/>

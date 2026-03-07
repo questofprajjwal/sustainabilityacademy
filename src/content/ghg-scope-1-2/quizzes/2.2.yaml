@@ -1,44 +1,26 @@
-- question: "A company-owned delivery truck making a customer delivery produces emissions classified as:"
+- question: "A facility consumed 2,000 MWh of electricity. It retired 800 I-RECs (each representing 1 MWh of renewable energy). For the market-based Scope 2 calculation, how should the remaining 1,200 MWh be treated?"
   options:
-    - "Scope 2, because the truck uses diesel purchased from a third party"
-    - "Scope 3, because it is serving an external customer"
-    - "Scope 1, because the truck is owned or controlled by the reporting organisation"
-    - "Scope 1 for the fuel combustion and Scope 3 for vehicle maintenance"
-  answer: 2
-  explanation: "Scope 1 covers fuel combustion in vehicles owned or controlled by the reporting organisation. The key test is ownership or operational control, not the purpose of the trip. An employee driving their own car on company business is Scope 3."
-
-- question: "For on-road vehicles, why are CH4 and N2O calculated using a distance-based equation (Equation 4) rather than a fuel-based equation?"
-  options:
-    - "Fuel consumption data is unavailable for on-road vehicles"
-    - "CH4 and N2O from on-road vehicles are strongly influenced by vehicle type and emissions control technology, best represented by distance-based factors tied to model year"
-    - "Distance-based factors are more conservative and produce higher reported emissions"
-    - "The EPA requires distance-based calculations for all transport emissions"
+    - "Assign an emission factor of zero to all 2,000 MWh since I-RECs were purchased"
+    - "Use the residual mix or grid average factor for the remaining 1,200 MWh"
+    - "Exclude the remaining 1,200 MWh from the market-based total entirely"
+    - "Average the zero-emission I-REC factor across all 2,000 MWh proportionally"
   answer: 1
-  explanation: "CH4 and N2O from on-road vehicles depend heavily on the type of catalytic converter and vehicle model year, not just fuel volume. Distance-based factors (Equation 4) correlated with vehicle type and model year capture this relationship better than fuel-based factors for these gases."
+  explanation: "Certificates only cover the MWh they represent. The 800 I-RECs zero out 800 MWh, but the remaining 1,200 MWh must use the next available factor in the market-based hierarchy - typically the residual mix factor or, if unavailable, the grid average factor."
 
-- question: "A company's truck fleet consumes 50,000 litres of diesel. Using an EPA CO2 emission factor of 2.68 kg CO2/litre, what are the CO2 emissions in metric tonnes?"
+- question: "Your client's electricity bill for a building with rooftop solar shows 350 MWh consumed. You know the building exported 50 MWh of solar-generated electricity back to the grid. What figure should you use as Scope 2 activity data?"
   options:
-    - "13.4 tCO2"
-    - "134 tCO2"
-    - "1,340 tCO2"
-    - "268 tCO2"
+    - "350 MWh, as shown on the bill"
+    - "300 MWh, subtracting the solar exports"
+    - "400 MWh, adding back the exports to get gross grid purchases"
+    - "350 MWh for location-based and 300 MWh for market-based"
+  answer: 2
+  explanation: "The bill shows net consumption (grid purchases minus solar exports). For Scope 2, you need gross purchases from the grid - the total electricity drawn, before netting out exports. Since 350 MWh is the net figure and 50 MWh was exported, the gross grid purchases are 400 MWh."
+
+- question: "When calculating location-based Scope 2 for a facility in Texas, which emission factor source should you prefer?"
+  options:
+    - "IEA national average factor for the United States"
+    - "EPA eGRID subregional total output emission rate for the relevant subregion"
+    - "The utility company's published fuel mix disclosure"
+    - "The residual mix factor published by Green-e"
   answer: 1
-  explanation: "50,000 litres × 2.68 kg CO2/litre = 134,000 kg CO2 ÷ 1,000 = 134 metric tonnes CO2."
-
-- question: "A vehicle fleet operates on B20 fuel (20% biodiesel, 80% petroleum diesel). How should CO2 emissions be treated?"
-  options:
-    - "Apply the fossil diesel emission factor to the full 100% of fuel consumed"
-    - "Apply no emission factor — biodiesel blends are carbon neutral"
-    - "Calculate fossil CO2 from the 80% fossil portion (included in inventory) and report biomass CO2 from the 20% biodiesel separately"
-    - "Use the weighted average of fossil diesel and biodiesel emission factors for the full volume"
-  answer: 2
-  explanation: "Fossil CO2 from the petroleum diesel portion is included in the inventory. CO2 from the biodiesel (biomass) portion is reported separately as biomass CO2 and excluded from the CO2-equivalent total. CH4 and N2O from both portions are included in the CO2e total."
-
-- question: "What is the best source of distance data for calculating CH4 and N2O from on-road vehicles using Equation 4?"
-  options:
-    - "Fuel receipts converted to distance using fuel economy estimates"
-    - "Employee self-reported estimates of trips taken"
-    - "Odometer readings from vehicle operator logs or maintenance records"
-    - "GPS data from navigation systems"
-  answer: 2
-  explanation: "Odometer readings from vehicle operator logs or maintenance records are the best direct source of vehicle-miles or vehicle-kilometers traveled. Fuel economy conversion is less accurate. Distance data should be in vehicle-miles/km, not passenger-miles."
+  explanation: "The location-based method uses a geographic hierarchy: direct line factor first, then regional/subnational, then national. EPA eGRID subregional factors are the most geographically precise publicly available data for US grid electricity, making them the correct choice over the broader IEA national average. Utility fuel mix and residual mix factors belong to the market-based hierarchy, not location-based."

@@ -1,44 +1,26 @@
-- question: "The location-based method calculates Scope 2 emissions based on:"
+- question: "An error in a company's GHG inventory overstates Scope 1 emissions by 3% of the total inventory. A verifier reviewing the inventory would most likely classify this error as:"
   options:
-    - "The GHG emission rate of the specific generator a company has contracted with"
-    - "Average energy generation emission factors for defined geographic grid locations"
-    - "The lowest available emission factor from any supplier in the market"
-    - "The company's historical Scope 2 emissions adjusted for renewable purchases"
+    - "Material, since any known error must be corrected before the report is published"
+    - "Immaterial, since it falls below the 5% materiality threshold"
+    - "Material, because overstatements are treated more strictly than understatements"
+    - "Cannot be determined without knowing the absolute tCO2e value of the error"
   answer: 1
-  explanation: "The location-based method uses average emission factors for the geographic area (grid region) in which operations occur. Examples include US EPA eGRID subregion factors, UK Defra grid average factors, and IEA national electricity emission factors."
+  explanation: "The practical materiality threshold is 5% of the total inventory. An error of 3% falls below this line, so it would be classified as immaterial from a verification standpoint. This does not mean the error should be ignored - it should still be corrected if possible - but it would not trigger a qualified verification opinion."
 
-- question: "A facility consumes 10,000 MWh of electricity per year. The location-based grid emission factor is 0.75 kg CO2e/kWh and the company holds a wind PPA with an associated emission factor of 0 kg CO2e/kWh. What are the market-based Scope 2 emissions?"
+- question: "A company reports Scope 1 of 25,000 tCO2e and has purchased 5,000 tonnes of carbon offsets. How should the Scope 1 figure appear in their GHG Protocol-conformant report?"
   options:
-    - "7,500 tCO2e (same as location-based)"
-    - "0 tCO2e (certificates from the PPA cover 100% of consumption)"
-    - "3,750 tCO2e (50% renewable)"
-    - "8,500 tCO2e (residual mix × consumption)"
+    - "20,000 tCO2e (net of offsets), with the offset purchase documented"
+    - "25,000 tCO2e (gross), with offsets disclosed in a separate section"
+    - "25,000 tCO2e (gross), minus offsets in a footnote showing 20,000 tCO2e net"
+    - "Either 20,000 or 25,000 tCO2e, at the company's discretion"
   answer: 1
-  explanation: "When the company holds and retires certificates from a wind PPA covering 100% of consumption with a 0 kg CO2e/kWh emission factor, its market-based Scope 2 total is 0 tCO2e. Both the location-based result (7,500 tCO2e) and market-based result (0 tCO2e) must be reported."
+  explanation: "The GHG Protocol requires that Scope 1 and Scope 2 be reported as gross figures, independent of any GHG trades or offsets. Offsets represent emission reductions happening elsewhere - they do not change what your operations actually emitted. The 5,000 tonnes of offsets are disclosed separately, outside the scope totals."
 
-- question: "What does the residual mix emission factor represent in market-based Scope 2 accounting?"
+- question: "A company is preparing for its first third-party GHG verification. Its consultant recommends limited assurance. What does a limited assurance opinion actually state?"
   options:
-    - "The average emission factor for all generators in a country before any certificates are issued"
-    - "The GHG intensity of the electricity that remains after all certificate-based contractual claims have been removed"
-    - "The difference between a company's location-based and market-based results"
-    - "A backup emission factor used when grid average factors are unavailable"
+    - "The inventory is accurate and free from material misstatement"
+    - "Nothing has come to the verifier's attention suggesting the inventory is materially wrong"
+    - "The methodology is sound but the data has not been independently verified"
+    - "The inventory is provisionally accepted pending site visits and detailed data testing"
   answer: 1
-  explanation: "The residual mix represents all generation and associated emissions that have NOT been claimed by contractual instruments. When renewable certificates are claimed, they are removed from the residual mix, making the residual mix factor higher than the grid average. Companies without certificates should use the residual mix factor."
-
-- question: "Why must both location-based and market-based Scope 2 totals be reported when a company operates in markets with contractual instruments?"
-  options:
-    - "Because regulators require two separate figures for cross-country comparisons"
-    - "Because each method serves different analytical purposes — location-based shows grid intensity risk; market-based shows procurement impact — and neither alone provides a complete picture"
-    - "To allow companies to choose whichever total is lower for public reporting"
-    - "Because this requirement applies only to publicly listed companies"
-  answer: 1
-  explanation: "Dual reporting is required because the two methods serve different purposes. Location-based shows the physical GHG intensity of the grids where operations occur. Market-based shows the outcome of procurement decisions. Relying solely on one would hide information that is relevant to different stakeholder audiences."
-
-- question: "In the Scope 2 market-based method, what is the most precise type of emission factor, at the top of the hierarchy?"
-  options:
-    - "Grid average emission factors"
-    - "Supplier or utility-specific emission rates"
-    - "Energy attribute certificates (RECs, Guarantees of Origin, I-RECs)"
-    - "Residual mix factors"
-  answer: 2
-  explanation: "The market-based emission factor hierarchy, from most to least precise: (1) energy attribute certificates, (2) direct contracts/PPAs, (3) supplier-specific emission rates, (4) residual mix factors, (5) grid average factors as last resort. Certificates provide the most specific and traceable attribution of generation to consumption."
+  explanation: "Limited assurance (negative assurance) means the verifier conducted procedures - typically a desk review, methodology check, and data sampling - and found no evidence of material misstatement. It does not positively confirm accuracy the way reasonable assurance does. Most voluntary reporting starts with limited assurance because it is less expensive and less intensive than reasonable assurance."

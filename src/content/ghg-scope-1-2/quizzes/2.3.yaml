@@ -1,44 +1,26 @@
-- question: "Why can a small physical quantity of fugitive refrigerant release represent a large CO2-equivalent emission?"
+- question: "A company purchases I-RECs generated from a solar project in Vietnam to offset electricity consumed at its factory in India. Does this meet the Scope 2 Quality Criteria?"
   options:
-    - "Refrigerants are heavier than air and concentrate near the ground"
-    - "HFCs, PFCs, and SF6 have extremely high Global Warming Potentials (GWPs) compared to CO2"
-    - "Fugitive releases persist in the atmosphere for longer than combustion emissions"
-    - "Fugitive emissions occur at higher temperatures, amplifying their warming effect"
+    - "Yes, because I-RECs are internationally standardized and recognized everywhere"
+    - "No, because the certificate must come from the same market boundary where the electricity is consumed"
+    - "Yes, as long as the vintage matches the reporting period"
+    - "No, because solar I-RECs do not carry a GHG emission rate"
   answer: 1
-  explanation: "The gases involved in fugitive releases (HFCs, PFCs, SF6) have very high GWPs. For example, SF6 has a GWP of 23,500 — one kilogram of SF6 is climatically equivalent to over 23 tonnes of CO2. Small physical volumes can represent large CO2-equivalent emissions."
+  explanation: "Quality Criterion #5 requires that the certificate come from the same market where the consuming facility operates. Cross-border I-RECs from Vietnam cannot be used for consumption in India. The company would need to purchase I-RECs from Indian renewable energy projects."
 
-- question: "A utility company's electrical switchgear contains 100 kg of SF6. A 2% annual leak releases 2 kg. Using SF6 GWP of 23,500, what is the CO2-equivalent emission?"
+- question: "Your client purchased carbon offsets equivalent to 100% of their Scope 2 emissions. How should this appear in their GHG report?"
   options:
-    - "2 tCO2e"
-    - "47 tCO2e"
-    - "470 tCO2e"
-    - "235 tCO2e"
-  answer: 1
-  explanation: "2 kg SF6 × 23,500 GWP = 47,000 kg CO2e = 47 metric tonnes CO2e. For comparison, burning approximately 885 litres of diesel produces the same warming impact."
-
-- question: "Which fugitive emission calculation method is most accurate for an organisation that maintains its own refrigerant inventory in storage containers?"
-  options:
-    - "Screening Method — uses default leak rates per equipment type"
-    - "Method for Purchased Gases — sums mass of gas purchased"
-    - "Material Balance Method — tracks beginning/end stocks, purchases, sales, and capacity changes"
-    - "Simplified Material Balance — tracks contractor charge and recovery records"
+    - "Report Scope 2 as zero, with a footnote explaining the offsets"
+    - "Subtract the offsets from the Scope 2 total and report the net figure"
+    - "Report the full Scope 2 total unchanged and disclose the offsets separately"
+    - "Replace the market-based Scope 2 figure with zero and keep the location-based figure"
   answer: 2
-  explanation: "The Material Balance Method is recommended for organisations that own and maintain refrigerant stocks. It calculates emissions as the mass that cannot be accounted for through purchases, sales, and equipment capacity changes — capturing all net refrigerant flows."
+  explanation: "Carbon offsets and energy attribute certificates are completely different instruments. Offsets represent avoided emissions elsewhere - they cannot reduce your Scope 2 total. The GHG Protocol requires reporting gross Scope 2 emissions with offsets disclosed separately, outside the scopes."
 
-- question: "Why does the GHG Protocol allow CFCs and HCFCs to be excluded from the CO2-equivalent total and reported as memo items only?"
+- question: "A company operates in India, the UK, and the US. It has purchased I-RECs for its Indian offices and a GO-backed green tariff for the UK, but has no instruments for its US offices. How many Scope 2 totals must it report?"
   options:
-    - "CFCs and HCFCs have no global warming effect"
-    - "Their global warming impact is complicated by their ozone-depleting properties, and they are excluded under the Montreal Protocol framework"
-    - "CFCs and HCFCs are only used in consumer products, not industrial equipment"
-    - "They have very low GWP values and are therefore not material"
+    - "One total using the location-based method only"
+    - "Two totals - one location-based and one market-based for the entire company"
+    - "Three separate totals - one per country, each using the locally appropriate method"
+    - "Two totals, but only for the Indian and UK operations since the US has no instruments"
   answer: 1
-  explanation: "CFCs and HCFCs are ozone-depleting substances being phased out under the Montreal Protocol. Their climate impact is complex due to indirect effects from ozone depletion. The GHG Protocol allows them as separate memo items with no GWP applied. HFCs (their replacement) are fully included in inventories."
-
-- question: "Scope 1 fugitive emissions from refrigeration systems include emissions during which phases?"
-  options:
-    - "Only operational leakage during normal use"
-    - "Only disposal at end of equipment life"
-    - "Installation, normal operation, servicing, and disposal — the full use-phase"
-    - "Manufacturing of the refrigerant before it is purchased"
-  answer: 2
-  explanation: "Scope 1 fugitive emissions are use-phase emissions: releases during equipment installation, normal operational leakage, losses during servicing and repair, and disposal. Manufacturing emissions of refrigerants before purchase are Scope 3 indirect emissions attributed to the equipment manufacturer."
+  explanation: "If a company operates in any market where contractual instruments exist, it must report both location-based and market-based totals for the entire corporate inventory - not selectively by country. Since India (I-RECs), the UK (GOs), and the US (RECs) all have certificate markets, dual reporting is mandatory. The US offices with no instruments would use the grid average as a fallback in the market-based calculation."

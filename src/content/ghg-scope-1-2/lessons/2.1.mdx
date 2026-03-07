@@ -1,133 +1,145 @@
-{/* source: EPA Center for Corporate Climate Leadership, Direct Emissions from Stationary Combustion Sources (December 2023), Sections 1-4 */}
+{/* source: GHG Protocol Scope 2 Guidance, Chapters 1-2 (pp. 4-19), Chapter 4 (pp. 24-31), Chapter 5 (pp. 32-41) */}
 
-Stationary combustion is the single largest contributor to Scope 1 emissions for most industrial and commercial organizations. It covers any fixed piece of equipment that burns fuel on-site: boilers, furnaces, kilns, ovens, flares, thermal oxidizers, dryers, internal combustion engines used for power generation, and process heaters. If it stays in one place and burns carbon-bearing fuel or waste material, it is a stationary combustion source.
+Scope 2 is the electricity your company buys. For most service-sector companies - tech firms, banks, retailers, consulting firms - this is the biggest emissions category in their inventory. Unlike Scope 1, where you need to track every boiler and vehicle, Scope 2 starts with something simple: your electricity bills.
 
-## Greenhouse Gases Produced
+But "simple" does not mean "straightforward." The GHG Protocol requires up to two different numbers for the same electricity consumption, and getting the boundary wrong is one of the most common mistakes in corporate inventories. This lesson covers what counts, what does not, and the dual reporting rule that trips up most first-time reporters.
 
-Combustion of fuels at stationary sources produces three greenhouse gases: carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O). CO2 accounts for more than 99 percent of total CO2-equivalent emissions from commercial, industrial, and electricity generation combustion sources in the United States. CH4 and N2O together represent less than one percent of the total on a CO2-equivalent basis for most fuel types, though they are still required to be reported.
+## What Counts as Scope 2
 
-Emissions of CH4 and N2O are more variable than CO2 because they depend not just on the fuel's carbon content but also on the type of combustion technology, the efficiency and vintage of the equipment, pollution control systems, and operational practices. The methods used to calculate CO2 can also be applied to CH4 and N2O by substituting the appropriate emission factors.
+Scope 2 covers the indirect GHG emissions from generating purchased or acquired energy that your company consumes. Four types of energy qualify:
+
+- **Electricity** - the big one. Lighting, data centers, HVAC, production lines, EV charging
+- **Steam** - purchased from a district energy system or industrial supplier
+- **Heat** - purchased hot water or thermal energy for space heating or industrial processes
+- **Cooling** - purchased chilled water or cooling from a district cooling network
+
+The key word is "purchased." The energy must come from a source outside your organizational boundary and be consumed within it.
 
 <HighlightBox>
-Stationary combustion scope 1 sources produce CO2, CH4, and N2O. HFCs, PFCs, and SF6 are not products of combustion. They arise from refrigeration and industrial gas use and are accounted for separately as fugitive emissions.
+Scope 2 covers purchased and consumed electricity, steam, heat, and cooling. The emissions happen at the generation source - the power plant, the boiler house, the chiller - not at your office. If your company generates electricity on-site in equipment it owns or controls, that is Scope 1, not Scope 2.
 </HighlightBox>
 
-## Biomass Fuels
+## What Does NOT Count as Scope 2
 
-Not all stationary combustion sources burn fossil fuels. Biomass fuels (non-fossil fuels such as agricultural waste, wood chips, or biomass-derived gases) may be combusted independently or co-fired with fossil fuels. The same calculation methods apply to determine CO2, CH4, and N2O emissions from these fuels.
+Three exclusions catch people out regularly:
 
-The GHG Protocol requires that CO2 emissions from biomass combustion be reported separately as "biomass CO2 emissions" and tracked independently from fossil CO2 emissions. Biomass CO2 is not included in an organization's total CO2-equivalent emissions inventory under current guidance. CH4 and N2O from biomass combustion, however, are included in the overall CO2-equivalent inventory.
+**On-site generation consumed on-site.** Your rooftop solar panels powering your own building? Scope 1 (with zero CO2 emissions, since it is solar). Not Scope 2. Including it in both scopes would be double counting within a single inventory.
 
-This distinction matters in practice: a facility co-firing natural gas and wood waste must calculate and report its wood-derived CO2 separately, while including all CH4 and N2O from both fuel streams in its main inventory figure.
+**Electricity purchased for resale.** If you buy power and sell it to a third party, that is not "consumed by the reporting company." It belongs in your customer's Scope 2, not yours. Including resold energy inflates your number.
 
-## Waste-Derived Fuels
-
-Stationary combustion sources sometimes burn waste-derived fuels: used tires, used motor oils, municipal solid waste (MSW), hazardous waste, landfill gas, and various byproduct gases. These are treated like any other fuel. Any GHG produced from combustion of a fossil-based waste product is included in the organization's inventory.
-
-For mixed waste streams such as MSW, the fossil and biomass fractions must be separated. The CO2 from combusting the fossil portion (plastics, synthetic materials) is included in the main inventory. The CO2 from combusting the biomass portion (yard waste, paper products) is reported as biomass CO2 and excluded from the CO2-equivalent total.
-
-Importantly, emissions from waste-derived fuel combustion cover only the actual combustion emissions. No "offset" credit is claimed for diverting waste from landfill, and no upstream emissions from waste collection or transport are included here.
-
-## Non-Combustion Emission Sources
-
-The combustion of fuel does not account for all GHG emissions associated with stationary combustion infrastructure. Natural gas use can result in fugitive methane emissions from leaks in gas transport lines, valves, and piping owned by the organization. Coal piles and fuel storage tanks can also be sources of fugitive methane. These non-combustion sources are typically minor compared to combustion emissions, but organizations must account for them using fugitive emissions guidance specific to their sector.
+**Electricity sold back to the grid.** If you have on-site generation and export surplus to the grid, use gross purchases from the grid for your Scope 2 calculation - not the net figure after exports. Net metering on your utility bill is a billing convention, not your actual consumption.
 
 <AnalogyBox>
-Think of stationary combustion like a kitchen stove: the emissions from burning the gas are the combustion emissions. But if there is a small gas leak at the fitting before the flame, that is a fugitive emission, separate from the act of cooking. Both need to be tracked, but through different methods.
+Think of Scope 2 like a restaurant's water bill. You report what the municipal supply delivered to your kitchen - not what your private well pumped (that is your own resource, like Scope 1), and not what you bottled and sold to customers (that is their consumption, not yours).
 </AnalogyBox>
 
-## The Two Calculation Methods
+## Location-Based vs Market-Based: Two Numbers, One Reality
 
-There are two main methods for estimating GHG emissions from stationary combustion sources.
+Here is where Scope 2 gets interesting. The GHG Protocol requires two different methods for calculating the same electricity consumption, and they can give wildly different results.
 
-**Method 1: Continuous Emissions Monitoring System (CEMS)**
+**Location-based method** uses the average emission factor of the grid where your facility operates. It answers: "How carbon-intensive is the grid serving our offices?"
 
-A CEMS continuously measures pollutants in exhaust gases directly at the combustion source. Two approaches exist under 40 CFR Part 75: measuring CO2 concentration and flue gas flow rate to determine mass emissions, or using O2 concentration with theoretical CO2 production based on fuel characteristics. Annual CO2 emissions are determined by aggregating hourly readings.
+It does not care what you bought contractually. It reflects the physical reality of what power plants are running in your region. If you sit on a coal-heavy grid, your location-based number will be high - even if you bought wind RECs.
 
-CEMS is required for certain large emitters under the U.S. Clean Air Act Acid Rain Program and the EPA Greenhouse Gas Reporting Program (GHGRP). If an organization has CEMS data that satisfies Title IV or GHGRP requirements, it should use those same figures in its GHG inventory. CEMS cannot calculate CH4 and N2O; the fuel analysis method must supplement it for those gases.
+**Market-based method** uses the emission factor from what you contractually purchased. It answers: "What did our procurement decisions actually do to our reported emissions?"
 
-**Method 2: Fuel Analysis Method**
+This reflects your choices: Did you buy renewable energy certificates? Sign a power purchase agreement with a solar farm? Choose a green tariff from your utility? Those decisions show up here.
 
-The fuel analysis method is a mass balance approach: determine the carbon content of the fuel and apply it to the quantity burned. It is the standard method for organizations not subject to CEMS requirements. Three equations are available, each suited to a different state of knowledge about fuel characteristics:
+<ResponsiveTable>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Location-Based</th>
+<th>Market-Based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it measures</td>
+<td>GHG intensity of the grid where you operate</td>
+<td>Impact of your procurement choices</td>
+</tr>
+<tr>
+<td>Emission factor source</td>
+<td>Grid average (regional or national)</td>
+<td>Certificates, contracts, supplier rates, or residual mix</td>
+</tr>
+<tr>
+<td>Most useful for</td>
+<td>Comparing facility locations, assessing physical grid risk</td>
+<td>Demonstrating renewable energy procurement, tracking PPA impact</td>
+</tr>
+<tr>
+<td>What it ignores</td>
+<td>Your renewable energy purchases</td>
+<td>The actual grid intensity where you sit</td>
+</tr>
+<tr>
+<td>Applies to</td>
+<td>All grids globally</td>
+<td>Markets with contractual instruments (RECs, GOs, I-RECs, PPAs)</td>
+</tr>
+</tbody>
+</table>
+</ResponsiveTable>
 
-<EquationBreakdown
-  title="Equation 1 - Emissions from Fuel Volume/Mass (least preferred)"
-  result="E | GHG Emissions | Total emissions from stationary combustion, in kg or tonnes | blue"
-  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units (e.g., litres, kg, cubic feet) | green ;; EF<sub>1</sub> | Emission Factor | Emission factor per mass or volume unit of fuel (e.g., kg CO₂/litre) | amber"
-/>
+## The Dual Reporting Rule
 
-<EquationBreakdown
-  title="Equation 2 - Emissions from Fuel Energy Content (preferred)"
-  result="E | GHG Emissions | Total emissions from stationary combustion, in kg or tonnes | blue"
-  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; HHV | Higher Heating Value | Energy content per mass or volume unit of fuel (e.g., MMBtu/kg) | amber ;; EF<sub>2</sub> | Emission Factor | Emission factor per energy unit (e.g., kg CO₂/MMBtu) | violet"
-/>
+This is not optional. If contractual instruments - RECs, Guarantees of Origin, I-RECs, supplier-specific emission factors - exist in ANY market where your company operates, you must report both a location-based and a market-based Scope 2 total for your entire inventory.
 
-<EquationBreakdown
-  title="Equation 3 - CO₂ from Carbon Content (most preferred)"
-  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
-  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; CC | Carbon Content | Mass of carbon per mass or volume unit of fuel | amber ;; 44/12 | Molecular Weight Ratio | Ratio of CO₂ molecular weight to carbon atomic weight, converting carbon mass to CO₂ mass | violet"
-/>
+Even if only one of your fifty offices is in a market with certificates, the rule applies to the whole company. For operations in markets without contractual instruments, you use the location-based figure for both columns.
 
-Equation 3 is the most accurate for CO2 because CO2 emissions are stoichiometrically tied to the fuel's carbon content. It can only be used for CO2, so Equation 1 or 2 must be applied alongside it for CH4 and N2O.
-
-## Activity Data: Sources and Units
-
-The first input to any fuel analysis calculation is the quantity of fuel combusted. The preferred approach is direct measurement using fuel flow meters for liquids and gases, or weight-based systems such as coal feed belt scales. If direct measurement is unavailable, fuel purchase records are the next best source: monthly utility bills for natural gas, periodic invoices for fuel oil deliveries.
-
-Several factors can cause purchase data to differ from actual combustion:
-
-- Changes in on-site fuel storage inventory between the start and end of the reporting year
-- Fuel used as feedstock (where carbon is stored in a product rather than released through combustion)
-- Fugitive releases or fuel spills
-
-For inventory changes, actual fuel burned is calculated as: Fuel Burned = Fuel Purchased + (Fuel Stock at Start - Fuel Stock at End). Feedstock volumes must be subtracted from purchased quantities before calculating emissions.
-
-Activity data may be expressed in mass or volume units (kilograms, litres, cubic feet, short tons) or in energy units (MMBtu, therms). Energy units are preferred when available because they reduce uncertainty in emission factor application.
-
-## Fuel Carbon Content and Heat Content
-
-CO2 emissions are directly proportional to carbon content, which varies by fuel type and grade. Organizations should determine the actual carbon content of consumed fuels where possible, either from supplier-provided chemical analysis or from periodic fuel sampling. If carbon content is unavailable, heat content becomes the next best input for Equation 2.
-
-All EPA GHG Emission Factors Hub values are based on higher heating value (HHV). If fuel consumption data are expressed in lower heating value (LHV) units, which is common in non-U.S. reporting contexts, they must be converted before applying EPA emission factors: divide LHV energy by 0.95 for coal and petroleum products, and by 0.90 for natural gas.
-
-## Emission Factors
-
-When actual carbon content is unknown, default emission factors from the EPA GHG Emission Factors Hub provide the carbon content approximation. These factors are defined per unit of fuel mass or volume (for Equation 1) and per unit of energy content (for Equation 2). Factors per energy unit are preferred because they are less variable than per-mass or per-volume factors. For natural gas, the EPA default CO2 emission factor is 53.06 kg CO2/MMBtu.
-
-For fuels with highly variable composition such as coal or MSW, default factors carry greater uncertainty, and site-specific fuel analysis is strongly recommended.
-
-## Completeness Requirements
-
-A complete stationary combustion inventory includes all fuel-burning equipment within the organization's operational boundary. The GHG Protocol sets no minimum materiality threshold for exclusion. Every source must at minimum be assessed and estimated. Source types that must be considered include: boilers and furnaces, internal combustion engines, turbines, flares, process heaters and ovens, incinerators, thermal oxidizers, dryers, and natural gas chillers. Cross-checking against Title V air permit source lists or annual fuel use surveys is a practical way to verify completeness.
+The two totals must never be added together or netted. Each represents a separate way of allocating emissions, and combining them produces a meaningless hybrid.
 
 <ExampleBox>
-**Example: Natural gas boiler using Equation 2**
+**Example: Wind PPA - same facility, two results**
 
-An organization burns natural gas in an on-site boiler. Utility bills show 61,500 therms consumed in the reporting year. Converting to energy: 61,500 therms x 0.1 MMBtu/therm = 6,150 MMBtu.
+A manufacturer operates a facility in a coal-heavy grid region with a grid average emission factor of 0.75 tCO2e/MWh. The facility consumes 10,000 MWh per year.
 
-Applying EPA default emission factors:
-- CO2: 6,150 MMBtu x 53.06 kg CO2/MMBtu x 10⁻³ metric tons/kg = 326.3 metric tons CO2
-- CH4: 6,150 x 1.0 g CH4/MMBtu x 10⁻⁶ metric tons/g = 0.00615 t CH4 x 28 GWP = 0.2 t CO2e
-- N2O: 6,150 x 0.10 g N2O/MMBtu x 10⁻⁶ metric tons/g = 0.000615 t N2O x 265 GWP = 0.2 t CO2e
+**Location-based Scope 2:** 10,000 MWh x 0.75 = **7,500 tCO2e**
 
-Total: 326.3 + 0.2 + 0.2 = 326.7 metric tons CO2e
+The manufacturer signs a PPA with a wind farm and retains the energy attribute certificates. The certificates carry an emission factor of 0 tCO2e/MWh.
+
+**Market-based Scope 2:** 10,000 MWh x 0 = **0 tCO2e**
+
+Both numbers go in the report. The location-based result shows the facility still sits on a dirty grid. The market-based result shows the procurement decision eliminated the company's contractual emissions.
 </ExampleBox>
 
-<CalculationExercise
-  question="A company burns 10,000 MMBtu of natural gas at its on-site boiler. Using the EPA default CO2 emission factor of 53.06 kg CO2/MMBtu, what are the total CO2 emissions in metric tonnes?"
-  answer={530.6}
-  unit="tCO2"
-  hints={[
-    "Multiply fuel consumption (MMBtu) by the emission factor (kg CO2/MMBtu) to get total kg of CO2.",
-    "Convert kg to metric tonnes by dividing by 1,000. So: 10,000 x 53.06 / 1,000 = ?"
-  ]}
-  solution="10,000 MMBtu x 53.06 kg CO2/MMBtu = 530,600 kg CO2. Dividing by 1,000 converts to 530.6 metric tonnes CO2."
-/>
+## The REC Sales Trap
 
-<DeepDive title="When should you use CEMS instead of fuel analysis?">
-For large emitters regulated under the U.S. Acid Rain Program or GHGRP, CEMS provides continuously measured CO2 data and is generally more accurate than fuel analysis for CO2. It eliminates the need to estimate carbon content or heat content from default tables.
+This catches companies with rooftop solar every single time. Here is the rule:
 
-However, CEMS requires significant capital investment, ongoing calibration, and maintenance. It also cannot measure CH4 or N2O, so fuel analysis must supplement it regardless. For smaller facilities, or for equipment not covered by CEMS within an otherwise CEMS-equipped plant (such as an emergency generator or a duct burner), the fuel analysis method fills the gap.
+If you install solar panels on your roof but sell the RECs (or I-RECs) from that generation to someone else, you cannot claim that solar electricity as zero-emission for your own Scope 2. You have transferred the environmental attributes to the buyer. For your own inventory, you must treat that on-site solar consumption as if it came from the grid - using the grid average emission factor (location-based) or the residual mix (market-based).
 
-Where CEMS data meets Title IV or GHGRP quality standards, those exact figures should be carried directly into the corporate GHG inventory without recalculation.
-</DeepDive>
+You cannot have it both ways. Either you keep the certificates and claim the clean energy, or you sell the certificates and lose the claim.
+
+## Indian Context: CEA Grid Emission Factors
+
+If you are working with Indian companies - and increasingly, consultants are - here is what you need to know.
+
+The Central Electricity Authority (CEA) publishes India's grid emission factor annually in its "CO2 Baseline Database" report. For 2023-24, the weighted average emission factor for the Indian grid is approximately **0.713 tCO2/MWh** (combined margin). This is the number you use for location-based Scope 2 calculations for any facility connected to the Indian grid.
+
+Where to find it: search for "CEA CO2 Baseline Database" on the CEA website (cea.nic.in). The report provides both operating margin and build margin factors, but for Scope 2 inventory purposes, you typically use the weighted average (combined margin) grid emission factor.
+
+**Do Indian companies need market-based reporting?** India has an active I-REC market, and many large companies now buy I-RECs or sign solar/wind PPAs with open-access power producers. If your client has done either, they must report both methods. If they have not purchased any contractual instruments, they can report location-based only - but should be aware that as India's I-REC market matures, dual reporting will become standard practice.
+
+<HighlightBox>
+**Common mistakes that will get flagged in verification:**
+
+1. **Using net metering instead of gross purchases.** Your electricity bill may show net consumption after solar exports. For Scope 2, you need gross purchases from the grid.
+
+2. **Confusing captive power with Scope 2.** A diesel genset or captive coal plant on your premises is Scope 1, not Scope 2 - even if a third party operates it under your control.
+
+3. **Not reporting both methods.** If your company operates anywhere with RECs, GOs, or I-RECs, you owe two numbers. Reporting only location-based is non-conformant.
+
+4. **Selling RECs and claiming zero emissions.** If you sold the certificates from your rooftop solar, you sold the claim. Your on-site solar consumption gets grid-average treatment.
+
+5. **Using the wrong grid factor.** In India, use CEA's published factor, not an outdated IEA number. In the US, use EPA eGRID subregional factors, not a national average.
+</HighlightBox>
+
+## Key Takeaways
+
+Scope 2 is conceptually simple - purchased energy times an emission factor - but the dual reporting requirement, boundary rules, and certificate interactions add real complexity. Before you touch a calculator, make sure you can answer three questions for every facility: What energy did we purchase? What certificates or contracts do we hold? And does this market require dual reporting?
+
+The next lesson walks through the actual calculation step by step, from electricity bills to final Scope 2 totals.

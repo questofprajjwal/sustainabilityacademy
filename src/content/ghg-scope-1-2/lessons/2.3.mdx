@@ -1,161 +1,206 @@
-{/* source: EPA Center for Corporate Climate Leadership, Direct Fugitive Emissions from Refrigeration, Air Conditioning, Fire Suppression, and Industrial Gases (December 2023), Sections 1-3 */}
+{/* source: GHG Protocol Scope 2 Guidance, Chapters 7-8 (pp. 58-73), Chapter 10 (pp. 78-87) */}
 
-Fugitive emissions are releases of greenhouse gases that occur outside of any intentional combustion process. They are not burned, they are leaked, vented, or discharged during normal equipment operation, servicing, or disposal. For most organizations, the primary fugitive emission sources are refrigeration and air conditioning (RAC) systems, fire suppression equipment, and the purchase and use of industrial gases.
+If your client has bought RECs or I-RECs, or signed a solar PPA, you need to understand certificates. If they have not, you still need to know the disclosure rules - because every Scope 2 report has required elements that auditors will check.
 
-## Why Fugitive Emissions Matter
+This lesson covers three things practitioners need: what energy attribute certificates actually are, what quality criteria they must meet, and exactly what your Scope 2 disclosure must contain.
 
-The gases involved in fugitive releases are not CO2. They are hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6), and, in older equipment, chlorofluorocarbons (CFCs) and hydrochlorofluorocarbons (HCFCs). The defining characteristic of these gases is their extremely high global warming potential (GWP).
+## What Energy Attribute Certificates Are
 
-<HighlightBox>
-Selected GWP values (AR5, 100-year):
-- SF6: 23,500 (used in electrical switchgear and industrial processes)
-- HFC-23: 12,400 (used in fire suppression)
-- HFC-134a: 1,430 (common automotive and commercial refrigerant)
-- HFC-32: 677 (used in split air conditioners)
+Grid electricity is physically fungible. Once generated and fed into the grid, electricity from a solar panel is indistinguishable from electricity from a coal plant. You cannot trace which electrons reach your office. This creates a problem: how does a company claim it "uses" renewable energy?
 
-A single kilogram of SF6 released to atmosphere is climatically equivalent to over 23 tonnes of CO2. Small physical volumes of these gases can represent large CO2-equivalent emissions.
-</HighlightBox>
+Energy attribute certificates solve this by separating the non-physical attributes of generation - the technology type, the emission rate, the location - from the physical electricity flow. These attributes are tracked, transferred, and retired independently of the electrons.
 
-Despite the relatively small physical quantities involved compared to combustion emissions, fugitive refrigerant and industrial gas releases can be a material component of a Scope 1 inventory, particularly for organizations with large commercial refrigeration systems, data centers relying on SF6 electrical equipment, or fire suppression systems in critical infrastructure.
+<AnalogyBox>
+Think of certificates like title deeds in property markets. The physical land and the legal title to it are separate things. You can stand on a piece of land, but you only own it if you hold the title. Similarly, a company can consume electricity, but it can only claim the generation attributes of a specific power plant if it holds and retires the certificate representing those attributes. The physical electricity and its non-physical attributes travel through different systems.
+</AnalogyBox>
 
-## Manufacturing vs Use-Phase Emissions
+Once a generator's attributes are separated into a certificate, the remaining electricity becomes "null power" - it has no traceable attributes. Consumers of null power cannot claim to be using renewable energy. Instead, null power is assigned the residual mix emission rate for market-based Scope 2 purposes.
 
-This guidance and all Scope 1 reporting apply only to use-phase emissions: releases that occur while the organization owns and operates the equipment, during installation, during servicing, and at disposal. They do not include emissions from the manufacturing of refrigerants or fire suppressants, which are Scope 3 indirect emissions attributed to the equipment manufacturer. Scope 1 fugitive emissions arise from:
+## Three Certificate Systems You Need to Know
 
-- Normal operational leakage from refrigeration, AC, and fire suppression systems
-- Catastrophic or accidental leaks
-- Refrigerant losses during equipment installation, repair, and removal
-- Deliberate discharge of fire suppressants to extinguish fires
-- Venting of purchased industrial gases after use in manufacturing, testing, or laboratory applications
-
-## Scope of Equipment Covered
-
-Refrigeration and air conditioning equipment covered by this guidance includes: household refrigeration, domestic and commercial air conditioning (including heat pumps), chillers, retail food refrigeration systems, cold storage warehouses, refrigerated transport, industrial process refrigeration, and commercial unitary AC systems. Fire suppression systems include both fixed systems (building-integrated) and portable equipment.
-
-Industrial gases such as CO2, SF6, and various HFCs are used in welding, manufacturing, semiconductor fabrication, testing, and laboratory applications. When these gases are purchased, used, and released, they are Scope 1 emissions.
-
-## The Four Calculation Methods
-
-The EPA guidance provides four methods with varying accuracy and data requirements. Selection depends on the type of equipment, the quality of records maintained, and whether emissions are found to be material after initial screening.
-
-**Method 1: Screening Method**
-
-The Screening Method estimates emissions by multiplying equipment refrigerant capacity by default emission factors for the equipment category. It covers installation, operation, and disposal phases separately.
-
-For refrigeration and AC equipment:
-- Installation emissions = refrigerant charged into new equipment x assembly loss factor (% of charge)
-- Operation emissions = refrigerant capacity x annual leak rate (% of capacity per year) x time in service
-- Disposal emissions = refrigerant capacity remaining at disposal x (1 - recovery efficiency)
-
-For fire suppression equipment, total capacity is multiplied by a fixed emission factor: 2.5 percent for fixed systems, 3.5 percent for portable equipment.
-
-The Screening Method requires the least data but has the highest uncertainty. Emission factors are broad averages that vary significantly between individual pieces of equipment and change over time. It should be used only as an initial screen to determine whether emissions are material. If they are found to be significant relative to other Scope 1 sources, one of the more accurate methods below should be adopted.
-
-**Method 2: Method for Purchased Gases**
-
-This method applies when an organization purchases industrial gases (such as SF6 for electrical switchgear or CO2 for laboratory use), uses them in a process, and then releases them. The assumption is that all gas purchased in the reporting period is used and released in that period.
-
-The calculation is straightforward: sum the mass of each gas type purchased, multiply by its GWP from the EPA GHG Emission Factors Hub, and sum to get total CO2-equivalent emissions. For bulk purchases intended for multi-year use, the purchased quantity should be divided by the expected years of use to apportion to the current period.
-
-This method is not appropriate for organizations that maintain an inventory of industrial gases in storage containers or that use gases to charge equipment on an ongoing basis; for those cases, the material balance methods are more accurate.
-
-**Method 3: Material Balance Method**
-
-The Material Balance Method is the recommended approach for organizations that own and maintain refrigerant-containing equipment and track refrigerant stocks. It calculates emissions as the mass of refrigerant that cannot be accounted for through purchases, sales, and changes in equipment capacity.
-
-<EquationBreakdown
-  title="Material Balance Method"
-  operator="+"
-  result="E | Fugitive Emissions | Mass of refrigerant released to the atmosphere during the reporting period | blue"
-  inputs="(I<sub>B</sub> - I<sub>E</sub>) | Net Inventory Change | Refrigerant in storage at beginning minus end of period - a decrease means refrigerant left storage | green ;; P | Purchases | Refrigerant purchased or otherwise acquired during the period | amber ;; -S | Sales | Refrigerant sold or otherwise disposed of during the period (subtracted) | violet ;; (C<sub>B</sub> - C<sub>E</sub>) | Net Capacity Change | Total equipment capacity at beginning minus end of period - a decrease means equipment was retired or downsized | rose"
-/>
-
-This equation is applied separately for each type of refrigerant. The resulting mass of emissions is multiplied by the refrigerant's GWP to get CO2-equivalent emissions. The method captures all net flows of refrigerant: what was brought in, what left in containers or equipment, and the net change in what the equipment was designed to hold.
-
-**Method 4: Simplified Material Balance Method**
-
-The Simplified Material Balance Method is appropriate for organizations that do not maintain their own stock of refrigerants and instead rely on service contractors for all equipment servicing. In these cases, the organization has fewer data flows to track because it does not hold refrigerant in storage.
-
-<EquationBreakdown
-  title="Simplified Material Balance Method"
-  operator="+"
-  result="E | Fugitive Emissions | Mass of refrigerant released to the atmosphere during the reporting period | blue"
-  inputs="(P<sub>N</sub> - C<sub>N</sub>) | Installation Losses | Refrigerant purchased to charge new equipment minus total capacity of that new equipment (omit C<sub>N</sub> if pre-charged) | green ;; P<sub>S</sub> | Service Purchases | Refrigerant purchased to service existing equipment, replacing operational leaks | amber ;; (C<sub>D</sub> - R<sub>D</sub>) | Disposal Losses | Total capacity of equipment disposed of minus refrigerant recovered from retiring equipment | violet"
-/>
-
-The three terms represent the three emission events: net losses during installation (P<sub>N</sub> minus C<sub>N</sub>), operating losses replaced by service purchases (P<sub>S</sub>), and disposal losses (capacity at retirement minus what was recovered). This method requires service contractors to record and report the quantities they charge to and recover from equipment.
-
-## Choosing the Right Method
+Different markets have developed different certificate systems. As a practitioner, you will encounter three main types:
 
 <ResponsiveTable>
 <table>
-  <thead>
-    <tr>
-      <th>Method</th>
-      <th>Best for</th>
-      <th>Data required</th>
-      <th>Accuracy</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Screening Method</td>
-      <td>Initial materiality assessment; organizations with minimal refrigeration</td>
-      <td>Equipment type, capacity, generic leak rates</td>
-      <td>Low</td>
-    </tr>
-    <tr>
-      <td>Method for Purchased Gases</td>
-      <td>Industrial gas users (welding, lab, SF6 switchgear)</td>
-      <td>Gas purchase records by type</td>
-      <td>Medium</td>
-    </tr>
-    <tr>
-      <td>Material Balance Method</td>
-      <td>Organizations maintaining their own refrigerant inventory</td>
-      <td>Beginning/end stock, purchases, sales, capacity changes</td>
-      <td>High</td>
-    </tr>
-    <tr>
-      <td>Simplified Material Balance</td>
-      <td>Organizations using service contractors for all RAC servicing</td>
-      <td>Refrigerant charged and recovered by contractors</td>
-      <td>High</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th>Certificate Type</th>
+<th>Where It Operates</th>
+<th>Primary Purpose</th>
+<th>Key Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>REC (Renewable Energy Certificate)</td>
+<td>US, Canada, Australia</td>
+<td>RPS compliance + voluntary claims</td>
+<td>Fully aggregated - one REC carries ALL environmental attributes for that MWh</td>
+</tr>
+<tr>
+<td>GO (Guarantee of Origin)</td>
+<td>EU and European Economic Area</td>
+<td>Supplier fuel mix disclosure + voluntary claims</td>
+<td>Relationship to subsidies varies by country - check local rules</td>
+</tr>
+<tr>
+<td>I-REC (International REC)</td>
+<td>Emerging markets (India, Brazil, Turkey, South Africa, etc.)</td>
+<td>Voluntary corporate disclosure</td>
+<td>Standardized tracking for markets without established national systems</td>
+</tr>
+</tbody>
 </table>
 </ResponsiveTable>
 
-## Activity Data and GWP-Based Emission Factors
+All three can be used for market-based Scope 2, provided they meet the Scope 2 Quality Criteria. The certificate can be obtained unbundled (purchased separately from your electricity), bundled with a green tariff, or conveyed through a PPA.
 
-Unlike combustion sources where emission factors convert fuel to CO2, fugitive emission calculations work in mass of gas released. The emission factor applied is the gas's GWP, which converts the physical mass of the released gas into CO2-equivalent tonnes.
+## I-RECs in India
 
-For the Screening Method, IPCC default emission factors provide leak rates and recovery efficiencies by equipment category. For example, medium and large commercial refrigeration systems carry a default annual operating leak rate of 35 percent of capacity per year, and an installation loss factor of 3 percent.
+India has a growing I-REC market, and understanding it is increasingly important for consultants working with Indian corporates.
 
-GWP values are sourced from the EPA GHG Emission Factors Hub, which uses IPCC Fifth Assessment Report (AR5) 100-year GWP values. Organizations should use the most current values available at the time of calculation.
+**How it works:** Renewable energy generators in India register their projects with the I-REC Standard. For every MWh of renewable electricity they generate and feed into the grid, they receive one I-REC. Companies purchase these I-RECs and retire them in the I-REC registry to claim the renewable attributes for their Scope 2 market-based calculation.
 
-## Completeness
+**Why companies buy them:** Indian companies pursuing RE100 targets, SBTi commitments, or ESG ratings need a mechanism to claim renewable energy use. I-RECs provide that mechanism. They are also significantly cheaper than building captive solar or signing long-term open-access PPAs, making them attractive for companies that want to start decarbonizing Scope 2 immediately.
 
-Every piece of refrigeration, AC, or fire suppression equipment within the operational boundary must be accounted for. For organizations using the Screening Method, each piece of equipment of each type must be inventoried. For the Material Balance Methods, all refrigerant types and blends used across all equipment must be tracked separately.
+**What to watch out for:** I-REC prices in India have historically been low (sometimes under $1/MWh), which raises questions about whether the purchase drives new renewable capacity. For companies facing stakeholder scrutiny on additionality, pairing I-RECs with a direct PPA or captive solar investment tells a stronger story. Also verify that the I-RECs match your reporting period vintage and are sourced from the Indian market - cross-border I-RECs do not meet the market boundary criterion.
 
-A practical completeness check is to compare the refrigerant inventory against equipment lists, maintenance contracts, and insurance records. If a third party manages any refrigerant tracking (for example, a property management company handling building AC), that party must provide the necessary data.
+## The 8 Scope 2 Quality Criteria
+
+Not every piece of paper claiming to be a "green certificate" qualifies for your market-based Scope 2 calculation. The GHG Protocol established eight quality criteria that contractual instruments must meet. Think of this as your checklist before accepting any instrument:
+
+<ResponsiveTable>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Criterion</th>
+<th>What to Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Conveys GHG emission rate</td>
+<td>Does the instrument carry the direct GHG emission rate of the generation source?</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Unique claim</td>
+<td>Is this the only instrument claiming the GHG attributes for that MWh? No competing claims?</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Tracked and retired</td>
+<td>Has the instrument been retired in a recognized registry on behalf of the reporting entity?</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Vintage matching</td>
+<td>Was the energy generated within (or close to) the reporting period? Ideally same year, up to 6 months before or 3 months after.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Same market boundary</td>
+<td>Is the certificate from the same market where your electricity-consuming operations are located?</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Supplier EF based on delivered electricity</td>
+<td>If using a supplier emission factor, does it reflect full delivered electricity including certificate retirements?</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Verified sole ownership</td>
+<td>Where certificates do not exist, is the contract verified to convey a sole right to claim the GHG emission rate?</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Residual mix available</td>
+<td>Is a residual mix factor published for this market? If not, have you disclosed its absence?</td>
+</tr>
+</tbody>
+</table>
+</ResponsiveTable>
+
+If an instrument fails any criterion, you cannot use it for market-based Scope 2. Fall back to the next available factor in the emission factor hierarchy (supplier rate, residual mix, or grid average).
+
+## Offsets Are Not Certificates
+
+One paragraph, because this confusion persists: Carbon offsets and energy attribute certificates are completely different instruments. An offset represents avoided emissions elsewhere in the world, measured in tonnes of CO2e. A certificate represents the generation attributes of a specific MWh of electricity. Offsets cannot be used to reduce your Scope 2 total. If your company buys offsets, report them separately, outside the scopes. A single MWh of renewable generation generally cannot produce both a certificate and an offset - the same attributes cannot serve two purposes.
+
+## What Your Scope 2 Disclosure Must Contain
+
+The GHG Protocol sets clear requirements for what goes into a Scope 2 report. Here is the mandatory list:
+
+**If you operate only in markets without contractual instruments:**
+- One Scope 2 total (location-based method), in metric tonnes CO2e
+
+**If you operate in any market with contractual instruments (most companies):**
+- Location-based Scope 2 total, in metric tonnes CO2e
+- Market-based Scope 2 total, in metric tonnes CO2e
+- Each result clearly labelled by method
+- The category of instruments used (certificates, contracts, supplier rates, residual mix)
+- Base year and base-year methodology
+- Which method is used for goal-setting
+- Total electricity consumption (recommended, in MWh)
+- Biogenic CO2 reported separately (if applicable)
 
 <ExampleBox>
-**Example: Why SF6 leaks matter**
+**What good Scope 2 disclosure actually looks like**
 
-A utility company operates electrical switchgear containing 100 kg of SF6. A small leak releases 2 kg during the reporting year (a 2 percent annual leak rate).
+"In FY2024, TechCorp consumed 12,400 MWh of electricity across 8 offices in India, the UK, and the US. Our location-based Scope 2 emissions totaled 5,830 tCO2e, calculated using CEA combined margin factors for India (0.713 tCO2/MWh), Defra 2024 factors for the UK (0.207 tCO2/MWh), and EPA eGRID subregional factors for the US (0.31-0.42 tCO2/MWh depending on subregion).
 
-Physical leak: 2 kg SF6
+Our market-based Scope 2 emissions totaled 2,150 tCO2e. This reflects the retirement of 5,000 I-RECs (India, solar, vintage 2024) covering our Mumbai and Bangalore offices, and a Green-e certified wind REC purchase covering our US operations. Our UK office uses a GO-backed 100% renewable tariff from its supplier. Our Delhi and Hyderabad offices have no contractual instruments and use the CEA grid factor for market-based reporting.
 
-CO2-equivalent: 2 kg x 23,500 GWP = 47,000 kg CO2e = 47 metric tonnes CO2e
+Our SBTi target is tracked against the market-based total. Base year is FY2022, calculated using the same methodology."
 
-For comparison, burning approximately 885 litres of diesel produces the same CO2-equivalent warming impact. A small, almost undetectable SF6 leak is equivalent in climate terms to a significant diesel fuel purchase.
+This disclosure hits every required element: both totals, instrument types, emission factor sources, base year, and goal-setting method.
 </ExampleBox>
 
-<DeepDive title="What happened to CFCs and HCFCs?">
-Historically, refrigeration and AC equipment used ozone-depleting substances (ODSs): primarily chlorofluorocarbons (CFCs) and hydrochlorofluorocarbons (HCFCs). Under the Montreal Protocol and the U.S. Clean Air Act Title VI, these substances are being phased out of production and use.
+## Instrument Feature Disclosure
 
-CFCs and HCFCs are excluded from most GHG inventories because their global warming impact is complicated by their stratospheric ozone-depleting properties. The GHG Protocol allows them to be reported as separate memo items, with no GWP applied and no contribution to the CO2-equivalent total.
+Beyond the required elements, the guidance recommends disclosing features of the instruments you claim. This matters because a REC from a 30-year-old hydro plant carries different implications than one from a newly built wind farm.
 
-HFCs were introduced as non-ozone-depleting replacements for CFCs and HCFCs. They do not deplete ozone but do have significant GWPs and are fully included in GHG inventories. Organizations that switched from ODSs to HFCs may see their GHG inventory increase because HFCs, unlike the ODSs they replaced, are counted in the total. This transition effect should be documented to explain year-over-year changes to stakeholders.
+Useful features to disclose:
+
+- **Certification label** - Green-e Energy, EKOenergy, or other third-party certification
+- **Energy resource type** - wind, solar, hydro, biomass, or "mix"
+- **Facility location** - country, state, or grid region
+- **Facility age** - year the generation facility was commissioned or repowered
+- **Relationship to regulatory requirements** - is this purchase above the supplier's quota obligations?
+
+<ExampleBox>
+**Example: Good instrument feature disclosure**
+
+A company purchases 50,000 MWh of RECs annually to match its US operations. Its disclosure states: the certificates are Green-e Energy certified; they represent wind generation from a facility commissioned in 2022; the facility is located in ERCOT (Texas); the purchase is surplus to any state RPS obligation; no emissions allowances have been retired alongside the certificates. This tells stakeholders far more than simply reporting a zero market-based emission factor.
+</ExampleBox>
+
+<DeepDive title="How policy context affects certificate value">
+The environmental significance of a certificate depends on the policy context where the generator operates. Three interactions matter:
+
+**Supplier quotas (RPS/renewable targets):** If a government already requires your supplier to deliver a percentage of renewable electricity, buying that same renewable product as a "voluntary" purchase does not create incremental demand. Voluntary purchases that are surplus to quota obligations carry more weight.
+
+**Subsidy receipt:** In some countries (notably Germany under feed-in tariffs), renewable generators receiving public subsidies must have their attributes allocated as a public benefit. The attributes are not available for individual voluntary claims. Check whether the generator behind your certificate receives subsidies that restrict attribute transfer.
+
+**Emissions trading schemes:** In capped power sectors (EU ETS), whether voluntary renewable procurement reduces overall sector emissions depends on whether allowances are retired alongside certificates. Without allowance retirement, the cap may allow the saved emissions to be emitted elsewhere.
+
+These interactions mean that identical certificates in different jurisdictions can carry very different real-world significance. Transparent disclosure lets stakeholders make that assessment.
 </DeepDive>
+
+## Your Scope 2 Reporting Checklist
+
+Before you finalize any Scope 2 section of a GHG inventory, run through this list:
+
+1. Have you reported total electricity consumption in MWh?
+2. Have you calculated a location-based total using grid average emission factors?
+3. If contractual instruments exist in any market you operate in, have you also calculated a market-based total?
+4. Are both totals clearly labelled by method?
+5. Have you disclosed which instruments you used and their key features?
+6. Have you specified which method your reduction target is based on?
+7. Have you disclosed your base year and base-year calculation methodology?
+8. If certificates do not cover all consumption, have you used the correct fallback factors?
+9. Have you confirmed that all certificates meet the 8 Quality Criteria?
+10. Are offsets reported separately, outside the scopes?
+
+Get these right, and your Scope 2 disclosure will withstand third-party verification. Get them wrong, and you will be fielding questions from auditors.

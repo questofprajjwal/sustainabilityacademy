@@ -1,44 +1,26 @@
-- question: "Which greenhouse gases are produced by stationary combustion sources?"
+- question: "A manufacturer consumes 10,000 MWh on a coal-heavy grid (0.75 tCO2e/MWh) and holds wind energy certificates covering all 10,000 MWh. What must they report?"
   options:
-    - "CO2 only"
-    - "CO2 and CH4 only"
-    - "CO2, CH4, and N2O"
-    - "CO2, CH4, N2O, and HFCs"
+    - "Only the market-based figure: 0 tCO2e"
+    - "Only the location-based figure: 7,500 tCO2e"
+    - "Both: location-based 7,500 tCO2e AND market-based 0 tCO2e"
+    - "The average of both: 3,750 tCO2e"
   answer: 2
-  explanation: "Stationary combustion produces CO2, CH4, and N2O. HFCs, PFCs, and SF6 are not products of combustion — they arise from refrigeration and industrial gas use and are accounted for separately as fugitive emissions."
+  explanation: "The GHG Protocol's dual reporting rule requires both a location-based and a market-based Scope 2 total whenever contractual instruments (RECs, GOs, I-RECs) exist in any market where the company operates. The two totals are never added, averaged, or netted - each represents a different way of allocating emissions. Location-based shows physical grid reality; market-based shows procurement impact."
 
-- question: "A company burns natural gas in a boiler. Utility bills show 61,500 therms consumed. Converted to energy, that is 6,150 MMBtu. Using the EPA default CO2 factor of 53.06 kg CO2/MMBtu, what are the approximate CO2 emissions?"
+- question: "A company installs rooftop solar panels but sells the I-RECs generated from that solar electricity to another buyer. For their own Scope 2 inventory, how should they treat the on-site solar consumption?"
   options:
-    - "61.5 metric tonnes CO2"
-    - "326 metric tonnes CO2"
-    - "530 metric tonnes CO2"
-    - "3,263 metric tonnes CO2"
+    - "Report it as zero-emission electricity since it is generated on their own roof"
+    - "Treat it as grid-average electricity for their market-based calculation since they sold the environmental claim"
+    - "Exclude it from the inventory entirely since it is on-site generation"
+    - "Report it as Scope 1 with zero emissions"
   answer: 1
-  explanation: "6,150 MMBtu × 53.06 kg CO2/MMBtu = 326,319 kg CO2 ÷ 1,000 = 326.3 metric tonnes CO2. Note: 1 therm = 0.1 MMBtu, so 61,500 therms = 6,150 MMBtu."
+  explanation: "When you sell the RECs or I-RECs from your on-site solar, you transfer the environmental attributes to the buyer. You can no longer claim that electricity as zero-emission. For your market-based Scope 2 calculation, that solar consumption must be treated as if it came from the grid (using grid-average or residual mix factors). You cannot sell the certificate and keep the claim - it is one or the other."
 
-- question: "Equation 3 for stationary combustion (Emissions = Fuel × CC × 44/12) uses the ratio 44/12 because:"
+- question: "A company has a diesel generator on its premises that provides backup power during grid outages. How should emissions from this generator be classified?"
   options:
-    - "44 is the molecular weight of CO2 and 12 is the atomic weight of carbon"
-    - "44 percent of CO2 is carbon and 12 percent is oxygen"
-    - "These are the default heat content values for natural gas"
-    - "44/12 is the EPA conversion factor for MMBtu to metric tonnes"
-  answer: 0
-  explanation: "CO2 has a molecular weight of 44 (12 for carbon + 16 × 2 for two oxygen atoms). Carbon has an atomic weight of 12. The ratio 44/12 converts the mass of carbon in the fuel directly to the mass of CO2 produced when that carbon is fully oxidised."
-
-- question: "Why is CO2 from biomass combustion treated differently from fossil CO2 in a GHG inventory?"
-  options:
-    - "Biomass CO2 has a lower GWP than fossil CO2"
-    - "Biomass CO2 must be reported separately and is excluded from the CO2-equivalent total under current guidance"
-    - "Biomass combustion does not actually produce CO2"
-    - "Biomass CO2 is counted under Scope 2, not Scope 1"
+    - "Scope 2 - it generates electricity consumed on-site"
+    - "Scope 1 - the company owns and controls the combustion source"
+    - "Scope 3 - backup power is not part of regular operations"
+    - "Split between Scope 1 (fuel) and Scope 2 (electricity generated)"
   answer: 1
-  explanation: "The GHG Protocol requires biomass CO2 to be reported separately as 'biomass CO2 emissions' and not included in the CO2-equivalent total. However, CH4 and N2O from biomass combustion ARE included in the CO2e total."
-
-- question: "CEMS (Continuous Emissions Monitoring Systems) is the most accurate approach for CO2, but has a key limitation. What is it?"
-  options:
-    - "CEMS can only be used at facilities larger than 1,000 MMBtu/hr"
-    - "CEMS cannot measure CH4 or N2O, so fuel analysis must supplement it for those gases"
-    - "CEMS data cannot be used directly in a corporate GHG inventory"
-    - "CEMS only works with natural gas, not liquid fuels or coal"
-  answer: 1
-  explanation: "CEMS continuously measures CO2 in flue gas but cannot measure CH4 or N2O. The fuel analysis method must be used alongside CEMS for these gases. Where CEMS data meets Title IV or GHGRP quality standards, those exact figures should be used in the corporate inventory."
+  explanation: "Scope 2 covers purchased electricity from sources outside your organizational boundary. A diesel generator that you own and control on your premises is within your boundary - its emissions are Scope 1 (direct combustion), not Scope 2. The fact that it generates electricity is irrelevant; the test is ownership and control of the source, not the form of energy produced."

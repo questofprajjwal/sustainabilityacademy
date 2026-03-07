@@ -1,132 +1,168 @@
-{/* source: EPA Center for Corporate Climate Leadership, Direct Emissions from Mobile Combustion Sources (December 2023), Sections 1-5 */}
+{/* source: GHG Protocol Scope 2 Guidance, Chapter 6 (pp. 42-57); EPA GHG Inventory Guidance: Indirect Emissions from Purchased Electricity */}
 
-Mobile combustion covers GHG emissions from fuel burned in vehicles and equipment that move. The defining characteristic is not the fuel type but the fact that the source is mobile: it can travel from location to location. For Scope 1 reporting, the key question is not what moves, but who owns or controls it.
+You have electricity bills from 5 offices, a factory floor that buys steam from a district system, and a warehouse with rooftop solar. Here is exactly what to do to turn all of that into Scope 2 numbers.
 
-## What Counts as a Mobile Source
+The calculation itself is multiplication. The hard part is getting the inputs right - making sure your activity data is complete and your emission factors match the right method. This lesson walks through the practical workflow from raw data to reported totals.
 
-Mobile combustion sources include on-road vehicles (cars, trucks, buses, vans, pickup trucks, SUVs) and non-road vehicles and equipment (aircraft, ships, boats, locomotives, forklifts, construction equipment, agricultural equipment). Any of these that combust fuel generate CO2, CH4, and N2O emissions.
+## The Core Formula
 
-Two important exclusions apply to mobile sources under this guidance:
+Every Scope 2 calculation comes down to one equation:
 
-1. Electric vehicles and plug-in hybrids running on electricity do not generate combustion emissions. Their electricity consumption is accounted for under Scope 2.
-2. Refrigerant leakage from mobile air conditioning systems (truck refrigeration units, car AC) is a fugitive emission, not a combustion emission, and is quantified separately under fugitive emissions guidance.
+<EquationBreakdown
+  title="Scope 2 Emissions Calculation"
+  result="E<sub>Scope 2</sub> | Scope 2 Emissions | Total indirect emissions from purchased energy, in metric tonnes CO2e | blue"
+  inputs="AD | Activity Data | Quantity of electricity, heat, steam, or cooling purchased and consumed (MWh) | green ;; EF | Emission Factor | CO2e emitted per unit of energy consumed (tCO2e/MWh) | amber"
+/>
 
-## Scope 1 vs Scope 3: The Ownership Boundary
+You run this equation twice - once with the location-based emission factor and once with the market-based emission factor - for every facility. Then you roll up the facility-level results to get corporate totals.
 
-The most important classification decision for mobile sources is the scope boundary.
+## Step 1: Gather Your Activity Data
+
+Activity data is the quantity of energy purchased and consumed during the reporting period. For electricity, this is measured in kWh or MWh. For steam and heat, it may be in GJ, MMBtu, or mass units (tonnes of steam).
+
+**Where to get it:**
+
+The best source is utility bills or purchase records at the meter point. Pull 12 months of bills for each facility, sum up the total kWh consumed, and convert to MWh (divide by 1,000).
+
+If bills are missing for some months, estimate using the average of available months - but document this and keep the estimated share below 10 percent of total consumption.
 
 <HighlightBox>
-**Scope 1:** Fuel combustion in vehicles owned or controlled by the reporting organization. This includes company-owned cars, delivery trucks, forklifts, company aircraft, and vessels.
+**What your electricity bill actually tells you**
 
-**Scope 3:** Transportation-related emissions that are not owned or controlled by the organization. This includes employee-owned vehicles used for business travel and commuting, third-party logistics providers, and contracted freight.
+A commercial electricity bill typically shows: billing period dates, meter number, consumption in kWh (sometimes broken into peak/off-peak), demand charges in kW, and the total amount billed. For Scope 2, you need the **total kWh consumed** - not the cost, not the demand, not the rate category.
+
+Watch out for net metering: if your building has rooftop solar, the bill may show net consumption (grid purchases minus solar exports). You need **gross purchases** - the total drawn from the grid, before netting out any exports. Ask your utility for gross consumption data if the bill only shows net.
 </HighlightBox>
 
-The test is operational control or ownership, not the purpose of the trip. A company-owned delivery truck making a customer delivery is Scope 1. An employee driving their own car to a client meeting is Scope 3, Category 6 (business travel) or Category 7 (employee commuting).
+**Critical rule: use gross, not net.** Net metering data from utility bills reflects a billing convention, not your physical gross consumption. If your facility has on-site generation that exports to the grid, net metering will underestimate your Scope 2 activity data.
 
-<AnalogyBox>
-Ownership determines scope for mobile sources in the same way it does for buildings. A company burns gas in a boiler it owns: Scope 1. A company pays a supplier to ship goods in the supplier's truck: Scope 3. The activity is similar, but the control relationship is what matters.
-</AnalogyBox>
+For steam, if your data is in mass units (e.g., tonnes of steam), you need to convert to energy units using standard steam tables based on the steam's pressure and temperature. Your steam supplier should be able to provide the energy content per unit of steam delivered.
 
-## Greenhouse Gases Included
+## Step 2: Determine Which Methods Apply
 
-Mobile combustion produces CO2, CH4, and N2O. For modern on-road vehicles (less than 20 years old), CH4 and N2O typically account for less than one percent of total GHG emissions. For older on-road vehicles and for non-road or alternative fuel vehicles such as buses running on compressed natural gas, CH4 and N2O can represent five percent or more of total GHG emissions.
+Ask one question: Does any market where your company operates provide contractual instruments (RECs, GOs, I-RECs, supplier-specific emission rates)?
 
-This difference arises because CH4 and N2O emissions from mobile sources depend heavily on emissions control equipment, particularly the type of catalytic converter fitted, and on vehicle miles traveled. The calculation approach for CH4 and N2O therefore differs from that used for CO2.
+- **Yes** - you must calculate both location-based and market-based totals for the entire corporate inventory
+- **No** - you only need the location-based total
 
-## Biofuels in Mobile Sources
+For most companies operating in the US, EU, India, Australia, Japan, or Latin America, the answer is yes.
 
-Many transport fuels are blends of fossil and biomass-derived components. E10 (10 percent ethanol, 90 percent gasoline) is the default motor gasoline in the United States. E85 contains 51 to 83 percent ethanol. B20 is a blend of 20 percent biodiesel and 80 percent petroleum diesel. Sustainable aviation fuel (SAF) ranges from 10 to 50 percent biofuel by blend.
+## Step 3: Choose Your Emission Factors
 
-The GHG Protocol requires that CO2 from biofuel combustion be reported separately as biomass CO2 and excluded from the CO2-equivalent total. Fossil CO2 from the same blend is included in the inventory. CH4 and N2O from biofuel combustion are included in the CO2-equivalent total regardless of fuel origin.
+This is where the two methods diverge.
 
-In practice, organizations should use the blend percentage to estimate the fossil and biofuel portions. If blend data is unavailable and a vehicle uses gasoline, organizations may assume 10 percent ethanol as the default. For flex-fuel vehicles where the actual fuel type is unknown, fossil fuel should be assumed.
+### Location-Based Emission Factor Hierarchy
 
-## Calculating CO2 Emissions
+Pick the most geographically precise factor available:
 
-CO2 emissions from mobile sources are calculated using the same three-equation fuel analysis framework as stationary combustion. The approach depends on what is known about fuel characteristics:
+1. **Direct line emission factor** - if electricity comes through a direct wire from a known generator (e.g., an industrial park supplier)
+2. **Regional or subnational factor** - for grid-purchased electricity. In the US, use EPA eGRID subregion total output emission rates. In the UK, use Defra's annual grid factor
+3. **National factor** - when regional data is unavailable. The IEA publishes country-level factors
 
-<EquationBreakdown
-  title="Equation 1 - CO₂ from Fuel Volume/Mass (least preferred)"
-  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
-  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units (e.g., litres, gallons, kg) | green ;; EF<sub>1</sub> | Emission Factor | CO₂ emission factor per mass or volume unit of fuel (e.g., kg CO₂/litre) | amber"
-/>
+Always use the most recent factor available at the time you calculate.
 
-<EquationBreakdown
-  title="Equation 2 - CO₂ from Fuel Energy Content (preferred)"
-  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
-  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; HHV | Higher Heating Value | Energy content per mass or volume unit of fuel (e.g., MMBtu/litre) | amber ;; EF<sub>2</sub> | Emission Factor | CO₂ emission factor per energy unit (e.g., kg CO₂/MMBtu) | violet"
-/>
+### Market-Based Emission Factor Hierarchy
 
-<EquationBreakdown
-  title="Equation 3 - CO₂ from Carbon Content (most preferred)"
-  result="E<sub>CO₂</sub> | CO₂ Emissions | Total CO₂ released from combustion, in kg or tonnes | blue"
-  inputs="Fuel | Fuel Consumed | Quantity of fuel burned in mass or volume units | green ;; CC | Carbon Content | Mass of carbon per mass or volume unit of fuel | amber ;; 44/12 | Molecular Weight Ratio | Ratio of CO₂ molecular weight to carbon atomic weight, converting carbon mass to CO₂ mass | violet"
-/>
+Move down this list until you find data that applies:
 
-For diesel, the EPA default CO2 emission factor is 2.68 kg CO2/litre (10.15 kg CO2/gallon). For petrol/gasoline, the factor is 2.35 kg CO2/litre (8.87 kg CO2/gallon). These per-volume factors are used with Equation 1.
+1. **Energy attribute certificates** (RECs, GOs, I-RECs) that meet Scope 2 Quality Criteria - emission factor is typically 0 for renewables
+2. **Contracts** (PPAs) for electricity from specified sources, in markets without certificates
+3. **Supplier-specific emission rates** - the GHG intensity your utility reports for its delivered product
+4. **Residual mix factor** - what remains after all certificate claims are removed from the grid mix
+5. **Grid average factor** - last resort, same as location-based
 
-## Calculating CH4 and N2O Emissions
+<HighlightBox>
+**Residual mix** is the emission factor for "unclaimed" electricity - what is left after all certificates, contracts, and supplier claims have been subtracted from the grid total. It prevents double counting. Where no residual mix is published, use the grid average and disclose that you did so.
+</HighlightBox>
 
-CH4 and N2O emissions from mobile sources are calculated using one of two equations, depending on vehicle type:
+## Step 4: Match Factors to Consumption
 
-<EquationBreakdown
-  title="Equation 4 - Distance-Based (for on-road vehicles)"
-  result="E<sub>CH₄/N₂O</sub> | CH₄ or N₂O Emissions | Mass of CH₄ or N₂O emitted from on-road mobile combustion | blue"
-  inputs="D | Distance Traveled | Vehicle-miles or vehicle-kilometers traveled during the reporting period | green ;; EF<sub>4</sub> | Emission Factor | CH₄ or N₂O emission factor per distance unit, by vehicle type and model year | amber"
-/>
+Each facility's electricity consumption must be matched with the appropriate emission factor. If certificates cover only part of a facility's consumption, the remainder uses the next available factor in the hierarchy.
 
-<EquationBreakdown
-  title="Equation 5 - Fuel-Based (for non-road vehicles)"
-  result="E<sub>CH₄/N₂O</sub> | CH₄ or N₂O Emissions | Mass of CH₄ or N₂O emitted from non-road mobile combustion | blue"
-  inputs="Fuel | Fuel Consumed | Volume of fuel combusted by non-road vehicles (e.g., litres, gallons) | green ;; EF<sub>5</sub> | Emission Factor | CH₄ or N₂O emission factor per volume unit, by fuel type | amber"
-/>
+For example, if your Mumbai office consumed 500 MWh and your company retired 200 I-RECs (each representing 1 MWh of renewable energy), then:
 
-Equation 4 applies to on-road vehicles because their CH4 and N2O emissions are strongly influenced by vehicle type and emissions control technology (catalytic converter design), which are best represented by distance-based factors correlated with model year. Equation 5 applies to non-road vehicles such as aircraft, ships, locomotives, and forklifts, where distance data is less standardized.
+- 200 MWh is covered by I-RECs (market-based EF = 0)
+- 300 MWh uses the residual mix or grid average factor for the remaining consumption
 
-## Choosing Activity Data
+## Step 5: Calculate and Roll Up
 
-Fuel consumption data is the preferred activity data for all CO2 calculations and for CH4 and N2O calculations from non-road vehicles. The most accurate method is to gather data from fuel receipts or purchase records. For vehicles fueled at commercial stations, this is typically obtained through fuel card records. For on-site fueling, it comes from delivery records.
-
-For on-road vehicles, distance traveled is additionally required for CH4 and N2O calculations using Equation 4. Distance data should be in vehicle-miles or vehicle-kilometers (not passenger-miles, which are used for Scope 3 transport). The best source is vehicle odometer readings, obtainable from operator logs or vehicle maintenance records.
-
-If fuel use data is unavailable, fuel economy factors can convert distance to fuel consumption. The recommended source for on-road vehicles is fueleconomy.gov, using the combined city-highway mpg value for the specific vehicle make, model, and year. Estimating from fuel economy is less accurate than direct fuel records but is preferable to estimating from fuel cost alone.
-
-For heavy-duty and non-road vehicles, activity data may be expressed in hours of operation, horsepower-hours, or ton-miles shipped, with fuel consumption rates available from vehicle suppliers or manufacturer documentation.
-
-## Completeness
-
-A complete mobile combustion inventory captures all vehicles and equipment within the organization's operational boundary. To verify completeness, the inventory list should be compared against fleet management records and insurance records. Vehicle types that must be considered include: passenger cars, vans, pickup trucks and SUVs; heavy-duty on-road trucks; combination trucks; buses; aircraft; ships and boats; locomotives; forklifts; construction equipment; and agricultural equipment.
+Multiply each facility's consumption by its emission factor for each method. Then sum all facility results to get corporate totals.
 
 <ExampleBox>
-**Example: Freight truck fleet**
+**Example: Three-office company**
 
-A logistics company operates 50 diesel trucks, each traveling 120,000 km per year, consuming approximately 1,000 litres of diesel per truck per year.
+| Office | Consumption | Location-Based EF | Market-Based EF | Location Result | Market Result |
+|--------|------------|-------------------|-----------------|----------------|---------------|
+| Delhi | 800 MWh | 0.713 tCO2/MWh | 0.713 (no instruments) | 570.4 tCO2 | 570.4 tCO2 |
+| Mumbai | 500 MWh | 0.713 tCO2/MWh | 0 (I-RECs for full amount) | 356.5 tCO2 | 0 tCO2 |
+| London | 200 MWh | 0.207 tCO2/MWh | 0 (GO-backed green tariff) | 41.4 tCO2 | 0 tCO2 |
 
-Total diesel consumed: 50 trucks x 1,000 litres = 50,000 litres
+**Corporate location-based Scope 2: 968.3 tCO2**
 
-CO2 emissions (Equation 1):
-50,000 litres x 2.68 kg CO2/litre = 134,000 kg CO2 = 134 metric tonnes CO2
+**Corporate market-based Scope 2: 570.4 tCO2**
 
-For CH4 and N2O, the company applies distance-based emission factors by truck model year from the EPA GHG Emission Factors Hub, multiplied by total vehicle-kilometers traveled, then converted to CO2e using GWP values.
+The Delhi office has no instruments, so its market-based result equals location-based. Mumbai and London both hold certificates, so their market-based result drops to zero.
 </ExampleBox>
 
 <CalculationExercise
-  question="A company's truck fleet consumes 50,000 litres of diesel during the reporting year. Using an EPA CO2 emission factor of 2.68 kg CO2/litre, what are the total CO2 emissions in metric tonnes?"
-  answer={134}
-  unit="tCO2"
+  question="A facility consumes 2,000,000 kWh of electricity in a reporting year. The location-based grid emission factor is 0.45 kg CO2e per kWh. What are the location-based Scope 2 emissions in metric tonnes CO2e?"
+  answer={900}
+  unit="tCO2e"
   hints={[
-    "Multiply total fuel volume (litres) by the CO2 emission factor (kg CO2/litre) to get total kg.",
-    "Divide kg by 1,000 to convert to metric tonnes. So: 50,000 x 2.68 / 1,000 = ?"
+    "Convert the emission factor to metric tonnes: 0.45 kg CO2e/kWh = 0.00045 tCO2e/kWh.",
+    "Multiply consumption by the emission factor: 2,000,000 kWh x 0.00045 tCO2e/kWh.",
+    "Alternatively: 2,000,000 kWh x 0.45 kg CO2e/kWh = 900,000 kg CO2e = 900 tCO2e."
   ]}
-  solution="50,000 litres x 2.68 kg CO2/litre = 134,000 kg CO2. Dividing by 1,000 gives 134 metric tonnes CO2."
+  solution="2,000,000 kWh x 0.45 kg CO2e/kWh = 900,000 kg CO2e = 900 metric tonnes CO2e. This is the location-based Scope 2 result."
 />
 
-<DeepDive title="Handling biofuel blends in practice">
-When a fleet operates on blended fuels such as B20, organizations should separate the fossil and biomass fuel volumes before applying emission factors.
+## Indian Calculation: Location-Based
 
-For a vehicle consuming 10,000 litres of B20:
-- Fossil diesel portion: 10,000 x 0.80 = 8,000 litres, apply fossil CO2 emission factor (included in inventory)
-- Biodiesel portion: 10,000 x 0.20 = 2,000 litres, apply biomass CO2 emission factor (reported separately, excluded from CO2e total)
+<CalculationExercise
+  question="Your client has 4 offices across India consuming a total of 1,500 MWh. Using the CEA grid emission factor of 0.713 tCO2/MWh, calculate location-based Scope 2 emissions."
+  answer={1069.5}
+  tolerance={1}
+  unit="tCO2"
+  hints={[
+    "This is a straightforward multiplication: total consumption x grid emission factor.",
+    "1,500 MWh x 0.713 tCO2/MWh = ?"
+  ]}
+  solution="1,500 MWh x 0.713 tCO2/MWh = 1,069.5 tCO2. Since all offices are in India and we are using the national CEA factor, we apply the same factor to the total consumption."
+/>
 
-If the exact blend ratio is unknown, the most recent blend percentage data from the fuel supplier should be requested. For gasoline vehicles where blend data is unavailable, a 10 percent ethanol assumption (E10) is the recommended default per EPA guidance.
+## Indian Calculation: Market-Based with I-RECs
+
+<CalculationExercise
+  question="Same client (1,500 MWh total) buys 500 I-RECs (1 I-REC = 1 MWh of renewable energy, emission factor = 0). What is their market-based Scope 2? The remaining 1,000 MWh uses the grid factor of 0.713 tCO2/MWh."
+  answer={713}
+  unit="tCO2"
+  hints={[
+    "Split the consumption: 500 MWh is covered by I-RECs (EF = 0), and 1,000 MWh uses the grid factor.",
+    "Market-based = (500 x 0) + (1,000 x 0.713) = ?"
+  ]}
+  solution="500 MWh x 0 tCO2/MWh (I-REC covered) + 1,000 MWh x 0.713 tCO2/MWh (grid) = 0 + 713 = 713 tCO2. The I-RECs eliminated emissions for one-third of consumption. Compared to the location-based total of 1,069.5 tCO2, the market-based method shows a 33% reduction from renewable procurement."
+/>
+
+## Handling Steam, Heat, and Cooling
+
+The same formula and hierarchies apply. The practical differences:
+
+**Steam and heat:** If your supplier provides an emission factor per GJ of steam delivered, use it. If not, estimate it as: emission factor of the fuel used for generation divided by the thermal efficiency of the boiler. For steam where condensate is returned to the supplier, use the net energy delivered (check steam tables for the enthalpy difference).
+
+**Cooling:** If purchased cooling comes from an electric chiller, the emission factor equals the electricity emission factor divided by the chiller's coefficient of performance (COP). A COP of 3.0 means the chiller produces 3 units of cooling per 1 unit of electricity consumed.
+
+<DeepDive title="Combined Heat and Power (CHP) allocation">
+When your company purchases electricity or steam from a CHP plant, the supplier must allocate its total combustion emissions between the two energy outputs. This allocation affects the emission factor you receive.
+
+Common allocation methods include the efficiency method (allocating based on the efficiency of producing each output separately) and the energy content method (allocating based on the energy content of each output). The GHG Protocol publishes specific CHP allocation guidance. As the purchaser, your job is to confirm with the CHP supplier that they follow best practices for allocation - you do not need to do the allocation yourself.
 </DeepDive>
+
+## Biofuel in the Grid Mix
+
+One sentence you need to know: for grid electricity generated from biomass combustion, CH4 and N2O emissions are included in Scope 2, but biogenic CO2 is reported separately from the scopes. Most published grid emission factors (like EPA eGRID) already handle this correctly - they include biomass CH4 and N2O but exclude biomass CO2.
+
+## Rolling Up to Corporate Level
+
+Once you have facility-level results for both methods, aggregate them into two corporate totals: one location-based, one market-based. Use the same emission factor vintage across comparable operations. Document any estimation methods used and the percentage of total consumption that was estimated.
+
+Report final Scope 2 in metric tonnes CO2e. Where possible, also report the individual GHG components (CO2, CH4, N2O) separately. And always report total electricity consumption in MWh alongside the emission totals - this gives stakeholders context for interpreting the numbers.

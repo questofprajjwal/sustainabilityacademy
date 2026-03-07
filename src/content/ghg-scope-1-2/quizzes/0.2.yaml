@@ -1,44 +1,26 @@
-- question: "Which of the five GHG accounting principles requires that emission sources within the chosen boundary be accounted for, with any exclusions disclosed and justified?"
+- question: "A retail chain reports a 12% emissions reduction but also switched from location-based to market-based electricity accounting that year. Which principle did they most likely violate?"
   options:
-    - "Accuracy"
-    - "Transparency"
-    - "Completeness"
+    - "Relevance - they measured the wrong sources"
+    - "Completeness - they left out emission sources"
+    - "Consistency - they changed methods without restating historical data"
+    - "Accuracy - their numbers were systematically overstated"
+  answer: 2
+  explanation: "Consistency requires using the same methods, emission factors, and boundary definitions year to year. When methods change, you must restate the base year so trends remain meaningful. In this case, the apparent 12% reduction was mostly an accounting change (only 3% was real). Without restating the base year under the new method, stakeholders are misled about actual performance."
+
+- question: "The Body Shop operates 2,000 stores across 51 countries. Many stores inside shopping centres cannot get separate energy meters. They used real meter data where available and standardised estimation guidelines (based on floor area, equipment, and hours) for the rest. Which principles does this approach satisfy?"
+  options:
+    - "Accuracy only - estimates are never complete"
+    - "Completeness and accuracy - all stores are included using the best available data"
+    - "Transparency only - they disclosed their method"
+    - "Relevance only - they covered the right sources"
+  answer: 1
+  explanation: "This two-tier approach satisfies both completeness (all 2,000 stores are included, not just the ones with meters) and accuracy (estimates use real parameters like floor area and operating hours, not guesses). Using estimated data is acceptable under the GHG Protocol - but you must disclose that it is estimated, which also satisfies transparency."
+
+- question: "A company reports total emissions of 150,000 tCO2e with no breakdown by scope, source category, or gas. Which principle is most directly violated?"
+  options:
     - "Relevance"
+    - "Completeness"
+    - "Transparency"
+    - "Accuracy"
   answer: 2
-  explanation: "The Completeness principle requires that all GHG emission sources and sinks within the chosen inventory boundary be accounted for and reported. Any specific exclusions must be disclosed and justified."
-
-- question: "The GHG Protocol rejects using a materiality threshold as a basis for completeness. Why?"
-  options:
-    - "Thresholds are too complex to calculate accurately"
-    - "To apply a threshold, the source must first be quantified — at which point most of the benefit is lost anyway"
-    - "Thresholds are only valid for Scope 2 emissions"
-    - "The standard requires all sources to be directly measured, not estimated"
-  answer: 1
-  explanation: "A materiality threshold is technically a predefined negative bias. To confirm a source falls below the threshold, it must first be quantified. Once quantified, the benefit of exclusion is largely gone. Materiality is relevant to verification, not as a licence to exclude sources without quantification."
-
-- question: "What does the Consistency principle primarily enable?"
-  options:
-    - "Accurate real-time monitoring of emissions"
-    - "Meaningful comparison of emissions over time"
-    - "Complete coverage of all Scope 3 categories"
-    - "Independent third-party verification"
-  answer: 1
-  explanation: "Consistency requires that the same methodologies be used across reporting periods, enabling meaningful trend analysis. Without consistent methods, users cannot distinguish genuine performance improvements from accounting changes."
-
-- question: "The Body Shop example in this lesson illustrates which principle?"
-  options:
-    - "The Relevance principle — selecting the right inventory boundary"
-    - "The balance between Accuracy and Completeness"
-    - "The Consistency principle — using the same methods year over year"
-    - "The Transparency principle — disclosing all assumptions"
-  answer: 1
-  explanation: "The Body Shop example shows how to balance Accuracy and Completeness. With nearly 2,000 stores in 51 countries, direct data was often unavailable. The two-tier solution (direct measurement where possible, standardised estimates otherwise) maintained both a complete and more accurate inventory."
-
-- question: "Which statement best describes the Accuracy principle?"
-  options:
-    - "The inventory must use direct measurement equipment for all emission sources"
-    - "The inventory should be precisely calculated to three decimal places"
-    - "Quantification should neither systematically over nor under actual emissions, with uncertainties minimised and disclosed"
-    - "Only site-specific emission factors may be used, never default values"
-  answer: 2
-  explanation: "Accuracy does not mean precision — it means the inventory is not systematically biased in either direction, uncertainties are reduced as far as practicable, and remaining uncertainty is disclosed."
+  explanation: "Transparency requires documenting methods, assumptions, data sources, and results clearly enough that someone else could reproduce the numbers. A single total without scope breakdowns, source categories, or methodology documentation makes the report impossible to verify or evaluate. An auditor cannot check what is not documented."

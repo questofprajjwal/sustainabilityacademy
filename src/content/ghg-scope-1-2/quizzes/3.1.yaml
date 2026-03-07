@@ -1,44 +1,26 @@
-- question: "Scope 2 emissions are best described as:"
+- question: "A company's base year (2021) Scope 1+2 emissions were 80,000 tCO2e. In 2023, it doubled production output at an existing factory, increasing emissions by 15,000 tCO2e. Should the base year be recalculated?"
   options:
-    - "Direct emissions from sources owned or controlled by the company"
-    - "Indirect emissions from the generation of purchased electricity, steam, heat, or cooling consumed by the company"
-    - "All indirect emissions throughout the value chain, including supply chain and product use"
-    - "Emissions from company-owned vehicles and mobile equipment"
-  answer: 1
-  explanation: "Scope 2 covers indirect GHG emissions from the generation of purchased or acquired electricity, steam, heat, or cooling. The emissions physically occur at the power plant or generation facility, not at the company's premises."
+    - "Yes, because the 15,000 tCO2e increase exceeds any reasonable significance threshold"
+    - "Yes, because the production doubled, which is a major operational event"
+    - "No, because increased production at an existing facility is an operational change, not a structural one"
+    - "No, but only if the increase is below the company's significance threshold"
+  answer: 2
+  explanation: "Ramping up production output at an existing facility is an operational change - it represents a genuine change in emissions to the atmosphere. Operational changes are exactly what the base year comparison is designed to capture. Only structural changes (mergers, acquisitions, divestments) trigger recalculation. The size of the increase is irrelevant to this determination."
 
-- question: "Why is Scope 2 particularly important for companies in technology, retail, and manufacturing sectors?"
+- question: "A company made three small acquisitions over two years, each adding roughly 4% to its base year emissions. Using California's Climate Action Registry threshold of 10% (applied cumulatively), when does recalculation become required?"
   options:
-    - "These sectors have no Scope 1 direct emissions"
-    - "For many such companies, Scope 2 can represent the single largest share of their total GHG inventory and is directly responsive to procurement decisions"
-    - "Scope 2 is mandatory for technology companies under the EU ETS"
-    - "These sectors are exempt from Scope 3 reporting, making Scope 2 the only indirect emission category"
-  answer: 1
-  explanation: "The electricity and heat generation sector accounts for at least one-third of global GHG emissions. For many technology, retail, and manufacturing companies, purchased electricity is the dominant energy input, making Scope 2 their largest GHG category — and the most directly addressable through procurement."
+    - "After the first acquisition, since any structural change requires recalculation"
+    - "After the second acquisition, since 8% is close enough to 10%"
+    - "After the third acquisition, since the cumulative impact (12%) exceeds the 10% threshold"
+    - "Never, because each individual acquisition is below 10%"
+  answer: 2
+  explanation: "The significance threshold is applied cumulatively. The first acquisition adds 4%, the second brings the total to 8%, and the third pushes the cumulative impact to 12% - past the 10% threshold. At that point, the base year must be recalculated to include all three acquisitions. Testing each acquisition individually would defeat the purpose of the threshold."
 
-- question: "Which of the following questions did the GHG Protocol Scope 2 Guidance primarily resolve?"
+- question: "A company discovers that electricity meters at its largest facility were miscalibrated, causing Scope 2 emissions to be understated by 7% in the base year. Which of the following is correct?"
   options:
-    - "Whether companies must report CH4 and N2O from electricity generation"
-    - "How renewable energy purchases, green power programs, and supplier-specific emission factors should be handled in a consistent way"
-    - "Whether Scope 2 reporting is mandatory for all companies"
-    - "How to set organisational boundaries for electricity utilities"
+    - "No recalculation needed - emission factor updates and data corrections are routine adjustments"
+    - "Recalculate the base year, because discovery of significant errors is a valid recalculation trigger"
+    - "Only recalculate if the error exceeds the company's significance threshold for structural changes"
+    - "Report the corrected figure for the current year only and note the historical discrepancy"
   answer: 1
-  explanation: "The Scope 2 Guidance resolved three key problems: (1) whether buying from a wind farm reduces a company's Scope 2 figure; (2) which green power instruments legitimately reduce the reported figure; and (3) when to use supplier-specific versus grid-average emission factors."
-
-- question: "Which business goal does the market-based method best serve for Scope 2?"
-  options:
-    - "Assessing GHG intensity risks tied to the physical grid serving a company's facilities"
-    - "Demonstrating the impact of specific procurement choices and engaging with energy supply markets"
-    - "Comparing aggregate GHG performance across a sector"
-    - "Satisfying mandatory regulatory reporting requirements"
-  answer: 1
-  explanation: "The market-based method reflects individual procurement decisions — which electricity product or supplier a company selects. It is most useful for demonstrating the impact of deliberate procurement choices. The location-based method better serves grid intensity risk assessment."
-
-- question: "How does one company's Scope 1 emission relate to another company's Scope 2 emission?"
-  options:
-    - "They are always counted twice, which is a known flaw in the GHG Protocol"
-    - "One company's Scope 1 from energy generation legitimately becomes another company's Scope 2 from purchasing that energy — this cross-company accounting is an intended feature"
-    - "They should be netted against each other to avoid double counting"
-    - "Only the consumer's Scope 2 is reported; the generator excludes it from Scope 1"
-  answer: 1
-  explanation: "Cross-company accounting — generator's Scope 1 becomes consumer's Scope 2 — is a feature of the framework, not a problem. This allows multiple entities along a value chain to consistently report and act on the same physical emissions where they have the most direct influence."
+  explanation: "Discovery of significant errors or improvements in data accuracy that materially change historical figures are explicit recalculation triggers under the GHG Protocol - separate from structural changes. A 7% understatement at the company's largest facility is clearly significant and warrants restating the base year to maintain the integrity of year-over-year comparisons."

@@ -1,44 +1,26 @@
-- question: "Why does a GHG inventory need a base year?"
+- question: "A company reimburses employees for using their personal cars on business trips. The company also owns a fleet of delivery trucks. How should emissions from each be classified?"
   options:
-    - "To set a fixed reference point so that current emissions can be meaningfully compared to historical performance"
-    - "Because all GHG programs require 1990 as the base year"
-    - "To ensure emissions are reported in tonnes rather than other units"
-    - "To satisfy the requirement to report six gases separately"
+    - "Both are Scope 1 - the company pays for both"
+    - "Employee cars are Scope 1 (reimbursement equals control), delivery trucks are also Scope 1"
+    - "Employee cars are Scope 3 (company does not own them), delivery trucks are Scope 1 (company-owned)"
+    - "Employee cars are Scope 3, delivery trucks are Scope 2"
+  answer: 2
+  explanation: "The scope boundary for mobile emissions is based on ownership or operational control, not who pays. Mileage reimbursement does not transfer ownership of the vehicle. Employee-owned cars used for business travel fall under Scope 3 (Category 6). Company-owned delivery trucks are Scope 1. This distinction catches people out constantly."
+
+- question: "A utility company's electrical switchgear leaks 3 kg of SF6 during the year. SF6 has a GWP of 23,500. How many tonnes CO2e should be reported?"
+  options:
+    - "70.5 tCO2e - equivalent to burning about 26,300 litres of diesel"
+    - "23.5 tCO2e - equivalent to burning about 8,800 litres of diesel"
+    - "7.05 tCO2e - equivalent to burning about 2,630 litres of diesel"
+    - "235 tCO2e - equivalent to burning about 87,700 litres of diesel"
   answer: 0
-  explanation: "A base year is the historical reference point against which current emissions are compared. Without a stable base year, it is impossible to assess whether emissions have genuinely risen or fallen, or whether changes simply reflect changes in accounting."
+  explanation: "3 kg SF6 x 23,500 GWP = 70,500 kg CO2e = 70.5 tonnes CO2e. Since diesel produces about 2.68 kg CO2 per litre, this equals roughly 70,500 / 2.68 = 26,306 litres of diesel. This illustrates why fugitive emissions from high-GWP gases cannot be dismissed as negligible - a barely noticeable 3 kg leak has the climate impact of a significant fuel burn."
 
-- question: "When MUST base year emissions be recalculated?"
+- question: "An office building has 10 split AC units, each containing 4 kg of R-410A (GWP = 2,088). An AC contractor's service records show 6 kg of refrigerant was topped up during the year. Using the simplified material balance method, what are the fugitive emissions?"
   options:
-    - "Every time a company updates its emission factors"
-    - "When structural changes (mergers, acquisitions, divestitures) have a significant impact on base year emissions"
-    - "When emissions increase more than 5 percent year-over-year"
-    - "Whenever a new GHG reporting standard is published"
+    - "83.5 tCO2e - based on the total charge of 40 kg times GWP"
+    - "12.5 tCO2e - based on the 6 kg topped up times GWP"
+    - "4.2 tCO2e - based on a 5% default leak rate times total charge times GWP"
+    - "0 tCO2e - refrigerant top-ups are maintenance, not emissions"
   answer: 1
-  explanation: "Base year emissions must be recalculated for structural changes that transfer ownership or control of emission sources between companies, significant methodology changes, and discovery of significant errors. Updating emission factor values alone does not trigger recalculation."
-
-- question: "ENDESA recalculated its base year emissions after selling its stake in the Viesgo power plants. This illustrates:"
-  options:
-    - "An organic growth adjustment — ENDESA's actual emissions changed"
-    - "A structural change recalculation — the divestment transferred existing emission sources to another company"
-    - "A methodology change — ENDESA switched from equity share to operational control"
-    - "A discovery of significant errors in prior year data"
-  answer: 1
-  explanation: "ENDESA's sale of its 87.5 percent holding in Viesgo is a structural change (divestment). The six power plants' emissions were removed from ENDESA's base year, maintaining a comparable historical series that reflects only the operations ENDESA still controls."
-
-- question: "Company C builds a new production line at an existing factory it already owns, causing emissions to increase. How should this be treated?"
-  options:
-    - "Recalculate the base year to include the new production line's projected emissions"
-    - "Report the higher emissions as genuine organic growth — no base year adjustment is required"
-    - "Exclude the new production line until it has been operational for one full year"
-    - "Report only the percentage change, not the absolute increase"
-  answer: 1
-  explanation: "An operational change (new production line at an owned facility) represents real changes in the company's own emissions. These are recorded as genuine increases, not base year adjustments. Only structural changes that transfer existing emission sources between companies require base year recalculation."
-
-- question: "A company may choose a multi-year average as its base year (e.g., an average of three consecutive years). What is the main reason for doing this?"
-  options:
-    - "It is required by all international GHG programs"
-    - "To smooth out unusual fluctuations that would make a single year unrepresentative"
-    - "To make the base year figure larger, giving more room to show reductions"
-    - "To comply with ISO 14064 requirements"
-  answer: 1
-  explanation: "A multi-year average (such as the UK ETS's 1998–2000 average) smooths out anomalies caused by production fluctuations, extreme weather, or one-off events that would make a single year's data unrepresentative of typical performance."
+  explanation: "Under the simplified material balance method, the refrigerant topped up by the contractor equals the amount that leaked (assuming no equipment changes). So the emission is 6 kg x 2,088 GWP = 12,528 kg CO2e = 12.5 tCO2e. This method works well when external contractors handle all servicing - the top-up quantity is your direct measure of leakage."
