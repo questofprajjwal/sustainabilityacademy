@@ -64,6 +64,7 @@ export default function EquationBreakdown({ title, result, inputs, operator = 'Ã
                 ? `${getColor(r.color).border} ${getColor(r.color).bg} ${getColor(r.color).text} opacity-40`
                 : `${getColor(r.color).border} ${getColor(r.color).bg} ${getColor(r.color).text}`
           }`}
+          onClick={() => setHovered(prev => prev === 0 ? null : 0)}
           onMouseEnter={() => setHovered(0)}
           onMouseLeave={() => setHovered(null)}
           dangerouslySetInnerHTML={{ __html: r.symbol }}
@@ -84,6 +85,7 @@ export default function EquationBreakdown({ title, result, inputs, operator = 'Ã
                       ? `${c.border} ${c.bg} ${c.text} opacity-40`
                       : `${c.border} ${c.bg} ${c.text}`
                 }`}
+                onClick={() => setHovered(prev => prev === idx ? null : idx)}
                 onMouseEnter={() => setHovered(idx)}
                 onMouseLeave={() => setHovered(null)}
                 dangerouslySetInnerHTML={{ __html: part.symbol }}
@@ -127,6 +129,7 @@ export default function EquationBreakdown({ title, result, inputs, operator = 'Ã
                     ? `${c.border} ${c.bg} opacity-40`
                     : `${c.border} ${c.bg}`
               }`}
+              onClick={() => setHovered(prev => prev === idx ? null : idx)}
               onMouseEnter={() => setHovered(idx)}
               onMouseLeave={() => setHovered(null)}
             >

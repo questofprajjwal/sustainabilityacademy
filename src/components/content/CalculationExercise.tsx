@@ -116,7 +116,7 @@ export default function CalculationExercise({
               }}
               onKeyDown={(e) => e.key === 'Enter' && handleCheck()}
               placeholder="Enter your answer"
-              className={`w-44 px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-violet-400 ${
+              className={`w-full sm:w-44 px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-violet-400 ${
                 status === 'wrong'
                   ? 'border-red-400 bg-red-50'
                   : 'border-gray-300 bg-white'

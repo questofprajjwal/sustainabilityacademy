@@ -1,14 +1,17 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useProgress } from '@/lib/progress';
 import type { LessonMeta, LessonNavContext, QuizQuestion } from '@/lib/types';
 import { getColor } from '@/lib/colors';
 import { lessonIdToUrl } from '@/lib/url-helpers';
+import { useSwipeNavigation } from '@/lib/use-swipe';
 import Quiz from '@/components/learning/Quiz';
 import LessonNav from '@/components/learning/LessonNav';
+import BottomLessonNav from '@/components/learning/BottomLessonNav';
+import ReadingProgress from '@/components/learning/ReadingProgress';
 import Breadcrumb from '@/components/platform/Breadcrumb';
 
 interface Props {
@@ -33,6 +36,21 @@ export default function LessonClient({
   const progress = useProgress(courseId);
   const router = useRouter();
   const colors = getColor(courseColor);
+
+  // Swipe between lessons
+  const goNext = useCallback(() => {
+    if (navCtx?.nextLesson) {
+      router.push(`/courses/${courseId}/${lessonIdToUrl(navCtx.nextLesson.id)}`);
+    }
+  }, [navCtx?.nextLesson, courseId, router]);
+
+  const goPrev = useCallback(() => {
+    if (navCtx?.prevLesson) {
+      router.push(`/courses/${courseId}/${lessonIdToUrl(navCtx.prevLesson.id)}`);
+    }
+  }, [navCtx?.prevLesson, courseId, router]);
+
+  useSwipeNavigation(navCtx?.nextLesson ? goNext : null, navCtx?.prevLesson ? goPrev : null);
 
   // Track last accessed lesson — guard to avoid redundant writes
   useEffect(() => {
@@ -93,7 +111,8 @@ export default function LessonClient({
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-4 min-[400px]:px-5 sm:px-6 py-8">
+    <div className="max-w-4xl mx-auto px-4 min-[400px]:px-5 sm:px-6 py-8 pb-20 md:pb-8">
+      <ReadingProgress color={colors.bg} />
       <Breadcrumb crumbs={breadcrumbs} />
 
       {/* Lesson metadata header */}
@@ -191,6 +210,16 @@ export default function LessonClient({
           courseId={courseId}
           prevLesson={navCtx.prevLesson}
           nextLesson={navCtx.nextLesson}
+        />
+      )}
+
+      {navCtx && (
+        <BottomLessonNav
+          courseId={courseId}
+          prevLesson={navCtx.prevLesson}
+          nextLesson={navCtx.nextLesson}
+          lessonIndex={navCtx.lessonIndex}
+          moduleLessonCount={navCtx.moduleLessonCount}
         />
       )}
     </div>

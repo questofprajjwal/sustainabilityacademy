@@ -14,22 +14,17 @@ export default function Footer() {
               Open-source sustainability education
             </p>
           </div>
-          <div className="flex items-center gap-6 text-xs text-gray-500">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500">
             <span>Climate</span>
-            <span className="text-gray-700">|</span>
             <span>Carbon Markets</span>
-            <span className="text-gray-700">|</span>
             <span>ESG</span>
-            <span className="text-gray-700">|</span>
             <span>Green Finance</span>
-            <span className="text-gray-700">|</span>
             <Link
               href="/glossary"
               className="text-gray-500 hover:text-gray-300 transition-colors"
             >
               Glossary
             </Link>
-            <span className="text-gray-700">|</span>
             <Link
               href="/disclaimer"
               className="text-gray-500 hover:text-gray-300 transition-colors"

@@ -133,7 +133,7 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
                 aria-expanded={isExpanded}
                 aria-controls={controlId}
                 onClick={() => toggleModule(mod.id)}
-                className="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-left hover:bg-gray-100 transition-colors group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
+                className="w-full flex items-center justify-between px-3 py-2.5 min-h-[44px] rounded-lg text-left hover:bg-gray-100 transition-colors group focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-inset"
               >
                 <div className="flex items-center gap-2 min-w-0">
                   <span className="text-base flex-shrink-0" aria-hidden>{mod.icon}</span>
@@ -175,7 +175,7 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
                       href={`/courses/${course.id}/${lessonIdToUrl(lesson.id)}`}
                       onClick={onClose}
                       aria-current={isActive ? 'page' : undefined}
-                      className={`flex items-center gap-2 px-3 py-2 mx-2 rounded-lg text-sm transition-colors mb-0.5 ${
+                      className={`flex items-center gap-2 px-3 py-2 min-h-[44px] mx-2 rounded-lg text-sm transition-colors mb-0.5 ${
                         isActive
                           ? `${colors.active} font-medium`
                           : 'text-gray-600 hover:bg-gray-100'

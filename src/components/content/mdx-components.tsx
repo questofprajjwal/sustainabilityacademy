@@ -80,10 +80,10 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     ),
     // Heading styles
     h2: (props: ComponentPropsWithoutRef<'h2'>) => (
-      <h2 className="text-3xl font-extrabold text-gray-900 mt-12 mb-6 tracking-tight border-b pb-2 border-gray-100" {...props} />
+      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-12 mb-6 tracking-tight border-b pb-2 border-gray-100" {...props} />
     ),
     h3: (props: ComponentPropsWithoutRef<'h3'>) => (
-      <h3 className="text-2xl font-bold text-gray-800 mt-8 mb-4 tracking-tight" {...props} />
+      <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mt-8 mb-4 tracking-tight" {...props} />
     ),
     h4: (props: ComponentPropsWithoutRef<'h4'>) => (
       <h4 className="text-lg font-semibold text-gray-700 mt-6 mb-3" {...props} />
