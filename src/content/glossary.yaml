@@ -38,6 +38,12 @@
 
 # ─── B ────────────────────────────────────────────────────────────────────────
 
+- term: "BOGON"
+  slug: "bogon"
+  definition: "A practitioner term for a stakeholder archetype who provides nothing during the reporting process - no data, no feedback, no responses - and then blames the consultant when the work is delayed or incomplete. Key trait: absent during work, present during blame. The defense is keeping a meticulous paper trail of all requests and follow-ups."
+  category: "esg"
+  related: ["drongon", "stakeholder-engagement"]
+
 - term: "Baseline Scenario"
   slug: "baseline-scenario"
   definition: "The reference case describing what would have happened in the absence of a carbon project. Used to calculate emission reductions by comparing project emissions against it."
@@ -173,6 +179,12 @@
   related: ["esrs", "double-materiality", "efrag"]
 
 # ─── D ────────────────────────────────────────────────────────────────────────
+
+- term: "DRONGON"
+  slug: "drongon"
+  definition: "A practitioner term for a stakeholder archetype who does not understand the work but keeps showing up as if they do. They insert themselves into the review process, provide generic or trivial feedback, demand endless review rounds, and consume enormous amounts of time. Key trait: high noise, low signal. Managed by setting clear review milestones and limiting revision rounds."
+  category: "esg"
+  related: ["bogon", "stakeholder-engagement"]
 
 - term: "Decarbonization"
   slug: "decarbonization"
