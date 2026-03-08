@@ -46,14 +46,18 @@ LearningPlatform/
 │   │   │   ├── FormulaBox.tsx        # Dark background formula block
 │   │   │   ├── Flowchart.tsx         # Mermaid flowchart renderer (client-side)
 │   │   │   ├── EquationBreakdown.tsx # Interactive color-coded equation explainer
-│   │   │   └── ResponsiveTable.tsx   # Horizontal-scroll table wrapper
+│   │   │   ├── ResponsiveTable.tsx   # Horizontal-scroll table wrapper
+│   │   │   ├── GlossaryTerm.tsx     # Inline tooltip for glossary terms
+│   │   │   └── CaseStudy.tsx        # Multi-step decision scenario
 │   │   ├── learning/
-│   │   │   ├── Sidebar.tsx           # Course navigation sidebar
+│   │   │   ├── Sidebar.tsx           # Course navigation sidebar (+ reading time)
 │   │   │   ├── Quiz.tsx              # Interactive quiz component
 │   │   │   ├── LessonNav.tsx         # Prev / Next lesson buttons
 │   │   │   └── ProgressBar.tsx
 │   │   └── platform/
-│   │       ├── PlatformNav.tsx       # Top nav bar (progress export/import)
+│   │       ├── PlatformNav.tsx       # Top nav bar (search, glossary link, progress)
+│   │       ├── SearchButton.tsx     # Cmd+K search trigger
+│   │       ├── SearchModal.tsx      # Fuzzy search modal (Fuse.js)
 │   │       ├── CourseCard.tsx        # Homepage course card
 │   │       ├── Breadcrumb.tsx
 │   │       └── Footer.tsx
@@ -65,9 +69,12 @@ LearningPlatform/
 │   │   ├── progress.ts               # useProgress + usePlatformProgress hooks
 │   │   ├── progress-export.ts        # Export/import progress as JSON
 │   │   ├── colors.ts                 # colorMap (11 colors)
-│   │   └── schemas.ts                # Zod validation schemas
+│   │   ├── schemas.ts                # Zod validation schemas
+│   │   ├── reading-time.ts           # stripMdx() + computeReadingTime() utility
+│   │   └── glossary.ts               # Server-only: loads glossary.yaml
 │   │
 │   └── content/                      # All course content lives here
+│       ├── glossary.yaml             # Platform-wide glossary (106 terms)
 │       └── <course-id>/              # One folder per course
 │           ├── course.yaml           # Course + module + lesson metadata
 │           ├── SOURCES.md            # Which PDFs informed which modules

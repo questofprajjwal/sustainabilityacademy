@@ -73,10 +73,4 @@ MC simulation is **required** when using spectroscopy techniques for SOC measure
   <li>Credits already issued based on over-predicted values may need buffer pool adjustments</li>
   <li>True-up data is incorporated into the model validation dataset, improving future predictions</li>
 </ul>
-
-<div class="bg-green-50 border border-green-200 rounded p-4">
-  <p class="font-semibold text-green-800">Key Takeaway</p>
-  <p class="text-green-900 mt-1">Analytical error propagation: combine individual uncertainties by adding squared relative uncertainties, then taking the square root. Monte Carlo: run thousands of simulations to build a probability distribution. True-up: reality check the model against actual measurements every 5 years. These three mechanisms ensure the methodology's uncertainty framework is robust and honest.</p>
-</div>
-
 <KeyTakeaways items="Analytical error propagation combines uncertainties by adding squared relative uncertainties and taking the square root (for multiplied/divided values) ;; Monte Carlo simulation runs thousands of random iterations to build a probability distribution - required when spectroscopy is used for SOC measurement ;; VM0042 uses a 95% confidence lower bound: the deduction ensures only a 5% probability that the true value is lower than claimed ;; The deduction schedule: less than 15% CI half-width = 0% deduction, 15-20% = 5%, 20-30% = 15%, over 30% = 35% ;; Model true-up every 5 years compares predictions to actual soil samples - if the model over-predicted, recalibration and buffer adjustments may be required" />
