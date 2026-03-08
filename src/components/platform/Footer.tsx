@@ -26,6 +26,12 @@ export default function Footer() {
               Glossary
             </Link>
             <Link
+              href="/feedback"
+              className="text-gray-500 hover:text-gray-300 transition-colors"
+            >
+              Feedback
+            </Link>
+            <Link
               href="/disclaimer"
               className="text-gray-500 hover:text-gray-300 transition-colors"
             >
