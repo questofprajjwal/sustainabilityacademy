@@ -175,9 +175,11 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
                       href={`/courses/${course.id}/${lessonIdToUrl(lesson.id)}`}
                       onClick={onClose}
                       aria-current={isActive ? 'page' : undefined}
-                      className={`flex items-center gap-2 px-3 py-2 min-h-[44px] mx-2 rounded-lg text-sm transition-colors mb-0.5 ${
+                      className={`flex items-center gap-2 px-3 py-2 min-h-[44px] mx-2 rounded-lg text-sm transition-colors mb-1 ${
                         isActive
-                          ? `${colors.active} font-medium`
+                          ? `${colors.active} font-medium shadow-sm`
+                          : isCompleted
+                          ? 'text-gray-600 bg-gray-50/50 hover:bg-gray-100'
                           : 'text-gray-600 hover:bg-gray-100'
                       }`}
                     >
@@ -186,8 +188,8 @@ export default function Sidebar({ course, currentLessonId, completedLessons, isO
                           isCompleted
                             ? 'bg-green-500 border-green-500 text-white'
                             : isActive
-                            ? `${colors.border} border-2`
-                            : 'border-gray-300'
+                            ? `${colors.border} border-2 bg-white`
+                            : 'border-gray-200 bg-gray-50'
                         }`}
                         aria-hidden
                       >

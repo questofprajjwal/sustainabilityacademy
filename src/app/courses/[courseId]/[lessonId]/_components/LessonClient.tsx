@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useProgress } from '@/lib/progress';
@@ -13,6 +13,7 @@ import LessonNav from '@/components/learning/LessonNav';
 import BottomLessonNav from '@/components/learning/BottomLessonNav';
 import ReadingProgress from '@/components/learning/ReadingProgress';
 import Breadcrumb from '@/components/platform/Breadcrumb';
+import BackToTop from '@/components/learning/BackToTop';
 
 interface Props {
   courseId: string;
@@ -113,7 +114,21 @@ export default function LessonClient({
   return (
     <div className="max-w-4xl mx-auto px-4 min-[400px]:px-5 sm:px-6 py-8 pb-20 md:pb-8">
       <ReadingProgress color={colors.bg} />
-      <Breadcrumb crumbs={breadcrumbs} />
+      {/* Mobile: simple back link; Desktop: full breadcrumb */}
+      <div className="md:hidden">
+        <Link
+          href={`/courses/${courseId}`}
+          className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 transition-colors"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to course
+        </Link>
+      </div>
+      <div className="hidden md:block">
+        <Breadcrumb crumbs={breadcrumbs} />
+      </div>
 
       {/* Lesson metadata header */}
       <div className="mt-4 mb-6">
@@ -205,12 +220,15 @@ export default function LessonClient({
         )}
       </div>
 
+      {/* Inline nav - desktop only (mobile uses BottomLessonNav) */}
       {navCtx && (
-        <LessonNav
-          courseId={courseId}
-          prevLesson={navCtx.prevLesson}
-          nextLesson={navCtx.nextLesson}
-        />
+        <div className="hidden md:block">
+          <LessonNav
+            courseId={courseId}
+            prevLesson={navCtx.prevLesson}
+            nextLesson={navCtx.nextLesson}
+          />
+        </div>
       )}
 
       {navCtx && (
@@ -222,6 +240,8 @@ export default function LessonClient({
           moduleLessonCount={navCtx.moduleLessonCount}
         />
       )}
+
+      <BackToTop />
     </div>
   );
 }

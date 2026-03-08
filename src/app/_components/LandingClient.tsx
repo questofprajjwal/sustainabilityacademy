@@ -85,18 +85,6 @@ export default function LandingClient({ courseData }: Props) {
               Master climate science, carbon markets, ESG reporting, and green finance with structured, expert-quality courses.
             </p>
 
-            {/* Topic pills */}
-            <div className="flex flex-wrap gap-2 mb-10">
-              {['Climate Science', 'Carbon Markets', 'ESG Reporting', 'Green Finance', 'GHG Protocol'].map(topic => (
-                <span
-                  key={topic}
-                  className="px-3 py-1 text-xs font-medium bg-white/10 text-emerald-100 rounded-full border border-white/10 backdrop-blur-sm"
-                >
-                  {topic}
-                </span>
-              ))}
-            </div>
-
             <div className="flex flex-wrap items-center gap-4">
               {continueLessonHref ? (
                 <>
@@ -127,6 +115,18 @@ export default function LandingClient({ courseData }: Props) {
                   </svg>
                 </a>
               )}
+            </div>
+
+            {/* Topic pills */}
+            <div className="flex flex-wrap gap-2 mt-8">
+              {['Climate Science', 'Carbon Markets', 'ESG Reporting', 'Green Finance', 'GHG Protocol'].map(topic => (
+                <span
+                  key={topic}
+                  className="px-3 py-1 text-xs font-medium bg-white/10 text-emerald-100 rounded-full border border-white/10 backdrop-blur-sm"
+                >
+                  {topic}
+                </span>
+              ))}
             </div>
 
             {/* Stats bar */}
