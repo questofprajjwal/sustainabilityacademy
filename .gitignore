@@ -20,6 +20,9 @@
 # source PDFs — kept locally in src/content/<course>/sources/ but not committed to git
 src/content/**/sources/*.pdf
 
+# practitioner interview notes — raw working material, not committed
+src/content/**/practical-interview-notes.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*
