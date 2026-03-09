@@ -1,10 +1,17 @@
 # ──────────────────────────────────────────────────────────────────────────────
 # Glossary - Sustainability Academy
 # Categories: carbon-markets, climate-science, ghg-accounting, esg,
-#             sustainability, reporting-standards, climate-finance, governance
+#             sustainability, reporting-standards, climate-finance, governance,
+#             social-safeguards, eu-taxonomy
 # ──────────────────────────────────────────────────────────────────────────────
 
 # ─── A ────────────────────────────────────────────────────────────────────────
+
+- term: "Area of Influence"
+  slug: "area-of-influence"
+  definition: "Under IFC PS1, the zone over which a project's environmental and social impacts extend. Includes the project site, associated facilities, cumulative impact zones, and areas affected by unplanned but predictable developments. Defines the geographic scope for risk identification and stakeholder engagement."
+  category: "social-safeguards"
+  related: ["esia", "esms", "cumulative-impact-assessment", "performance-standards"]
 
 - term: "Additionality"
   slug: "additionality"
@@ -50,11 +57,29 @@
   category: "carbon-markets"
   related: ["additionality", "emission-reductions"]
 
+- term: "Biodiversity Action Plan (BAP)"
+  slug: "biodiversity-action-plan"
+  definition: "A strategic document required for projects in critical habitat under IFC PS6. Describes how the mitigation strategy will achieve net gain (or no net loss), includes off-site actions and external partners, and differs from a Biodiversity Management Plan (BMP) which is operational and site-level."
+  category: "social-safeguards"
+  related: ["critical-habitat", "biodiversity-offset", "mitigation-hierarchy"]
+
 - term: "Biodiversity"
   slug: "biodiversity"
   definition: "The variety of life on Earth at genetic, species, and ecosystem levels. Underpins ecosystem services vital to human society including pollination, water purification, and climate regulation."
   category: "sustainability"
   related: ["natural-capital", "ecosystem-services", "tnfd"]
+
+- term: "Biodiversity Action Plan (BAP)"
+  slug: "biodiversity-action-plan"
+  definition: "A strategic document required under IFC PS6 for projects in critical or natural habitat. Describes the composite mitigation strategy for achieving net gains (critical habitat) or no net loss (natural habitat), including off-site conservation, partnerships, long-term funding, and measurable biodiversity targets. Distinct from the operational Biodiversity Management Plan (BMP)."
+  category: "social-safeguards"
+  related: ["critical-habitat", "biodiversity-offset", "mitigation-hierarchy", "performance-standards"]
+
+- term: "Biodiversity Offset"
+  slug: "biodiversity-offset"
+  definition: "Measurable conservation outcomes designed to compensate for residual adverse impacts on biodiversity after avoidance, minimization, and restoration have been applied. Must follow the like-for-like or better principle. In critical habitat, must achieve net gains; in natural habitat, no net loss."
+  category: "social-safeguards"
+  related: ["critical-habitat", "mitigation-hierarchy", "biodiversity-action-plan"]
 
 - term: "Biochar"
   slug: "biochar"
@@ -69,6 +94,12 @@
   related: ["permanence", "carbon-sequestration"]
 
 # ─── C ────────────────────────────────────────────────────────────────────────
+
+- term: "CapEx KPI (EU Taxonomy)"
+  slug: "capex-kpi"
+  definition: "One of three mandatory EU Taxonomy disclosure KPIs. The proportion of a company's capital expenditure that is Taxonomy-aligned - i.e., associated with economic activities meeting substantial contribution, DNSH, and minimum social safeguards criteria."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "turnover-kpi", "opex-kpi", "taxonomy-alignment"]
 
 - term: "Carbon Budget"
   slug: "carbon-budget"
@@ -124,11 +155,29 @@
   category: "carbon-markets"
   related: ["cdm", "carbon-credit"]
 
+- term: "Chance Find Procedure"
+  slug: "chance-find-procedure"
+  definition: "A project-specific procedure required under IFC PS8 that outlines actions to take when previously unknown cultural heritage is encountered during construction or operations. Includes stop-work protocols, record keeping, chain of custody for movable finds, notification of heritage authorities, and expert assessment."
+  category: "social-safeguards"
+  related: ["cultural-heritage", "esms"]
+
 - term: "Circular Economy"
   slug: "circular-economy"
   definition: "A production and consumption model that eliminates waste and keeps materials in use through designing out waste, keeping products in circulation, and regenerating natural systems."
   category: "sustainability"
   related: ["sdgs", "natural-capital"]
+
+- term: "Climate Change Adaptation (EU Taxonomy Objective)"
+  slug: "climate-change-adaptation"
+  definition: "The second of six EU Taxonomy environmental objectives. An economic activity substantially contributes to adaptation by reducing material physical climate risks through solutions that do not adversely affect others' adaptation efforts or lock in assets incompatible with long-term resilience."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "climate-change-mitigation", "physical-risk"]
+
+- term: "Climate Change Mitigation (EU Taxonomy Objective)"
+  slug: "climate-change-mitigation"
+  definition: "The first of six EU Taxonomy environmental objectives. An economic activity substantially contributes to mitigation by avoiding or reducing GHG emissions, or enhancing removals, consistent with the Paris Agreement 1.5C target."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "climate-change-adaptation", "paris-agreement"]
 
 - term: "Climate Scenario Analysis"
   slug: "climate-scenario-analysis"
@@ -171,6 +220,24 @@
   definition: "The time period during which a carbon project can generate verified emission reductions or removals and issue carbon credits."
   category: "carbon-markets"
   related: ["additionality", "monitoring"]
+
+- term: "Critical Habitat"
+  slug: "critical-habitat"
+  definition: "Areas of outstanding biodiversity value under IFC PS6, defined by five criteria: presence of CR/EN species, endemic/restricted-range species, globally significant migratory concentrations, highly threatened ecosystems, or key evolutionary processes. Projects in critical habitat must demonstrate net gains for the biodiversity values that triggered the designation."
+  category: "social-safeguards"
+  related: ["biodiversity-offset", "biodiversity-action-plan", "mitigation-hierarchy"]
+
+- term: "Cultural Heritage"
+  slug: "cultural-heritage"
+  definition: "Under IFC PS8, includes tangible forms (archaeological sites, historic structures, artifacts), unique natural features with cultural significance (sacred groves, lakes, waterfalls), and intangible culture (traditional knowledge, practices, ceremonies). Protected regardless of whether legally listed or previously identified."
+  category: "social-safeguards"
+  related: ["chance-find-procedure", "fpic"]
+
+- term: "Cumulative Impact Assessment"
+  slug: "cumulative-impact-assessment"
+  definition: "An assessment under IFC PS1 that considers impacts combining with those from other existing and planned developments in the project's area of influence. Required when multiple projects affect the same resources or communities simultaneously."
+  category: "social-safeguards"
+  related: ["esia", "esms", "area-of-influence"]
 
 - term: "CSRD"
   slug: "csrd"
@@ -226,9 +293,15 @@
 
 - term: "Ecosystem Services"
   slug: "ecosystem-services"
-  definition: "Benefits that nature provides to human society, including pollination, flood control, water purification, climate regulation, and soil formation."
+  definition: "Benefits that people, including businesses, obtain from ecosystems. Organized into four categories: provisioning (food, water, timber), regulating (climate regulation, water purification, pollination), cultural (sacred sites, recreation, ecotourism), and supporting (nutrient cycling, primary production). Under IFC PS6, classified as Type I (may adversely affect communities) and Type II (project depends on for operations)."
   category: "sustainability"
   related: ["biodiversity", "natural-capital"]
+
+- term: "Enabling Activity (EU Taxonomy)"
+  slug: "enabling-activity"
+  definition: "An economic activity that directly enables other activities to make a substantial contribution to an EU Taxonomy environmental objective. Must not lead to lock-in of carbon-intensive assets, must have a substantial positive environmental impact based on lifecycle considerations, and cannot qualify simply because it improves efficiency of a polluting activity."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "transition-activity", "substantial-contribution"]
 
 - term: "EFRAG"
   slug: "efrag"
@@ -254,6 +327,18 @@
   category: "climate-finance"
   related: ["carbon-pricing", "cbam"]
 
+- term: "ESIA"
+  slug: "esia"
+  definition: "Environmental and Social Impact Assessment - a systematic process under IFC PS1 for identifying, predicting, and evaluating the environmental and social impacts of a proposed project. Covers seven key elements: scoping, baseline data, impact prediction, cumulative impacts, alternatives analysis, mitigation design, and monitoring framework."
+  category: "social-safeguards"
+  related: ["esms", "cumulative-impact-assessment", "mitigation-hierarchy"]
+
+- term: "ESMS"
+  slug: "esms"
+  definition: "Environmental and Social Management System - a structured management system required by IFC PS1 for all investment clients. Comprises seven elements: policy, identification of risks and impacts, management programs, organizational capacity, emergency preparedness, stakeholder engagement, and monitoring and review."
+  category: "social-safeguards"
+  related: ["esia", "performance-standards"]
+
 - term: "ESG"
   slug: "esg"
   definition: "Environmental, Social, and Governance - a framework for evaluating corporate sustainability and ethical impact across three pillars."
@@ -272,13 +357,25 @@
   category: "reporting-standards"
   related: ["csrd", "efrag", "double-materiality"]
 
+- term: "Equator Principles"
+  slug: "equator-principles"
+  definition: "A risk management framework adopted by over 130 financial institutions in 38 countries for determining, assessing, and managing environmental and social risk in project finance. Applies IFC Performance Standards as the benchmark for projects above $10 million, making the PS the de facto global standard for project finance E&S management."
+  category: "social-safeguards"
+  related: ["performance-standards", "esia", "esms"]
+
 - term: "EU Taxonomy"
   slug: "eu-taxonomy"
-  definition: "A classification system defining which economic activities are environmentally sustainable based on six environmental objectives, including climate mitigation, adaptation, water, circular economy, pollution, and biodiversity."
-  category: "reporting-standards"
-  related: ["sfdr", "dnsh", "csrd"]
+  definition: "A classification system defining which economic activities are environmentally sustainable based on six environmental objectives: climate mitigation, climate adaptation, water and marine resources, circular economy, pollution prevention, and biodiversity. Activities must make a substantial contribution to at least one objective, do no significant harm to the others, and meet minimum social safeguards."
+  category: "eu-taxonomy"
+  related: ["sfdr", "dnsh", "csrd", "substantial-contribution", "taxonomy-alignment", "minimum-social-safeguards"]
 
 # ─── F ────────────────────────────────────────────────────────────────────────
+
+- term: "FPIC"
+  slug: "fpic"
+  definition: "Free, Prior, and Informed Consent - the highest tier of community engagement under IFC PS7. Required in three circumstances: impacts on lands subject to traditional ownership or customary use, relocation of Indigenous Peoples, and significant impacts on critical cultural heritage. Established through good faith negotiation; does not require unanimity but must document both the mutually accepted process and evidence of agreement."
+  category: "social-safeguards"
+  related: ["icp", "indigenous-peoples-plan", "performance-standards"]
 
 - term: "Fiduciary Duty"
   slug: "fiduciary-duty"
@@ -344,6 +441,18 @@
 
 # ─── I ────────────────────────────────────────────────────────────────────────
 
+- term: "ICP"
+  slug: "icp"
+  definition: "Informed Consultation and Participation - the baseline engagement requirement under IFC PS7 for projects affecting Indigenous Peoples. Goes beyond standard consultation to require engaging representative bodies, providing accessible information, allowing adequate time for internal decision-making, and documenting how community views shaped the project."
+  category: "social-safeguards"
+  related: ["fpic", "stakeholder-engagement", "performance-standards"]
+
+- term: "IFC Performance Standards"
+  slug: "performance-standards"
+  definition: "Eight environmental and social standards that IFC requires its investment clients to meet. PS1 (Assessment and Management Systems) is always applicable; PS2-8 cover labor, resource efficiency, community health, resettlement, biodiversity, indigenous peoples, and cultural heritage. Applied globally through the Equator Principles by 130+ financial institutions."
+  category: "social-safeguards"
+  related: ["esms", "equator-principles", "mitigation-hierarchy"]
+
 - term: "IFRS S2"
   slug: "ifrs-s2"
   definition: "The ISSB's climate-related disclosure standard requiring companies to report on governance, strategy, risk management, and metrics and targets related to climate risks and opportunities."
@@ -374,6 +483,18 @@
   category: "reporting-standards"
   related: ["ifrs-s2", "tcfd"]
 
+- term: "Indigenous Peoples Plan (IPP)"
+  slug: "indigenous-peoples-plan"
+  definition: "A time-bound action plan required under IFC PS7 detailing measures to avoid, minimize, and compensate for adverse impacts on Indigenous Peoples. Must include nine elements: baseline information, impact analysis, consultation results, mitigation measures, natural resource management, opportunity enhancement, grievance mechanism, budget/timetable, and monitoring."
+  category: "social-safeguards"
+  related: ["fpic", "icp", "performance-standards"]
+
+- term: "Involuntary Resettlement"
+  slug: "involuntary-resettlement"
+  definition: "Under IFC PS5, displacement that occurs when affected persons cannot refuse - either through government expropriation or negotiated settlements under threat of expropriation. Covers both physical displacement (loss of homes) and economic displacement (loss of income or resource access). All displaced persons receive protection regardless of formal tenure status."
+  category: "social-safeguards"
+  related: ["resettlement-action-plan", "livelihood-restoration", "performance-standards"]
+
 - term: "ITMO"
   slug: "itmo"
   definition: "Internationally Transferred Mitigation Outcome - the unit of exchange under Article 6.2, representing emission reductions transferred between countries with corresponding adjustments applied."
@@ -398,6 +519,12 @@
 
 # ─── L ────────────────────────────────────────────────────────────────────────
 
+- term: "Livelihood Restoration"
+  slug: "livelihood-restoration"
+  definition: "Under IFC PS5, the requirement to help economically displaced persons rebuild their income-earning capacity. Cash compensation alone is rarely sufficient. Measures vary by livelihood type: land-based (replacement land, improved inputs, transitional food support), wage-based (job placement, skills training), enterprise-based (relocation assistance, access to customers)."
+  category: "social-safeguards"
+  related: ["involuntary-resettlement", "resettlement-action-plan"]
+
 - term: "Leakage"
   slug: "leakage"
   definition: "An increase in greenhouse gas emissions outside the project boundary that occurs as a result of the project activity. Must be accounted for when calculating net emission reductions."
@@ -411,6 +538,18 @@
   related: ["market-based-method", "scope-2", "emission-factor"]
 
 # ─── M ────────────────────────────────────────────────────────────────────────
+
+- term: "Minimum Social Safeguards (EU Taxonomy)"
+  slug: "minimum-social-safeguards"
+  definition: "A mandatory requirement under the EU Taxonomy that companies must meet alongside environmental criteria. Based on the OECD Guidelines for Multinational Enterprises, UN Guiding Principles on Business and Human Rights, ILO Core Conventions, and the International Bill of Human Rights. Covers human rights due diligence, anti-corruption, fair competition, and taxation."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "taxonomy-alignment", "dnsh"]
+
+- term: "Mitigation Hierarchy"
+  slug: "mitigation-hierarchy"
+  definition: "The fundamental logic running through all IFC Performance Standards: (1) avoid the impact entirely, (2) minimize where avoidance is not possible, (3) restore or compensate for residual impacts, (4) offset only as a last resort. Jumping straight to compensation without first trying to avoid and minimize is non-compliant."
+  category: "social-safeguards"
+  related: ["performance-standards", "biodiversity-offset", "critical-habitat"]
 
 - term: "Market-Based Method"
   slug: "market-based-method"
@@ -456,6 +595,12 @@
   category: "climate-finance"
   related: ["esg-integration", "impact-investing"]
 
+- term: "Net Gain / No Net Loss"
+  slug: "net-gain-no-net-loss"
+  definition: "Biodiversity outcome targets under IFC PS6. No net loss is the minimum standard for natural habitat - project impacts must be fully offset so biodiversity is no worse off. Net gain is the higher standard required for critical habitat - the project must leave biodiversity measurably better off than if it had never happened. Both require long-term monitoring and typically involve biodiversity offsets."
+  category: "social-safeguards"
+  related: ["critical-habitat", "biodiversity-offset", "biodiversity-action-plan", "mitigation-hierarchy"]
+
 - term: "Net Zero"
   slug: "net-zero"
   definition: "Achieving a balance between greenhouse gas emissions produced and greenhouse gas emissions removed from the atmosphere, resulting in no net increase."
@@ -463,6 +608,12 @@
   related: ["carbon-sequestration", "emission-reductions", "sbti"]
 
 # ─── O ────────────────────────────────────────────────────────────────────────
+
+- term: "OpEx KPI (EU Taxonomy)"
+  slug: "opex-kpi"
+  definition: "One of three mandatory EU Taxonomy disclosure KPIs. The proportion of a company's operating expenditure (research and development, building renovation, short-term leases, maintenance) that is Taxonomy-aligned."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "capex-kpi", "turnover-kpi", "taxonomy-alignment"]
 
 - term: "Operational Control"
   slug: "operational-control"
@@ -521,6 +672,12 @@
   related: ["biochar", "carbon-sequestration"]
 
 # ─── R ────────────────────────────────────────────────────────────────────────
+
+- term: "Resettlement Action Plan (RAP)"
+  slug: "resettlement-action-plan"
+  definition: "A comprehensive plan required under IFC PS5 when a project causes physical displacement. Covers 19 sections including census of affected persons, asset inventory, valuation methodology, entitlements, relocation site preparation, transitional support, grievance mechanism, budget, and completion audit criteria. Must be disclosed to affected communities before displacement begins."
+  category: "social-safeguards"
+  related: ["involuntary-resettlement", "livelihood-restoration", "performance-standards"]
 
 - term: "REC"
   slug: "rec"
@@ -620,6 +777,12 @@
   category: "climate-finance"
   related: ["transition-risk", "carbon-pricing"]
 
+- term: "Substantial Contribution (EU Taxonomy)"
+  slug: "substantial-contribution"
+  definition: "The first of three tests an economic activity must pass for EU Taxonomy alignment. An activity must make a substantial contribution to at least one of the six environmental objectives through specific technical screening criteria - quantitative thresholds that vary by sector and activity."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "dnsh", "minimum-social-safeguards", "technical-screening-criteria"]
+
 - term: "Sustainability-Linked Bond"
   slug: "sustainability-linked-bond"
   definition: "A bond whose financial characteristics (typically coupon rate) are tied to the issuer's achievement of predefined ESG performance targets, with penalties for missing them."
@@ -627,6 +790,24 @@
   related: ["green-bond", "social-bond"]
 
 # ─── T ────────────────────────────────────────────────────────────────────────
+
+- term: "Taxonomy Alignment"
+  slug: "taxonomy-alignment"
+  definition: "The status of an economic activity that passes all three EU Taxonomy tests: makes a substantial contribution to at least one environmental objective, does no significant harm to the other five, and meets minimum social safeguards. Only aligned activities count toward a company's Taxonomy KPIs (Turnover, CapEx, OpEx)."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "taxonomy-eligibility", "substantial-contribution", "dnsh"]
+
+- term: "Taxonomy Eligibility"
+  slug: "taxonomy-eligibility"
+  definition: "The status of an economic activity that is described in the EU Taxonomy's delegated acts, regardless of whether it meets the performance thresholds. Eligibility is the first filter - an activity must be listed before it can be assessed for alignment. Many activities are eligible but not aligned."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "taxonomy-alignment", "technical-screening-criteria"]
+
+- term: "Technical Screening Criteria (TSC)"
+  slug: "technical-screening-criteria"
+  definition: "Sector-specific quantitative thresholds defined in the EU Taxonomy delegated acts that determine whether an activity makes a substantial contribution to an environmental objective. Examples include gCO2e/kWh limits for electricity generation and energy efficiency standards for buildings."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "substantial-contribution", "taxonomy-alignment"]
 
 - term: "TCFD"
   slug: "tcfd"
@@ -640,11 +821,23 @@
   category: "reporting-standards"
   related: ["biodiversity", "natural-capital", "tcfd"]
 
+- term: "Transition Activity (EU Taxonomy)"
+  slug: "transition-activity"
+  definition: "An economic activity for which there is no technologically and economically feasible low-carbon alternative, but which supports the transition to a climate-neutral economy. Must have GHG emission levels corresponding to best performance in the sector, must not hamper development of low-carbon alternatives, and must not lead to lock-in of carbon-intensive assets."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "enabling-activity", "substantial-contribution"]
+
 - term: "Transition Risk"
   slug: "transition-risk"
   definition: "Financial risk arising from the shift to a low-carbon economy, including policy changes (carbon taxes), technology disruption (renewables), market shifts (changing consumer preferences), and reputational impacts."
   category: "climate-finance"
   related: ["physical-risk", "climate-scenario-analysis", "stranded-assets"]
+
+- term: "Turnover KPI (EU Taxonomy)"
+  slug: "turnover-kpi"
+  definition: "One of three mandatory EU Taxonomy disclosure KPIs. The proportion of a company's net revenue derived from Taxonomy-aligned economic activities. The primary metric for assessing what share of a company's business is environmentally sustainable."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "capex-kpi", "opex-kpi", "taxonomy-alignment"]
 
 # ─── V ────────────────────────────────────────────────────────────────────────
 
