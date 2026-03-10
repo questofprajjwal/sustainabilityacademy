@@ -8,7 +8,7 @@
     "build": "npm run prebuild && next build",
     "start": "next start -p 5001",
     "migrate": "npx tsx scripts/migrate-content.ts",
-    "validate": "npx tsx scripts/validate-content.ts"
+    "validate": "npx tsx scripts/check-course-completeness.ts && npx tsx scripts/validate-content.ts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
