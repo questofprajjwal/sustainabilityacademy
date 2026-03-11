@@ -20,7 +20,12 @@ Scope 3 emissions of borrowers and investees shall be disclosed **separately** f
 
 For listed equity and corporate bonds, the attribution factor uses **EVIC (Enterprise Value Including Cash)** as the denominator:
 
-**Attribution Factor = Outstanding Amount / EVIC**
+<EquationBreakdown
+  title="Listed Equity and Corporate Bonds - Attribution Factor"
+  result="AF | Attribution Factor | The financial institution's share of the investee company's emissions | blue"
+  inputs="Outstanding Amount | Outstanding Amount | Market value of equity holding or book value of bond position at fiscal year end | green ;; EVIC | Enterprise Value Including Cash | Market cap (ordinary + preferred shares) + book value of total debt + minority interests | amber"
+  operator="÷"
+/>
 
 **EVIC is defined as the sum of:**
 - Market capitalisation of ordinary shares at fiscal year end
@@ -39,7 +44,11 @@ PCAF aligns its EVIC definition with the EU Technical Expert Group (EU TEG) and 
 
 The financed emissions formula aggregates across all investees:
 
-**Financed Emissions = Σ (Outstanding Amount_c / EVIC_c) × Company Emissions_c**
+<EquationBreakdown
+  title="Financed Emissions - Listed Equity Aggregation"
+  result="FE | Financed Emissions | Total financed emissions across all investees, summed using Σ, in tCO₂e | blue"
+  inputs="AF<sub>c</sub> | Attribution Factor | Outstanding Amount / EVIC for each investee company c | green ;; E<sub>c</sub> | Company Emissions | Annual GHG emissions of investee company c, in tCO₂e | amber"
+/>
 
 <ExampleBox>
 **Worked example: Listed equity**
@@ -71,7 +80,11 @@ For listed companies, third-party data providers (CDP, Bloomberg, MSCI) typicall
 
 Companies in a financial institution's portfolio may report **emission removals** (nature-based or technology-based CO2 removal from the atmosphere). FIs must account for and report attributed emission removals **separately** from absolute emissions, using the same attribution factor:
 
-**Attributed Emission Removals = Attribution Factor × Company's Reported Emission Removals**
+<EquationBreakdown
+  title="Attributed Emission Removals"
+  result="AER | Attributed Emission Removals | The financial institution's share of a company's emission removals, reported separately, in tCO₂e | blue"
+  inputs="AF | Attribution Factor | Outstanding Amount / EVIC for the investee | green ;; ER | Company Emission Removals | Total emission removals reported by the investee company (nature-based or technology-based), in tCO₂e | amber"
+/>
 
 Companies may also generate or retire **carbon credits**. Carbon credits retired may optionally be reported; carbon credits generated should be reported. These figures provide context but do not offset the absolute emissions reported under the PCAF Standard.
 

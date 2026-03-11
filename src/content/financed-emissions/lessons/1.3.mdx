@@ -117,7 +117,12 @@ Think of it like calculating your GPA. Each course (each loan or investment) get
 
 The formula is:
 
-**Weighted Average DQ Score = Σ (Outstanding Amount_i × DQ Score_i) / Σ Outstanding Amount_i**
+<EquationBreakdown
+  title="Weighted Average Data Quality Score"
+  result="WADQ | Weighted Average DQ Score | Portfolio-level data quality metric, weighted by exposure size (1 = highest quality, 5 = lowest) | blue"
+  inputs="OA<sub>i</sub> × DQ<sub>i</sub> | Weighted Score | Each loan or investment's outstanding amount multiplied by its data quality score, summed across all positions | green ;; Σ OA<sub>i</sub> | Total Outstanding | Sum of all outstanding amounts across the portfolio | amber"
+  operator="÷"
+/>
 
 A financial institution with a weighted average score of 2.3 has significantly better data quality than one with a score of 4.1, and stakeholders can use this metric to assess the reliability of the reported emissions figures.
 

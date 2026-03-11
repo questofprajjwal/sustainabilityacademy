@@ -64,7 +64,11 @@ The Facilitated Emissions Standard (Part B, First Version, December 2023) covers
 
 The attribution formula for facilitated emissions has two key components:
 
-**Facilitated Emissions = Attribution Factor × Weighting Factor × Annual Emissions of Issuer**
+<EquationBreakdown
+  title="Facilitated Emissions - Core Formula"
+  result="FacE | Facilitated Emissions | GHG emissions attributed to the FI's capital market facilitation role, in tCO₂e | blue"
+  inputs="AF | Attribution Factor | The FI's league table credit share of the deal | green ;; WF | Weighting Factor | Fixed at 33%, reflecting the temporary and off-balance-sheet nature of facilitation | amber ;; E<sub>issuer</sub> | Annual Emissions of Issuer | Total annual GHG emissions of the issuing company, in tCO₂e | violet"
+/>
 
 ### Attribution Factor: League Table Credit
 
@@ -99,9 +103,13 @@ The 33% weighting factor was determined through PCAF's public consultation proce
 
 The full facilitated emissions formula is:
 
-**Facilitated Emissions_i = (League Table Credit_i / Total Credits) × 33% × Annual Emissions of Issuer**
+<EquationBreakdown
+  title="Facilitated Emissions - Full Formula with League Table Credit"
+  result="FacE<sub>i</sub> | Facilitated Emissions | Emissions attributed to financial institution i from the facilitation, in tCO₂e | blue"
+  inputs="LTC<sub>i</sub> / ΣC | League Table Share | Institution i's credit (100% for active, 50% for passive bookrunner) divided by total credits across all bookrunners | green ;; 33% | Weighting Factor | Fixed weighting reflecting the indirect, temporary facilitation role | amber ;; E<sub>issuer</sub> | Annual Emissions of Issuer | Total annual GHG emissions of the issuing company, in tCO₂e | violet"
+/>
 
-Where i = the financial institution's position.
+Where i = the financial institution's position in the deal.
 
 ## Emission Scopes Covered
 

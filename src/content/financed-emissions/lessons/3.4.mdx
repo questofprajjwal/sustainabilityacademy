@@ -17,7 +17,12 @@ Supranational bonds (issued by entities like the IMF, World Bank, or European In
 
 The key challenge with sovereign debt is that governments do not have equity or debt in the same sense as corporations. PCAF therefore uses **PPP-adjusted GDP** (Purchasing Power Parity-adjusted Gross Domestic Product) as the denominator, reflecting the overall economic output of the country that is funded by the government's spending:
 
-**Attribution Factor = Outstanding Amount / PPP-adjusted GDP**
+<EquationBreakdown
+  title="Sovereign Debt - Attribution Factor"
+  result="AF | Attribution Factor | The financial institution's proportional share of the country's emissions | blue"
+  inputs="Outstanding Amount | Outstanding Amount | The FI's holding of sovereign bonds or direct loans to the government | green ;; GDP<sub>PPP</sub> | PPP-adjusted GDP | Purchasing Power Parity-adjusted Gross Domestic Product of the country, correcting for price-level differences | amber"
+  operator="÷"
+/>
 
 <HighlightBox>
 PPP-adjusted GDP is used rather than nominal GDP to correct for differences in price levels across countries. Countries with lower price levels would appear to have smaller economies when measured in unadjusted exchange-rate terms, leading to higher attribution factors for financial institutions investing in their sovereign bonds. PPP adjustment corrects this distortion.
@@ -25,9 +30,13 @@ PPP-adjusted GDP is used rather than nominal GDP to correct for differences in p
 
 **The financed emissions formula for sovereign debt:**
 
-**Financed Emissions = Σ (Outstanding Amount_c / PPP-adjusted GDP_c) × Country Emissions_c**
+<EquationBreakdown
+  title="Sovereign Debt Financed Emissions - Aggregation"
+  result="FE | Financed Emissions | Total financed emissions from sovereign debt holdings, summed across all countries, in tCO₂e | blue"
+  inputs="AF<sub>c</sub> | Attribution Factor | Outstanding Amount / PPP-adjusted GDP for each country c | green ;; E<sub>c</sub> | Country Emissions | Total national GHG emissions of country c reported to UNFCCC, in tCO₂e | amber"
+/>
 
-Where c = country.
+Where c = each country in the sovereign debt portfolio.
 
 <ExampleBox>
 **Sovereign debt calculation**

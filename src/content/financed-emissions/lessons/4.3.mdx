@@ -80,21 +80,29 @@ The Options 1 to 3 framework creates a structured fallback hierarchy that financ
 
 For Option 3, proxy methods derive emissions estimates from **economic activity data** combined with sector-level emission intensity coefficients from EEIO databases. The three sub-options offer different trade-offs:
 
-**Option 3a (Revenue-based, Score 3)**: Requires the company's revenue to calculate:
+**Option 3a (Revenue-based, Score 3)**: Requires the company's revenue. This is the most company-specific of the three proxy methods and is generally preferred when revenue data is accessible.
 
-*Emissions = Company Revenue × Sector GHG Emissions / Sector Revenue*
+<EquationBreakdown
+  title="Option 3a - Revenue-Based Proxy (Score 3)"
+  result="E | Estimated Emissions | Proxy emissions estimate using company revenue and sector intensity, in tCO₂e | blue"
+  inputs="Rev<sub>co</sub> | Company Revenue | The specific company's total annual revenue | green ;; EI<sub>rev</sub> | Sector Emission Intensity | Sector GHG Emissions divided by Sector Revenue, from EEIO databases | amber"
+/>
 
-This approach is the most company-specific of the three proxy methods and is generally preferred when revenue data is accessible.
+**Option 3b (Asset-based, Score 4)**: When revenue data is unavailable, this approach is less specific than 3a but captures the scale of the company's operations relative to its sector peers.
 
-**Option 3b (Asset-based, Score 4)**: When revenue data is unavailable, asset-based estimates use:
-
-*Emissions = Outstanding Amount × (Sector GHG Emissions / Sector Total Assets)*
-
-This is less specific than 3a but captures the scale of the company's operations relative to its sector peers.
+<EquationBreakdown
+  title="Option 3b - Asset-Based Proxy (Score 4)"
+  result="E | Estimated Emissions | Proxy emissions estimate using outstanding amount and sector asset intensity, in tCO₂e | blue"
+  inputs="OA | Outstanding Amount | The FI's outstanding loan or investment amount | green ;; EI<sub>assets</sub> | Sector Asset Intensity | Sector GHG Emissions divided by Sector Total Assets, from EEIO databases | amber"
+/>
 
 **Option 3c (Asset-turnover-based, Score 4)**: Bridges between asset and revenue intensity:
 
-*Emissions = Outstanding Amount × Asset Turnover Ratio × (Sector GHG Emissions / Sector Revenue)*
+<EquationBreakdown
+  title="Option 3c - Asset-Turnover-Based Proxy (Score 4)"
+  result="E | Estimated Emissions | Proxy emissions estimate bridging asset and revenue intensity approaches, in tCO₂e | blue"
+  inputs="OA | Outstanding Amount | The FI's outstanding loan or investment amount | green ;; ATR | Asset Turnover Ratio | Sector average ratio of revenue to total assets | amber ;; EI<sub>rev</sub> | Sector Revenue Intensity | Sector GHG Emissions divided by Sector Revenue, from EEIO databases | violet"
+/>
 
 ## Sampling Tests for Estimation Validation
 

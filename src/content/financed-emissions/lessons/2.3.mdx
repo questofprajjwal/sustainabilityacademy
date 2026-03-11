@@ -31,11 +31,20 @@ Removed emissions may be reported separately if relevant, but shall never be net
 
 The attribution formula for project finance follows the same logic as business loans:
 
-**Attribution Factor = Outstanding Amount (Investment) / (Total Project Equity + Total Project Debt)**
+<EquationBreakdown
+  title="Project Finance - Attribution Factor"
+  result="AF | Attribution Factor | The financial institution's proportional share of the project's emissions | blue"
+  inputs="Outstanding Amount | Outstanding Amount | The FI's loan amount or equity investment in the project | green ;; E<sub>proj</sub> + D<sub>proj</sub> | Total Project Equity + Debt | Sum of all equity and debt committed to the project, typically from the SPV balance sheet | amber"
+  operator="÷"
+/>
 
 For equity, the outstanding amount is:
 
-**(Shares held by FI / Total project shares) × Total project equity**
+<EquationBreakdown
+  title="Outstanding Amount - Project Equity"
+  result="OA | Outstanding Amount | The financial institution's equity stake value in the project | blue"
+  inputs="Share Ratio | Project Ownership Share | Shares held by the FI divided by total shares in the project entity | green ;; E<sub>proj</sub> | Total Project Equity | The project's total equity from its balance sheet | amber"
+/>
 
 The denominator includes the **total financing available for the project**: at inception, this is the total debt plus equity committed to realise the project. In subsequent years, financial institutions should use the total equity and debt reported on the project's balance sheet.
 
@@ -64,7 +73,12 @@ The default attribution methodology assumes a separate balance sheet for the pro
 
 For these cases, if total project debt is unavailable but the project's emissions can be defined independently, the following alternative attribution factor may be used:
 
-**Attribution Factor = Outstanding Amount / Total Project Value at Origination**
+<EquationBreakdown
+  title="Alternative Attribution - No Separate Balance Sheet"
+  result="AF | Attribution Factor | The FI's proportional share when no separate project balance sheet exists | blue"
+  inputs="Outstanding Amount | Outstanding Amount | The FI's loan amount for the project | green ;; PV<sub>orig</sub> | Project Value at Origination | The total project cost at inception, frozen as a constant denominator for all subsequent years | amber"
+  operator="÷"
+/>
 
 The total project value is **frozen at origination** and used as a constant denominator for all subsequent years of GHG accounting. This can only be applied when the project's emissions can be independently measured (the LED installation's electricity consumption can be estimated; the boiler's fuel consumption can be measured directly).
 

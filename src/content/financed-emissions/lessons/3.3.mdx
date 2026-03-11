@@ -39,13 +39,16 @@ The bank then multiplies this by the estimated total annual emissions of all 50,
 
 ## Attribution Formula
 
-The general formula for securitizations is:
+The general formula for securitizations simplifies to:
 
-**Attribution Factor = (Tranche Holding / Total Securitization Nominal) × (Total Securitization Nominal / Total Underlying Asset Value at Origination)**
+<EquationBreakdown
+  title="Securitization Attribution Factor"
+  result="AF | Attribution Factor | The financial institution's proportional share of the underlying pool's emissions | blue"
+  inputs="Tranche Holding | Tranche Holding | The nominal value of the FI's position in a specific securitization tranche | green ;; AV<sub>orig</sub> | Total Underlying Asset Value | The aggregate origination value of all underlying assets in the securitized pool | amber"
+  operator="÷"
+/>
 
-Which simplifies to:
-
-**Attribution Factor = Tranche Holding / Total Underlying Asset Value at Origination**
+The full multi-layer formula is (Tranche Holding / Total Securitization Nominal) multiplied by (Total Securitization Nominal / Total Underlying Asset Value at Origination), but since the securitization nominal cancels out, the simplified version above is equivalent.
 
 For a CLO, the total underlying asset value is the aggregate of the corporate borrowers' EVIC (for listed) or total equity + debt (for private) values.
 

@@ -20,7 +20,12 @@ Scope 3 emissions from vehicle manufacturing are not required under the current 
 
 The attribution for motor vehicle loans uses the **vehicle or fleet value at origination** as the denominator:
 
-**Attribution Factor = Outstanding Amount / Total Vehicle Value at Origination**
+<EquationBreakdown
+  title="Motor Vehicle Loans - Attribution Factor"
+  result="AF | Attribution Factor | The bank's share of the vehicle's annual emissions | blue"
+  inputs="Outstanding Amount | Outstanding Amount | Current outstanding loan balance for the vehicle | green ;; VV<sub>orig</sub> | Vehicle Value at Origination | Total vehicle purchase price at the time the loan was made | amber"
+  operator="÷"
+/>
 
 <AnalogyBox>
 This is consistent with the real estate approach: the financial institution's share of the vehicle's cost at the time the loan was made determines its share of the vehicle's lifetime emissions attribution. As the loan is repaid, the outstanding amount falls and the attribution factor shrinks, eventually reaching zero at loan maturity.
@@ -28,7 +33,11 @@ This is consistent with the real estate approach: the financial institution's sh
 
 The financed emissions formula aggregates across all financed vehicles:
 
-**Financed Emissions = Σ (Outstanding Amount_v / Total Value at Origination_v) × Annual Emissions_v**
+<EquationBreakdown
+  title="Motor Vehicle Financed Emissions - Portfolio Aggregation"
+  result="FE | Financed Emissions | Total financed emissions across all financed vehicles, summed using Σ, in tCO₂e | blue"
+  inputs="AF<sub>v</sub> | Attribution Factor | Outstanding Amount / Vehicle Value at Origination for each vehicle or fleet v | green ;; E<sub>v</sub> | Annual Vehicle Emissions | Annual GHG emissions of vehicle v from fuel or electricity consumption, in tCO₂e | amber"
+/>
 
 Where v = each vehicle or vehicle fleet.
 
@@ -112,7 +121,11 @@ The global average of ~7% means that in a typical country, insurance premiums re
 
 For battery electric vehicles (BEVs), the attributable emissions are the Scope 2 emissions from electricity consumption:
 
-**Annual BEV Emissions = Annual kWh consumed × Grid emission factor (tCO2e/MWh)**
+<EquationBreakdown
+  title="Electric Vehicle Annual Emissions"
+  result="E<sub>BEV</sub> | Annual BEV Emissions | Annual Scope 2 emissions from the electric vehicle's electricity consumption, in tCO₂e | blue"
+  inputs="kWh | Annual Electricity Consumed | Total kilowatt-hours consumed by the vehicle per year | green ;; EF<sub>grid</sub> | Grid Emission Factor | tCO₂e per MWh for the country or region where the vehicle primarily operates | amber"
+/>
 
 The grid emission factor should be the most current available for the country or region where the vehicle primarily operates. As the electricity grid decarbonises over time, the same EV will produce decreasing Scope 2 emissions from year to year, which is a natural feature of this methodology.
 

@@ -22,7 +22,12 @@ Financial institutions shall report absolute **Scope 1, Scope 2, and Scope 3 emi
 
 The attribution factor uses the **total equity plus debt** from the company's balance sheet as the denominator:
 
-**Attribution Factor = Outstanding Amount / (Total Equity + Total Debt)**
+<EquationBreakdown
+  title="Business Loans - Attribution Factor (Private Companies)"
+  result="AF | Attribution Factor | The financial institution's proportional share of the borrower's emissions | blue"
+  inputs="Outstanding Amount | Outstanding Amount | Disbursed loan amount minus repayments, declining over time as the loan is repaid | green ;; E + D | Total Equity + Total Debt | Sum of total equity and total debt (current + long-term) from the company's balance sheet | amber"
+  operator="÷"
+/>
 
 Total debt includes both current and long-term debt on the balance sheet.
 
@@ -30,13 +35,22 @@ Total debt includes both current and long-term debt on the balance sheet.
 
 **For unlisted equity**: The outstanding amount is calculated as:
 
-**(Shares held by FI / Total shares of investee) × Total Equity of investee**
+<EquationBreakdown
+  title="Outstanding Amount - Unlisted Equity"
+  result="OA | Outstanding Amount | The financial institution's equity stake value in the unlisted company | blue"
+  inputs="Share Ratio | Ownership Share | Shares held by the FI divided by total shares of the investee company | green ;; Total Equity | Total Equity of Investee | The investee company's total equity from its balance sheet | amber"
+/>
 
 ### For Business Loans to Listed Companies
 
 When a bank provides a business loan to a listed company (general purpose, no specific use of proceeds), the denominator shifts to EVIC rather than balance sheet equity plus debt:
 
-**Attribution Factor (listed borrower) = Outstanding Amount / EVIC**
+<EquationBreakdown
+  title="Business Loans - Attribution Factor (Listed Borrower)"
+  result="AF | Attribution Factor | The financial institution's share when lending to a listed company | blue"
+  inputs="Outstanding Amount | Outstanding Amount | Disbursed loan amount minus repayments | green ;; EVIC | Enterprise Value Including Cash | Market cap + book value of total debt + minority interests of the listed borrower | amber"
+  operator="÷"
+/>
 
 ### Handling Negative Equity
 
