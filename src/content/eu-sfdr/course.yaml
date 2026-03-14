@@ -153,3 +153,26 @@ modules:
         title: "Building a SFDR Compliance Framework"
         duration: "40 min"
         vmRef: "RTS 2022/1288; ESMA Q&As"
+
+  - id: 6
+    title: "SFDR 2.0 — The Proposed Overhaul"
+    subtitle: "From disclosure regime to product categorisation"
+    icon: "🔄"
+    color: rose
+    lessons:
+      - id: "6.1"
+        title: "Why SFDR 2.0? Problems with the Current Framework"
+        duration: "35 min"
+        vmRef: "EC COM(2025) 841 final, Recitals; EC 2023 Consultation Summary"
+      - id: "6.2"
+        title: "The New Product Categories: Articles 7, 8, and 9"
+        duration: "50 min"
+        vmRef: "EC COM(2025) 841 final, Articles 6a-9a"
+      - id: "6.3"
+        title: "What Changes: PAI, Disclosures, Scope, and Naming"
+        duration: "45 min"
+        vmRef: "EC COM(2025) 841 final, Articles 3-5, 10-12"
+      - id: "6.4"
+        title: "Preparing for SFDR 2.0: Timeline, Impact, and Action Plan"
+        duration: "40 min"
+        vmRef: "EC COM(2025) 841 final; Sustainalytics Impact Analysis; ESAs Joint Opinion JC/2024/06"

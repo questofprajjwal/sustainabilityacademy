@@ -111,6 +111,12 @@
   category: "carbon-markets"
   related: ["permanence", "carbon-sequestration"]
 
+- term: "Butterfly Diagram"
+  slug: "butterfly-diagram"
+  definition: "A visual model developed by the Ellen MacArthur Foundation showing two material cycles in a circular economy: the biological cycle (nutrients returned to the biosphere) and the technical cycle (products, components, and materials kept in use through reuse, repair, remanufacturing, and recycling)."
+  category: "sustainability"
+  related: ["circular-economy"]
+
 # ─── C ────────────────────────────────────────────────────────────────────────
 
 - term: "CapEx KPI (EU Taxonomy)"
@@ -137,6 +143,12 @@
   category: "climate-science"
   related: ["carbon-sequestration", "direct-air-capture", "net-zero"]
 
+- term: "Carbon Leakage"
+  slug: "carbon-leakage"
+  definition: "The risk that production and associated emissions shift from jurisdictions with stringent climate policies to those with weaker or no carbon pricing. Can occur through relocation of production facilities or shifts in trade flows. The primary rationale for border carbon adjustments like CBAM."
+  category: "carbon-markets"
+  related: ["cbam", "emissions-trading-system"]
+
 - term: "Carbon Pricing"
   slug: "carbon-pricing"
   definition: "Mechanisms that put a monetary cost on greenhouse gas emissions, including carbon taxes (fixed price per tonne) and emissions trading systems (cap-and-trade markets)."
@@ -151,9 +163,15 @@
 
 - term: "CBAM"
   slug: "cbam"
-  definition: "Carbon Border Adjustment Mechanism - EU import tariffs calibrated to the carbon price not paid in the country of origin, designed to prevent carbon leakage from industries relocating to avoid carbon costs."
-  category: "climate-finance"
-  related: ["ets", "carbon-pricing"]
+  definition: "Carbon Border Adjustment Mechanism. An EU regulation (2023/956) requiring importers of carbon-intensive goods (cement, iron/steel, aluminium, fertilisers, electricity, hydrogen) to purchase certificates reflecting the EU ETS carbon price for embedded emissions. Designed to prevent carbon leakage as free ETS allowances are phased out (2026-2034)."
+  category: "carbon-markets"
+  related: ["emissions-trading-system", "carbon-leakage", "eu-ets"]
+
+- term: "CBAM Certificate"
+  slug: "cbam-certificate"
+  definition: "A tradeable instrument purchased by authorised CBAM declarants, priced at the weekly average EU ETS auction price. Each certificate represents one tonne of CO2e of embedded emissions. Certificates must be surrendered annually to cover the embedded emissions of imported CBAM goods, minus any deduction for carbon prices paid in the country of origin."
+  category: "carbon-markets"
+  related: ["cbam", "emissions-trading-system"]
 
 - term: "CCP (Core Carbon Principles)"
   slug: "ccp"
@@ -245,6 +263,12 @@
   category: "carbon-markets"
   related: ["carbon-credit", "article-6"]
 
+- term: "Cradle to Cradle"
+  slug: "cradle-to-cradle"
+  definition: "A design philosophy developed by William McDonough and Michael Braungart that models industrial systems on biological ones, where all materials are either biological nutrients (safely returned to the biosphere) or technical nutrients (recycled indefinitely without quality loss). Contrast with cradle-to-grave."
+  category: "sustainability"
+  related: ["circular-economy", "life-cycle-assessment"]
+
 - term: "Corresponding Adjustment"
   slug: "corresponding-adjustment"
   definition: "An accounting mechanism under Article 6 where a host country adds transferred emission reductions back to its own emissions total while the acquiring country subtracts them, preventing double counting."
@@ -301,6 +325,12 @@
   category: "climate-science"
   related: ["net-zero", "transition-risk", "1-5c-pathway"]
 
+- term: "Digital Product Passport (DPP)"
+  slug: "digital-product-passport"
+  definition: "An electronic record containing standardised information about a product's composition, origin, repairability, recyclability, and environmental footprint. Required under the EU Ecodesign for Sustainable Products Regulation (ESPR) for regulated product categories."
+  category: "sustainability"
+  related: ["espr", "circular-economy"]
+
 - term: "Direct Air Capture (DAC)"
   slug: "direct-air-capture"
   definition: "Technology that physically extracts CO2 directly from the ambient atmosphere and stores it permanently in geological formations or products. Used for neutralizing residual emissions that cannot be abated."
@@ -338,6 +368,12 @@
   definition: "Benefits that people, including businesses, obtain from ecosystems. Organized into four categories: provisioning (food, water, timber), regulating (climate regulation, water purification, pollination), cultural (sacred sites, recreation, ecotourism), and supporting (nutrient cycling, primary production). Under IFC PS6, classified as Type I (may adversely affect communities) and Type II (project depends on for operations)."
   category: "sustainability"
   related: ["biodiversity", "natural-capital"]
+
+- term: "Embedded Emissions"
+  slug: "embedded-emissions"
+  definition: "The greenhouse gas emissions released during the production of a good, including direct emissions from the production process and, for certain CBAM goods, indirect emissions from electricity consumed. Calculated per tonne of product using installation-level data or default values."
+  category: "carbon-markets"
+  related: ["cbam", "emission-factor"]
 
 - term: "Enabling Activity (EU Taxonomy)"
   slug: "enabling-activity"
@@ -381,6 +417,12 @@
   category: "social-safeguards"
   related: ["esia", "performance-standards"]
 
+- term: "ESPR"
+  slug: "espr"
+  definition: "Ecodesign for Sustainable Products Regulation. EU Regulation 2024/1781 replacing the original Ecodesign Directive. Sets performance and information requirements for products sold in the EU, including durability, repairability, recyclability, and mandatory Digital Product Passports."
+  category: "sustainability"
+  related: ["eu-taxonomy", "digital-product-passport", "circular-economy"]
+
 - term: "ESG"
   slug: "esg"
   definition: "Environmental, Social, and Governance - a framework for evaluating corporate sustainability and ethical impact across three pillars."
@@ -404,6 +446,12 @@
   definition: "Exploring Natural Capital Opportunities, Risks and Exposure. A tool developed by the Natural Capital Finance Alliance and UNEP-WCMC that maps how economic sectors depend on and impact nature. Covers 167 sub-sectors and 21 ecosystem services. Used in the TNFD LEAP approach."
   category: "biodiversity"
   related: ["tnfd", "ecosystem-services", "natural-capital", "leap-approach"]
+
+- term: "EPR"
+  slug: "epr"
+  definition: "Extended Producer Responsibility. A policy approach where producers are given significant responsibility for the end-of-life treatment and disposal of their products. Implemented through fees that fund collection, sorting, and recycling infrastructure. Eco-modulation adjusts fees based on product recyclability."
+  category: "sustainability"
+  related: ["circular-economy", "waste-hierarchy"]
 
 - term: "Equator Principles"
   slug: "equator-principles"
@@ -563,6 +611,12 @@
   category: "climate-finance"
   related: ["esg-integration", "sdgs"]
 
+- term: "Industrial Symbiosis"
+  slug: "industrial-symbiosis"
+  definition: "A form of inter-firm cooperation where the waste, by-products, or excess resources of one company become inputs for another. The Kalundborg Eco-Industrial Park in Denmark is the world's most cited example, operating since the 1970s."
+  category: "sustainability"
+  related: ["circular-economy", "material-flow-analysis"]
+
 - term: "IPBES"
   slug: "ipbes"
   definition: "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. The biodiversity equivalent of the IPCC. Its 2019 Global Assessment found that approximately one million species face extinction and identified five direct drivers of biodiversity loss."
@@ -647,6 +701,12 @@
   category: "carbon-markets"
   related: ["emission-reductions", "monitoring"]
 
+- term: "Life Cycle Assessment (LCA)"
+  slug: "life-cycle-assessment"
+  definition: "A systematic methodology (ISO 14040/14044) for evaluating the environmental impacts of a product, process, or service throughout its entire life cycle, from raw material extraction through production, use, and end-of-life treatment."
+  category: "sustainability"
+  related: ["circular-economy", "emission-factor"]
+
 - term: "Livelihood Restoration"
   slug: "livelihood-restoration"
   definition: "Under IFC PS5, the requirement to help economically displaced persons rebuild their income-earning capacity. Cash compensation alone is rarely sufficient. Measures vary by livelihood type: land-based (replacement land, improved inputs, transitional food support), wage-based (job placement, skills training), enterprise-based (relocation assistance, access to customers)."
@@ -684,6 +744,18 @@
   definition: "A Scope 2 accounting approach that reflects specific electricity purchasing decisions such as renewable energy certificates (RECs) or power purchase agreements, allowing companies to claim lower emissions."
   category: "ghg-accounting"
   related: ["location-based-method", "scope-2", "rec"]
+
+- term: "Material Circularity Indicator (MCI)"
+  slug: "material-circularity-indicator"
+  definition: "A metric developed by the Ellen MacArthur Foundation and Granta Design measuring how restorative a product's material flows are. Ranges from 0 (fully linear) to 1 (fully circular). Considers recycled content, recyclability, product utility, and lifespan."
+  category: "sustainability"
+  related: ["circular-economy"]
+
+- term: "Material Flow Analysis (MFA)"
+  slug: "material-flow-analysis"
+  definition: "A systematic assessment of flows and stocks of materials within a defined system (product, company, region, or economy). Uses mass balance principles to track resource inputs, outputs, and accumulation. Sankey diagrams are a common visualisation tool."
+  category: "sustainability"
+  related: ["circular-economy", "material-circularity-indicator"]
 
 - term: "Materiality"
   slug: "materiality"
@@ -1098,6 +1170,12 @@
   definition: "Weighted Average Carbon Intensity - a portfolio-level metric that normalizes GHG emissions by revenue across holdings, allowing comparison of carbon exposure between different portfolios."
   category: "climate-finance"
   related: ["financed-emissions", "scope-1", "scope-2"]
+
+- term: "Waste Hierarchy"
+  slug: "waste-hierarchy"
+  definition: "A five-step priority order for waste management established by the EU Waste Framework Directive (2008/98/EC): prevention, preparation for reuse, recycling, other recovery (e.g., energy recovery), and disposal. Prevention is the most preferred option."
+  category: "sustainability"
+  related: ["circular-economy", "epr"]
 
 - term: "WBA"
   slug: "wba"
