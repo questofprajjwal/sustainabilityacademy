@@ -14,6 +14,8 @@ import BottomLessonNav from '@/components/learning/BottomLessonNav';
 import ReadingProgress from '@/components/learning/ReadingProgress';
 import Breadcrumb from '@/components/platform/Breadcrumb';
 import BackToTop from '@/components/learning/BackToTop';
+import Confetti from '@/components/platform/Confetti';
+import XPToast from '@/components/platform/XPToast';
 
 interface Props {
   courseId: string;
@@ -37,6 +39,8 @@ export default function LessonClient({
   const progress = useProgress(courseId);
   const router = useRouter();
   const colors = getColor(courseColor);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [xpToast, setXpToast] = useState({ visible: false, amount: 0 });
 
   // Swipe between lessons
   const goNext = useCallback(() => {
@@ -98,10 +102,19 @@ export default function LessonClient({
 
   function handleMarkComplete() {
     if (!progress.mounted) return;
-    progress.markComplete(lessonId);
-    if (navCtx?.nextLesson) {
-      router.push(`/courses/${courseId}/${lessonIdToUrl(navCtx.nextLesson.id)}`);
+    const result = progress.markComplete(lessonId);
+
+    if (result.xpAwarded > 0) {
+      setShowConfetti(true);
+      setXpToast({ visible: true, amount: result.xpAwarded });
     }
+
+    // Navigate after a brief delay so the user sees the celebration
+    setTimeout(() => {
+      if (navCtx?.nextLesson) {
+        router.push(`/courses/${courseId}/${lessonIdToUrl(navCtx.nextLesson.id)}`);
+      }
+    }, result.xpAwarded > 0 ? 1200 : 0);
   }
 
   const breadcrumbs = [
@@ -113,6 +126,12 @@ export default function LessonClient({
 
   return (
     <div className="max-w-4xl mx-auto px-4 min-[400px]:px-5 sm:px-6 py-8 pb-20 md:pb-8">
+      <Confetti trigger={showConfetti} onComplete={() => setShowConfetti(false)} />
+      <XPToast
+        xp={xpToast.amount}
+        visible={xpToast.visible}
+        onDone={() => setXpToast({ visible: false, amount: 0 })}
+      />
       <ReadingProgress color={colors.bg} />
       {/* Mobile: simple back link; Desktop: full breadcrumb */}
       <div className="md:hidden">

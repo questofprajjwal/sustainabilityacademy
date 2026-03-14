@@ -6,6 +6,7 @@ import type { Course } from '@/lib/types';
 import { getColor } from '@/lib/colors';
 import { lessonIdToUrl } from '@/lib/url-helpers';
 import ProgressBar from '@/components/learning/ProgressBar';
+import CourseRoadmap from '@/components/learning/CourseRoadmap';
 import Breadcrumb from '@/components/platform/Breadcrumb';
 import Footer from '@/components/platform/Footer';
 
@@ -96,75 +97,22 @@ export default function CourseOverviewClient({ course, totalLessons }: Props) {
           </div>
         </div>
 
-        {/* Module cards */}
+        {/* Course Roadmap */}
         <div className="space-y-4">
-          <h2 className="text-xl font-bold text-gray-800">Course Modules</h2>
-          {course.modules.map(mod => {
-            const modColors = getColor(mod.color);
-            const modCompleted = progress.mounted
-              ? mod.lessons.filter(l => progress.isCompleted(l.id)).length
-              : 0;
-            const modPercent = mod.lessons.length > 0 ? (modCompleted / mod.lessons.length) * 100 : 0;
-            const firstLesson = mod.lessons[0];
-
-            return (
-              <div
-                key={mod.id}
-                className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className={`h-1 ${modColors.bg}`} aria-hidden />
-                <div className="p-5">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-start gap-3">
-                      <span className="text-2xl mt-0.5" aria-hidden>{mod.icon}</span>
-                      <div>
-                        <p className={`text-xs font-semibold ${modColors.text} mb-0.5`}>
-                          Module {mod.id + 1}
-                        </p>
-                        <h3 className="font-bold text-gray-900">{mod.title}</h3>
-                        <p className="text-sm text-gray-500">{mod.subtitle}</p>
-                      </div>
-                    </div>
-                    <div className="text-right flex-shrink-0">
-                      <p className="text-sm text-gray-500">
-                        {mod.lessons.length} lesson{mod.lessons.length !== 1 ? 's' : ''}
-                      </p>
-                      {progress.mounted && modCompleted > 0 && (
-                        <p className="text-xs text-green-600 font-medium">
-                          {modCompleted}/{mod.lessons.length} done
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  {progress.mounted && modCompleted > 0 && (
-                    <div className="mt-3">
-                      <ProgressBar percent={modPercent} colorClass={modColors.bg} />
-                    </div>
-                  )}
-
-                  <div className="mt-4">
-                    <Link
-                      href={`/courses/${course.id}/${lessonIdToUrl(firstLesson.id)}`}
-                      className={`inline-flex items-center gap-1.5 text-sm font-medium px-4 py-1.5 rounded-lg transition-colors ${
-                        modCompleted === mod.lessons.length
-                          ? 'text-green-700 bg-green-50 hover:bg-green-100'
-                          : modCompleted > 0
-                          ? `${modColors.text} ${modColors.light} hover:opacity-80`
-                          : 'text-gray-600 bg-gray-100 hover:bg-gray-200'
-                      }`}
-                    >
-                      {modCompleted === mod.lessons.length
-                        ? '✓ Review Module'
-                        : modCompleted > 0
-                        ? '▶ Continue'
-                        : 'Start Module'}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          <h2 className="text-xl font-bold text-gray-800">Course Roadmap</h2>
+          <CourseRoadmap
+            course={course}
+            completedLessons={
+              progress.mounted
+                ? Object.fromEntries(
+                    course.modules
+                      .flatMap(m => m.lessons)
+                      .filter(l => progress.isCompleted(l.id))
+                      .map(l => [l.id, true])
+                  )
+                : {}
+            }
+          />
         </div>
       </div>
 

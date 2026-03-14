@@ -4,7 +4,10 @@ import Link from 'next/link';
 import { exportProgress } from '@/lib/progress-export';
 import { useRef, useState } from 'react';
 import { importProgress } from '@/lib/progress-export';
+import { usePlatformProgress } from '@/lib/progress';
 import SearchButton from './SearchButton';
+import XPBadge from './XPBadge';
+import StreakCounter from './StreakCounter';
 
 interface Props {
   lastLessonHref?: string;
@@ -13,6 +16,7 @@ interface Props {
 export default function PlatformNav({ lastLessonHref }: Props) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [importMsg, setImportMsg] = useState<string | null>(null);
+  const { mounted, xp, streak } = usePlatformProgress();
 
   async function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -45,9 +49,22 @@ export default function PlatformNav({ lastLessonHref }: Props) {
             <span className="sm:hidden">SA</span>
           </Link>
 
-          {/* Search + Nav + Actions */}
+          {/* Search + Gamification + Nav + Actions */}
           <div className="flex items-center gap-3">
             <SearchButton />
+
+            {mounted && xp > 0 && (
+              <div className="hidden sm:block">
+                <XPBadge xp={xp} compact />
+              </div>
+            )}
+
+            {mounted && streak.currentStreak > 0 && (
+              <div className="hidden sm:block">
+                <StreakCounter streak={streak} compact />
+              </div>
+            )}
+
             {lastLessonHref && (
               <Link
                 href={lastLessonHref}

@@ -68,6 +68,15 @@ export type QuizQuestion =
 export interface PlatformProgress {
   version: 2;
   courses: Record<string, CourseProgress>;
+  xp?: number;
+  level?: number;
+  streak?: StreakData;
+}
+
+export interface StreakData {
+  currentStreak: number;
+  longestStreak: number;
+  lastStudyDate: string | null;   // ISO date string (YYYY-MM-DD)
 }
 
 export interface CourseProgress {

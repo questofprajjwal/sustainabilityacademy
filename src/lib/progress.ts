@@ -11,7 +11,14 @@
  */
 
 import { useState, useEffect, useCallback } from 'react';
-import type { PlatformProgress, CourseProgress, QuizState } from './types';
+import type { PlatformProgress, CourseProgress, QuizState, StreakData } from './types';
+import {
+  XP_LESSON_COMPLETE,
+  XP_PERFECT_QUIZ,
+  XP_MODULE_COMPLETE,
+  XP_COURSE_COMPLETE,
+  updateStreak,
+} from './gamification';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
@@ -158,12 +165,20 @@ export function useProgress(courseId: string) {
     });
   }, [courseId]);
 
+  const updatePlatformData = useCallback((updater: (p: PlatformProgress) => PlatformProgress) => {
+    setPlatform(prev => {
+      const updated = updater(prev);
+      savePlatformProgress(updated);
+      return updated;
+    });
+  }, []);
+
   // Return safe defaults until mounted
   if (!mounted) {
     return {
       mounted: false,
       isCompleted: () => false,
-      markComplete: () => {},
+      markComplete: () => ({ xpAwarded: 0, streakUpdated: false }),
       completedCount: 0,
       totalLessons: 0,
       percentComplete: 0,
@@ -179,6 +194,9 @@ export function useProgress(courseId: string) {
       clearScrollPosition: () => {},
       resetCourse: () => {},
       resetQuiz: () => {},
+      addXP: () => {},
+      xp: 0,
+      streak: { currentStreak: 0, longestStreak: 0, lastStudyDate: null } as StreakData,
     };
   }
 
@@ -191,7 +209,14 @@ export function useProgress(courseId: string) {
       return !!cp.completedLessons[lessonId];
     },
 
-    markComplete(lessonId: string): void {
+    markComplete(lessonId: string): { xpAwarded: number; streakUpdated: boolean } {
+      // Skip if already completed
+      if (cp.completedLessons[lessonId]) {
+        return { xpAwarded: 0, streakUpdated: false };
+      }
+
+      let xpGained = XP_LESSON_COMPLETE;
+
       updateCourse(prev => ({
         ...prev,
         lastAccessedAt: Date.now(),
@@ -200,6 +225,22 @@ export function useProgress(courseId: string) {
           [lessonId]: Date.now(),
         },
       }));
+
+      // Update XP and streak at platform level
+      const streak = platform.streak ?? { currentStreak: 0, longestStreak: 0, lastStudyDate: null };
+      const streakResult = updateStreak(streak.lastStudyDate, streak.currentStreak, streak.longestStreak);
+
+      updatePlatformData(prev => ({
+        ...prev,
+        xp: (prev.xp ?? 0) + xpGained,
+        streak: {
+          currentStreak: streakResult.currentStreak,
+          longestStreak: streakResult.longestStreak,
+          lastStudyDate: streakResult.lastStudyDate,
+        },
+      }));
+
+      return { xpAwarded: xpGained, streakUpdated: streakResult.isNewDay };
     },
 
     completedCount: Object.keys(cp.completedLessons).length,
@@ -318,6 +359,16 @@ export function useProgress(courseId: string) {
         return { ...prev, quizzes };
       });
     },
+
+    addXP(amount: number): void {
+      updatePlatformData(prev => ({
+        ...prev,
+        xp: (prev.xp ?? 0) + amount,
+      }));
+    },
+
+    xp: platform.xp ?? 0,
+    streak: platform.streak ?? { currentStreak: 0, longestStreak: 0, lastStudyDate: null },
   };
 }
 
@@ -344,6 +395,8 @@ export function usePlatformProgress() {
       getCourseProgress: (_courseId: string) => null as CourseProgress | null,
       overallStats: { coursesStarted: 0, totalLessonsCompleted: 0, totalLessons: 0 },
       lastAccessedCourse: null as string | null,
+      xp: 0,
+      streak: { currentStreak: 0, longestStreak: 0, lastStudyDate: null } as StreakData,
     };
   }
 
@@ -361,5 +414,7 @@ export function usePlatformProgress() {
       const bestAt = platform.courses[best]?.lastAccessedAt ?? 0;
       return cp.lastAccessedAt > bestAt ? id : best;
     }, null),
+    xp: platform.xp ?? 0,
+    streak: platform.streak ?? { currentStreak: 0, longestStreak: 0, lastStudyDate: null },
   };
 }
