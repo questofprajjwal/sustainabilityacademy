@@ -2,10 +2,16 @@
 # Glossary - Sustainability Academy
 # Categories: carbon-markets, climate-science, ghg-accounting, esg,
 #             sustainability, reporting-standards, climate-finance, governance,
-#             social-safeguards, eu-taxonomy
+#             social-safeguards, eu-taxonomy, biodiversity, human-rights
 # ──────────────────────────────────────────────────────────────────────────────
 
 # ─── A ────────────────────────────────────────────────────────────────────────
+
+- term: "ACR"
+  slug: "acr"
+  definition: "American Carbon Registry. One of the four major voluntary carbon market registries. Established in 1996 as the first private voluntary GHG registry in the US. Now managed by Winrock International. Focuses on emission reduction and removal projects primarily in the Americas."
+  category: "carbon-markets"
+  related: ["vcs", "gold-standard", "carbon-credit"]
 
 - term: "Area of Influence"
   slug: "area-of-influence"
@@ -43,6 +49,12 @@
   category: "climate-finance"
   related: ["financed-emissions", "pcaf"]
 
+- term: "Avoidance Credit"
+  slug: "avoidance-credit"
+  definition: "A carbon credit representing emissions that were prevented from occurring, such as protecting a forest that would otherwise have been cleared (REDD+) or replacing a fossil fuel power plant with renewable energy. Contrasts with removal credits."
+  category: "carbon-markets"
+  related: ["removal-credit", "redd-plus", "carbon-credit"]
+
 # ─── B ────────────────────────────────────────────────────────────────────────
 
 - term: "BOGON"
@@ -57,12 +69,6 @@
   category: "carbon-markets"
   related: ["additionality", "emission-reductions"]
 
-- term: "Biodiversity Action Plan (BAP)"
-  slug: "biodiversity-action-plan"
-  definition: "A strategic document required for projects in critical habitat under IFC PS6. Describes how the mitigation strategy will achieve net gain (or no net loss), includes off-site actions and external partners, and differs from a Biodiversity Management Plan (BMP) which is operational and site-level."
-  category: "social-safeguards"
-  related: ["critical-habitat", "biodiversity-offset", "mitigation-hierarchy"]
-
 - term: "Biodiversity"
   slug: "biodiversity"
   definition: "The variety of life on Earth at genetic, species, and ecosystem levels. Underpins ecosystem services vital to human society including pollination, water purification, and climate regulation."
@@ -74,6 +80,18 @@
   definition: "A strategic document required under IFC PS6 for projects in critical or natural habitat. Describes the composite mitigation strategy for achieving net gains (critical habitat) or no net loss (natural habitat), including off-site conservation, partnerships, long-term funding, and measurable biodiversity targets. Distinct from the operational Biodiversity Management Plan (BMP)."
   category: "social-safeguards"
   related: ["critical-habitat", "biodiversity-offset", "mitigation-hierarchy", "performance-standards"]
+
+- term: "Biodiversity Credit"
+  slug: "biodiversity-credit"
+  definition: "A measurable unit representing a verified positive biodiversity outcome, such as species recovery or habitat restoration. Unlike carbon credits, biodiversity credits lack a universal metric, making standardisation and fungibility challenging. Emerging frameworks include the UK's Biodiversity Net Gain and voluntary schemes like the Biodiversity Credit Alliance."
+  category: "biodiversity"
+  related: ["biodiversity", "biodiversity-offset", "natural-capital"]
+
+- term: "Biodiversity Intactness Index (BII)"
+  slug: "biodiversity-intactness-index"
+  definition: "A metric estimating the average proportion of a region's original species abundance that remains despite human pressures. Ranges from 0% (complete loss) to 100% (pristine). Based on over 2.38 million records from the PREDICTS database."
+  category: "biodiversity"
+  related: ["mean-species-abundance", "biodiversity"]
 
 - term: "Biodiversity Offset"
   slug: "biodiversity-offset"
@@ -137,6 +155,12 @@
   category: "climate-finance"
   related: ["ets", "carbon-pricing"]
 
+- term: "CCP (Core Carbon Principles)"
+  slug: "ccp"
+  definition: "Ten quality criteria established by the ICVCM for high-integrity carbon credits. Organised into three categories: governance, emissions impact, and sustainable development. Credits meeting all criteria receive the CCP label."
+  category: "carbon-markets"
+  related: ["icvcm", "vcmi", "carbon-credit"]
+
 - term: "CDP"
   slug: "cdp"
   definition: "Carbon Disclosure Project - a global non-profit running the world's largest environmental disclosure system. Companies and cities report climate, water, and forest data through annual questionnaires scored from D- to A."
@@ -154,6 +178,18 @@
   definition: "Certified Emission Reduction - a carbon credit issued under the Kyoto Protocol's Clean Development Mechanism, representing one tonne of CO2e reduced."
   category: "carbon-markets"
   related: ["cdm", "carbon-credit"]
+
+- term: "Child Labour"
+  slug: "child-labour"
+  definition: "Work that deprives children of their childhood, potential, and dignity, and is harmful to physical and mental development. ILO Convention 138 sets minimum age standards and Convention 182 identifies worst forms including slavery, trafficking, and hazardous work. The ILO estimates 160 million children are in child labour globally."
+  category: "human-rights"
+  related: ["forced-labour", "ilo", "hrdd"]
+
+- term: "CHRB"
+  slug: "chrb"
+  definition: "Corporate Human Rights Benchmark. Now part of the World Benchmarking Alliance, it assesses the human rights policies, processes, and practices of large companies across five measurement areas: governance, human rights due diligence, remedy, company performance, and transparency."
+  category: "human-rights"
+  related: ["ungps", "hrdd", "wba"]
 
 - term: "Chance Find Procedure"
   slug: "chance-find-procedure"
@@ -238,6 +274,12 @@
   definition: "An assessment under IFC PS1 that considers impacts combining with those from other existing and planned developments in the project's area of influence. Required when multiple projects affect the same resources or communities simultaneously."
   category: "social-safeguards"
   related: ["esia", "esms", "area-of-influence"]
+
+- term: "CSDDD"
+  slug: "csddd"
+  definition: "Corporate Sustainability Due Diligence Directive. An EU directive adopted in 2024 requiring large companies to identify, prevent, mitigate, and account for adverse human rights and environmental impacts across their value chains. Includes civil liability provisions and administrative penalties up to 5% of global turnover."
+  category: "human-rights"
+  related: ["hrdd", "lksg", "due-diligence"]
 
 - term: "CSRD"
   slug: "csrd"
@@ -357,11 +399,23 @@
   category: "reporting-standards"
   related: ["csrd", "efrag", "double-materiality"]
 
+- term: "ENCORE"
+  slug: "encore"
+  definition: "Exploring Natural Capital Opportunities, Risks and Exposure. A tool developed by the Natural Capital Finance Alliance and UNEP-WCMC that maps how economic sectors depend on and impact nature. Covers 167 sub-sectors and 21 ecosystem services. Used in the TNFD LEAP approach."
+  category: "biodiversity"
+  related: ["tnfd", "ecosystem-services", "natural-capital", "leap-approach"]
+
 - term: "Equator Principles"
   slug: "equator-principles"
   definition: "A risk management framework adopted by over 130 financial institutions in 38 countries for determining, assessing, and managing environmental and social risk in project finance. Applies IFC Performance Standards as the benchmark for projects above $10 million, making the PS the de facto global standard for project finance E&S management."
   category: "social-safeguards"
   related: ["performance-standards", "esia", "esms"]
+
+- term: "EU Deforestation Regulation (EUDR)"
+  slug: "eudr"
+  definition: "EU regulation requiring companies placing commodities (palm oil, soy, cocoa, beef, timber, rubber, coffee) on the EU market to demonstrate products are deforestation-free and legally produced. Requires geolocation data and due diligence statements."
+  category: "sustainability"
+  related: ["eu-taxonomy", "due-diligence"]
 
 - term: "EU Taxonomy"
   slug: "eu-taxonomy"
@@ -395,6 +449,12 @@
   category: "carbon-markets"
   related: ["sbti", "afolu"]
 
+- term: "Forced Labour"
+  slug: "forced-labour"
+  definition: "All work or service exacted from any person under the threat of penalty and for which that person has not offered themselves voluntarily. The ILO identifies 11 indicators including abuse of vulnerability, deception, restriction of movement, isolation, physical violence, intimidation, retention of identity documents, withholding of wages, and debt bondage."
+  category: "human-rights"
+  related: ["modern-slavery", "child-labour", "ilo"]
+
 - term: "Fugitive Emissions"
   slug: "fugitive-emissions"
   definition: "Intentional or unintentional releases of greenhouse gases from equipment leaks, industrial processes, coal mines, or refrigeration and air-conditioning systems."
@@ -415,6 +475,12 @@
   category: "ghg-accounting"
   related: ["scope-1", "scope-2", "scope-3"]
 
+- term: "Gold Standard"
+  slug: "gold-standard"
+  definition: "A carbon credit certification standard established by WWF and other NGOs in 2003. Requires projects to demonstrate contributions to at least three UN Sustainable Development Goals beyond climate action. Known for strong stakeholder consultation requirements."
+  category: "carbon-markets"
+  related: ["vcs", "acr", "carbon-credit", "sdgs"]
+
 - term: "Green Bond"
   slug: "green-bond"
   definition: "A fixed-income instrument with proceeds earmarked specifically to fund climate and environmental projects such as renewable energy, energy efficiency, and clean transport."
@@ -433,19 +499,45 @@
   category: "reporting-standards"
   related: ["esg", "sdgs"]
 
+- term: "Grievance Mechanism"
+  slug: "grievance-mechanism"
+  definition: "A process through which concerns and complaints related to a company's human rights impacts can be raised, investigated, and resolved. UNGP Principle 31 sets eight effectiveness criteria: legitimate, accessible, predictable, equitable, transparent, rights-compatible, a source of continuous learning, and based on engagement and dialogue."
+  category: "human-rights"
+  related: ["ungps", "hrdd", "remediation"]
+
 - term: "GWP"
   slug: "gwp"
   definition: "Global Warming Potential - a measure of how much heat a greenhouse gas traps in the atmosphere relative to CO2 over a specified time period (typically 100 years). Methane has a GWP of 28."
   category: "climate-science"
   related: ["ghg", "co2e"]
 
+# ─── H ────────────────────────────────────────────────────────────────────────
+
+- term: "HRDD"
+  slug: "hrdd"
+  definition: "Human Rights Due Diligence. An ongoing process through which companies identify, prevent, mitigate, and account for how they address their adverse human rights impacts. Defined in the UNGPs (Principles 17-21) and OECD Due Diligence Guidance as a six-step process."
+  category: "human-rights"
+  related: ["ungps", "csddd", "due-diligence"]
+
 # ─── I ────────────────────────────────────────────────────────────────────────
+
+- term: "IBAT"
+  slug: "ibat"
+  definition: "Integrated Biodiversity Assessment Tool. Provides access to the IUCN Red List of Threatened Species, World Database on Protected Areas, and Key Biodiversity Areas. Used to screen project locations for biodiversity sensitivity in the TNFD LEAP Locate phase."
+  category: "biodiversity"
+  related: ["tnfd", "leap-approach", "biodiversity"]
 
 - term: "ICP"
   slug: "icp"
   definition: "Informed Consultation and Participation - the baseline engagement requirement under IFC PS7 for projects affecting Indigenous Peoples. Goes beyond standard consultation to require engaging representative bodies, providing accessible information, allowing adequate time for internal decision-making, and documenting how community views shaped the project."
   category: "social-safeguards"
   related: ["fpic", "stakeholder-engagement", "performance-standards"]
+
+- term: "ICVCM"
+  slug: "icvcm"
+  definition: "Integrity Council for the Voluntary Carbon Market. An independent governance body that sets and enforces global threshold standards for high-quality carbon credits through the Core Carbon Principles (CCPs) and Assessment Framework."
+  category: "carbon-markets"
+  related: ["ccp", "vcmi", "voluntary-carbon-market"]
 
 - term: "IFC Performance Standards"
   slug: "performance-standards"
@@ -459,11 +551,23 @@
   category: "reporting-standards"
   related: ["issb", "tcfd", "scope-1"]
 
+- term: "ILO"
+  slug: "ilo"
+  definition: "International Labour Organization. A UN specialized agency setting international labour standards through conventions and recommendations. Its eight fundamental conventions cover freedom of association, forced labour, child labour, and discrimination. The ILO's MNE Declaration provides guidance specifically for business."
+  category: "human-rights"
+  related: ["forced-labour", "child-labour", "just-transition"]
+
 - term: "Impact Investing"
   slug: "impact-investing"
   definition: "Investments made with the specific intent to generate measurable positive social or environmental impact alongside a financial return."
   category: "climate-finance"
   related: ["esg-integration", "sdgs"]
+
+- term: "IPBES"
+  slug: "ipbes"
+  definition: "Intergovernmental Science-Policy Platform on Biodiversity and Ecosystem Services. The biodiversity equivalent of the IPCC. Its 2019 Global Assessment found that approximately one million species face extinction and identified five direct drivers of biodiversity loss."
+  category: "biodiversity"
+  related: ["biodiversity", "ecosystem-services"]
 
 - term: "IPCC"
   slug: "ipcc"
@@ -511,6 +615,18 @@
 
 # ─── K ────────────────────────────────────────────────────────────────────────
 
+- term: "KnowTheChain"
+  slug: "knowthechain"
+  definition: "A benchmark initiative evaluating how companies in food, ICT, and apparel sectors address forced labour risks in their supply chains. Assesses governance, traceability, risk assessment, purchasing practices, recruitment, worker voice, and remedy."
+  category: "human-rights"
+  related: ["chrb", "forced-labour", "wba"]
+
+- term: "Kunming-Montreal Global Biodiversity Framework (GBF)"
+  slug: "kunming-montreal-gbf"
+  definition: "Adopted at CBD COP15 in December 2022, this framework sets 23 targets for 2030, including the landmark 30x30 target (protecting 30% of land and sea) and Target 15 requiring large companies to assess and disclose nature-related risks and dependencies."
+  category: "biodiversity"
+  related: ["tnfd", "biodiversity", "sbtn"]
+
 - term: "Kyoto Protocol"
   slug: "kyoto-protocol"
   definition: "The first binding international climate agreement (1997) establishing carbon markets through the Clean Development Mechanism, Joint Implementation, and emissions trading among developed countries."
@@ -519,17 +635,35 @@
 
 # ─── L ────────────────────────────────────────────────────────────────────────
 
-- term: "Livelihood Restoration"
-  slug: "livelihood-restoration"
-  definition: "Under IFC PS5, the requirement to help economically displaced persons rebuild their income-earning capacity. Cash compensation alone is rarely sufficient. Measures vary by livelihood type: land-based (replacement land, improved inputs, transitional food support), wage-based (job placement, skills training), enterprise-based (relocation assistance, access to customers)."
-  category: "social-safeguards"
-  related: ["involuntary-resettlement", "resettlement-action-plan"]
+- term: "LEAP Approach"
+  slug: "leap-approach"
+  definition: "The TNFD's integrated assessment process for identifying and managing nature-related issues. Four phases: Locate (interface with nature), Evaluate (dependencies and impacts), Assess (risks and opportunities), and Prepare (respond and report). Designed to feed into the four TNFD disclosure pillars."
+  category: "biodiversity"
+  related: ["tnfd", "encore", "ibat"]
 
 - term: "Leakage"
   slug: "leakage"
   definition: "An increase in greenhouse gas emissions outside the project boundary that occurs as a result of the project activity. Must be accounted for when calculating net emission reductions."
   category: "carbon-markets"
   related: ["emission-reductions", "monitoring"]
+
+- term: "Livelihood Restoration"
+  slug: "livelihood-restoration"
+  definition: "Under IFC PS5, the requirement to help economically displaced persons rebuild their income-earning capacity. Cash compensation alone is rarely sufficient. Measures vary by livelihood type: land-based (replacement land, improved inputs, transitional food support), wage-based (job placement, skills training), enterprise-based (relocation assistance, access to customers)."
+  category: "social-safeguards"
+  related: ["involuntary-resettlement", "resettlement-action-plan"]
+
+- term: "Living Wage"
+  slug: "living-wage"
+  definition: "A wage sufficient to afford a decent standard of living for a worker and their family, including food, housing, healthcare, education, clothing, transport, and a margin for unexpected events. Distinguished from the legal minimum wage, which is often set below subsistence level. The Anker methodology is the most widely used benchmarking approach."
+  category: "human-rights"
+  related: ["hrdd", "ilo"]
+
+- term: "LkSG"
+  slug: "lksg"
+  definition: "Lieferkettensorgfaltspflichtengesetz (German Supply Chain Due Diligence Act). Enacted in 2023, it requires companies with 1,000+ employees in Germany to establish human rights and environmental due diligence across their supply chains. Enforced by the Federal Office for Economic Affairs and Export Control (BAFA)."
+  category: "human-rights"
+  related: ["csddd", "hrdd", "due-diligence"]
 
 - term: "Location-Based Method"
   slug: "location-based-method"
@@ -538,12 +672,6 @@
   related: ["market-based-method", "scope-2", "emission-factor"]
 
 # ─── M ────────────────────────────────────────────────────────────────────────
-
-- term: "Minimum Social Safeguards (EU Taxonomy)"
-  slug: "minimum-social-safeguards"
-  definition: "A mandatory requirement under the EU Taxonomy that companies must meet alongside environmental criteria. Based on the OECD Guidelines for Multinational Enterprises, UN Guiding Principles on Business and Human Rights, ILO Core Conventions, and the International Bill of Human Rights. Covers human rights due diligence, anti-corruption, fair competition, and taxation."
-  category: "eu-taxonomy"
-  related: ["eu-taxonomy", "taxonomy-alignment", "dnsh"]
 
 - term: "Mitigation Hierarchy"
   slug: "mitigation-hierarchy"
@@ -562,6 +690,24 @@
   definition: "The principle determining which sustainability topics are significant enough to warrant disclosure. A topic is material if it could influence decisions of stakeholders or represents significant impacts."
   category: "reporting-standards"
   related: ["double-materiality", "esrs"]
+
+- term: "Mean Species Abundance (MSA)"
+  slug: "mean-species-abundance"
+  definition: "A biodiversity metric measuring the mean abundance of original species in an area relative to their abundance in an undisturbed reference state. Ranges from 0 (complete loss) to 1 (pristine). Developed by PBL Netherlands and used in the GLOBIO model."
+  category: "biodiversity"
+  related: ["biodiversity-intactness-index", "biodiversity"]
+
+- term: "Minimum Social Safeguards (EU Taxonomy)"
+  slug: "minimum-social-safeguards"
+  definition: "A mandatory requirement under the EU Taxonomy that companies must meet alongside environmental criteria. Based on the OECD Guidelines for Multinational Enterprises, UN Guiding Principles on Business and Human Rights, ILO Core Conventions, and the International Bill of Human Rights. Covers human rights due diligence, anti-corruption, fair competition, and taxation."
+  category: "eu-taxonomy"
+  related: ["eu-taxonomy", "taxonomy-alignment", "dnsh"]
+
+- term: "Modern Slavery"
+  slug: "modern-slavery"
+  definition: "An umbrella term covering forced labour, debt bondage, human trafficking, and forced marriage. The ILO estimates approximately 50 million people are in situations of modern slavery globally. Addressed by legislation including the UK Modern Slavery Act and Australian Modern Slavery Act."
+  category: "human-rights"
+  related: ["forced-labour", "uflpa", "hrdd"]
 
 - term: "Monitoring"
   slug: "monitoring"
@@ -582,6 +728,12 @@
   definition: "The stock of natural assets - geology, soil, water, air, and living organisms - that provides ecosystem services underpinning economic activity and human wellbeing."
   category: "sustainability"
   related: ["biodiversity", "ecosystem-services", "tnfd"]
+
+- term: "Nature-Positive"
+  slug: "nature-positive"
+  definition: "A goal and framing concept calling for a measurable net gain in biodiversity and ecosystem integrity by 2030, relative to a 2020 baseline, with full recovery by 2050. Aligned with the Kunming-Montreal GBF ambition."
+  category: "biodiversity"
+  related: ["kunming-montreal-gbf", "biodiversity", "sbtn"]
 
 - term: "NDC"
   slug: "ndc"
@@ -647,6 +799,12 @@
   category: "climate-finance"
   related: ["financed-emissions", "attribution-factor", "scope-3"]
 
+- term: "PDD"
+  slug: "pdd"
+  definition: "Project Design Document. The detailed technical document that describes a carbon credit project's methodology, baseline scenario, monitoring plan, and expected emission reductions. Submitted to the registry during the validation stage."
+  category: "carbon-markets"
+  related: ["vcs", "validation", "carbon-credit"]
+
 - term: "Permanence"
   slug: "permanence"
   definition: "The requirement that carbon stored or emission reductions achieved by a project are long-lasting and not reversed. Particularly relevant for forestry and land-use projects."
@@ -673,12 +831,6 @@
 
 # ─── R ────────────────────────────────────────────────────────────────────────
 
-- term: "Resettlement Action Plan (RAP)"
-  slug: "resettlement-action-plan"
-  definition: "A comprehensive plan required under IFC PS5 when a project causes physical displacement. Covers 19 sections including census of affected persons, asset inventory, valuation methodology, entitlements, relocation site preparation, transitional support, grievance mechanism, budget, and completion audit criteria. Must be disclosed to affected communities before displacement begins."
-  category: "social-safeguards"
-  related: ["involuntary-resettlement", "livelihood-restoration", "performance-standards"]
-
 - term: "REC"
   slug: "rec"
   definition: "Renewable Energy Certificate - a tradable instrument certifying that one MWh of electricity was generated from a renewable source. Used in market-based Scope 2 accounting."
@@ -691,13 +843,43 @@
   category: "carbon-markets"
   related: ["afolu", "carbon-sequestration", "carbon-credit"]
 
+- term: "Removal Credit"
+  slug: "removal-credit"
+  definition: "A carbon credit representing CO2 that has been actively removed from the atmosphere, such as through direct air capture, afforestation, biochar, or enhanced weathering. Generally considered higher quality than avoidance credits under the Oxford Principles hierarchy."
+  category: "carbon-markets"
+  related: ["avoidance-credit", "cdr", "biochar", "direct-air-capture"]
+
+- term: "Resettlement Action Plan (RAP)"
+  slug: "resettlement-action-plan"
+  definition: "A comprehensive plan required under IFC PS5 when a project causes physical displacement. Covers 19 sections including census of affected persons, asset inventory, valuation methodology, entitlements, relocation site preparation, transitional support, grievance mechanism, budget, and completion audit criteria. Must be disclosed to affected communities before displacement begins."
+  category: "social-safeguards"
+  related: ["involuntary-resettlement", "livelihood-restoration", "performance-standards"]
+
+- term: "Retirement (Carbon Credit)"
+  slug: "retirement"
+  definition: "The permanent cancellation of a carbon credit in a registry to claim the associated emission reduction or removal. Once retired, a credit cannot be transferred, sold, or used again. Retirement is the final step in the credit lifecycle."
+  category: "carbon-markets"
+  related: ["vcu", "carbon-credit", "double-counting"]
+
 # ─── S ────────────────────────────────────────────────────────────────────────
+
+- term: "Salient Human Rights Issues"
+  slug: "salient-human-rights-issues"
+  definition: "The human rights at risk of the most severe negative impacts through a company's activities and business relationships. Severity is assessed by scale, scope, and irremediability of the impact. Companies are expected to prioritise these issues in their HRDD process."
+  category: "human-rights"
+  related: ["hrdd", "ungps", "materiality"]
 
 - term: "SASB"
   slug: "sasb"
   definition: "Sustainability Accounting Standards Board - develops sector-specific materiality maps identifying which sustainability issues are financially material for 77 industries. Now part of the ISSB."
   category: "reporting-standards"
   related: ["issb", "materiality"]
+
+- term: "SBTN"
+  slug: "sbtn"
+  definition: "Science Based Targets Network. Extends the science-based target approach from climate (SBTi) to nature, covering biodiversity, freshwater, land, and ocean. Uses the AR3T framework: Avoid, Reduce, Restore and Regenerate, and Transform."
+  category: "biodiversity"
+  related: ["sbti", "biodiversity", "nature-positive"]
 
 - term: "SBTi"
   slug: "sbti"
@@ -833,11 +1015,37 @@
   category: "climate-finance"
   related: ["physical-risk", "climate-scenario-analysis", "stranded-assets"]
 
+- term: "TSVCM"
+  slug: "tsvcm"
+  definition: "Taskforce on Scaling Voluntary Carbon Markets. Launched by Mark Carney and the IIF in 2020, it produced influential reports projecting VCM growth to $5-50 billion by 2030 and recommended market infrastructure improvements. Led to the creation of the ICVCM."
+  category: "carbon-markets"
+  related: ["icvcm", "voluntary-carbon-market"]
+
 - term: "Turnover KPI (EU Taxonomy)"
   slug: "turnover-kpi"
   definition: "One of three mandatory EU Taxonomy disclosure KPIs. The proportion of a company's net revenue derived from Taxonomy-aligned economic activities. The primary metric for assessing what share of a company's business is environmentally sustainable."
   category: "eu-taxonomy"
   related: ["eu-taxonomy", "capex-kpi", "opex-kpi", "taxonomy-alignment"]
+
+# ─── U ────────────────────────────────────────────────────────────────────────
+
+- term: "UFLPA"
+  slug: "uflpa"
+  definition: "Uyghur Forced Labor Prevention Act. A US law enacted in 2021 that creates a rebuttable presumption that goods produced in Xinjiang, China, or by entities on the UFLPA Entity List, are made with forced labour and are prohibited from import into the United States."
+  category: "human-rights"
+  related: ["forced-labour", "modern-slavery"]
+
+- term: "UNDRIP"
+  slug: "undrip"
+  definition: "United Nations Declaration on the Rights of Indigenous Peoples. Adopted in 2007, it affirms the individual and collective rights of indigenous peoples, including the right to Free, Prior and Informed Consent (FPIC) for decisions affecting their lands, territories, resources, and cultural heritage."
+  category: "human-rights"
+  related: ["fpic", "ungps"]
+
+- term: "UNGPs"
+  slug: "ungps"
+  definition: "United Nations Guiding Principles on Business and Human Rights. Adopted in 2011, they establish three pillars: the state duty to protect human rights, the corporate responsibility to respect human rights, and access to remedy for victims. Also known as the Ruggie Principles."
+  category: "human-rights"
+  related: ["hrdd", "csddd", "due-diligence", "grievance-mechanism"]
 
 # ─── V ────────────────────────────────────────────────────────────────────────
 
@@ -846,6 +1054,18 @@
   definition: "The full range of activities and entities involved in creating and delivering a product or service, including upstream suppliers and downstream customers. Central to Scope 3 emissions accounting."
   category: "ghg-accounting"
   related: ["scope-3", "due-diligence"]
+
+- term: "Voluntary Carbon Market (VCM)"
+  slug: "vcm"
+  definition: "A decentralized market where companies and individuals voluntarily purchase carbon credits to offset their emissions, operating independently of compliance carbon markets and national accounting."
+  category: "carbon-markets"
+  related: ["carbon-credit", "vcs", "article-6"]
+
+- term: "VCMI"
+  slug: "vcmi"
+  definition: "Voluntary Carbon Markets Integrity Initiative. A multi-stakeholder platform that sets guidance for how companies can credibly use carbon credits through its Claims Code of Practice, which defines Silver, Gold, and Platinum claim tiers based on decarbonisation progress."
+  category: "carbon-markets"
+  related: ["icvcm", "ccp", "voluntary-carbon-market"]
 
 - term: "VCS"
   slug: "vcs"
@@ -859,11 +1079,11 @@
   category: "carbon-markets"
   related: ["carbon-credit", "vvb", "vcs"]
 
-- term: "Voluntary Carbon Market (VCM)"
-  slug: "vcm"
-  definition: "A decentralized market where companies and individuals voluntarily purchase carbon credits to offset their emissions, operating independently of compliance carbon markets and national accounting."
+- term: "Vintage (Carbon Credit)"
+  slug: "vintage"
+  definition: "The year in which the emission reduction or removal represented by a carbon credit occurred. Older vintages may reflect less stringent methodology versions. Many buyers prefer recent vintages (within 5 years) to ensure credits reflect current standards."
   category: "carbon-markets"
-  related: ["carbon-credit", "vcs", "article-6"]
+  related: ["carbon-credit", "vcu"]
 
 - term: "VVB"
   slug: "vvb"
@@ -878,6 +1098,12 @@
   definition: "Weighted Average Carbon Intensity - a portfolio-level metric that normalizes GHG emissions by revenue across holdings, allowing comparison of carbon exposure between different portfolios."
   category: "climate-finance"
   related: ["financed-emissions", "scope-1", "scope-2"]
+
+- term: "WBA"
+  slug: "wba"
+  definition: "World Benchmarking Alliance. An organisation that publishes free public benchmarks ranking companies on their contributions to the SDGs. Includes the Corporate Human Rights Benchmark (CHRB), Social Benchmark, and Nature Benchmark, covering over 2,000 companies globally."
+  category: "human-rights"
+  related: ["chrb", "knowthechain", "sdgs"]
 
 - term: "1.5C Pathway"
   slug: "1-5c-pathway"
