@@ -4,7 +4,7 @@ import PlatformNav from '@/components/platform/PlatformNav';
 import Footer from '@/components/platform/Footer';
 
 export const metadata = {
-  title: 'Glossary - Sustainability Academy',
+  title: 'Glossary - Green Tryst',
   description: 'Key sustainability, carbon markets, and ESG terms defined.',
 };
 

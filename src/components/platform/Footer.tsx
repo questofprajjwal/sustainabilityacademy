@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2.5 mb-2">
               <span className="w-5 h-5 bg-gradient-to-br from-green-400 to-emerald-500 rounded-md" aria-hidden />
-              <span className="text-sm font-semibold text-white">Sustainability Academy</span>
+              <span className="text-sm font-semibold text-white">Green Tryst - Sustainability Academy</span>
             </div>
             <p className="text-xs text-gray-500 ml-[30px]">
               Open-source sustainability education

@@ -13,8 +13,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Sustainability Academy - Learn Sustainability',
-    template: '%s - Sustainability Academy',
+    default: 'Green Tryst - Sustainability Academy',
+    template: '%s - Green Tryst',
   },
   description:
     'Expert-authored courses covering the full spectrum of sustainability - climate science, carbon markets, ESG, clean energy, biodiversity, circular economy, and more.',
@@ -27,14 +27,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
-    siteName: 'Sustainability Academy',
-    title: 'Sustainability Academy - Learn Sustainability',
+    siteName: 'Green Tryst - Sustainability Academy',
+    title: 'Green Tryst - Sustainability Academy',
     description:
       'Free, expert-authored courses on climate science, carbon markets, ESG reporting, GHG accounting, and more.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sustainability Academy',
+    title: 'Green Tryst - Sustainability Academy',
     description:
       'Free, expert-authored courses on climate science, carbon markets, ESG reporting, GHG accounting, and more.',
   },

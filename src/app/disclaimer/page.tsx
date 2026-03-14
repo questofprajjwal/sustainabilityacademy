@@ -4,9 +4,9 @@ import PlatformNav from '@/components/platform/PlatformNav';
 import Footer from '@/components/platform/Footer';
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | Sustainability Academy',
+  title: 'Disclaimer | Green Tryst - Sustainability Academy',
   description:
-    'Important information regarding the sources, accuracy, copyright, and intended use of the educational content provided by Sustainability Academy.',
+    'Important information regarding the sources, accuracy, copyright, and intended use of the educational content provided by Green Tryst - Sustainability Academy.',
 };
 
 export default function DisclaimerPage() {
@@ -25,7 +25,7 @@ export default function DisclaimerPage() {
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-gray-900">Purpose of This Platform</h2>
               <p>
-                Sustainability Academy is an independent, non-commercial educational platform created with the sole
+                Green Tryst - Sustainability Academy is an independent, non-commercial educational platform created with the sole
                 purpose of providing free-of-cost, accessible education on sustainability-related topics to learners
                 worldwide. The platform does not charge any fees, does not sell any products or services, and does not
                 generate revenue from its educational content. Our mission is to democratise knowledge in the fields of
@@ -59,7 +59,7 @@ export default function DisclaimerPage() {
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-gray-900">Copyright and Intellectual Property</h2>
               <p>
-                Sustainability Academy does not claim any copyright, ownership, or proprietary rights over the
+                Green Tryst - Sustainability Academy does not claim any copyright, ownership, or proprietary rights over the
                 underlying data, methodologies, frameworks, standards, technical specifications, or any other
                 intellectual property contained within the original source documents referenced in our course materials.
                 All such rights remain the exclusive property of the original authors, publishers, organisations, and
@@ -74,7 +74,7 @@ export default function DisclaimerPage() {
               <p>
                 The original editorial expression, structure, presentation, and pedagogical design of our course
                 materials (including explanatory text, analogies, examples, exercises, and quiz questions that we have
-                independently authored) are the work of Sustainability Academy. However, the factual content and
+                independently authored) are the work of Green Tryst - Sustainability Academy. However, the factual content and
                 technical substance drawn from publicly available sources remain attributed to and owned by their
                 original creators.
               </p>
@@ -84,7 +84,7 @@ export default function DisclaimerPage() {
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-gray-900">No Affiliation or Endorsement</h2>
               <p>
-                Sustainability Academy is not affiliated with, endorsed by, sponsored by, licensed by, or in any way
+                Green Tryst - Sustainability Academy is not affiliated with, endorsed by, sponsored by, licensed by, or in any way
                 formally associated with any standard-setting body, regulatory authority, governmental agency,
                 international organisation, industry consortium, or any other entity whose publications or frameworks
                 are referenced in our educational content. The inclusion of content derived from any particular source
@@ -93,7 +93,7 @@ export default function DisclaimerPage() {
               </p>
               <p>
                 Any opinions, interpretations, simplifications, or editorial choices reflected in our course materials
-                are solely those of Sustainability Academy and its contributors, and should not be attributed to or
+                are solely those of Green Tryst - Sustainability Academy and its contributors, and should not be attributed to or
                 construed as the official position of any referenced organisation or standard-setting body.
               </p>
             </section>
@@ -103,7 +103,7 @@ export default function DisclaimerPage() {
               <h2 className="text-xl font-semibold text-gray-900">Accuracy and Completeness</h2>
               <p>
                 While we have made every reasonable effort to ensure the accuracy, completeness, and reliability of the
-                information presented on this platform, Sustainability Academy makes no warranties or representations,
+                information presented on this platform, Green Tryst - Sustainability Academy makes no warranties or representations,
                 express or implied, regarding the correctness, completeness, adequacy, timeliness, or suitability of
                 any content for any particular purpose. Educational content is provided on an &ldquo;as is&rdquo; and
                 &ldquo;as available&rdquo; basis.
@@ -150,7 +150,7 @@ export default function DisclaimerPage() {
               <h2 className="text-xl font-semibold text-gray-900">User Responsibility</h2>
               <p>
                 Users of this platform assume full responsibility for how they interpret, apply, and act upon the
-                information provided in our courses. Sustainability Academy shall not be held liable for any loss,
+                information provided in our courses. Green Tryst - Sustainability Academy shall not be held liable for any loss,
                 damage, expense, or consequence, whether direct, indirect, incidental, special, or consequential,
                 arising from or in connection with the use of, reliance upon, or inability to use the content provided
                 on this platform.
@@ -168,7 +168,7 @@ export default function DisclaimerPage() {
               <p>
                 Our course materials may contain references or links to external websites, documents, or resources
                 maintained by third parties. These references are provided solely for the convenience of our users and
-                for supplementary educational context. Sustainability Academy does not control, endorse, or assume any
+                for supplementary educational context. Green Tryst - Sustainability Academy does not control, endorse, or assume any
                 responsibility for the content, accuracy, privacy practices, or availability of any third-party
                 resources. The inclusion of any external reference does not imply our endorsement or approval of the
                 referenced site or its contents.
@@ -179,7 +179,7 @@ export default function DisclaimerPage() {
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-gray-900">Data and Privacy</h2>
               <p>
-                Sustainability Academy respects the privacy of its users. All progress data, quiz responses, and
+                Green Tryst - Sustainability Academy respects the privacy of its users. All progress data, quiz responses, and
                 learning activity are stored exclusively in your web browser&apos;s local storage on your own device. We
                 do not collect, transmit, store, or process any personal data on external servers. No user accounts are
                 required, no cookies are set for tracking purposes, and no analytics or advertising services are
@@ -191,7 +191,7 @@ export default function DisclaimerPage() {
             <section className="space-y-4">
               <h2 className="text-xl font-semibold text-gray-900">Changes to This Disclaimer</h2>
               <p>
-                Sustainability Academy reserves the right to modify, update, or amend this disclaimer at any time
+                Green Tryst - Sustainability Academy reserves the right to modify, update, or amend this disclaimer at any time
                 without prior notice. Any changes will be effective immediately upon publication on this page. We
                 encourage users to review this disclaimer periodically to remain informed of any updates. Continued use
                 of the platform following any changes constitutes acceptance of the revised terms.

@@ -45,8 +45,8 @@ export default function PlatformNav({ lastLessonHref }: Props) {
             className="flex items-center gap-2.5 font-semibold text-gray-900 hover:text-gray-600 transition-colors"
           >
             <span className="w-6 h-6 bg-gradient-to-br from-green-500 to-emerald-600 rounded-md shadow-sm" aria-hidden />
-            <span className="hidden sm:inline">Sustainability Academy</span>
-            <span className="sm:hidden">SA</span>
+            <span className="hidden sm:inline">Green Tryst - Sustainability Academy</span>
+            <span className="sm:hidden">GT</span>
           </Link>
 
           {/* Search + Gamification + Nav + Actions */}

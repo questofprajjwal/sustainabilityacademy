@@ -13,7 +13,7 @@ export default function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Sustainability Academy',
+    name: 'Green Tryst - Sustainability Academy',
     url: siteUrl,
     description:
       'Free, expert-authored courses on climate science, carbon markets, ESG reporting, GHG accounting, and more.',
@@ -39,7 +39,7 @@ export default function HomePage() {
           url: `${siteUrl}/courses/${c.id}`,
           provider: {
             '@type': 'Organization',
-            name: 'Sustainability Academy',
+            name: 'Green Tryst - Sustainability Academy',
           },
           isAccessibleForFree: true,
         },

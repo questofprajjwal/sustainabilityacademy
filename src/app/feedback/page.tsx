@@ -4,9 +4,9 @@ import Footer from '@/components/platform/Footer';
 import FeedbackForm from './_components/FeedbackForm';
 
 export const metadata: Metadata = {
-  title: 'Feedback & Course Requests | Sustainability Academy',
+  title: 'Feedback & Course Requests | Green Tryst',
   description:
-    'Share your feedback, suggest improvements, or request new courses on Sustainability Academy.',
+    'Share your feedback, suggest improvements, or request new courses on Green Tryst - Sustainability Academy.',
 };
 
 export default function FeedbackPage() {
